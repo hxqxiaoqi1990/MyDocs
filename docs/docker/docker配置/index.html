@@ -8,15 +8,54 @@
 <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
-<title>Zabbix – 自在网站</title>
-  <meta name="description" content="" /><link rel="canonical" href="http://localhost:8081/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/zabbix/" itemprop="url" />
+<title>Docker配置 – 自在网站</title>
+  <meta name="description" content="/etc/docker/daemon.json 是 Docker 守护进程（dockerd）的核心配置文件，用于自定义 Docker 的运行参数（如镜像加速、网络、存储、日志等）。默认情况下该文件可能不存在，需手动创建并配置，修改后需重启 Docker 服务生效。
+一、配置文件基础说明 1. 文件格式 严格遵循 JSON 语法（键值对、逗号分隔、字符串用双引号）。
+注释：JSON 本身不支持注释，若需添加注释，需使用工具（如 jq）处理，或部署时移除注释。
+生效方式：修改后执行 systemctl daemon-reload &amp;&amp; systemctl restart docker 重启 Docker 服务。
+验证配置：docker info 可查看配置是否生效（如镜像加速地址、存储驱动等）。
+2. 默认配置路径 Linux：/etc/docker/daemon.json
+Windows：C:\ProgramData\docker\config\daemon.json
+macOS（Docker Desktop）：通过 GUI 配置（偏好设置 → Docker Engine），底层对应 ~/.docker/daemon.json
+二、核心配置参数详解（按功能分类） 1. 镜像加速配置（最常用） 解决 Docker 拉取镜像慢的问题，优先配置国内镜像源。" /><link rel="canonical" href="http://localhost:8081/docs/docker/docker%E9%85%8D%E7%BD%AE/" itemprop="url" />
 
-<meta property="og:title" content="Zabbix">
+<meta property="og:title" content="Docker配置">
 <meta
   property="og:description"
   content="
     
-      
+      /etc/docker/daemon.json 是 Docker 守护进程（dockerd）的核心配置文件，用于自定义 Docker 的运行参数（如镜像加速、网络、存储、日志等）。默认情况下该文件可能不存在，需手动创建并配置，修改后需重启 Docker 服务生效。
+一、配置文件基础说明
+    1. 文件格式
+    
+
+严格遵循 JSON 语法（键值对、逗号分隔、字符串用双引号）。
+
+
+注释：JSON 本身不支持注释，若需添加注释，需使用工具（如 jq）处理，或部署时移除注释。
+
+
+生效方式：修改后执行 systemctl daemon-reload &amp;&amp; systemctl restart docker 重启 Docker 服务。
+
+
+验证配置：docker info 可查看配置是否生效（如镜像加速地址、存储驱动等）。
+
+
+2. 默认配置路径
+    
+
+Linux：/etc/docker/daemon.json
+
+
+Windows：C:\ProgramData\docker\config\daemon.json
+
+
+macOS（Docker Desktop）：通过 GUI 配置（偏好设置 → Docker Engine），底层对应 ~/.docker/daemon.json
+
+
+二、核心配置参数详解（按功能分类）
+    1. 镜像加速配置（最常用）
+    解决 Docker 拉取镜像慢的问题，优先配置国内镜像源。
     
   ">
 <meta
@@ -24,24 +63,43 @@
   content="
     article
   ">
-<meta property="og:url" content="http://localhost:8081/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/zabbix/"><meta property="article:section" content="docs">
+<meta property="og:url" content="http://localhost:8081/docs/docker/docker%E9%85%8D%E7%BD%AE/"><meta property="article:section" content="docs">
 
 <meta
   property="article:published_time"
-  content="2025-12-26T16:51:46+08:00">
+  content="2025-12-29T15:51:10+08:00">
 
 
 <meta
   property="article:modified_time"
-  content="2025-12-26T16:51:46+08:00">
+  content="2025-12-29T15:51:10+08:00">
 
 
 
-  <meta itemprop="name" content="Zabbix">
-  <meta itemprop="datePublished" content="2025-12-26T16:51:46+08:00">
-  <meta itemprop="dateModified" content="2025-12-26T16:51:46+08:00">
+  <meta itemprop="name" content="Docker配置">
+  <meta itemprop="description" content="/etc/docker/daemon.json 是 Docker 守护进程（dockerd）的核心配置文件，用于自定义 Docker 的运行参数（如镜像加速、网络、存储、日志等）。默认情况下该文件可能不存在，需手动创建并配置，修改后需重启 Docker 服务生效。
+一、配置文件基础说明 1. 文件格式 严格遵循 JSON 语法（键值对、逗号分隔、字符串用双引号）。
+注释：JSON 本身不支持注释，若需添加注释，需使用工具（如 jq）处理，或部署时移除注释。
+生效方式：修改后执行 systemctl daemon-reload &amp;&amp; systemctl restart docker 重启 Docker 服务。
+验证配置：docker info 可查看配置是否生效（如镜像加速地址、存储驱动等）。
+2. 默认配置路径 Linux：/etc/docker/daemon.json
+Windows：C:\ProgramData\docker\config\daemon.json
+macOS（Docker Desktop）：通过 GUI 配置（偏好设置 → Docker Engine），底层对应 ~/.docker/daemon.json
+二、核心配置参数详解（按功能分类） 1. 镜像加速配置（最常用） 解决 Docker 拉取镜像慢的问题，优先配置国内镜像源。">
+  <meta itemprop="datePublished" content="2025-12-29T15:51:10+08:00">
+  <meta itemprop="dateModified" content="2025-12-29T15:51:10+08:00">
+  <meta itemprop="wordCount" content="461">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Zabbix">
+  <meta name="twitter:title" content="Docker配置">
+  <meta name="twitter:description" content="/etc/docker/daemon.json 是 Docker 守护进程（dockerd）的核心配置文件，用于自定义 Docker 的运行参数（如镜像加速、网络、存储、日志等）。默认情况下该文件可能不存在，需手动创建并配置，修改后需重启 Docker 服务生效。
+一、配置文件基础说明 1. 文件格式 严格遵循 JSON 语法（键值对、逗号分隔、字符串用双引号）。
+注释：JSON 本身不支持注释，若需添加注释，需使用工具（如 jq）处理，或部署时移除注释。
+生效方式：修改后执行 systemctl daemon-reload &amp;&amp; systemctl restart docker 重启 Docker 服务。
+验证配置：docker info 可查看配置是否生效（如镜像加速地址、存储驱动等）。
+2. 默认配置路径 Linux：/etc/docker/daemon.json
+Windows：C:\ProgramData\docker\config\daemon.json
+macOS（Docker Desktop）：通过 GUI 配置（偏好设置 → Docker Engine），底层对应 ~/.docker/daemon.json
+二、核心配置参数详解（按功能分类） 1. 镜像加速配置（最常用） 解决 Docker 拉取镜像慢的问题，优先配置国内镜像源。">
 <link href="/css/compiled/main.css" rel="stylesheet" />
     <link href="/css/variables.css" rel="stylesheet" />
     <link href="/css/custom.css" rel="stylesheet" />
@@ -167,7 +225,7 @@
               
             </li></ul>
       </div>
-            </li><li class="hx:flex hx:flex-col "><a
+            </li><li class="hx:flex hx:flex-col open"><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/docs/docker/"
@@ -184,13 +242,28 @@
   >Docker基础
     </a>
               
-            </li><li class="hx:flex hx:flex-col "><a
+            </li><li class="hx:flex hx:flex-col open"><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      hextra-sidebar-active-item hx:bg-primary-100 hx:font-semibold hx:text-primary-800 hx:contrast-more:border hx:contrast-more:border-primary-500 hx:dark:bg-primary-400/10 hx:dark:text-primary-600 hx:contrast-more:dark:border-primary-500"
     href="/docs/docker/docker%E9%85%8D%E7%BD%AE/"
     
   >Docker配置
     </a>
+  
+    <ul class='hx:flex hx:flex-col hx:gap-1 hx:relative hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:dark:before:bg-neutral-800 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:pr-3 hx:rtl:before:right-0 hx:ltr:ml-3 hx:rtl:mr-3'><li>
+              <a
+                href="#%e4%b8%80%e9%85%8d%e7%bd%ae%e6%96%87%e4%bb%b6%e5%9f%ba%e7%a1%80%e8%af%b4%e6%98%8e"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >一、配置文件基础说明</a>
+            </li>
+          <li>
+              <a
+                href="#%e4%ba%8c%e6%a0%b8%e5%bf%83%e9%85%8d%e7%bd%ae%e5%8f%82%e6%95%b0%e8%af%a6%e8%a7%a3%e6%8c%89%e5%8a%9f%e8%83%bd%e5%88%86%e7%b1%bb"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >二、核心配置参数详解（按功能分类）</a>
+            </li>
+          </ul>
+  
               
             </li><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
@@ -293,7 +366,7 @@
               
             </li></ul>
       </div>
-            </li><li class="hx:flex hx:flex-col open"><a
+            </li><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/"
@@ -358,14 +431,13 @@
   >Jenkins
     </a>
               
-            </li><li class="hx:flex hx:flex-col open"><a
+            </li><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hextra-sidebar-active-item hx:bg-primary-100 hx:font-semibold hx:text-primary-800 hx:contrast-more:border hx:contrast-more:border-primary-500 hx:dark:bg-primary-400/10 hx:dark:text-primary-600 hx:contrast-more:dark:border-primary-500"
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/zabbix/"
     
   >Zabbix
     </a>
-  
               
             </li><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
@@ -562,7 +634,7 @@
               
             </li></ul>
       </div></li>
-          <li class=""><a
+          <li class="open"><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/docs/docker/"
@@ -578,9 +650,9 @@
   >Docker基础
     </a>
               
-            </li><li class="hx:flex hx:flex-col "><a
+            </li><li class="hx:flex hx:flex-col open"><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      hextra-sidebar-active-item hx:bg-primary-100 hx:font-semibold hx:text-primary-800 hx:contrast-more:border hx:contrast-more:border-primary-500 hx:dark:bg-primary-400/10 hx:dark:text-primary-600 hx:contrast-more:dark:border-primary-500"
     href="/docs/docker/docker%E9%85%8D%E7%BD%AE/"
     
   >Docker配置
@@ -686,7 +758,7 @@
               
             </li></ul>
       </div></li>
-          <li class="open"><a
+          <li class=""><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/"
@@ -750,9 +822,9 @@
   >Jenkins
     </a>
               
-            </li><li class="hx:flex hx:flex-col open"><a
+            </li><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hextra-sidebar-active-item hx:bg-primary-100 hx:font-semibold hx:text-primary-800 hx:contrast-more:border hx:contrast-more:border-primary-500 hx:dark:bg-primary-400/10 hx:dark:text-primary-600 hx:contrast-more:dark:border-primary-500"
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/zabbix/"
     
   >Zabbix
@@ -949,8 +1021,48 @@
 </div></div></div></aside>
     
 <nav class="hextra-toc hx:order-last hx:hidden hx:w-64 hx:shrink-0 hx:xl:block hx:print:hidden hx:px-4" aria-label="table of contents">
-    <div class="hextra-scrollbar hx:sticky hx:top-16 hx:overflow-y-auto hx:pr-4 hx:pt-6 hx:text-sm [hyphens:auto] hx:max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] hx:ltr:-mr-4 hx:rtl:-ml-4">
-      <div class=" hx:sticky hx:bottom-0 hx:flex hx:flex-col hx:items-start hx:gap-2 hx:pb-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-t hx:contrast-more:border-neutral-400 hx:contrast-more:shadow-none hx:contrast-more:dark:border-neutral-400">
+    <div class="hextra-scrollbar hx:sticky hx:top-16 hx:overflow-y-auto hx:pr-4 hx:pt-6 hx:text-sm [hyphens:auto] hx:max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] hx:ltr:-mr-4 hx:rtl:-ml-4"><p class="hx:mb-4 hx:font-semibold hx:tracking-tight">此页上</p><ul>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#%e4%b8%80%e9%85%8d%e7%bd%ae%e6%96%87%e4%bb%b6%e5%9f%ba%e7%a1%80%e8%af%b4%e6%98%8e">一、配置文件基础说明
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#1-%e6%96%87%e4%bb%b6%e6%a0%bc%e5%bc%8f">1. 文件格式
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#2-%e9%bb%98%e8%ae%a4%e9%85%8d%e7%bd%ae%e8%b7%af%e5%be%84">2. 默认配置路径
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#%e4%ba%8c%e6%a0%b8%e5%bf%83%e9%85%8d%e7%bd%ae%e5%8f%82%e6%95%b0%e8%af%a6%e8%a7%a3%e6%8c%89%e5%8a%9f%e8%83%bd%e5%88%86%e7%b1%bb">二、核心配置参数详解（按功能分类）
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#1-%e9%95%9c%e5%83%8f%e5%8a%a0%e9%80%9f%e9%85%8d%e7%bd%ae%e6%9c%80%e5%b8%b8%e7%94%a8">1. 镜像加速配置（最常用）
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#2-%e7%bd%91%e7%bb%9c%e9%85%8d%e7%bd%ae">2. 网络配置
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#3-%e5%ad%98%e5%82%a8%e9%85%8d%e7%bd%ae">3. 存储配置
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#4-%e5%ae%89%e5%85%a8%e9%85%8d%e7%bd%ae">4. 安全配置
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#5-%e8%b5%84%e6%ba%90%e9%99%90%e5%88%b6%e9%85%8d%e7%bd%ae">5. 资源限制配置
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#6-%e5%85%b6%e4%bb%96%e5%ae%9e%e7%94%a8%e9%85%8d%e7%bd%ae">6. 其他实用配置
+        </a>
+      </li></ul>
+      <div class="hx:mt-8 hx:border-t hx:bg-white hx:pt-8 hx:shadow-[0_-12px_16px_white] hx:dark:bg-dark hx:dark:shadow-[0_-12px_16px_#111] hx:sticky hx:bottom-0 hx:flex hx:flex-col hx:items-start hx:gap-2 hx:pb-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-t hx:contrast-more:border-neutral-400 hx:contrast-more:shadow-none hx:contrast-more:dark:border-neutral-400">
         <button aria-hidden="true" id="backToTop" onClick="scrollUp();" class="hx:cursor-pointer hx:transition-all hx:duration-75 hx:opacity-0 hx:text-xs hx:font-medium hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-100 hx:contrast-more:text-gray-800 hx:contrast-more:dark:text-gray-50">
           <span>返回顶部</span>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="hx:inline hx:ltr:ml-1 hx:rtl:mr-1 hx:h-3.5 hx:w-3.5 hx:rounded-full hx:border hx:border-gray-500 hx:hover:border-gray-900 hx:dark:border-gray-400 hx:dark:hover:border-gray-100 hx:contrast-more:border-gray-800 hx:contrast-more:dark:border-gray-50">
@@ -969,24 +1081,436 @@
           <a href="/docs/">文档</a>
         </div><svg class="hx:w-3.5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
         <div class="hx:whitespace-nowrap hx:transition-colors hx:min-w-[24px] hx:overflow-hidden hx:text-ellipsis hx:hover:text-gray-900 hx:dark:hover:text-gray-100">
-          <a href="/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/">运维服务</a>
-        </div><svg class="hx:w-3.5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg><div class="hx:whitespace-nowrap hx:transition-colors hx:font-medium hx:text-gray-700 hx:contrast-more:font-bold hx:contrast-more:text-current hx:dark:text-gray-100 hx:contrast-more:dark:text-current">Zabbix</div>
+          <a href="/docs/docker/">docker</a>
+        </div><svg class="hx:w-3.5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg><div class="hx:whitespace-nowrap hx:transition-colors hx:font-medium hx:text-gray-700 hx:contrast-more:font-bold hx:contrast-more:text-current hx:dark:text-gray-100 hx:contrast-more:dark:text-current">Docker配置</div>
   </div>
 
         <div class="content">
-          <h1>Zabbix</h1>
-          
+          <h1>Docker配置</h1>
+          <p><code>/etc/docker/daemon.json</code> 是 Docker 守护进程（dockerd）的核心配置文件，用于自定义 Docker 的运行参数（如镜像加速、网络、存储、日志等）。默认情况下该文件可能不存在，需手动创建并配置，修改后需重启 Docker 服务生效。</p>
+<h2>一、配置文件基础说明<span class="hx:absolute hx:-mt-20" id="一配置文件基础说明"></span>
+    <a href="#%e4%b8%80%e9%85%8d%e7%bd%ae%e6%96%87%e4%bb%b6%e5%9f%ba%e7%a1%80%e8%af%b4%e6%98%8e" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>1. 文件格式<span class="hx:absolute hx:-mt-20" id="1-文件格式"></span>
+    <a href="#1-%e6%96%87%e4%bb%b6%e6%a0%bc%e5%bc%8f" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><ul>
+<li>
+<p>严格遵循 <strong>JSON 语法</strong>（键值对、逗号分隔、字符串用双引号）。</p>
+</li>
+<li>
+<p>注释：JSON 本身不支持注释，若需添加注释，需使用工具（如 <code>jq</code>）处理，或部署时移除注释。</p>
+</li>
+<li>
+<p>生效方式：修改后执行 <code>systemctl daemon-reload &amp;&amp; systemctl restart docker</code> 重启 Docker 服务。</p>
+</li>
+<li>
+<p>验证配置：<code>docker info</code> 可查看配置是否生效（如镜像加速地址、存储驱动等）。</p>
+</li>
+</ul>
+<h3>2. 默认配置路径<span class="hx:absolute hx:-mt-20" id="2-默认配置路径"></span>
+    <a href="#2-%e9%bb%98%e8%ae%a4%e9%85%8d%e7%bd%ae%e8%b7%af%e5%be%84" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><ul>
+<li>
+<p>Linux：<code>/etc/docker/daemon.json</code></p>
+</li>
+<li>
+<p>Windows：<code>C:\ProgramData\docker\config\daemon.json</code></p>
+</li>
+<li>
+<p>macOS（Docker Desktop）：通过 GUI 配置（偏好设置 → Docker Engine），底层对应 <code>~/.docker/daemon.json</code></p>
+</li>
+</ul>
+<h2>二、核心配置参数详解（按功能分类）<span class="hx:absolute hx:-mt-20" id="二核心配置参数详解按功能分类"></span>
+    <a href="#%e4%ba%8c%e6%a0%b8%e5%bf%83%e9%85%8d%e7%bd%ae%e5%8f%82%e6%95%b0%e8%af%a6%e8%a7%a3%e6%8c%89%e5%8a%9f%e8%83%bd%e5%88%86%e7%b1%bb" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>1. 镜像加速配置（最常用）<span class="hx:absolute hx:-mt-20" id="1-镜像加速配置最常用"></span>
+    <a href="#1-%e9%95%9c%e5%83%8f%e5%8a%a0%e9%80%9f%e9%85%8d%e7%bd%ae%e6%9c%80%e5%b8%b8%e7%94%a8" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>解决 Docker 拉取镜像慢的问题，优先配置国内镜像源。</p>
+<table>
+  <thead>
+      <tr>
+          <th>参数</th>
+          <th>类型</th>
+          <th>说明</th>
+          <th>示例</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>registry-mirrors</code></td>
+          <td>数组（字符串）</td>
+          <td>镜像仓库加速地址列表，按顺序优先级匹配</td>
+          <td>阿里云、网易云、Docker 中国官方加速</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>示例配置</strong>：</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;registry-mirrors&#34;</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;https://xxxx.mirror.aliyuncs.com&#34;</span><span class="p">,</span>  <span class="c1">// 阿里云专属加速（需登录阿里云容器镜像服务获取）
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="s2">&#34;https://hub-mirror.c.163.com&#34;</span><span class="p">,</span>      <span class="c1">// 网易云加速（公开）
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="s2">&#34;https://docker.mirrors.ustc.edu.cn&#34;</span> <span class="c1">// 中科大加速（公开）
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="复制代码"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<h3>2. 网络配置<span class="hx:absolute hx:-mt-20" id="2-网络配置"></span>
+    <a href="#2-%e7%bd%91%e7%bb%9c%e9%85%8d%e7%bd%ae" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>自定义 Docker 网络相关参数（如默认网段、端口映射范围、DNS 等）。</p>
+<table>
+  <thead>
+      <tr>
+          <th>参数</th>
+          <th>类型</th>
+          <th>说明</th>
+          <th>示例</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>bip</code></td>
+          <td>字符串</td>
+          <td>桥接网络（bridge）的默认网关和子网</td>
+          <td><code>&quot;bip&quot;: &quot;172.17.0.1/16&quot;</code>（默认是 172.17.0.1/16）</td>
+      </tr>
+      <tr>
+          <td><code>default-address-pools</code></td>
+          <td>数组</td>
+          <td>自定义 Docker 网络地址池（避免与内网网段冲突）</td>
+          <td>见下方示例</td>
+      </tr>
+      <tr>
+          <td><code>dns</code></td>
+          <td>数组（字符串）</td>
+          <td>容器默认 DNS 服务器列表</td>
+          <td><code>&quot;dns&quot;: [&quot;223.5.5.5&quot;, &quot;8.8.8.8&quot;]</code>（阿里云 DNS + Google DNS）</td>
+      </tr>
+      <tr>
+          <td><code>dns-search</code></td>
+          <td>数组（字符串）</td>
+          <td>DNS 搜索域（容器内解析域名时自动拼接）</td>
+          <td><code>&quot;dns-search&quot;: [&quot;docker.internal&quot;, &quot;company.com&quot;]</code></td>
+      </tr>
+      <tr>
+          <td><code>ipv6</code></td>
+          <td>布尔值</td>
+          <td>是否启用 IPv6 支持</td>
+          <td><code>&quot;ipv6&quot;: true</code></td>
+      </tr>
+      <tr>
+          <td><code>fixed-cidr-v6</code></td>
+          <td>字符串</td>
+          <td>IPv6 固定子网</td>
+          <td><code>&quot;fixed-cidr-v6&quot;: &quot;2001:db8::/64&quot;</code></td>
+      </tr>
+      <tr>
+          <td><code>port-range</code></td>
+          <td>字符串</td>
+          <td>允许 Docker 映射的端口范围（默认 49153-65535）</td>
+          <td><code>&quot;port-range&quot;: &quot;30000-32767&quot;</code></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>示例配置（解决网段冲突）</strong>：</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;bip&#34;</span><span class="p">:</span> <span class="s2">&#34;172.31.0.1/16&#34;</span><span class="p">,</span>  <span class="c1">// 自定义 bridge 网络网关和子网
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nt">&#34;default-address-pools&#34;</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;base&#34;</span><span class="p">:</span> <span class="s2">&#34;172.32.0.0/16&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;size&#34;</span><span class="p">:</span> <span class="mi">24</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;base&#34;</span><span class="p">:</span> <span class="s2">&#34;172.33.0.0/16&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;size&#34;</span><span class="p">:</span> <span class="mi">24</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">],</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;dns&#34;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;223.5.5.5&#34;</span><span class="p">,</span> <span class="s2">&#34;8.8.8.8&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="复制代码"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<h3>3. 存储配置<span class="hx:absolute hx:-mt-20" id="3-存储配置"></span>
+    <a href="#3-%e5%ad%98%e5%82%a8%e9%85%8d%e7%bd%ae" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>自定义 Docker 存储驱动、数据存储路径、镜像和容器限制等。</p>
+<table>
+  <thead>
+      <tr>
+          <th>参数</th>
+          <th>类型</th>
+          <th>说明</th>
+          <th>示例</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>data-root</code></td>
+          <td>字符串</td>
+          <td>Docker 数据存储根目录（默认 <code>/var/lib/docker</code>）</td>
+          <td><code>&quot;data-root&quot;: &quot;/data/docker&quot;</code>（迁移 Docker 数据到 <code>/data</code> 分区）</td>
+      </tr>
+      <tr>
+          <td><code>storage-driver</code></td>
+          <td>字符串</td>
+          <td>存储驱动（推荐 <code>overlay2</code>，Docker 18.09+ 默认）</td>
+          <td><code>&quot;storage-driver&quot;: &quot;overlay2&quot;</code></td>
+      </tr>
+      <tr>
+          <td><code>storage-opts</code></td>
+          <td>数组（字符串）</td>
+          <td>存储驱动额外参数（如 overlay2 的日志大小限制）</td>
+          <td><code>&quot;storage-opts&quot;: [&quot;overlay2.override_kernel_check=true&quot;, &quot;overlay2.size=100G&quot;]</code></td>
+      </tr>
+      <tr>
+          <td><code>max-concurrent-downloads</code></td>
+          <td>整数</td>
+          <td>同时下载镜像的最大线程数（默认 3，提升下载速度）</td>
+          <td><code>&quot;max-concurrent-downloads&quot;: 10</code></td>
+      </tr>
+      <tr>
+          <td><code>max-concurrent-uploads</code></td>
+          <td>整数</td>
+          <td>同时上传镜像的最大线程数（默认 5）</td>
+          <td><code>&quot;max-concurrent-uploads&quot;: 5</code></td>
+      </tr>
+      <tr>
+          <td><code>log-driver</code></td>
+          <td>字符串</td>
+          <td>容器日志驱动（默认 <code>json-file</code>，可选 <code>journald</code>、<code>syslog</code>、<code>fluentd</code> 等）</td>
+          <td><code>&quot;log-driver&quot;: &quot;json-file&quot;</code></td>
+      </tr>
+      <tr>
+          <td><code>log-opts</code></td>
+          <td>对象</td>
+          <td>日志驱动参数（如日志大小、滚动数量）</td>
+          <td>见下方示例</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>示例配置（存储优化 + 日志限制）</strong>：</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;data-root&#34;</span><span class="p">:</span> <span class="s2">&#34;/data/docker&#34;</span><span class="p">,</span>  <span class="c1">// 迁移数据目录到大容量分区
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nt">&#34;storage-driver&#34;</span><span class="p">:</span> <span class="s2">&#34;overlay2&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;storage-opts&#34;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;overlay2.size=100G&#34;</span><span class="p">],</span>  <span class="c1">// 每个容器最大磁盘占用 100G
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nt">&#34;max-concurrent-downloads&#34;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>          <span class="c1">// 加速镜像下载
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nt">&#34;log-driver&#34;</span><span class="p">:</span> <span class="s2">&#34;json-file&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;log-opts&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;max-size&#34;</span><span class="p">:</span> <span class="s2">&#34;10m&#34;</span><span class="p">,</span>  <span class="c1">// 单个日志文件最大 10MB
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nt">&#34;max-file&#34;</span><span class="p">:</span> <span class="s2">&#34;3&#34;</span>     <span class="c1">// 最多保留 3 个日志文件（滚动删除）
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="复制代码"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<h3>4. 安全配置<span class="hx:absolute hx:-mt-20" id="4-安全配置"></span>
+    <a href="#4-%e5%ae%89%e5%85%a8%e9%85%8d%e7%bd%ae" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>限制 Docker 权限、启用 TLS 认证、配置信任镜像仓库等。</p>
+<table>
+  <thead>
+      <tr>
+          <th>参数</th>
+          <th>类型</th>
+          <th>说明</th>
+          <th>示例</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>tls</code></td>
+          <td>布尔值</td>
+          <td>是否启用 TLS 认证（远程访问 Docker 时加密）</td>
+          <td><code>&quot;tls&quot;: true</code></td>
+      </tr>
+      <tr>
+          <td><code>tlscacert</code></td>
+          <td>字符串</td>
+          <td>TLS 根证书路径</td>
+          <td><code>&quot;tlscacert&quot;: &quot;/etc/docker/ca.pem&quot;</code></td>
+      </tr>
+      <tr>
+          <td><code>tlscert</code></td>
+          <td>字符串</td>
+          <td>TLS 客户端证书路径</td>
+          <td><code>&quot;tlscert&quot;: &quot;/etc/docker/cert.pem&quot;</code></td>
+      </tr>
+      <tr>
+          <td><code>tlskey</code></td>
+          <td>字符串</td>
+          <td>TLS 客户端密钥路径</td>
+          <td><code>&quot;tlskey&quot;: &quot;/etc/docker/key.pem&quot;</code></td>
+      </tr>
+      <tr>
+          <td><code>tlsverify</code></td>
+          <td>布尔值</td>
+          <td>是否验证服务端证书</td>
+          <td><code>&quot;tlsverify&quot;: true</code></td>
+      </tr>
+      <tr>
+          <td><code>insecure-registries</code></td>
+          <td>数组（字符串）</td>
+          <td>信任的非 HTTPS 镜像仓库（如私有仓库）</td>
+          <td><code>&quot;insecure-registries&quot;: [&quot;192.168.1.100:5000&quot;]</code></td>
+      </tr>
+      <tr>
+          <td><code>allow-nondistributable-artifacts</code></td>
+          <td>数组（字符串）</td>
+          <td>允许推送非分布式镜像到指定仓库</td>
+          <td><code>&quot;allow-nondistributable-artifacts&quot;: [&quot;192.168.1.100:5000&quot;]</code></td>
+      </tr>
+      <tr>
+          <td><code>live-restore</code></td>
+          <td>布尔值</td>
+          <td>Docker 守护进程重启时，保持容器运行（避免服务中断）</td>
+          <td><code>&quot;live-restore&quot;: true</code></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>示例配置（私有仓库信任 + TLS 认证）</strong>：</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;insecure-registries&#34;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;192.168.1.100:5000&#34;</span><span class="p">],</span>  <span class="c1">// 信任内网 HTTP 私有仓库
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nt">&#34;tls&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;tlscacert&#34;</span><span class="p">:</span> <span class="s2">&#34;/etc/docker/ca.pem&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;tlscert&#34;</span><span class="p">:</span> <span class="s2">&#34;/etc/docker/server-cert.pem&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;tlskey&#34;</span><span class="p">:</span> <span class="s2">&#34;/etc/docker/server-key.pem&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;tlsverify&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;live-restore&#34;</span><span class="p">:</span> <span class="kc">true</span>  <span class="c1">// 守护进程重启不影响运行中的容器
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="复制代码"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<h3>5. 资源限制配置<span class="hx:absolute hx:-mt-20" id="5-资源限制配置"></span>
+    <a href="#5-%e8%b5%84%e6%ba%90%e9%99%90%e5%88%b6%e9%85%8d%e7%bd%ae" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>限制 Docker 占用的系统资源（CPU、内存、PID 等）。</p>
+<table>
+  <thead>
+      <tr>
+          <th>参数</th>
+          <th>类型</th>
+          <th>说明</th>
+          <th>示例</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>default-shm-size</code></td>
+          <td>字符串</td>
+          <td>容器默认共享内存大小（默认 64M，部分服务如 Chrome、Elasticsearch 需增大）</td>
+          <td><code>&quot;default-shm-size&quot;: &quot;2G&quot;</code></td>
+      </tr>
+      <tr>
+          <td><code>oom-score-adjust</code></td>
+          <td>整数</td>
+          <td>Docker 守护进程的 OOM 优先级（-1000 到 1000，数值越低越不容易被 OOM 杀死）</td>
+          <td><code>&quot;oom-score-adjust&quot;: -1000</code></td>
+      </tr>
+      <tr>
+          <td><code>max-pids</code></td>
+          <td>整数</td>
+          <td>所有容器的最大 PID 总数限制（避免容器占用过多进程）</td>
+          <td><code>&quot;max-pids&quot;: 10000</code></td>
+      </tr>
+      <tr>
+          <td><code>cpu-shares</code></td>
+          <td>整数</td>
+          <td>Docker 整体 CPU 权重（相对值，默认 1024）</td>
+          <td><code>&quot;cpu-shares&quot;: 2048</code></td>
+      </tr>
+      <tr>
+          <td><code>memory-limit</code></td>
+          <td>字符串</td>
+          <td>Docker 整体内存限制（默认无限制）</td>
+          <td><code>&quot;memory-limit&quot;: &quot;16G&quot;</code></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>示例配置（资源限制）</strong>：</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;default-shm-size&#34;</span><span class="p">:</span> <span class="s2">&#34;2G&#34;</span><span class="p">,</span>    <span class="c1">// 默认共享内存 2G
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nt">&#34;oom-score-adjust&#34;</span><span class="p">:</span> <span class="mi">-1000</span><span class="p">,</span>   <span class="c1">// 避免 Docker 被 OOM 杀死
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nt">&#34;max-pids&#34;</span><span class="p">:</span> <span class="mi">10000</span><span class="p">,</span>           <span class="c1">// 最大进程数 10000
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nt">&#34;memory-limit&#34;</span><span class="p">:</span> <span class="s2">&#34;16G&#34;</span>        <span class="c1">// 限制 Docker 总内存占用不超过 16G
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="复制代码"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<h3>6. 其他实用配置<span class="hx:absolute hx:-mt-20" id="6-其他实用配置"></span>
+    <a href="#6-%e5%85%b6%e4%bb%96%e5%ae%9e%e7%94%a8%e9%85%8d%e7%bd%ae" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
+  <thead>
+      <tr>
+          <th>参数</th>
+          <th>类型</th>
+          <th>说明</th>
+          <th>示例</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>experimental</code></td>
+          <td>布尔值</td>
+          <td>是否启用 Docker 实验性特性（如 Buildx、IPv6 等）</td>
+          <td><code>&quot;experimental&quot;: true</code></td>
+      </tr>
+      <tr>
+          <td><code>features</code></td>
+          <td>对象</td>
+          <td>启用特定特性（如 <code>buildkit</code> 构建引擎）</td>
+          <td><code>&quot;features&quot;: {&quot;buildkit&quot;: true}</code></td>
+      </tr>
+      <tr>
+          <td><code>labels</code></td>
+          <td>数组（字符串）</td>
+          <td>给 Docker 守护进程添加标签（用于集群管理）</td>
+          <td><code>&quot;labels&quot;: [&quot;env=production&quot;, &quot;owner=devops&quot;]</code></td>
+      </tr>
+      <tr>
+          <td><code>log-level</code></td>
+          <td>字符串</td>
+          <td>日志级别（<code>debug</code>/<code>info</code>/<code>warn</code>/<code>error</code>/<code>fatal</code>，默认 <code>info</code>）</td>
+          <td><code>&quot;log-level&quot;: &quot;warn&quot;</code></td>
+      </tr>
+  </tbody>
+</table>
+
         </div>
         <div class="hx:mt-16"></div>
         <div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
-        href="/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/jenkins/"
-        title="Jenkins"
+        href="/docs/docker/docker%E5%9F%BA%E7%A1%80/"
+        title="Docker基础"
         class="hx:flex hx:max-w-[50%] hx:items-center hx:gap-1 hx:py-4 hx:text-base hx:font-medium hx:text-gray-600 hx:transition-colors [word-break:break-word] hx:hover:text-primary-600 hx:dark:text-gray-300 hx:md:text-lg hx:ltr:pr-4 hx:rtl:pl-4"
-      ><svg class="hx:inline hx:h-5 hx:shrink-0 hx:ltr:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>Jenkins</a><a
-        href="/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/promethous/"
-        title="Promethous"
+      ><svg class="hx:inline hx:h-5 hx:shrink-0 hx:ltr:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>Docker基础</a><a
+        href="/docs/docker/docker%E7%BD%91%E7%BB%9C/"
+        title="Docker网络"
         class="hx:flex hx:max-w-[50%] hx:items-center hx:gap-1 hx:py-4 hx:text-base hx:font-medium hx:text-gray-600 hx:transition-colors [word-break:break-word] hx:hover:text-primary-600 hx:dark:text-gray-300 hx:md:text-lg hx:ltr:ml-auto hx:ltr:pl-4 hx:ltr:text-right hx:rtl:mr-auto hx:rtl:pr-4 hx:rtl:text-left"
-      >Promethous<svg class="hx:inline hx:h-5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a></div>
+      >Docker网络<svg class="hx:inline hx:h-5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a></div>
         
       </main>
     </article>
