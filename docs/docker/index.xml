@@ -1,8 +1,8 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>自在网站 – 简介</title>
+    <title>自在网站 – </title>
     <link>http://localhost:8081/docs/docker/</link>
-    <description>Recent content in 简介 on 自在网站</description>
+    <description>Recent content on 自在网站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Mon, 29 Dec 2025 15:51:10 +0800</lastBuildDate>
