@@ -1,2 +1,0 @@
-# MyDocs
-My technical documentation
