@@ -1,71 +1,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>自在网站 – 简介</title>
-    <link>http://localhost:8081/docs/%E6%95%B0%E6%8D%AE%E5%BA%93/</link>
+    <link>https://example.org/docs/%E6%95%B0%E6%8D%AE%E5%BA%93/</link>
     <description>Recent content in 简介 on 自在网站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Tue, 30 Dec 2025 17:41:00 +0800</lastBuildDate>
     
-	  <atom:link href="http://localhost:8081/docs/%E6%95%B0%E6%8D%AE%E5%BA%93/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="https://example.org/docs/%E6%95%B0%E6%8D%AE%E5%BA%93/index.xml" rel="self" type="application/rss+xml" />
     
     
       
         
       
     
-    
-    <item>
-      <title>Sqlite</title>
-      <link>http://localhost:8081/docs/%E6%95%B0%E6%8D%AE%E5%BA%93/sqlite/</link>
-      <pubDate>Fri, 26 Dec 2025 16:33:08 +0800</pubDate>
-      
-      <guid>http://localhost:8081/docs/%E6%95%B0%E6%8D%AE%E5%BA%93/sqlite/</guid>
-      <description>
-        
-        
-        
-      </description>
-    </item>
-    
-    <item>
-      <title>Mongo</title>
-      <link>http://localhost:8081/docs/%E6%95%B0%E6%8D%AE%E5%BA%93/mongo/</link>
-      <pubDate>Fri, 26 Dec 2025 16:32:48 +0800</pubDate>
-      
-      <guid>http://localhost:8081/docs/%E6%95%B0%E6%8D%AE%E5%BA%93/mongo/</guid>
-      <description>
-        
-        
-        
-      </description>
-    </item>
-    
-    <item>
-      <title>Mysql</title>
-      <link>http://localhost:8081/docs/%E6%95%B0%E6%8D%AE%E5%BA%93/mysql/</link>
-      <pubDate>Fri, 26 Dec 2025 16:32:42 +0800</pubDate>
-      
-      <guid>http://localhost:8081/docs/%E6%95%B0%E6%8D%AE%E5%BA%93/mysql/</guid>
-      <description>
-        
-        
-        
-      </description>
-    </item>
-    
-    <item>
-      <title>Redis</title>
-      <link>http://localhost:8081/docs/%E6%95%B0%E6%8D%AE%E5%BA%93/redis/</link>
-      <pubDate>Fri, 26 Dec 2025 16:32:38 +0800</pubDate>
-      
-      <guid>http://localhost:8081/docs/%E6%95%B0%E6%8D%AE%E5%BA%93/redis/</guid>
-      <description>
-        
-        
-        
-      </description>
-    </item>
     
   </channel>
 </rss>
