@@ -9,15 +9,17 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
 <title>Nginx – 自在网站</title>
-  <meta name="description" content="初始化操作 # 创建目录 mkdir -p ./nginx/html ./nginx/conf.d # 拷贝nginx配置文件 docker run --rm -it nginx:latest cat /etc/nginx/conf.d/default.conf &gt; ./nginx/conf.d/default.conf docker run --rm -it nginx:latest cat /etc/nginx/nginx.conf &gt; ./nginx/nginx.conf docker run --rm -it nginx:latest cat /usr/share/nginx/html/index.html &gt; ./nginx/html/index.html 部署 docker-compose.yamlversion: &#39;3.8&#39; services: nginx: image: nginx:latest container_name: nginx # 容器名称 restart: always # 自动重启 environment: - TZ=Asia/Shanghai # 设置时区 ports: - &#34;80:80&#34; # 映射端口 deploy: resources: limits: cpus: &#34;0.5&#34; # 限制 CPU 核心数 memory: &#34;512M&#34; # 限制内存大小 volumes: - ./nginx/html:/usr/share/nginx/html # 数据持久化 - ./nginx/conf.d:/etc/nginx/conf.d # 配置持久化 - ./nginx/nginx.conf:/etc/nginx/nginx.conf # 配置持久化 启动 docker compose up -d ​" /><link rel="canonical" href="http://localhost:8081/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/nginx/" itemprop="url" />
+  <meta name="description" content="docker部署 初始化操作
+# 创建目录 mkdir -p ./nginx/html ./nginx/conf.d # 拷贝nginx配置文件 docker run --rm -it nginx:latest cat /etc/nginx/conf.d/default.conf &gt; ./nginx/conf.d/default.conf docker run --rm -it nginx:latest cat /etc/nginx/nginx.conf &gt; ./nginx/nginx.conf docker run --rm -it nginx:latest cat /usr/share/nginx/html/index.html &gt; ./nginx/html/index.html 创建yaml" /><link rel="canonical" href="http://localhost:8081/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/nginx/" itemprop="url" />
 
 <meta property="og:title" content="Nginx">
 <meta
   property="og:description"
   content="
     
-      初始化操作
-    
+      docker部署
+    初始化操作
+
 
 # 创建目录
 mkdir -p ./nginx/html ./nginx/conf.d
@@ -32,45 +34,7 @@ docker run --rm -it nginx:latest cat /usr/share/nginx/html/index.html &gt; ./ngi
   
 
 
-部署
-    
-
-docker-compose.yamlversion: &#39;3.8&#39;
-services:
-  nginx:
-    image: nginx:latest
-    container_name: nginx          # 容器名称
-    restart: always                # 自动重启
-    environment:
-      - TZ=Asia/Shanghai           # 设置时区
-    ports:
-      - &#34;80:80&#34;                    # 映射端口
-    deploy:
-      resources:
-        limits:
-          cpus: &#34;0.5&#34;              # 限制 CPU 核心数
-          memory: &#34;512M&#34;           # 限制内存大小
-    volumes:
-      - ./nginx/html:/usr/share/nginx/html        # 数据持久化
-      - ./nginx/conf.d:/etc/nginx/conf.d          # 配置持久化
-      - ./nginx/nginx.conf:/etc/nginx/nginx.conf  # 配置持久化
-  
-    
-
-  
-
-
-启动
-    
-
-docker compose up -d
-  
-    
-
-  
-
-
-​
+创建yaml
     
   ">
 <meta
@@ -92,13 +56,15 @@ docker compose up -d
 
 
   <meta itemprop="name" content="Nginx">
-  <meta itemprop="description" content="初始化操作 # 创建目录 mkdir -p ./nginx/html ./nginx/conf.d # 拷贝nginx配置文件 docker run --rm -it nginx:latest cat /etc/nginx/conf.d/default.conf &gt; ./nginx/conf.d/default.conf docker run --rm -it nginx:latest cat /etc/nginx/nginx.conf &gt; ./nginx/nginx.conf docker run --rm -it nginx:latest cat /usr/share/nginx/html/index.html &gt; ./nginx/html/index.html 部署 docker-compose.yamlversion: &#39;3.8&#39; services: nginx: image: nginx:latest container_name: nginx # 容器名称 restart: always # 自动重启 environment: - TZ=Asia/Shanghai # 设置时区 ports: - &#34;80:80&#34; # 映射端口 deploy: resources: limits: cpus: &#34;0.5&#34; # 限制 CPU 核心数 memory: &#34;512M&#34; # 限制内存大小 volumes: - ./nginx/html:/usr/share/nginx/html # 数据持久化 - ./nginx/conf.d:/etc/nginx/conf.d # 配置持久化 - ./nginx/nginx.conf:/etc/nginx/nginx.conf # 配置持久化 启动 docker compose up -d ​">
+  <meta itemprop="description" content="docker部署 初始化操作
+# 创建目录 mkdir -p ./nginx/html ./nginx/conf.d # 拷贝nginx配置文件 docker run --rm -it nginx:latest cat /etc/nginx/conf.d/default.conf &gt; ./nginx/conf.d/default.conf docker run --rm -it nginx:latest cat /etc/nginx/nginx.conf &gt; ./nginx/nginx.conf docker run --rm -it nginx:latest cat /usr/share/nginx/html/index.html &gt; ./nginx/html/index.html 创建yaml">
   <meta itemprop="datePublished" content="2025-12-26T16:50:09+08:00">
   <meta itemprop="dateModified" content="2025-12-26T16:50:09+08:00">
-  <meta itemprop="wordCount" content="93">
+  <meta itemprop="wordCount" content="481">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Nginx">
-  <meta name="twitter:description" content="初始化操作 # 创建目录 mkdir -p ./nginx/html ./nginx/conf.d # 拷贝nginx配置文件 docker run --rm -it nginx:latest cat /etc/nginx/conf.d/default.conf &gt; ./nginx/conf.d/default.conf docker run --rm -it nginx:latest cat /etc/nginx/nginx.conf &gt; ./nginx/nginx.conf docker run --rm -it nginx:latest cat /usr/share/nginx/html/index.html &gt; ./nginx/html/index.html 部署 docker-compose.yamlversion: &#39;3.8&#39; services: nginx: image: nginx:latest container_name: nginx # 容器名称 restart: always # 自动重启 environment: - TZ=Asia/Shanghai # 设置时区 ports: - &#34;80:80&#34; # 映射端口 deploy: resources: limits: cpus: &#34;0.5&#34; # 限制 CPU 核心数 memory: &#34;512M&#34; # 限制内存大小 volumes: - ./nginx/html:/usr/share/nginx/html # 数据持久化 - ./nginx/conf.d:/etc/nginx/conf.d # 配置持久化 - ./nginx/nginx.conf:/etc/nginx/nginx.conf # 配置持久化 启动 docker compose up -d ​">
+  <meta name="twitter:description" content="docker部署 初始化操作
+# 创建目录 mkdir -p ./nginx/html ./nginx/conf.d # 拷贝nginx配置文件 docker run --rm -it nginx:latest cat /etc/nginx/conf.d/default.conf &gt; ./nginx/conf.d/default.conf docker run --rm -it nginx:latest cat /etc/nginx/nginx.conf &gt; ./nginx/nginx.conf docker run --rm -it nginx:latest cat /usr/share/nginx/html/index.html &gt; ./nginx/html/index.html 创建yaml">
 <link href="/css/compiled/main.css" rel="stylesheet" />
     <link href="/css/variables.css" rel="stylesheet" />
     <link href="/css/custom.css" rel="stylesheet" />
@@ -160,7 +126,26 @@ docker compose up -d
   <path d="M12 3C7.0275 3 3 7.12937 3 12.2276C3 16.3109 5.57625 19.7597 9.15374 20.9824C9.60374 21.0631 9.77249 20.7863 9.77249 20.5441C9.77249 20.3249 9.76125 19.5982 9.76125 18.8254C7.5 19.2522 6.915 18.2602 6.735 17.7412C6.63375 17.4759 6.19499 16.6569 5.8125 16.4378C5.4975 16.2647 5.0475 15.838 5.80124 15.8264C6.51 15.8149 7.01625 16.4954 7.18499 16.7723C7.99499 18.1679 9.28875 17.7758 9.80625 17.5335C9.885 16.9337 10.1212 16.53 10.38 16.2993C8.3775 16.0687 6.285 15.2728 6.285 11.7432C6.285 10.7397 6.63375 9.9092 7.20749 9.26326C7.1175 9.03257 6.8025 8.08674 7.2975 6.81794C7.2975 6.81794 8.05125 6.57571 9.77249 7.76377C10.4925 7.55615 11.2575 7.45234 12.0225 7.45234C12.7875 7.45234 13.5525 7.55615 14.2725 7.76377C15.9937 6.56418 16.7475 6.81794 16.7475 6.81794C17.2424 8.08674 16.9275 9.03257 16.8375 9.26326C17.4113 9.9092 17.76 10.7281 17.76 11.7432C17.76 15.2843 15.6563 16.0687 13.6537 16.2993C13.98 16.5877 14.2613 17.1414 14.2613 18.0065C14.2613 19.2407 14.25 20.2326 14.25 20.5441C14.25 20.7863 14.4188 21.0746 14.8688 20.9824C16.6554 20.364 18.2079 19.1866 19.3078 17.6162C20.4077 16.0457 20.9995 14.1611 21 12.2276C21 7.12937 16.9725 3 12 3Z"></path>
 </svg>
 <span class="hx:sr-only">GitHub</span>
-          </a><button type="button" aria-label="Menu" class="hextra-hamburger-menu hx:cursor-pointer hx:-mr-2 hx:rounded-sm hx:p-2 hx:active:bg-gray-400/20 hx:md:hidden"><svg height=24 fill="none" viewBox="0 0 24 24" stroke="currentColor"><g><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8H20"></path></g><g><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16H20"></path></g></svg></button>
+          </a><div class="hx:relative hx:hidden hx:md:inline-block">
+  <button
+    title="docs"
+    data-state="closed"
+    class="hextra-nav-menu-toggle hx:cursor-pointer hx:text-sm hx:contrast-more:text-gray-700 hx:contrast-more:dark:text-gray-100 hx:relative hx:-ml-2 hx:whitespace-nowrap hx:p-2 hx:flex hx:items-center hx:gap-1 hx:text-gray-600 hx:hover:text-gray-800 hx:dark:text-gray-400 hx:dark:hover:text-gray-200"
+    type="button"
+    aria-label="docs"
+  ><span class="hx:text-center">docs</span><svg height=12 class="hx:transition-transform hx:duration-200 hx:ease-in-out" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button>
+  <ul
+    class="hextra-nav-menu-items hx:hidden hx:z-20 hx:max-h-64 hx:overflow-auto hx:rounded-md hx:ring-1 hx:ring-black/5 hx:bg-white hx:py-1 hx:text-sm hx:shadow-lg hx:dark:ring-white/20 hx:dark:bg-neutral-800"
+    style="min-width: 100px;"
+  >
+    <li class="hextra-nav-menu-item hx:flex hx:flex-col">
+      <a
+        href="/docs/docker/"
+        
+        class="hx:text-gray-600 hx:hover:text-gray-800 hx:dark:text-gray-400 hx:dark:hover:text-gray-200 hx:relative hx:cursor-pointer hx:whitespace-nowrap hx:py-1.5 hx:transition-colors hx:ltr:pl-3 hx:ltr:pr-9 hx:rtl:pr-3 hx:rtl:pl-9 hx:flex hx:items-center hx:gap-1"
+      >Docker</a>
+    </li></ul>
+</div><button type="button" aria-label="Menu" class="hextra-hamburger-menu hx:cursor-pointer hx:-mr-2 hx:rounded-sm hx:p-2 hx:active:bg-gray-400/20 hx:md:hidden"><svg height=24 fill="none" viewBox="0 0 24 24" stroke="currentColor"><g><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8H20"></path></g><g><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16H20"></path></g></svg></button>
   </nav>
 </div>
 
@@ -215,6 +200,30 @@ docker compose up -d
     </a>
               <div class="hx:ltr:pr-0 hx:overflow-hidden">
         <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/linux/%E6%96%87%E4%BB%B6%E6%89%93%E5%BC%80%E6%95%B0/"
+    
+  >文件打开数
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/linux/%E8%AF%AD%E8%A8%80/"
+    
+  >语言
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/linux/%E6%97%B6%E5%8C%BA/"
+    
+  >时区
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/docs/linux/%E9%95%9C%E5%83%8F%E4%BB%93%E5%BA%93%E5%A4%A7%E5%85%A8/"
@@ -497,21 +506,21 @@ docker compose up -d
   
     <ul class='hx:flex hx:flex-col hx:gap-1 hx:relative hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:dark:before:bg-neutral-800 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:pr-3 hx:rtl:before:right-0 hx:ltr:ml-3 hx:rtl:mr-3'><li>
               <a
-                href="#%e5%88%9d%e5%a7%8b%e5%8c%96%e6%93%8d%e4%bd%9c"
+                href="#docker%e9%83%a8%e7%bd%b2"
                 class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
-              >初始化操作</a>
+              >docker部署</a>
             </li>
           <li>
               <a
-                href="#%e9%83%a8%e7%bd%b2"
+                href="#yum%e9%83%a8%e7%bd%b2"
                 class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
-              >部署</a>
+              >yum部署</a>
             </li>
           <li>
               <a
-                href="#%e5%90%af%e5%8a%a8"
+                href="#%e9%85%8d%e7%bd%ae%e7%a4%ba%e4%be%8b"
                 class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
-              >启动</a>
+              >配置示例</a>
             </li>
           </ul>
   
@@ -629,7 +638,7 @@ docker compose up -d
       </div>
             </li></ul>
       </div>
-            </li><li class="hx:flex hx:flex-col open"><a
+            </li><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/docs/%E8%84%9A%E6%9C%AC%E5%B7%A5%E5%85%B7/"
@@ -664,6 +673,25 @@ docker compose up -d
               
             </li></ul>
       </div>
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/window/"
+    
+  >Window
+        <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></span>
+    </a>
+              <div class="hx:ltr:pr-0 hx:overflow-hidden">
+        <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/window/%E6%BF%80%E6%B4%BB/"
+    
+  >激活和优化
+    </a>
+              
+            </li></ul>
+      </div>
             </li></ul>
       </div></li>
           <li class=""><a
@@ -686,6 +714,30 @@ docker compose up -d
         <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></span>
     </a><div class="hx:ltr:pr-0 hx:overflow-hidden">
         <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/linux/%E6%96%87%E4%BB%B6%E6%89%93%E5%BC%80%E6%95%B0/"
+    
+  >文件打开数
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/linux/%E8%AF%AD%E8%A8%80/"
+    
+  >语言
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/linux/%E6%97%B6%E5%8C%BA/"
+    
+  >时区
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/docs/linux/%E9%95%9C%E5%83%8F%E4%BB%93%E5%BA%93%E5%A4%A7%E5%85%A8/"
@@ -1074,7 +1126,7 @@ docker compose up -d
       </div>
             </li></ul>
       </div></li>
-          <li class="open"><a
+          <li class=""><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/docs/%E8%84%9A%E6%9C%AC%E5%B7%A5%E5%85%B7/"
@@ -1104,6 +1156,24 @@ docker compose up -d
     href="/docs/%E8%84%9A%E6%9C%AC%E5%B7%A5%E5%85%B7/python/"
     
   >Python
+    </a>
+              
+            </li></ul>
+      </div></li>
+          <li class=""><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/window/"
+    
+  >Window
+        <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></span>
+    </a><div class="hx:ltr:pr-0 hx:overflow-hidden">
+        <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/window/%E6%BF%80%E6%B4%BB/"
+    
+  >激活和优化
     </a>
               
             </li></ul>
@@ -1165,15 +1235,55 @@ docker compose up -d
 <nav class="hextra-toc hx:order-last hx:hidden hx:w-64 hx:shrink-0 hx:xl:block hx:print:hidden hx:px-4" aria-label="table of contents">
     <div class="hextra-scrollbar hx:sticky hx:top-16 hx:overflow-y-auto hx:pr-4 hx:pt-6 hx:text-sm [hyphens:auto] hx:max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] hx:ltr:-mr-4 hx:rtl:-ml-4"><p class="hx:mb-4 hx:font-semibold hx:tracking-tight">此页上</p><ul>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#%e5%88%9d%e5%a7%8b%e5%8c%96%e6%93%8d%e4%bd%9c">初始化操作
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#docker%e9%83%a8%e7%bd%b2">docker部署
         </a>
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#%e9%83%a8%e7%bd%b2">部署
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#yum%e9%83%a8%e7%bd%b2">yum部署
         </a>
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#%e5%90%af%e5%8a%a8">启动
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#%e9%85%8d%e7%bd%ae%e7%a4%ba%e4%be%8b">配置示例
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#80%e4%b8%8e443%e5%90%8c%e6%97%b6%e4%bd%bf%e7%94%a8">80与443同时使用
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#80%e5%bc%ba%e5%88%b6%e8%b7%b3%e8%bd%ac443">80强制跳转443
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#%e7%9c%9f%e5%ae%9eip%e8%bd%ac%e5%8f%91%e9%85%8d%e7%bd%ae">真实ip转发配置
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#%e6%8c%87%e5%ae%9ahost%e8%bd%ac%e5%8f%91">指定host转发
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#url%e4%b8%8b%e5%88%92%e7%ba%bf%e6%94%af%e6%8c%81">url下划线支持
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#%e8%b7%a8%e5%9f%9f%e9%85%8d%e7%bd%ae">跨域配置
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#%e9%95%bf%e8%bf%9e%e6%8e%a5%e9%85%8d%e7%bd%ae">长连接配置
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#ailis%e5%92%8croot">ailis和root
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#%e6%96%9c%e6%9d%a0%e8%af%b4%e6%98%8e">斜杠说明
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#%e6%97%a5%e5%bf%97%e6%a0%bc%e5%bc%8f%e9%85%8d%e7%bd%ae">日志格式配置
         </a>
       </li></ul>
       <div class="hx:mt-8 hx:border-t hx:bg-white hx:pt-8 hx:shadow-[0_-12px_16px_white] hx:dark:bg-dark hx:dark:shadow-[0_-12px_16px_#111] hx:sticky hx:bottom-0 hx:flex hx:flex-col hx:items-start hx:gap-2 hx:pb-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-t hx:contrast-more:border-neutral-400 hx:contrast-more:shadow-none hx:contrast-more:dark:border-neutral-400">
@@ -1201,8 +1311,9 @@ docker compose up -d
 
         <div class="content">
           <h1>Nginx</h1>
-          <h2>初始化操作<span class="hx:absolute hx:-mt-20" id="初始化操作"></span>
-    <a href="#%e5%88%9d%e5%a7%8b%e5%8c%96%e6%93%8d%e4%bd%9c" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+          <h2>docker部署<span class="hx:absolute hx:-mt-20" id="docker部署"></span>
+    <a href="#docker%e9%83%a8%e7%bd%b2" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>初始化操作</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
 
 <div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 创建目录</span>
 </span></span><span class="line"><span class="cl">mkdir -p ./nginx/html ./nginx/conf.d
@@ -1220,8 +1331,8 @@ docker compose up -d
   </button>
 </div>
 </div>
-<h2>部署<span class="hx:absolute hx:-mt-20" id="部署"></span>
-    <a href="#%e9%83%a8%e7%bd%b2" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+<p>创建yaml</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
 
 <div class="hextra-code-filename not-prose" dir="auto">docker-compose.yaml</div><div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;3.8&#39;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">services</span><span class="p">:</span><span class="w">
@@ -1251,8 +1362,8 @@ docker compose up -d
   </button>
 </div>
 </div>
-<h2>启动<span class="hx:absolute hx:-mt-20" id="启动"></span>
-    <a href="#%e5%90%af%e5%8a%a8" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+<p>启动</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
 
 <div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker compose up -d</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
   <button
@@ -1265,6 +1376,290 @@ docker compose up -d
 </div>
 </div>
 <p>​</p>
+<h2>yum部署<span class="hx:absolute hx:-mt-20" id="yum部署"></span>
+    <a href="#yum%e9%83%a8%e7%bd%b2" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>执行</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">yum install -y nginx nginx-all-modules</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="复制代码"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<p>修改，添加最大文件打开数配置</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div class="hextra-code-filename not-prose" dir="auto">/usr/lib/systemd/system/nginx.service</div><div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nv">LimitNOFILE</span><span class="o">=</span><span class="m">65000</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-8">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="复制代码"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<p>启动</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">systemctl start nginx
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 开机自启</span>
+</span></span><span class="line"><span class="cl">systemctl <span class="nb">enable</span> nginx
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 重新加载systemctl配置</span>
+</span></span><span class="line"><span class="cl">systemctl daemon-reload</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="复制代码"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<h2>配置示例<span class="hx:absolute hx:-mt-20" id="配置示例"></span>
+    <a href="#%e9%85%8d%e7%bd%ae%e7%a4%ba%e4%be%8b" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>80与443同时使用<span class="hx:absolute hx:-mt-20" id="80与443同时使用"></span>
+    <a href="#80%e4%b8%8e443%e5%90%8c%e6%97%b6%e4%bd%bf%e7%94%a8" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">server <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    listen 80<span class="p">;</span>
+</span></span><span class="line"><span class="cl">    listen <span class="m">443</span> ssl<span class="p">;</span>
+</span></span><span class="line"><span class="cl">    server_name test.hxq.cn<span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># 证书配置</span>
+</span></span><span class="line"><span class="cl">    ssl_certificate ssl/test.hxq.cn.crt<span class="p">;</span>
+</span></span><span class="line"><span class="cl">    ssl_certificate_key ssl/test.hxq.cn.key<span class="p">;</span>
+</span></span><span class="line"><span class="cl">    ssl_session_cache shared:SSL:1m<span class="p">;</span>
+</span></span><span class="line"><span class="cl">    ssl_session_timeout 10m<span class="p">;</span>
+</span></span><span class="line"><span class="cl">    ssl_ciphers HIGH:!aNULL:!MD5<span class="p">;</span>
+</span></span><span class="line"><span class="cl">    ssl_prefer_server_ciphers on<span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># 压缩配置</span>
+</span></span><span class="line"><span class="cl">    gzip on<span class="p">;</span>
+</span></span><span class="line"><span class="cl">    gzip_disable <span class="s2">&#34;msie6&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    gzip_vary on<span class="p">;</span>
+</span></span><span class="line"><span class="cl">    gzip_proxied any<span class="p">;</span>
+</span></span><span class="line"><span class="cl">    gzip_comp_level 6<span class="p">;</span>
+</span></span><span class="line"><span class="cl">    gzip_buffers <span class="m">16</span> 8k<span class="p">;</span>
+</span></span><span class="line"><span class="cl">    gzip_http_version 1.1<span class="p">;</span>
+</span></span><span class="line"><span class="cl">    gzip_min_length 256<span class="p">;</span>
+</span></span><span class="line"><span class="cl">    gzip_types application/octet-stream application/atom+xml application/geo+json application/javascript application/x-javascript application/json application/ld+json application/manifest+json application/rdf+xml application/rss+xml application/xhtml+xml application/xml font/eot font/otf font/ttf image/svg+xml text/css text/javascript text/plain text/xml<span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    location / <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        proxy_set_header X-Real-IP <span class="nv">$remote_addr</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        proxy_set_header X-Forwarded-For <span class="nv">$proxy_add_x_forwarded_for</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        proxy_http_version 1.1<span class="p">;</span>
+</span></span><span class="line"><span class="cl">        proxy_pass http://192.168.1.2:8080<span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="复制代码"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<h3>80强制跳转443<span class="hx:absolute hx:-mt-20" id="80强制跳转443"></span>
+    <a href="#80%e5%bc%ba%e5%88%b6%e8%b7%b3%e8%bd%ac443" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 第一个server块：专门处理80端口请求，强制跳转至443 HTTPS</span>
+</span></span><span class="line"><span class="cl">server <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    listen 80<span class="p">;</span>
+</span></span><span class="line"><span class="cl">    server_name test.hxq.cn<span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># 核心跳转配置：301永久重定向（SEO友好，浏览器会缓存跳转规则）</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># $scheme 自动识别协议，$host 自动获取当前server_name，$request_uri 保留完整请求路径和参数</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="m">301</span> https://<span class="nv">$host$request_uri</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="复制代码"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<h3>真实ip转发配置<span class="hx:absolute hx:-mt-20" id="真实ip转发配置"></span>
+    <a href="#%e7%9c%9f%e5%ae%9eip%e8%bd%ac%e5%8f%91%e9%85%8d%e7%bd%ae" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">        <span class="c1"># 传递客户端直接IP（若Nginx前无反向代理/CDN，此值即为真实客户端IP）</span>
+</span></span><span class="line"><span class="cl">        proxy_set_header X-Real-IP <span class="nv">$remote_addr</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># 传递IP链路（包含客户端真实IP+各级代理IP）</span>
+</span></span><span class="line"><span class="cl">        proxy_set_header X-Forwarded-For <span class="nv">$proxy_add_x_forwarded_for</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># 传递客户端原始请求协议（http/https）</span>
+</span></span><span class="line"><span class="cl">        proxy_set_header X-Forwarded-Proto <span class="nv">$scheme</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># 传递客户端原始请求主机名</span>
+</span></span><span class="line"><span class="cl">        proxy_set_header X-Forwarded-Host <span class="nv">$host</span><span class="p">;</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="复制代码"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<h3>指定host转发<span class="hx:absolute hx:-mt-20" id="指定host转发"></span>
+    <a href="#%e6%8c%87%e5%ae%9ahost%e8%bd%ac%e5%8f%91" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">        <span class="c1"># 两种方案可选，根据后端服务需求选择其一</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># 方案1：传递原始客户端请求的Host（即test.hxq.cn，推荐，保持请求一致性）</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># 方案2：传递后端服务需要的自定义Host（例如后端要求Host为backend.hxq.cn，按需修改）</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># proxy_set_header Host backend.hxq.cn;</span>
+</span></span><span class="line"><span class="cl">        proxy_set_header Host <span class="nv">$host</span><span class="p">;</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="复制代码"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<h3>url下划线支持<span class="hx:absolute hx:-mt-20" id="url下划线支持"></span>
+    <a href="#url%e4%b8%8b%e5%88%92%e7%ba%bf%e6%94%af%e6%8c%81" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">    <span class="c1"># 开启请求头中的下划线支持（默认off，会忽略含下划线的请求头）</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># 补充：Nginx默认支持URL路径中的下划线，此配置主要解决&#34;请求头下划线&#34;和&#34;反向代理传递下划线参数&#34;问题</span>
+</span></span><span class="line"><span class="cl">    underscores_in_headers on<span class="p">;</span>  </span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="复制代码"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<h3>跨域配置<span class="hx:absolute hx:-mt-20" id="跨域配置"></span>
+    <a href="#%e8%b7%a8%e5%9f%9f%e9%85%8d%e7%bd%ae" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">    <span class="c1"># 允许请求来源（动态适配前端域名，比硬编码*更安全）</span>
+</span></span><span class="line"><span class="cl">    add_header Access-Control-Allow-Origin <span class="nv">$http_origin</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># 允许的HTTP请求方法</span>
+</span></span><span class="line"><span class="cl">    add_header Access-Control-Allow-Methods GET,POST,PUT,DELETE,OPTIONS,PATCH<span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># 允许的请求头</span>
+</span></span><span class="line"><span class="cl">    add_header Access-Control-Allow-Headers Origin,Content-Type,Accept,Authorization,X-Real-IP,X-Forwarded-For<span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># 允许携带Cookie/认证信息（配合前端withCredentials使用）</span>
+</span></span><span class="line"><span class="cl">    add_header Access-Control-Allow-Credentials true<span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># 预检请求（OPTIONS）缓存时间（1天），减少预检请求次数</span>
+</span></span><span class="line"><span class="cl">    add_header Access-Control-Max-Age 86400<span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># 处理预检请求（OPTIONS）：直接返回204，无需转发到后端服务</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="o">(</span><span class="nv">$request_method</span> <span class="o">=</span> OPTIONS<span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> 204<span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="复制代码"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<h3>长连接配置<span class="hx:absolute hx:-mt-20" id="长连接配置"></span>
+    <a href="#%e9%95%bf%e8%bf%9e%e6%8e%a5%e9%85%8d%e7%bd%ae" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 基础：启用HTTP/1.1协议（WebSocket代理的前提）</span>
+</span></span><span class="line"><span class="cl">proxy_http_version 1.1<span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 核心1：传递客户端的Upgrade请求头给后端服务</span>
+</span></span><span class="line"><span class="cl">proxy_set_header Upgrade <span class="nv">$http_upgrade</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 核心2：强制设置Connection请求头为&#34;upgrade&#34;，触发协议升级</span>
+</span></span><span class="line"><span class="cl">proxy_set_header Connection <span class="s2">&#34;upgrade&#34;</span><span class="p">;</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="复制代码"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<h3>ailis和root<span class="hx:absolute hx:-mt-20" id="ailis和root"></span>
+    <a href="#ailis%e5%92%8croot" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
+  <thead>
+      <tr>
+          <th style="text-align: left">对比项</th>
+          <th style="text-align: left">root 指令</th>
+          <th style="text-align: left">alias 指令</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">路径拼接规则</td>
+          <td style="text-align: left">最终路径 = root 路径 + 完整请求 URI</td>
+          <td style="text-align: left">最终路径 = alias 路径 + （请求 URI - location 匹配部分）</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">生效层级</td>
+          <td style="text-align: left">http、server、location 均可</td>
+          <td style="text-align: left">仅 location 块中有效</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">对 location 匹配要求</td>
+          <td style="text-align: left">无特殊要求，支持 =、<del>、^</del> 等所有匹配模式	匹配非正则</td>
+          <td style="text-align: left">location（=、^~、普通前缀）时最优，正则 location 中不推荐使用（可能失效）</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">目录末尾</td>
+          <td style="text-align: left">无强制要求，有无 / 对拼接结果影响较小</td>
+          <td style="text-align: left">建议添加 /，否则多级路径拼接可能出现错误</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">适用场景</td>
+          <td style="text-align: left">匹配整个网站根目录、常规静态文件目录（URI 与目录结构一致）</td>
+          <td style="text-align: left">匹配局部路径、需要替换 URI 前缀的场景（URI 与目录结构不一致）</td>
+      </tr>
+  </tbody>
+</table>
+<h3>斜杠说明<span class="hx:absolute hx:-mt-20" id="斜杠说明"></span>
+    <a href="#%e6%96%9c%e6%9d%a0%e8%af%b4%e6%98%8e" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><strong>proxy_pass</strong> 末尾是否加 /，核心影响Nginx 向后端转发请求时的 URI 拼接规则，分为两种核心场景：</p>
+<ol>
+<li><strong>proxy_pass</strong> 末尾不加 /：Nginx 会保留客户端请求的「完整 URI」（包含 location 匹配的前缀部分），拼接在后端地址后。</li>
+<li><strong>proxy_pass</strong> 末尾加 /：Nginx 会剔除客户端请求 URI 中与 location 匹配的前缀部分，仅将剩余 URI 拼接在后端地址后。</li>
+</ol>
+<h3>日志格式配置<span class="hx:absolute hx:-mt-20" id="日志格式配置"></span>
+    <a href="#%e6%97%a5%e5%bf%97%e6%a0%bc%e5%bc%8f%e9%85%8d%e7%bd%ae" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 定义名为 main 的Nginx访问日志格式</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 格式规范：key:&#34;value&#34; 形式包裹字段，避免特殊字符破坏日志结构；字段按「请求信息→状态信息→业务信息→客户端信息」归类</span>
+</span></span><span class="line"><span class="cl">log_format  main  <span class="s1">&#39;$remote_addr - $remote_user [$time_local] &#39;</span>  <span class="c1"># 基础连接信息</span>
+</span></span><span class="line"><span class="cl">                  <span class="c1"># $remote_addr: 客户端IP地址（Nginx直接对接的客户端，无前端代理时即为真实IP）</span>
+</span></span><span class="line"><span class="cl">                  <span class="c1"># $remote_user: HTTP基本认证用户名（未配置auth_basic时显示为&#34;-&#34;）</span>
+</span></span><span class="line"><span class="cl">                  <span class="c1"># $time_local: 服务器本地时间（格式：dd/MMM/yyyy:HH:mm:ss +时区）</span>
+</span></span><span class="line"><span class="cl">                  <span class="s1">&#39;requesthost:&#34;$http_host&#34;; &#39;</span>  <span class="c1"># 客户端请求的主机名（域名/IP:端口，如 test.hxq.cn:8080）</span>
+</span></span><span class="line"><span class="cl">                  <span class="s1">&#39;&#34;$request&#34; &#39;</span>  <span class="c1"># 完整请求行（格式：请求方法 请求URI HTTP协议版本，如 GET /test HTTP/1.1）</span>
+</span></span><span class="line"><span class="cl">                  <span class="s1">&#39;requesttime:&#34;$request_time&#34;; &#39;</span>  <span class="c1"># 整个请求的处理耗时（单位：秒，精确到毫秒，如 0.023）</span>
+</span></span><span class="line"><span class="cl">                  <span class="s1">&#39;$status $body_bytes_sent &#39;</span>  <span class="c1"># 响应状态信息</span>
+</span></span><span class="line"><span class="cl">                  <span class="c1"># $status: Nginx返回给客户端的HTTP状态码（如 200成功、502网关错误）</span>
+</span></span><span class="line"><span class="cl">                  <span class="c1"># $body_bytes_sent: Nginx发送给客户端的响应体字节数（不含响应头）</span>
+</span></span><span class="line"><span class="cl">                  <span class="s1">&#39;&#34;$http_referer&#34; &#39;</span>  <span class="c1"># 请求来源页面（Referer请求头，直接访问时显示为&#34;-&#34;）</span>
+</span></span><span class="line"><span class="cl">                  <span class="s1">&#39;request_body:&#34;$request_body&#34; &#39;</span>  <span class="c1"># 客户端请求体内容（仅POST/PUT等方法有值，大体积请求体可能为空）</span>
+</span></span><span class="line"><span class="cl">                  <span class="s1">&#39;content_type:&#34;$http_content_type&#34; &#39;</span>  <span class="c1"># 请求体的媒体类型（Content-Type请求头，无请求体时显示为&#34;-&#34;）</span>
+</span></span><span class="line"><span class="cl">                  <span class="s1">&#39;request_length:&#34;$request_length&#34; &#39;</span>  <span class="c1"># 客户端请求的总字节数（包含请求头+请求体）</span>
+</span></span><span class="line"><span class="cl">                  <span class="s1">&#39;upstream_response_time:&#34;$upstream_response_time&#34; &#39;</span>  <span class="c1"># 反向代理专用：Nginx等待后端服务响应的耗时（单位：秒，多个后端用逗号分隔）</span>
+</span></span><span class="line"><span class="cl">                  <span class="s1">&#39;upstream_addr:&#34;$upstream_addr&#34; &#39;</span>  <span class="c1"># 反向代理专用：实际转发的后端服务地址（IP:端口，多个后端用逗号分隔）</span>
+</span></span><span class="line"><span class="cl">                  <span class="s1">&#39;&#34;$http_user_agent&#34; &#39;</span>  <span class="c1"># 客户端用户代理标识（浏览器/爬虫类型，如 Chrome/143.0.0.0）</span>
+</span></span><span class="line"><span class="cl">                  <span class="s1">&#39;x_forwarded_for:&#34;$http_x_forwarded_for&#34; &#39;</span>  <span class="c1"># 客户端真实IP链路（X-Forwarded-For请求头，无前端代理时显示为&#34;-&#34;）</span>
+</span></span><span class="line"><span class="cl">                  <span class="s1">&#39;access_control_request_headers:&#34;$http_access_control_request_headers&#34;&#39;</span><span class="p">;</span>  <span class="c1"># 跨域预检专用：前端声明的自定义请求头（非OPTIONS请求时显示为&#34;-&#34;）</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="复制代码"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
 
         </div>
         <div class="hx:mt-16"></div>
