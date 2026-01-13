@@ -9,14 +9,135 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
 <title>Configmap基础 – 自在网站</title>
-  <meta name="description" content="" /><link rel="canonical" href="http://localhost:8081/docs/k8s/configmap%E5%9F%BA%E7%A1%80/" itemprop="url" />
+  <meta name="description" content="作为环境变量 apiVersion: v1 kind: Pod metadata: name: pod-env-config-demo spec: containers: - name: demo-container image: busybox command: [&#34;/bin/sh&#34;, &#34;-c&#34;, &#34;env | grep APP_ &amp;&amp; sleep 3600&#34;] # 打印环境变量并休眠 env: # 单个环境变量：直接引用 ConfigMap 的某个键值对 - name: APP_ENV # 容器内的环境变量名 valueFrom: configMapKeyRef: name: app-yaml-config # 引用的 ConfigMap 名称 key: app.env # 引用的 ConfigMap 中的键 - name: APP_VERSION # 另一个环境变量 valueFrom: configMapKeyRef: name: app-yaml-config key: app.version # （可选）批量注入环境变量：将 ConfigMap 所有键值对作为环境变量注入 envFrom: - configMapRef: name: app-simple-config # 引用的 ConfigMap 名称（方式 1 创建的） restartPolicy: Never 作为命令行参数（通过环境变量中转） apiVersion: v1 kind: Pod metadata: name: pod-command-config-demo spec: containers: - name: demo-container image: busybox # 命令行参数引用环境变量（环境变量来自 ConfigMap） command: [&#34;/bin/sh&#34;, &#34;-c&#34;, &#34;echo &#39;当前环境：$(APP_ENV)，版本：$(APP_VERSION)&#39; &amp;&amp; sleep 3600&#34;] env: - name: APP_ENV valueFrom: configMapKeyRef: name: app-yaml-config key: app.env - name: APP_VERSION valueFrom: configMapKeyRef: name: app-yaml-config key: app.version restartPolicy: Never 挂载为目录(支持热更新) apiVersion: v1 kind: Pod metadata: name: pod-volume-dir-config-demo spec: containers: - name: demo-container image: busybox command: [&#34;/bin/sh&#34;, &#34;-c&#34;, &#34;ls /app/config &amp;&amp; cat /app/config/app.conf &amp;&amp; sleep 3600&#34;] volumeMounts: - name: config-volume # 与 volumes 中定义的卷名对应 mountPath: /app/config # 容器内的挂载目录（该目录下原有文件会被覆盖） volumes: - name: config-volume # 定义卷名称 configMap: name: app-yaml-config # 引用的 ConfigMap 名称 restartPolicy: Never 挂载为文件 apiVersion: v1 kind: Pod metadata: name: pod-volume-file-config-demo spec: containers: - name: demo-container image: busybox command: [&#34;/bin/sh&#34;, &#34;-c&#34;, &#34;cat /app/db.properties &amp;&amp; sleep 3600&#34;] volumeMounts: - name: config-volume # 与 volumes 中定义的卷名对应 mountPath: /app/db.properties # 容器内的单个文件路径 subPath: db.properties # 引用 ConfigMap 中的某个键（对应生成的文件名） volumes: - name: config-volume configMap: name: app-yaml-config # 引用的 ConfigMap 名称 items: # 可选：筛选需要挂载的键（不写则挂载所有） - key: db.properties path: db.properties # 卷内的文件路径（与 subPath 对应） restartPolicy: Never " /><link rel="canonical" href="http://localhost:8081/docs/k8s/configmap%E5%9F%BA%E7%A1%80/" itemprop="url" />
 
 <meta property="og:title" content="Configmap基础">
 <meta
   property="og:description"
   content="
     
-      
+      作为环境变量
+    
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-env-config-demo
+spec:
+  containers:
+  - name: demo-container
+    image: busybox
+    command: [&#34;/bin/sh&#34;, &#34;-c&#34;, &#34;env | grep APP_ &amp;&amp; sleep 3600&#34;]  # 打印环境变量并休眠
+    env:
+      # 单个环境变量：直接引用 ConfigMap 的某个键值对
+      - name: APP_ENV  # 容器内的环境变量名
+        valueFrom:
+          configMapKeyRef:
+            name: app-yaml-config  # 引用的 ConfigMap 名称
+            key: app.env  # 引用的 ConfigMap 中的键
+      - name: APP_VERSION  # 另一个环境变量
+        valueFrom:
+          configMapKeyRef:
+            name: app-yaml-config
+            key: app.version
+    # （可选）批量注入环境变量：将 ConfigMap 所有键值对作为环境变量注入
+    envFrom:
+    - configMapRef:
+        name: app-simple-config  # 引用的 ConfigMap 名称（方式 1 创建的）
+  restartPolicy: Never
+  
+    
+
+  
+
+
+作为命令行参数（通过环境变量中转）
+    
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-command-config-demo
+spec:
+  containers:
+  - name: demo-container
+    image: busybox
+    # 命令行参数引用环境变量（环境变量来自 ConfigMap）
+    command: [&#34;/bin/sh&#34;, &#34;-c&#34;, &#34;echo &#39;当前环境：$(APP_ENV)，版本：$(APP_VERSION)&#39; &amp;&amp; sleep 3600&#34;]
+    env:
+      - name: APP_ENV
+        valueFrom:
+          configMapKeyRef:
+            name: app-yaml-config
+            key: app.env
+      - name: APP_VERSION
+        valueFrom:
+          configMapKeyRef:
+            name: app-yaml-config
+            key: app.version
+  restartPolicy: Never
+  
+    
+
+  
+
+
+挂载为目录(支持热更新)
+    
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-volume-dir-config-demo
+spec:
+  containers:
+  - name: demo-container
+    image: busybox
+    command: [&#34;/bin/sh&#34;, &#34;-c&#34;, &#34;ls /app/config &amp;&amp; cat /app/config/app.conf &amp;&amp; sleep 3600&#34;]
+    volumeMounts:
+    - name: config-volume  # 与 volumes 中定义的卷名对应
+      mountPath: /app/config  # 容器内的挂载目录（该目录下原有文件会被覆盖）
+  volumes:
+  - name: config-volume  # 定义卷名称
+    configMap:
+      name: app-yaml-config  # 引用的 ConfigMap 名称
+  restartPolicy: Never
+  
+    
+
+  
+
+
+挂载为文件
+    
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-volume-file-config-demo
+spec:
+  containers:
+  - name: demo-container
+    image: busybox
+    command: [&#34;/bin/sh&#34;, &#34;-c&#34;, &#34;cat /app/db.properties &amp;&amp; sleep 3600&#34;]
+    volumeMounts:
+    - name: config-volume  # 与 volumes 中定义的卷名对应
+      mountPath: /app/db.properties  # 容器内的单个文件路径
+      subPath: db.properties  # 引用 ConfigMap 中的某个键（对应生成的文件名）
+  volumes:
+  - name: config-volume
+    configMap:
+      name: app-yaml-config  # 引用的 ConfigMap 名称
+      items:  # 可选：筛选需要挂载的键（不写则挂载所有）
+      - key: db.properties
+        path: db.properties  # 卷内的文件路径（与 subPath 对应）
+  restartPolicy: Never
+  
+    
+
+  
+
+
     
   ">
 <meta
@@ -38,10 +159,13 @@
 
 
   <meta itemprop="name" content="Configmap基础">
+  <meta itemprop="description" content="作为环境变量 apiVersion: v1 kind: Pod metadata: name: pod-env-config-demo spec: containers: - name: demo-container image: busybox command: [&#34;/bin/sh&#34;, &#34;-c&#34;, &#34;env | grep APP_ &amp;&amp; sleep 3600&#34;] # 打印环境变量并休眠 env: # 单个环境变量：直接引用 ConfigMap 的某个键值对 - name: APP_ENV # 容器内的环境变量名 valueFrom: configMapKeyRef: name: app-yaml-config # 引用的 ConfigMap 名称 key: app.env # 引用的 ConfigMap 中的键 - name: APP_VERSION # 另一个环境变量 valueFrom: configMapKeyRef: name: app-yaml-config key: app.version # （可选）批量注入环境变量：将 ConfigMap 所有键值对作为环境变量注入 envFrom: - configMapRef: name: app-simple-config # 引用的 ConfigMap 名称（方式 1 创建的） restartPolicy: Never 作为命令行参数（通过环境变量中转） apiVersion: v1 kind: Pod metadata: name: pod-command-config-demo spec: containers: - name: demo-container image: busybox # 命令行参数引用环境变量（环境变量来自 ConfigMap） command: [&#34;/bin/sh&#34;, &#34;-c&#34;, &#34;echo &#39;当前环境：$(APP_ENV)，版本：$(APP_VERSION)&#39; &amp;&amp; sleep 3600&#34;] env: - name: APP_ENV valueFrom: configMapKeyRef: name: app-yaml-config key: app.env - name: APP_VERSION valueFrom: configMapKeyRef: name: app-yaml-config key: app.version restartPolicy: Never 挂载为目录(支持热更新) apiVersion: v1 kind: Pod metadata: name: pod-volume-dir-config-demo spec: containers: - name: demo-container image: busybox command: [&#34;/bin/sh&#34;, &#34;-c&#34;, &#34;ls /app/config &amp;&amp; cat /app/config/app.conf &amp;&amp; sleep 3600&#34;] volumeMounts: - name: config-volume # 与 volumes 中定义的卷名对应 mountPath: /app/config # 容器内的挂载目录（该目录下原有文件会被覆盖） volumes: - name: config-volume # 定义卷名称 configMap: name: app-yaml-config # 引用的 ConfigMap 名称 restartPolicy: Never 挂载为文件 apiVersion: v1 kind: Pod metadata: name: pod-volume-file-config-demo spec: containers: - name: demo-container image: busybox command: [&#34;/bin/sh&#34;, &#34;-c&#34;, &#34;cat /app/db.properties &amp;&amp; sleep 3600&#34;] volumeMounts: - name: config-volume # 与 volumes 中定义的卷名对应 mountPath: /app/db.properties # 容器内的单个文件路径 subPath: db.properties # 引用 ConfigMap 中的某个键（对应生成的文件名） volumes: - name: config-volume configMap: name: app-yaml-config # 引用的 ConfigMap 名称 items: # 可选：筛选需要挂载的键（不写则挂载所有） - key: db.properties path: db.properties # 卷内的文件路径（与 subPath 对应） restartPolicy: Never">
   <meta itemprop="datePublished" content="2025-12-26T16:42:03+08:00">
   <meta itemprop="dateModified" content="2025-12-26T16:42:03+08:00">
+  <meta itemprop="wordCount" content="245">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Configmap基础">
+  <meta name="twitter:description" content="作为环境变量 apiVersion: v1 kind: Pod metadata: name: pod-env-config-demo spec: containers: - name: demo-container image: busybox command: [&#34;/bin/sh&#34;, &#34;-c&#34;, &#34;env | grep APP_ &amp;&amp; sleep 3600&#34;] # 打印环境变量并休眠 env: # 单个环境变量：直接引用 ConfigMap 的某个键值对 - name: APP_ENV # 容器内的环境变量名 valueFrom: configMapKeyRef: name: app-yaml-config # 引用的 ConfigMap 名称 key: app.env # 引用的 ConfigMap 中的键 - name: APP_VERSION # 另一个环境变量 valueFrom: configMapKeyRef: name: app-yaml-config key: app.version # （可选）批量注入环境变量：将 ConfigMap 所有键值对作为环境变量注入 envFrom: - configMapRef: name: app-simple-config # 引用的 ConfigMap 名称（方式 1 创建的） restartPolicy: Never 作为命令行参数（通过环境变量中转） apiVersion: v1 kind: Pod metadata: name: pod-command-config-demo spec: containers: - name: demo-container image: busybox # 命令行参数引用环境变量（环境变量来自 ConfigMap） command: [&#34;/bin/sh&#34;, &#34;-c&#34;, &#34;echo &#39;当前环境：$(APP_ENV)，版本：$(APP_VERSION)&#39; &amp;&amp; sleep 3600&#34;] env: - name: APP_ENV valueFrom: configMapKeyRef: name: app-yaml-config key: app.env - name: APP_VERSION valueFrom: configMapKeyRef: name: app-yaml-config key: app.version restartPolicy: Never 挂载为目录(支持热更新) apiVersion: v1 kind: Pod metadata: name: pod-volume-dir-config-demo spec: containers: - name: demo-container image: busybox command: [&#34;/bin/sh&#34;, &#34;-c&#34;, &#34;ls /app/config &amp;&amp; cat /app/config/app.conf &amp;&amp; sleep 3600&#34;] volumeMounts: - name: config-volume # 与 volumes 中定义的卷名对应 mountPath: /app/config # 容器内的挂载目录（该目录下原有文件会被覆盖） volumes: - name: config-volume # 定义卷名称 configMap: name: app-yaml-config # 引用的 ConfigMap 名称 restartPolicy: Never 挂载为文件 apiVersion: v1 kind: Pod metadata: name: pod-volume-file-config-demo spec: containers: - name: demo-container image: busybox command: [&#34;/bin/sh&#34;, &#34;-c&#34;, &#34;cat /app/db.properties &amp;&amp; sleep 3600&#34;] volumeMounts: - name: config-volume # 与 volumes 中定义的卷名对应 mountPath: /app/db.properties # 容器内的单个文件路径 subPath: db.properties # 引用 ConfigMap 中的某个键（对应生成的文件名） volumes: - name: config-volume configMap: name: app-yaml-config # 引用的 ConfigMap 名称 items: # 可选：筛选需要挂载的键（不写则挂载所有） - key: db.properties path: db.properties # 卷内的文件路径（与 subPath 对应） restartPolicy: Never">
 <link href="/css/compiled/main.css" rel="stylesheet" />
     <link href="/css/variables.css" rel="stylesheet" />
     <link href="/css/custom.css" rel="stylesheet" />
@@ -326,6 +450,32 @@
   >Configmap基础
     </a>
   
+    <ul class='hx:flex hx:flex-col hx:gap-1 hx:relative hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:dark:before:bg-neutral-800 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:pr-3 hx:rtl:before:right-0 hx:ltr:ml-3 hx:rtl:mr-3'><li>
+              <a
+                href="#%e4%bd%9c%e4%b8%ba%e7%8e%af%e5%a2%83%e5%8f%98%e9%87%8f"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >作为环境变量</a>
+            </li>
+          <li>
+              <a
+                href="#%e4%bd%9c%e4%b8%ba%e5%91%bd%e4%bb%a4%e8%a1%8c%e5%8f%82%e6%95%b0%e9%80%9a%e8%bf%87%e7%8e%af%e5%a2%83%e5%8f%98%e9%87%8f%e4%b8%ad%e8%bd%ac"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >作为命令行参数（通过环境变量中转）</a>
+            </li>
+          <li>
+              <a
+                href="#%e6%8c%82%e8%bd%bd%e4%b8%ba%e7%9b%ae%e5%bd%95%e6%94%af%e6%8c%81%e7%83%ad%e6%9b%b4%e6%96%b0"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >挂载为目录(支持热更新)</a>
+            </li>
+          <li>
+              <a
+                href="#%e6%8c%82%e8%bd%bd%e4%b8%ba%e6%96%87%e4%bb%b6"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >挂载为文件</a>
+            </li>
+          </ul>
+  
               
             </li><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
@@ -333,6 +483,14 @@
     href="/docs/k8s/%E9%97%AE%E9%A2%98%E4%BC%98%E5%8C%96/"
     
   >问题优化
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/k8s/kubectl%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"
+    
+  >Kubectl常用命令
     </a>
               
             </li></ul>
@@ -826,6 +984,14 @@
   >问题优化
     </a>
               
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/k8s/kubectl%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"
+    
+  >Kubectl常用命令
+    </a>
+              
             </li></ul>
       </div></li>
           <li class=""><a
@@ -1190,8 +1356,24 @@
 </div></div></div></aside>
     
 <nav class="hextra-toc hx:order-last hx:hidden hx:w-64 hx:shrink-0 hx:xl:block hx:print:hidden hx:px-4" aria-label="table of contents">
-    <div class="hextra-scrollbar hx:sticky hx:top-16 hx:overflow-y-auto hx:pr-4 hx:pt-6 hx:text-sm [hyphens:auto] hx:max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] hx:ltr:-mr-4 hx:rtl:-ml-4">
-      <div class=" hx:sticky hx:bottom-0 hx:flex hx:flex-col hx:items-start hx:gap-2 hx:pb-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-t hx:contrast-more:border-neutral-400 hx:contrast-more:shadow-none hx:contrast-more:dark:border-neutral-400">
+    <div class="hextra-scrollbar hx:sticky hx:top-16 hx:overflow-y-auto hx:pr-4 hx:pt-6 hx:text-sm [hyphens:auto] hx:max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] hx:ltr:-mr-4 hx:rtl:-ml-4"><p class="hx:mb-4 hx:font-semibold hx:tracking-tight">此页上</p><ul>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#%e4%bd%9c%e4%b8%ba%e7%8e%af%e5%a2%83%e5%8f%98%e9%87%8f">作为环境变量
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#%e4%bd%9c%e4%b8%ba%e5%91%bd%e4%bb%a4%e8%a1%8c%e5%8f%82%e6%95%b0%e9%80%9a%e8%bf%87%e7%8e%af%e5%a2%83%e5%8f%98%e9%87%8f%e4%b8%ad%e8%bd%ac">作为命令行参数（通过环境变量中转）
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#%e6%8c%82%e8%bd%bd%e4%b8%ba%e7%9b%ae%e5%bd%95%e6%94%af%e6%8c%81%e7%83%ad%e6%9b%b4%e6%96%b0">挂载为目录(支持热更新)
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#%e6%8c%82%e8%bd%bd%e4%b8%ba%e6%96%87%e4%bb%b6">挂载为文件
+        </a>
+      </li></ul>
+      <div class="hx:mt-8 hx:border-t hx:bg-white hx:pt-8 hx:shadow-[0_-12px_16px_white] hx:dark:bg-dark hx:dark:shadow-[0_-12px_16px_#111] hx:sticky hx:bottom-0 hx:flex hx:flex-col hx:items-start hx:gap-2 hx:pb-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-t hx:contrast-more:border-neutral-400 hx:contrast-more:shadow-none hx:contrast-more:dark:border-neutral-400">
         <button aria-hidden="true" id="backToTop" onClick="scrollUp();" class="hx:cursor-pointer hx:transition-all hx:duration-75 hx:opacity-0 hx:text-xs hx:font-medium hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-100 hx:contrast-more:text-gray-800 hx:contrast-more:dark:text-gray-50">
           <span>返回顶部</span>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="hx:inline hx:ltr:ml-1 hx:rtl:mr-1 hx:h-3.5 hx:w-3.5 hx:rounded-full hx:border hx:border-gray-500 hx:hover:border-gray-900 hx:dark:border-gray-400 hx:dark:hover:border-gray-100 hx:contrast-more:border-gray-800 hx:contrast-more:dark:border-gray-50">
@@ -1216,7 +1398,141 @@
 
         <div class="content">
           <h1>Configmap基础</h1>
-          
+          <h2>作为环境变量<span class="hx:absolute hx:-mt-20" id="作为环境变量"></span>
+    <a href="#%e4%bd%9c%e4%b8%ba%e7%8e%af%e5%a2%83%e5%8f%98%e9%87%8f" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l">v1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l">Pod</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">metadata</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">pod-env-config-demo</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">spec</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">containers</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">demo-container</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">busybox</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&#34;/bin/sh&#34;</span><span class="p">,</span><span class="w"> </span><span class="s2">&#34;-c&#34;</span><span class="p">,</span><span class="w"> </span><span class="s2">&#34;env | grep APP_ &amp;&amp; sleep 3600&#34;</span><span class="p">]</span><span class="w">  </span><span class="c"># 打印环境变量并休眠</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">env</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="c"># 单个环境变量：直接引用 ConfigMap 的某个键值对</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">APP_ENV </span><span class="w"> </span><span class="c"># 容器内的环境变量名</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">valueFrom</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">configMapKeyRef</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">app-yaml-config </span><span class="w"> </span><span class="c"># 引用的 ConfigMap 名称</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l">app.env </span><span class="w"> </span><span class="c"># 引用的 ConfigMap 中的键</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">APP_VERSION </span><span class="w"> </span><span class="c"># 另一个环境变量</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">valueFrom</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">configMapKeyRef</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">app-yaml-config</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l">app.version</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># （可选）批量注入环境变量：将 ConfigMap 所有键值对作为环境变量注入</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">envFrom</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="nt">configMapRef</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">app-simple-config </span><span class="w"> </span><span class="c"># 引用的 ConfigMap 名称（方式 1 创建的）</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">restartPolicy</span><span class="p">:</span><span class="w"> </span><span class="l">Never</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="复制代码"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<h2>作为命令行参数（通过环境变量中转）<span class="hx:absolute hx:-mt-20" id="作为命令行参数通过环境变量中转"></span>
+    <a href="#%e4%bd%9c%e4%b8%ba%e5%91%bd%e4%bb%a4%e8%a1%8c%e5%8f%82%e6%95%b0%e9%80%9a%e8%bf%87%e7%8e%af%e5%a2%83%e5%8f%98%e9%87%8f%e4%b8%ad%e8%bd%ac" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l">v1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l">Pod</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">metadata</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">pod-command-config-demo</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">spec</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">containers</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">demo-container</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">busybox</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># 命令行参数引用环境变量（环境变量来自 ConfigMap）</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&#34;/bin/sh&#34;</span><span class="p">,</span><span class="w"> </span><span class="s2">&#34;-c&#34;</span><span class="p">,</span><span class="w"> </span><span class="s2">&#34;echo &#39;当前环境：$(APP_ENV)，版本：$(APP_VERSION)&#39; &amp;&amp; sleep 3600&#34;</span><span class="p">]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">env</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">APP_ENV</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">valueFrom</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">configMapKeyRef</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">app-yaml-config</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l">app.env</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">APP_VERSION</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">valueFrom</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">configMapKeyRef</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">app-yaml-config</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l">app.version</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">restartPolicy</span><span class="p">:</span><span class="w"> </span><span class="l">Never</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="复制代码"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<h2>挂载为目录(支持热更新)<span class="hx:absolute hx:-mt-20" id="挂载为目录支持热更新"></span>
+    <a href="#%e6%8c%82%e8%bd%bd%e4%b8%ba%e7%9b%ae%e5%bd%95%e6%94%af%e6%8c%81%e7%83%ad%e6%9b%b4%e6%96%b0" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l">v1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l">Pod</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">metadata</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">pod-volume-dir-config-demo</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">spec</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">containers</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">demo-container</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">busybox</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&#34;/bin/sh&#34;</span><span class="p">,</span><span class="w"> </span><span class="s2">&#34;-c&#34;</span><span class="p">,</span><span class="w"> </span><span class="s2">&#34;ls /app/config &amp;&amp; cat /app/config/app.conf &amp;&amp; sleep 3600&#34;</span><span class="p">]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">volumeMounts</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">config-volume </span><span class="w"> </span><span class="c"># 与 volumes 中定义的卷名对应</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">mountPath</span><span class="p">:</span><span class="w"> </span><span class="l">/app/config </span><span class="w"> </span><span class="c"># 容器内的挂载目录（该目录下原有文件会被覆盖）</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">config-volume </span><span class="w"> </span><span class="c"># 定义卷名称</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">configMap</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">app-yaml-config </span><span class="w"> </span><span class="c"># 引用的 ConfigMap 名称</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">restartPolicy</span><span class="p">:</span><span class="w"> </span><span class="l">Never</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="复制代码"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<h2>挂载为文件<span class="hx:absolute hx:-mt-20" id="挂载为文件"></span>
+    <a href="#%e6%8c%82%e8%bd%bd%e4%b8%ba%e6%96%87%e4%bb%b6" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l">v1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l">Pod</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">metadata</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">pod-volume-file-config-demo</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">spec</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">containers</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">demo-container</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">busybox</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&#34;/bin/sh&#34;</span><span class="p">,</span><span class="w"> </span><span class="s2">&#34;-c&#34;</span><span class="p">,</span><span class="w"> </span><span class="s2">&#34;cat /app/db.properties &amp;&amp; sleep 3600&#34;</span><span class="p">]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">volumeMounts</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">config-volume </span><span class="w"> </span><span class="c"># 与 volumes 中定义的卷名对应</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">mountPath</span><span class="p">:</span><span class="w"> </span><span class="l">/app/db.properties </span><span class="w"> </span><span class="c"># 容器内的单个文件路径</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">subPath</span><span class="p">:</span><span class="w"> </span><span class="l">db.properties </span><span class="w"> </span><span class="c"># 引用 ConfigMap 中的某个键（对应生成的文件名）</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">config-volume</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">configMap</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">app-yaml-config </span><span class="w"> </span><span class="c"># 引用的 ConfigMap 名称</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">items</span><span class="p">:</span><span class="w">  </span><span class="c"># 可选：筛选需要挂载的键（不写则挂载所有）</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l">db.properties</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l">db.properties </span><span class="w"> </span><span class="c"># 卷内的文件路径（与 subPath 对应）</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">restartPolicy</span><span class="p">:</span><span class="w"> </span><span class="l">Never</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="复制代码"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+
         </div>
         <div class="hx:mt-16"></div>
         <div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a

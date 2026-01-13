@@ -8,15 +8,120 @@
 <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
-<title>Docker网络 – 自在网站</title>
-  <meta name="description" content="待编写" /><link rel="canonical" href="http://localhost:8081/docs/docker/docker%E7%BD%91%E7%BB%9C/" itemprop="url" />
+<title>Kubectl常用命令 – 自在网站</title>
+  <meta name="description" content="查看pod日志 # 查看当前pod日志 kubectl logs &lt;pod-name&gt; -n &lt;namespace&gt; # 查看异常重启前日志 kubectl logs -p &lt;pod-name&gt; -n &lt;namespace&gt; # 查看最后10条日志 kubectl logs --tail=10 -p &lt;pod-name&gt; -n &lt;namespace&gt; 查看pod详细信息 kubectl describe pod &lt;pod-name&gt; -n &lt;namespace&gt; yaml格式查看pod文件 kubectl get pod &lt;pod-name&gt; -o yaml 登录pod # 进入pod的默认容器 kubectl exec -it &lt;pod-name&gt; -- /bin/bash # 进入pod的指定容器 kubectl exec -it &lt;pod-name&gt; -c &lt;container-name&gt; -- /bin/sh # 如果容器没有bash，使用sh kubectl exec -it &lt;pod-name&gt; -- /bin/sh # 执行单条命令 kubectl exec &lt;pod-name&gt; -- ls -la /app 拷贝pod中文件 # 拷贝单个文件 kubectl cp &lt;namespace&gt;/&lt;pod-name&gt;:/path/to/file ./local_file # 指定容器拷贝 kubectl cp &lt;namespace&gt;/&lt;pod-name&gt;:/app/logs/app.log ./app.log -c &lt;container-name&gt; # 拷贝整个目录 kubectl cp &lt;namespace&gt;/&lt;pod-name&gt;:/var/log/ ./pod_logs/ # 简写（默认命名空间） kubectl cp &lt;pod-name&gt;:/etc/config/conf.yaml ./conf.yaml # 拷贝文件到pod kubectl cp ./config.yaml &lt;namespace&gt;/&lt;pod-name&gt;:/etc/app/config.yaml # 拷贝目录到pod kubectl cp ./config/ &lt;namespace&gt;/&lt;pod-name&gt;:/etc/app/ # 带权限保留拷贝 kubectl cp --preserve ./script.sh &lt;pod-name&gt;:/tmp/script.sh 修改配置 # 编辑pod（不推荐直接编辑pod） kubectl edit pod &lt;pod-name&gt; # 编辑deployment（推荐方式） kubectl edit deployment &lt;deploy-name&gt; # 编辑configmap kubectl edit configmap &lt;cm-name&gt; # 编辑secret kubectl edit secret &lt;secret-name&gt; " /><link rel="canonical" href="http://localhost:8081/docs/k8s/kubectl%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" itemprop="url" />
 
-<meta property="og:title" content="Docker网络">
+<meta property="og:title" content="Kubectl常用命令">
 <meta
   property="og:description"
   content="
     
-      待编写
+      查看pod日志
+    
+
+# 查看当前pod日志
+kubectl logs &lt;pod-name&gt; -n &lt;namespace&gt;
+
+# 查看异常重启前日志
+kubectl logs -p &lt;pod-name&gt; -n &lt;namespace&gt;
+
+# 查看最后10条日志
+kubectl logs --tail=10 -p &lt;pod-name&gt; -n &lt;namespace&gt; 
+  
+    
+
+  
+
+
+查看pod详细信息
+    
+
+kubectl describe pod &lt;pod-name&gt; -n &lt;namespace&gt;
+  
+    
+
+  
+
+
+yaml格式查看pod文件
+    
+
+kubectl get pod &lt;pod-name&gt; -o yaml
+  
+    
+
+  
+
+
+登录pod
+    
+
+# 进入pod的默认容器
+kubectl exec -it &lt;pod-name&gt; -- /bin/bash
+
+# 进入pod的指定容器
+kubectl exec -it &lt;pod-name&gt; -c &lt;container-name&gt; -- /bin/sh
+
+# 如果容器没有bash，使用sh
+kubectl exec -it &lt;pod-name&gt; -- /bin/sh
+
+# 执行单条命令
+kubectl exec &lt;pod-name&gt; -- ls -la /app
+  
+    
+
+  
+
+
+拷贝pod中文件
+    
+
+# 拷贝单个文件
+kubectl cp &lt;namespace&gt;/&lt;pod-name&gt;:/path/to/file ./local_file
+
+# 指定容器拷贝
+kubectl cp &lt;namespace&gt;/&lt;pod-name&gt;:/app/logs/app.log ./app.log -c &lt;container-name&gt;
+
+# 拷贝整个目录
+kubectl cp &lt;namespace&gt;/&lt;pod-name&gt;:/var/log/ ./pod_logs/
+
+# 简写（默认命名空间）
+kubectl cp &lt;pod-name&gt;:/etc/config/conf.yaml ./conf.yaml
+
+# 拷贝文件到pod
+kubectl cp ./config.yaml &lt;namespace&gt;/&lt;pod-name&gt;:/etc/app/config.yaml
+
+# 拷贝目录到pod
+kubectl cp ./config/ &lt;namespace&gt;/&lt;pod-name&gt;:/etc/app/
+
+# 带权限保留拷贝
+kubectl cp --preserve ./script.sh &lt;pod-name&gt;:/tmp/script.sh
+  
+    
+
+  
+
+
+修改配置
+    
+
+# 编辑pod（不推荐直接编辑pod）
+kubectl edit pod &lt;pod-name&gt;
+
+# 编辑deployment（推荐方式）
+kubectl edit deployment &lt;deploy-name&gt;
+
+# 编辑configmap
+kubectl edit configmap &lt;cm-name&gt;
+
+# 编辑secret
+kubectl edit secret &lt;secret-name&gt;
+  
+    
+
+  
+
+
     
   ">
 <meta
@@ -24,27 +129,27 @@
   content="
     article
   ">
-<meta property="og:url" content="http://localhost:8081/docs/docker/docker%E7%BD%91%E7%BB%9C/"><meta property="article:section" content="docs">
+<meta property="og:url" content="http://localhost:8081/docs/k8s/kubectl%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"><meta property="article:section" content="docs">
 
 <meta
   property="article:published_time"
-  content="2025-12-26T16:35:37+08:00">
+  content="2026-01-12T16:12:36+08:00">
 
 
 <meta
   property="article:modified_time"
-  content="2025-12-26T16:35:37+08:00">
+  content="2026-01-12T16:12:36+08:00">
 
 
 
-  <meta itemprop="name" content="Docker网络">
-  <meta itemprop="description" content="待编写">
-  <meta itemprop="datePublished" content="2025-12-26T16:35:37+08:00">
-  <meta itemprop="dateModified" content="2025-12-26T16:35:37+08:00">
-  <meta itemprop="wordCount" content="1">
+  <meta itemprop="name" content="Kubectl常用命令">
+  <meta itemprop="description" content="查看pod日志 # 查看当前pod日志 kubectl logs &lt;pod-name&gt; -n &lt;namespace&gt; # 查看异常重启前日志 kubectl logs -p &lt;pod-name&gt; -n &lt;namespace&gt; # 查看最后10条日志 kubectl logs --tail=10 -p &lt;pod-name&gt; -n &lt;namespace&gt; 查看pod详细信息 kubectl describe pod &lt;pod-name&gt; -n &lt;namespace&gt; yaml格式查看pod文件 kubectl get pod &lt;pod-name&gt; -o yaml 登录pod # 进入pod的默认容器 kubectl exec -it &lt;pod-name&gt; -- /bin/bash # 进入pod的指定容器 kubectl exec -it &lt;pod-name&gt; -c &lt;container-name&gt; -- /bin/sh # 如果容器没有bash，使用sh kubectl exec -it &lt;pod-name&gt; -- /bin/sh # 执行单条命令 kubectl exec &lt;pod-name&gt; -- ls -la /app 拷贝pod中文件 # 拷贝单个文件 kubectl cp &lt;namespace&gt;/&lt;pod-name&gt;:/path/to/file ./local_file # 指定容器拷贝 kubectl cp &lt;namespace&gt;/&lt;pod-name&gt;:/app/logs/app.log ./app.log -c &lt;container-name&gt; # 拷贝整个目录 kubectl cp &lt;namespace&gt;/&lt;pod-name&gt;:/var/log/ ./pod_logs/ # 简写（默认命名空间） kubectl cp &lt;pod-name&gt;:/etc/config/conf.yaml ./conf.yaml # 拷贝文件到pod kubectl cp ./config.yaml &lt;namespace&gt;/&lt;pod-name&gt;:/etc/app/config.yaml # 拷贝目录到pod kubectl cp ./config/ &lt;namespace&gt;/&lt;pod-name&gt;:/etc/app/ # 带权限保留拷贝 kubectl cp --preserve ./script.sh &lt;pod-name&gt;:/tmp/script.sh 修改配置 # 编辑pod（不推荐直接编辑pod） kubectl edit pod &lt;pod-name&gt; # 编辑deployment（推荐方式） kubectl edit deployment &lt;deploy-name&gt; # 编辑configmap kubectl edit configmap &lt;cm-name&gt; # 编辑secret kubectl edit secret &lt;secret-name&gt;">
+  <meta itemprop="datePublished" content="2026-01-12T16:12:36+08:00">
+  <meta itemprop="dateModified" content="2026-01-12T16:12:36+08:00">
+  <meta itemprop="wordCount" content="146">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Docker网络">
-  <meta name="twitter:description" content="待编写">
+  <meta name="twitter:title" content="Kubectl常用命令">
+  <meta name="twitter:description" content="查看pod日志 # 查看当前pod日志 kubectl logs &lt;pod-name&gt; -n &lt;namespace&gt; # 查看异常重启前日志 kubectl logs -p &lt;pod-name&gt; -n &lt;namespace&gt; # 查看最后10条日志 kubectl logs --tail=10 -p &lt;pod-name&gt; -n &lt;namespace&gt; 查看pod详细信息 kubectl describe pod &lt;pod-name&gt; -n &lt;namespace&gt; yaml格式查看pod文件 kubectl get pod &lt;pod-name&gt; -o yaml 登录pod # 进入pod的默认容器 kubectl exec -it &lt;pod-name&gt; -- /bin/bash # 进入pod的指定容器 kubectl exec -it &lt;pod-name&gt; -c &lt;container-name&gt; -- /bin/sh # 如果容器没有bash，使用sh kubectl exec -it &lt;pod-name&gt; -- /bin/sh # 执行单条命令 kubectl exec &lt;pod-name&gt; -- ls -la /app 拷贝pod中文件 # 拷贝单个文件 kubectl cp &lt;namespace&gt;/&lt;pod-name&gt;:/path/to/file ./local_file # 指定容器拷贝 kubectl cp &lt;namespace&gt;/&lt;pod-name&gt;:/app/logs/app.log ./app.log -c &lt;container-name&gt; # 拷贝整个目录 kubectl cp &lt;namespace&gt;/&lt;pod-name&gt;:/var/log/ ./pod_logs/ # 简写（默认命名空间） kubectl cp &lt;pod-name&gt;:/etc/config/conf.yaml ./conf.yaml # 拷贝文件到pod kubectl cp ./config.yaml &lt;namespace&gt;/&lt;pod-name&gt;:/etc/app/config.yaml # 拷贝目录到pod kubectl cp ./config/ &lt;namespace&gt;/&lt;pod-name&gt;:/etc/app/ # 带权限保留拷贝 kubectl cp --preserve ./script.sh &lt;pod-name&gt;:/tmp/script.sh 修改配置 # 编辑pod（不推荐直接编辑pod） kubectl edit pod &lt;pod-name&gt; # 编辑deployment（推荐方式） kubectl edit deployment &lt;deploy-name&gt; # 编辑configmap kubectl edit configmap &lt;cm-name&gt; # 编辑secret kubectl edit secret &lt;secret-name&gt;">
 <link href="/css/compiled/main.css" rel="stylesheet" />
     <link href="/css/variables.css" rel="stylesheet" />
     <link href="/css/custom.css" rel="stylesheet" />
@@ -110,7 +215,7 @@
   <button
     title="docs"
     data-state="closed"
-    class="hextra-nav-menu-toggle hx:cursor-pointer hx:text-sm hx:contrast-more:text-gray-700 hx:contrast-more:dark:text-gray-100 hx:relative hx:-ml-2 hx:whitespace-nowrap hx:p-2 hx:flex hx:items-center hx:gap-1 hx:font-medium"
+    class="hextra-nav-menu-toggle hx:cursor-pointer hx:text-sm hx:contrast-more:text-gray-700 hx:contrast-more:dark:text-gray-100 hx:relative hx:-ml-2 hx:whitespace-nowrap hx:p-2 hx:flex hx:items-center hx:gap-1 hx:text-gray-600 hx:hover:text-gray-800 hx:dark:text-gray-400 hx:dark:hover:text-gray-200"
     type="button"
     aria-label="docs"
   ><span class="hx:text-center">docs</span><svg height=12 class="hx:transition-transform hx:duration-200 hx:ease-in-out" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button>
@@ -213,7 +318,7 @@
               
             </li></ul>
       </div>
-            </li><li class="hx:flex hx:flex-col open"><a
+            </li><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/docs/docker/"
@@ -238,14 +343,13 @@
   >Docker配置
     </a>
               
-            </li><li class="hx:flex hx:flex-col open"><a
+            </li><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hextra-sidebar-active-item hx:bg-primary-100 hx:font-semibold hx:text-primary-800 hx:contrast-more:border hx:contrast-more:border-primary-500 hx:dark:bg-primary-400/10 hx:dark:text-primary-600 hx:contrast-more:dark:border-primary-500"
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/docs/docker/docker%E7%BD%91%E7%BB%9C/"
     
   >Docker网络
     </a>
-  
               
             </li><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
@@ -273,7 +377,7 @@
               
             </li></ul>
       </div>
-            </li><li class="hx:flex hx:flex-col "><a
+            </li><li class="hx:flex hx:flex-col open"><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/docs/k8s/"
@@ -338,13 +442,52 @@
   >问题优化
     </a>
               
-            </li><li class="hx:flex hx:flex-col "><a
+            </li><li class="hx:flex hx:flex-col open"><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      hextra-sidebar-active-item hx:bg-primary-100 hx:font-semibold hx:text-primary-800 hx:contrast-more:border hx:contrast-more:border-primary-500 hx:dark:bg-primary-400/10 hx:dark:text-primary-600 hx:contrast-more:dark:border-primary-500"
     href="/docs/k8s/kubectl%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"
     
   >Kubectl常用命令
     </a>
+  
+    <ul class='hx:flex hx:flex-col hx:gap-1 hx:relative hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:dark:before:bg-neutral-800 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:pr-3 hx:rtl:before:right-0 hx:ltr:ml-3 hx:rtl:mr-3'><li>
+              <a
+                href="#%e6%9f%a5%e7%9c%8bpod%e6%97%a5%e5%bf%97"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >查看pod日志</a>
+            </li>
+          <li>
+              <a
+                href="#%e6%9f%a5%e7%9c%8bpod%e8%af%a6%e7%bb%86%e4%bf%a1%e6%81%af"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >查看pod详细信息</a>
+            </li>
+          <li>
+              <a
+                href="#yaml%e6%a0%bc%e5%bc%8f%e6%9f%a5%e7%9c%8bpod%e6%96%87%e4%bb%b6"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >yaml格式查看pod文件</a>
+            </li>
+          <li>
+              <a
+                href="#%e7%99%bb%e5%bd%95pod"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >登录pod</a>
+            </li>
+          <li>
+              <a
+                href="#%e6%8b%b7%e8%b4%9dpod%e4%b8%ad%e6%96%87%e4%bb%b6"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >拷贝pod中文件</a>
+            </li>
+          <li>
+              <a
+                href="#%e4%bf%ae%e6%94%b9%e9%85%8d%e7%bd%ae"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >修改配置</a>
+            </li>
+          </ul>
+  
               
             </li></ul>
       </div>
@@ -715,7 +858,7 @@
               
             </li></ul>
       </div></li>
-          <li class="open"><a
+          <li class=""><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/docs/docker/"
@@ -739,9 +882,9 @@
   >Docker配置
     </a>
               
-            </li><li class="hx:flex hx:flex-col open"><a
+            </li><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hextra-sidebar-active-item hx:bg-primary-100 hx:font-semibold hx:text-primary-800 hx:contrast-more:border hx:contrast-more:border-primary-500 hx:dark:bg-primary-400/10 hx:dark:text-primary-600 hx:contrast-more:dark:border-primary-500"
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/docs/docker/docker%E7%BD%91%E7%BB%9C/"
     
   >Docker网络
@@ -773,7 +916,7 @@
               
             </li></ul>
       </div></li>
-          <li class=""><a
+          <li class="open"><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/docs/k8s/"
@@ -837,9 +980,9 @@
   >问题优化
     </a>
               
-            </li><li class="hx:flex hx:flex-col "><a
+            </li><li class="hx:flex hx:flex-col open"><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      hextra-sidebar-active-item hx:bg-primary-100 hx:font-semibold hx:text-primary-800 hx:contrast-more:border hx:contrast-more:border-primary-500 hx:dark:bg-primary-400/10 hx:dark:text-primary-600 hx:contrast-more:dark:border-primary-500"
     href="/docs/k8s/kubectl%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"
     
   >Kubectl常用命令
@@ -1209,8 +1352,32 @@
 </div></div></div></aside>
     
 <nav class="hextra-toc hx:order-last hx:hidden hx:w-64 hx:shrink-0 hx:xl:block hx:print:hidden hx:px-4" aria-label="table of contents">
-    <div class="hextra-scrollbar hx:sticky hx:top-16 hx:overflow-y-auto hx:pr-4 hx:pt-6 hx:text-sm [hyphens:auto] hx:max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] hx:ltr:-mr-4 hx:rtl:-ml-4">
-      <div class=" hx:sticky hx:bottom-0 hx:flex hx:flex-col hx:items-start hx:gap-2 hx:pb-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-t hx:contrast-more:border-neutral-400 hx:contrast-more:shadow-none hx:contrast-more:dark:border-neutral-400">
+    <div class="hextra-scrollbar hx:sticky hx:top-16 hx:overflow-y-auto hx:pr-4 hx:pt-6 hx:text-sm [hyphens:auto] hx:max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] hx:ltr:-mr-4 hx:rtl:-ml-4"><p class="hx:mb-4 hx:font-semibold hx:tracking-tight">此页上</p><ul>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#%e6%9f%a5%e7%9c%8bpod%e6%97%a5%e5%bf%97">查看pod日志
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#%e6%9f%a5%e7%9c%8bpod%e8%af%a6%e7%bb%86%e4%bf%a1%e6%81%af">查看pod详细信息
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#yaml%e6%a0%bc%e5%bc%8f%e6%9f%a5%e7%9c%8bpod%e6%96%87%e4%bb%b6">yaml格式查看pod文件
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#%e7%99%bb%e5%bd%95pod">登录pod
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#%e6%8b%b7%e8%b4%9dpod%e4%b8%ad%e6%96%87%e4%bb%b6">拷贝pod中文件
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#%e4%bf%ae%e6%94%b9%e9%85%8d%e7%bd%ae">修改配置
+        </a>
+      </li></ul>
+      <div class="hx:mt-8 hx:border-t hx:bg-white hx:pt-8 hx:shadow-[0_-12px_16px_white] hx:dark:bg-dark hx:dark:shadow-[0_-12px_16px_#111] hx:sticky hx:bottom-0 hx:flex hx:flex-col hx:items-start hx:gap-2 hx:pb-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-t hx:contrast-more:border-neutral-400 hx:contrast-more:shadow-none hx:contrast-more:dark:border-neutral-400">
         <button aria-hidden="true" id="backToTop" onClick="scrollUp();" class="hx:cursor-pointer hx:transition-all hx:duration-75 hx:opacity-0 hx:text-xs hx:font-medium hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-100 hx:contrast-more:text-gray-800 hx:contrast-more:dark:text-gray-50">
           <span>返回顶部</span>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="hx:inline hx:ltr:ml-1 hx:rtl:mr-1 hx:h-3.5 hx:w-3.5 hx:rounded-full hx:border hx:border-gray-500 hx:hover:border-gray-900 hx:dark:border-gray-400 hx:dark:hover:border-gray-100 hx:contrast-more:border-gray-800 hx:contrast-more:dark:border-gray-50">
@@ -1229,25 +1396,144 @@
           <a href="/docs/">文档</a>
         </div><svg class="hx:w-3.5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
         <div class="hx:whitespace-nowrap hx:transition-colors hx:min-w-[24px] hx:overflow-hidden hx:text-ellipsis hx:hover:text-gray-900 hx:dark:hover:text-gray-100">
-          <a href="/docs/docker/">docker</a>
-        </div><svg class="hx:w-3.5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg><div class="hx:whitespace-nowrap hx:transition-colors hx:font-medium hx:text-gray-700 hx:contrast-more:font-bold hx:contrast-more:text-current hx:dark:text-gray-100 hx:contrast-more:dark:text-current">Docker网络</div>
+          <a href="/docs/k8s/">k8s</a>
+        </div><svg class="hx:w-3.5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg><div class="hx:whitespace-nowrap hx:transition-colors hx:font-medium hx:text-gray-700 hx:contrast-more:font-bold hx:contrast-more:text-current hx:dark:text-gray-100 hx:contrast-more:dark:text-current">Kubectl常用命令</div>
   </div>
 
         <div class="content">
-          <h1>Docker网络</h1>
-          <p>待编写</p>
+          <h1>Kubectl常用命令</h1>
+          <h2>查看pod日志<span class="hx:absolute hx:-mt-20" id="查看pod日志"></span>
+    <a href="#%e6%9f%a5%e7%9c%8bpod%e6%97%a5%e5%bf%97" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 查看当前pod日志</span>
+</span></span><span class="line"><span class="cl">kubectl logs &lt;pod-name&gt; -n &lt;namespace&gt;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 查看异常重启前日志</span>
+</span></span><span class="line"><span class="cl">kubectl logs -p &lt;pod-name&gt; -n &lt;namespace&gt;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 查看最后10条日志</span>
+</span></span><span class="line"><span class="cl">kubectl logs --tail<span class="o">=</span><span class="m">10</span> -p &lt;pod-name&gt; -n &lt;namespace&gt; </span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="复制代码"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<h2>查看pod详细信息<span class="hx:absolute hx:-mt-20" id="查看pod详细信息"></span>
+    <a href="#%e6%9f%a5%e7%9c%8bpod%e8%af%a6%e7%bb%86%e4%bf%a1%e6%81%af" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl describe pod &lt;pod-name&gt; -n &lt;namespace&gt;</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="复制代码"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<h2>yaml格式查看pod文件<span class="hx:absolute hx:-mt-20" id="yaml格式查看pod文件"></span>
+    <a href="#yaml%e6%a0%bc%e5%bc%8f%e6%9f%a5%e7%9c%8bpod%e6%96%87%e4%bb%b6" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl get pod &lt;pod-name&gt; -o yaml</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="复制代码"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<h2>登录pod<span class="hx:absolute hx:-mt-20" id="登录pod"></span>
+    <a href="#%e7%99%bb%e5%bd%95pod" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 进入pod的默认容器</span>
+</span></span><span class="line"><span class="cl">kubectl <span class="nb">exec</span> -it &lt;pod-name&gt; -- /bin/bash
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 进入pod的指定容器</span>
+</span></span><span class="line"><span class="cl">kubectl <span class="nb">exec</span> -it &lt;pod-name&gt; -c &lt;container-name&gt; -- /bin/sh
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 如果容器没有bash，使用sh</span>
+</span></span><span class="line"><span class="cl">kubectl <span class="nb">exec</span> -it &lt;pod-name&gt; -- /bin/sh
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 执行单条命令</span>
+</span></span><span class="line"><span class="cl">kubectl <span class="nb">exec</span> &lt;pod-name&gt; -- ls -la /app</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="复制代码"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<h2>拷贝pod中文件<span class="hx:absolute hx:-mt-20" id="拷贝pod中文件"></span>
+    <a href="#%e6%8b%b7%e8%b4%9dpod%e4%b8%ad%e6%96%87%e4%bb%b6" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 拷贝单个文件</span>
+</span></span><span class="line"><span class="cl">kubectl cp &lt;namespace&gt;/&lt;pod-name&gt;:/path/to/file ./local_file
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 指定容器拷贝</span>
+</span></span><span class="line"><span class="cl">kubectl cp &lt;namespace&gt;/&lt;pod-name&gt;:/app/logs/app.log ./app.log -c &lt;container-name&gt;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 拷贝整个目录</span>
+</span></span><span class="line"><span class="cl">kubectl cp &lt;namespace&gt;/&lt;pod-name&gt;:/var/log/ ./pod_logs/
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 简写（默认命名空间）</span>
+</span></span><span class="line"><span class="cl">kubectl cp &lt;pod-name&gt;:/etc/config/conf.yaml ./conf.yaml
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 拷贝文件到pod</span>
+</span></span><span class="line"><span class="cl">kubectl cp ./config.yaml &lt;namespace&gt;/&lt;pod-name&gt;:/etc/app/config.yaml
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 拷贝目录到pod</span>
+</span></span><span class="line"><span class="cl">kubectl cp ./config/ &lt;namespace&gt;/&lt;pod-name&gt;:/etc/app/
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 带权限保留拷贝</span>
+</span></span><span class="line"><span class="cl">kubectl cp --preserve ./script.sh &lt;pod-name&gt;:/tmp/script.sh</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="复制代码"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<h2>修改配置<span class="hx:absolute hx:-mt-20" id="修改配置"></span>
+    <a href="#%e4%bf%ae%e6%94%b9%e9%85%8d%e7%bd%ae" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 编辑pod（不推荐直接编辑pod）</span>
+</span></span><span class="line"><span class="cl">kubectl edit pod &lt;pod-name&gt;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 编辑deployment（推荐方式）</span>
+</span></span><span class="line"><span class="cl">kubectl edit deployment &lt;deploy-name&gt;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 编辑configmap</span>
+</span></span><span class="line"><span class="cl">kubectl edit configmap &lt;cm-name&gt;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 编辑secret</span>
+</span></span><span class="line"><span class="cl">kubectl edit secret &lt;secret-name&gt;</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="复制代码"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
 
         </div>
         <div class="hx:mt-16"></div>
         <div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
-        href="/docs/docker/docker%E9%85%8D%E7%BD%AE/"
-        title="Docker配置"
+        href="/docs/k8s/%E9%97%AE%E9%A2%98%E4%BC%98%E5%8C%96/"
+        title="问题优化"
         class="hx:flex hx:max-w-[50%] hx:items-center hx:gap-1 hx:py-4 hx:text-base hx:font-medium hx:text-gray-600 hx:transition-colors [word-break:break-word] hx:hover:text-primary-600 hx:dark:text-gray-300 hx:md:text-lg hx:ltr:pr-4 hx:rtl:pl-4"
-      ><svg class="hx:inline hx:h-5 hx:shrink-0 hx:ltr:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>Docker配置</a><a
-        href="/docs/docker/docker%E5%AD%98%E5%82%A8/"
-        title="Docker存储"
-        class="hx:flex hx:max-w-[50%] hx:items-center hx:gap-1 hx:py-4 hx:text-base hx:font-medium hx:text-gray-600 hx:transition-colors [word-break:break-word] hx:hover:text-primary-600 hx:dark:text-gray-300 hx:md:text-lg hx:ltr:ml-auto hx:ltr:pl-4 hx:ltr:text-right hx:rtl:mr-auto hx:rtl:pr-4 hx:rtl:text-left"
-      >Docker存储<svg class="hx:inline hx:h-5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a></div>
+      ><svg class="hx:inline hx:h-5 hx:shrink-0 hx:ltr:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>问题优化</a></div>
         
       </main>
     </article>
