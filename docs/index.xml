@@ -1,13 +1,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>自在网站 – </title>
-    <link>http://localhost:8081/docs/</link>
+    <link>https://example.org/docs/</link>
     <description>Recent content on 自在网站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Mon, 12 Jan 2026 16:12:36 +0800</lastBuildDate>
     
-	  <atom:link href="http://localhost:8081/docs/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="https://example.org/docs/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -17,10 +17,10 @@
     
     <item>
       <title>基本概念</title>
-      <link>http://localhost:8081/docs/k8s/%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</link>
+      <link>https://example.org/docs/k8s/%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</link>
       <pubDate>Fri, 26 Dec 2025 16:43:23 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/k8s/%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</guid>
+      <guid>https://example.org/docs/k8s/%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</guid>
       <description>
         
         
@@ -30,10 +30,10 @@
     
     <item>
       <title>Docker基础</title>
-      <link>http://localhost:8081/docs/docker/docker%E5%9F%BA%E7%A1%80/</link>
+      <link>https://example.org/docs/docker/docker%E5%9F%BA%E7%A1%80/</link>
       <pubDate>Fri, 26 Dec 2025 16:35:20 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/docker/docker%E5%9F%BA%E7%A1%80/</guid>
+      <guid>https://example.org/docs/docker/docker%E5%9F%BA%E7%A1%80/</guid>
       <description>
         
         
@@ -247,10 +247,10 @@
     
     <item>
       <title>Docker配置</title>
-      <link>http://localhost:8081/docs/docker/docker%E9%85%8D%E7%BD%AE/</link>
+      <link>https://example.org/docs/docker/docker%E9%85%8D%E7%BD%AE/</link>
       <pubDate>Mon, 29 Dec 2025 15:51:10 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/docker/docker%E9%85%8D%E7%BD%AE/</guid>
+      <guid>https://example.org/docs/docker/docker%E9%85%8D%E7%BD%AE/</guid>
       <description>
         
         
@@ -672,10 +672,10 @@
     
     <item>
       <title>控制器基础</title>
-      <link>http://localhost:8081/docs/k8s/%E6%8E%A7%E5%88%B6%E5%99%A8%E5%9F%BA%E7%A1%80/</link>
+      <link>https://example.org/docs/k8s/%E6%8E%A7%E5%88%B6%E5%99%A8%E5%9F%BA%E7%A1%80/</link>
       <pubDate>Fri, 26 Dec 2025 16:43:12 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/k8s/%E6%8E%A7%E5%88%B6%E5%99%A8%E5%9F%BA%E7%A1%80/</guid>
+      <guid>https://example.org/docs/k8s/%E6%8E%A7%E5%88%B6%E5%99%A8%E5%9F%BA%E7%A1%80/</guid>
       <description>
         
         
@@ -685,10 +685,10 @@
     
     <item>
       <title>网络基础</title>
-      <link>http://localhost:8081/docs/k8s/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/</link>
+      <link>https://example.org/docs/k8s/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/</link>
       <pubDate>Fri, 26 Dec 2025 16:42:22 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/k8s/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/</guid>
+      <guid>https://example.org/docs/k8s/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/</guid>
       <description>
         
         
@@ -698,10 +698,10 @@
     
     <item>
       <title>Docker网络</title>
-      <link>http://localhost:8081/docs/docker/docker%E7%BD%91%E7%BB%9C/</link>
+      <link>https://example.org/docs/docker/docker%E7%BD%91%E7%BB%9C/</link>
       <pubDate>Fri, 26 Dec 2025 16:35:37 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/docker/docker%E7%BD%91%E7%BB%9C/</guid>
+      <guid>https://example.org/docs/docker/docker%E7%BD%91%E7%BB%9C/</guid>
       <description>
         
         
@@ -712,10 +712,10 @@
     
     <item>
       <title>存储基础</title>
-      <link>http://localhost:8081/docs/k8s/%E5%AD%98%E5%82%A8%E5%9F%BA%E7%A1%80/</link>
+      <link>https://example.org/docs/k8s/%E5%AD%98%E5%82%A8%E5%9F%BA%E7%A1%80/</link>
       <pubDate>Fri, 26 Dec 2025 16:43:02 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/k8s/%E5%AD%98%E5%82%A8%E5%9F%BA%E7%A1%80/</guid>
+      <guid>https://example.org/docs/k8s/%E5%AD%98%E5%82%A8%E5%9F%BA%E7%A1%80/</guid>
       <description>
         
         
@@ -725,10 +725,10 @@
     
     <item>
       <title>Docker存储</title>
-      <link>http://localhost:8081/docs/docker/docker%E5%AD%98%E5%82%A8/</link>
+      <link>https://example.org/docs/docker/docker%E5%AD%98%E5%82%A8/</link>
       <pubDate>Fri, 26 Dec 2025 16:35:28 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/docker/docker%E5%AD%98%E5%82%A8/</guid>
+      <guid>https://example.org/docs/docker/docker%E5%AD%98%E5%82%A8/</guid>
       <description>
         
         
@@ -739,10 +739,10 @@
     
     <item>
       <title>权限基础</title>
-      <link>http://localhost:8081/docs/k8s/%E6%9D%83%E9%99%90%E5%9F%BA%E7%A1%80/</link>
+      <link>https://example.org/docs/k8s/%E6%9D%83%E9%99%90%E5%9F%BA%E7%A1%80/</link>
       <pubDate>Fri, 26 Dec 2025 16:44:23 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/k8s/%E6%9D%83%E9%99%90%E5%9F%BA%E7%A1%80/</guid>
+      <guid>https://example.org/docs/k8s/%E6%9D%83%E9%99%90%E5%9F%BA%E7%A1%80/</guid>
       <description>
         
         
@@ -752,10 +752,10 @@
     
     <item>
       <title>Dockerfile基础</title>
-      <link>http://localhost:8081/docs/docker/dockerfile%E5%9F%BA%E7%A1%80/</link>
+      <link>https://example.org/docs/docker/dockerfile%E5%9F%BA%E7%A1%80/</link>
       <pubDate>Fri, 26 Dec 2025 16:38:12 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/docker/dockerfile%E5%9F%BA%E7%A1%80/</guid>
+      <guid>https://example.org/docs/docker/dockerfile%E5%9F%BA%E7%A1%80/</guid>
       <description>
         
         
@@ -1070,10 +1070,10 @@
     
     <item>
       <title>Configmap基础</title>
-      <link>http://localhost:8081/docs/k8s/configmap%E5%9F%BA%E7%A1%80/</link>
+      <link>https://example.org/docs/k8s/configmap%E5%9F%BA%E7%A1%80/</link>
       <pubDate>Fri, 26 Dec 2025 16:42:03 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/k8s/configmap%E5%9F%BA%E7%A1%80/</guid>
+      <guid>https://example.org/docs/k8s/configmap%E5%9F%BA%E7%A1%80/</guid>
       <description>
         
         
@@ -1217,10 +1217,10 @@
     
     <item>
       <title>Docker Compose基础</title>
-      <link>http://localhost:8081/docs/docker/docker-compose%E5%9F%BA%E7%A1%80/</link>
+      <link>https://example.org/docs/docker/docker-compose%E5%9F%BA%E7%A1%80/</link>
       <pubDate>Fri, 26 Dec 2025 16:38:27 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/docker/docker-compose%E5%9F%BA%E7%A1%80/</guid>
+      <guid>https://example.org/docs/docker/docker-compose%E5%9F%BA%E7%A1%80/</guid>
       <description>
         
         
@@ -1816,10 +1816,10 @@
     
     <item>
       <title>问题优化</title>
-      <link>http://localhost:8081/docs/k8s/%E9%97%AE%E9%A2%98%E4%BC%98%E5%8C%96/</link>
+      <link>https://example.org/docs/k8s/%E9%97%AE%E9%A2%98%E4%BC%98%E5%8C%96/</link>
       <pubDate>Fri, 26 Dec 2025 16:47:57 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/k8s/%E9%97%AE%E9%A2%98%E4%BC%98%E5%8C%96/</guid>
+      <guid>https://example.org/docs/k8s/%E9%97%AE%E9%A2%98%E4%BC%98%E5%8C%96/</guid>
       <description>
         
         
@@ -1829,10 +1829,10 @@
     
     <item>
       <title>Kubectl常用命令</title>
-      <link>http://localhost:8081/docs/k8s/kubectl%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
+      <link>https://example.org/docs/k8s/kubectl%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
       <pubDate>Mon, 12 Jan 2026 16:12:36 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/k8s/kubectl%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
+      <guid>https://example.org/docs/k8s/kubectl%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
       <description>
         
         
@@ -1966,10 +1966,10 @@
     
     <item>
       <title>文件打开数</title>
-      <link>http://localhost:8081/docs/linux/%E6%96%87%E4%BB%B6%E6%89%93%E5%BC%80%E6%95%B0/</link>
+      <link>https://example.org/docs/linux/%E6%96%87%E4%BB%B6%E6%89%93%E5%BC%80%E6%95%B0/</link>
       <pubDate>Mon, 12 Jan 2026 15:27:16 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/linux/%E6%96%87%E4%BB%B6%E6%89%93%E5%BC%80%E6%95%B0/</guid>
+      <guid>https://example.org/docs/linux/%E6%96%87%E4%BB%B6%E6%89%93%E5%BC%80%E6%95%B0/</guid>
       <description>
         
         
@@ -2147,10 +2147,10 @@
     
     <item>
       <title>语言</title>
-      <link>http://localhost:8081/docs/linux/%E8%AF%AD%E8%A8%80/</link>
+      <link>https://example.org/docs/linux/%E8%AF%AD%E8%A8%80/</link>
       <pubDate>Mon, 12 Jan 2026 14:46:57 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/linux/%E8%AF%AD%E8%A8%80/</guid>
+      <guid>https://example.org/docs/linux/%E8%AF%AD%E8%A8%80/</guid>
       <description>
         
         
@@ -2160,10 +2160,10 @@
     
     <item>
       <title>时区</title>
-      <link>http://localhost:8081/docs/linux/%E6%97%B6%E5%8C%BA/</link>
+      <link>https://example.org/docs/linux/%E6%97%B6%E5%8C%BA/</link>
       <pubDate>Mon, 12 Jan 2026 14:46:53 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/linux/%E6%97%B6%E5%8C%BA/</guid>
+      <guid>https://example.org/docs/linux/%E6%97%B6%E5%8C%BA/</guid>
       <description>
         
         
@@ -2432,10 +2432,10 @@
     
     <item>
       <title>激活和优化</title>
-      <link>http://localhost:8081/docs/window/%E6%BF%80%E6%B4%BB/</link>
+      <link>https://example.org/docs/window/%E6%BF%80%E6%B4%BB/</link>
       <pubDate>Sun, 04 Jan 2026 17:10:10 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/window/%E6%BF%80%E6%B4%BB/</guid>
+      <guid>https://example.org/docs/window/%E6%BF%80%E6%B4%BB/</guid>
       <description>
         
         
@@ -2443,11 +2443,11 @@
     &lt;a href=&#34;#%e5%ae%89%e8%a3%85%e8%b7%b3%e8%bf%87window%e8%b4%a6%e5%8f%b7%e4%bd%bf%e7%94%a8%e6%9c%ac%e5%9c%b0%e8%b4%a6%e5%8f%b7%e6%96%ad%e7%bd%91%e5%ae%89%e8%a3%85&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;安装到网络连接界面时，按 &lt;code&gt;shfit+f10&lt;/code&gt; ，输入以下命令：&lt;/p&gt;
 &lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
 
-&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cmd&#34; data-lang=&#34;cmd&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# win11 24h2 版本执行
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;oobe\bypassnro
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# win11 版本执行&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;start ms-cxh:localonly
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# win11 25h2 版本执行
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;start&lt;/span&gt; ms-cxh:localonly&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 以上无法成功,可尝试以下命令&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;oobe&lt;span class=&#34;se&#34;&gt;\b&lt;/span&gt;ypassnro&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
   &lt;button
     class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
     title=&#34;复制代码&#34;
@@ -2458,13 +2458,14 @@
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2&gt;激活&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;激活&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#%e6%bf%80%e6%b4%bb&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;win11激活
-打开&lt;code&gt;cmd&lt;/code&gt;，输入以下内容&lt;/p&gt;
+    &lt;a href=&#34;#%e6%bf%80%e6%b4%bb&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;打开&lt;code&gt;cmd&lt;/code&gt;，输入以下内容&lt;/p&gt;
 &lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
 
-&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cmd&#34; data-lang=&#34;cmd&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;irm https://get.activated.win &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; iex
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;slmgr /ipk W269N-WFGWX-YVC9B-4J6C9-T83GX
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;slmgr /skms kms.03k.org
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;或
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;irm massgrave.dev/get.ps1 &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; iex&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;slmgr /skms kms.loli.best
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;slmgr /ato&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
   &lt;button
     class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
     title=&#34;复制代码&#34;
@@ -2474,13 +2475,12 @@
   &lt;/button&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;win10激活
-打开&lt;code&gt;cmd&lt;/code&gt;，输入以下内容&lt;/p&gt;
+&lt;p&gt;打开&lt;code&gt;powershell&lt;/code&gt;，输入以下内容&lt;/p&gt;
 &lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
 
-&lt;div&gt;&lt;pre&gt;&lt;code&gt;slmgr /ipk W269N-WFGWX-YVC9B-4J6C9-T83GX
-slmgr /skms kms.03k.org 或 slmgr /skms kms.loli.best
-slmgr /ato&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;irm https://get.activated.win &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; iex
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;或
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;irm massgrave.dev/get.ps1 &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; iex&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
   &lt;button
     class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
     title=&#34;复制代码&#34;
@@ -2634,10 +2634,10 @@ NBQWQ-W9PTV-B4YWP-4K773-T6PKG&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=
     
     <item>
       <title>Redis安装</title>
-      <link>http://localhost:8081/docs/%E6%95%B0%E6%8D%AE%E5%BA%93/redis/redis%E5%AE%89%E8%A3%85/</link>
+      <link>https://example.org/docs/%E6%95%B0%E6%8D%AE%E5%BA%93/redis/redis%E5%AE%89%E8%A3%85/</link>
       <pubDate>Tue, 30 Dec 2025 17:41:00 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/%E6%95%B0%E6%8D%AE%E5%BA%93/redis/redis%E5%AE%89%E8%A3%85/</guid>
+      <guid>https://example.org/docs/%E6%95%B0%E6%8D%AE%E5%BA%93/redis/redis%E5%AE%89%E8%A3%85/</guid>
       <description>
         
         
@@ -2692,10 +2692,10 @@ NBQWQ-W9PTV-B4YWP-4K773-T6PKG&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=
     
     <item>
       <title>Mongo安装</title>
-      <link>http://localhost:8081/docs/%E6%95%B0%E6%8D%AE%E5%BA%93/mongo/mongo%E5%AE%89%E8%A3%85/</link>
+      <link>https://example.org/docs/%E6%95%B0%E6%8D%AE%E5%BA%93/mongo/mongo%E5%AE%89%E8%A3%85/</link>
       <pubDate>Tue, 30 Dec 2025 17:39:37 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/%E6%95%B0%E6%8D%AE%E5%BA%93/mongo/mongo%E5%AE%89%E8%A3%85/</guid>
+      <guid>https://example.org/docs/%E6%95%B0%E6%8D%AE%E5%BA%93/mongo/mongo%E5%AE%89%E8%A3%85/</guid>
       <description>
         
         
@@ -2751,10 +2751,10 @@ NBQWQ-W9PTV-B4YWP-4K773-T6PKG&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=
     
     <item>
       <title>Mysql安装</title>
-      <link>http://localhost:8081/docs/%E6%95%B0%E6%8D%AE%E5%BA%93/mysql/mysql%E5%AE%89%E8%A3%85/</link>
+      <link>https://example.org/docs/%E6%95%B0%E6%8D%AE%E5%BA%93/mysql/mysql%E5%AE%89%E8%A3%85/</link>
       <pubDate>Tue, 30 Dec 2025 17:38:14 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/%E6%95%B0%E6%8D%AE%E5%BA%93/mysql/mysql%E5%AE%89%E8%A3%85/</guid>
+      <guid>https://example.org/docs/%E6%95%B0%E6%8D%AE%E5%BA%93/mysql/mysql%E5%AE%89%E8%A3%85/</guid>
       <description>
         
         
@@ -2812,10 +2812,10 @@ NBQWQ-W9PTV-B4YWP-4K773-T6PKG&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=
     
     <item>
       <title>Openvpn</title>
-      <link>http://localhost:8081/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/openvpn/</link>
+      <link>https://example.org/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/openvpn/</link>
       <pubDate>Tue, 30 Dec 2025 17:32:00 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/openvpn/</guid>
+      <guid>https://example.org/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/openvpn/</guid>
       <description>
         
         
@@ -2955,10 +2955,10 @@ docker run -v ./openvpn:/etc/openvpn --rm -it kylemanna/openvpn ovpn_initpki&lt;
     
     <item>
       <title>Gitlab</title>
-      <link>http://localhost:8081/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/gitlab/</link>
+      <link>https://example.org/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/gitlab/</link>
       <pubDate>Tue, 30 Dec 2025 17:30:16 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/gitlab/</guid>
+      <guid>https://example.org/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/gitlab/</guid>
       <description>
         
         
@@ -3040,10 +3040,10 @@ docker run -v ./openvpn:/etc/openvpn --rm -it kylemanna/openvpn ovpn_initpki&lt;
     
     <item>
       <title>Nginxwebui</title>
-      <link>http://localhost:8081/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/nginxwebui/</link>
+      <link>https://example.org/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/nginxwebui/</link>
       <pubDate>Tue, 30 Dec 2025 17:26:49 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/nginxwebui/</guid>
+      <guid>https://example.org/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/nginxwebui/</guid>
       <description>
         
         
@@ -3098,10 +3098,10 @@ docker run -v ./openvpn:/etc/openvpn --rm -it kylemanna/openvpn ovpn_initpki&lt;
     
     <item>
       <title>Nacos</title>
-      <link>http://localhost:8081/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/nacos/</link>
+      <link>https://example.org/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/nacos/</link>
       <pubDate>Tue, 30 Dec 2025 17:18:15 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/nacos/</guid>
+      <guid>https://example.org/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/nacos/</guid>
       <description>
         
         
@@ -3165,10 +3165,10 @@ docker run -v ./openvpn:/etc/openvpn --rm -it kylemanna/openvpn ovpn_initpki&lt;
     
     <item>
       <title>Nextcloud</title>
-      <link>http://localhost:8081/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/nextcloud/</link>
+      <link>https://example.org/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/nextcloud/</link>
       <pubDate>Tue, 30 Dec 2025 17:18:06 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/nextcloud/</guid>
+      <guid>https://example.org/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/nextcloud/</guid>
       <description>
         
         
@@ -3261,10 +3261,10 @@ docker run -v ./openvpn:/etc/openvpn --rm -it kylemanna/openvpn ovpn_initpki&lt;
     
     <item>
       <title>Mindoc</title>
-      <link>http://localhost:8081/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/mindoc/</link>
+      <link>https://example.org/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/mindoc/</link>
       <pubDate>Mon, 29 Dec 2025 16:59:30 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/mindoc/</guid>
+      <guid>https://example.org/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/mindoc/</guid>
       <description>
         
         
@@ -3345,10 +3345,10 @@ docker run -v ./openvpn:/etc/openvpn --rm -it kylemanna/openvpn ovpn_initpki&lt;
     
     <item>
       <title>Iptables之nat配置</title>
-      <link>http://localhost:8081/docs/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/iptables%E4%B9%8Bnat%E9%85%8D%E7%BD%AE/</link>
+      <link>https://example.org/docs/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/iptables%E4%B9%8Bnat%E9%85%8D%E7%BD%AE/</link>
       <pubDate>Mon, 29 Dec 2025 14:57:35 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/iptables%E4%B9%8Bnat%E9%85%8D%E7%BD%AE/</guid>
+      <guid>https://example.org/docs/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/iptables%E4%B9%8Bnat%E9%85%8D%E7%BD%AE/</guid>
       <description>
         
         
@@ -3778,10 +3778,10 @@ iptables -t nat -F POSTROUTING&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class
     
     <item>
       <title>Iptables基础</title>
-      <link>http://localhost:8081/docs/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/iptables%E5%9F%BA%E7%A1%80/</link>
+      <link>https://example.org/docs/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/iptables%E5%9F%BA%E7%A1%80/</link>
       <pubDate>Mon, 29 Dec 2025 11:17:36 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/iptables%E5%9F%BA%E7%A1%80/</guid>
+      <guid>https://example.org/docs/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/iptables%E5%9F%BA%E7%A1%80/</guid>
       <description>
         
         
@@ -4093,10 +4093,10 @@ iptables -P INPUT ACCEPT  # 临时放行所有入站，避免失联&lt;/code&gt;
     
     <item>
       <title>Tcpdump</title>
-      <link>http://localhost:8081/docs/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/tcpdump/</link>
+      <link>https://example.org/docs/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/tcpdump/</link>
       <pubDate>Mon, 29 Dec 2025 11:17:24 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/tcpdump/</guid>
+      <guid>https://example.org/docs/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/tcpdump/</guid>
       <description>
         
         
@@ -4256,10 +4256,10 @@ iptables -P INPUT ACCEPT  # 临时放行所有入站，避免失联&lt;/code&gt;
     
     <item>
       <title>Proxmox</title>
-      <link>http://localhost:8081/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/proxmox/</link>
+      <link>https://example.org/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/proxmox/</link>
       <pubDate>Fri, 26 Dec 2025 16:54:51 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/proxmox/</guid>
+      <guid>https://example.org/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/proxmox/</guid>
       <description>
         
         
@@ -4269,10 +4269,10 @@ iptables -P INPUT ACCEPT  # 临时放行所有入站，避免失联&lt;/code&gt;
     
     <item>
       <title>Frp</title>
-      <link>http://localhost:8081/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/frp/</link>
+      <link>https://example.org/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/frp/</link>
       <pubDate>Fri, 26 Dec 2025 16:54:36 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/frp/</guid>
+      <guid>https://example.org/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/frp/</guid>
       <description>
         
         
@@ -4529,10 +4529,10 @@ iptables -P INPUT ACCEPT  # 临时放行所有入站，避免失联&lt;/code&gt;
     
     <item>
       <title>Grafana</title>
-      <link>http://localhost:8081/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/grafana/</link>
+      <link>https://example.org/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/grafana/</link>
       <pubDate>Fri, 26 Dec 2025 16:54:30 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/grafana/</guid>
+      <guid>https://example.org/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/grafana/</guid>
       <description>
         
         
@@ -4591,10 +4591,10 @@ iptables -P INPUT ACCEPT  # 临时放行所有入站，避免失联&lt;/code&gt;
     
     <item>
       <title>Archery</title>
-      <link>http://localhost:8081/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/archery/</link>
+      <link>https://example.org/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/archery/</link>
       <pubDate>Fri, 26 Dec 2025 16:54:13 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/archery/</guid>
+      <guid>https://example.org/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/archery/</guid>
       <description>
         
         
@@ -4650,10 +4650,10 @@ iptables -P INPUT ACCEPT  # 临时放行所有入站，避免失联&lt;/code&gt;
     
     <item>
       <title>Nexus</title>
-      <link>http://localhost:8081/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/nexus/</link>
+      <link>https://example.org/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/nexus/</link>
       <pubDate>Fri, 26 Dec 2025 16:53:55 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/nexus/</guid>
+      <guid>https://example.org/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/nexus/</guid>
       <description>
         
         
@@ -4722,10 +4722,10 @@ iptables -P INPUT ACCEPT  # 临时放行所有入站，避免失联&lt;/code&gt;
     
     <item>
       <title>Harbor</title>
-      <link>http://localhost:8081/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/harbor/</link>
+      <link>https://example.org/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/harbor/</link>
       <pubDate>Fri, 26 Dec 2025 16:53:48 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/harbor/</guid>
+      <guid>https://example.org/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/harbor/</guid>
       <description>
         
         
@@ -4785,10 +4785,10 @@ iptables -P INPUT ACCEPT  # 临时放行所有入站，避免失联&lt;/code&gt;
     
     <item>
       <title>Jenkins</title>
-      <link>http://localhost:8081/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/jenkins/</link>
+      <link>https://example.org/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/jenkins/</link>
       <pubDate>Fri, 26 Dec 2025 16:53:40 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/jenkins/</guid>
+      <guid>https://example.org/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/jenkins/</guid>
       <description>
         
         
@@ -4863,10 +4863,10 @@ iptables -P INPUT ACCEPT  # 临时放行所有入站，避免失联&lt;/code&gt;
     
     <item>
       <title>Zabbix</title>
-      <link>http://localhost:8081/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/zabbix/</link>
+      <link>https://example.org/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/zabbix/</link>
       <pubDate>Fri, 26 Dec 2025 16:51:46 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/zabbix/</guid>
+      <guid>https://example.org/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/zabbix/</guid>
       <description>
         
         
@@ -4976,10 +4976,10 @@ iptables -P INPUT ACCEPT  # 临时放行所有入站，避免失联&lt;/code&gt;
     
     <item>
       <title>Promethous</title>
-      <link>http://localhost:8081/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/promethous/</link>
+      <link>https://example.org/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/promethous/</link>
       <pubDate>Fri, 26 Dec 2025 16:51:10 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/promethous/</guid>
+      <guid>https://example.org/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/promethous/</guid>
       <description>
         
         
@@ -5057,10 +5057,10 @@ iptables -P INPUT ACCEPT  # 临时放行所有入站，避免失联&lt;/code&gt;
     
     <item>
       <title>Elk</title>
-      <link>http://localhost:8081/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/elk/</link>
+      <link>https://example.org/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/elk/</link>
       <pubDate>Fri, 26 Dec 2025 16:50:20 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/elk/</guid>
+      <guid>https://example.org/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/elk/</guid>
       <description>
         
         
@@ -5419,10 +5419,10 @@ iptables -P INPUT ACCEPT  # 临时放行所有入站，避免失联&lt;/code&gt;
     
     <item>
       <title>Nginx</title>
-      <link>http://localhost:8081/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/nginx/</link>
+      <link>https://example.org/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/nginx/</link>
       <pubDate>Fri, 26 Dec 2025 16:50:09 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/nginx/</guid>
+      <guid>https://example.org/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/nginx/</guid>
       <description>
         
         
@@ -5781,10 +5781,10 @@ iptables -P INPUT ACCEPT  # 临时放行所有入站，避免失联&lt;/code&gt;
     
     <item>
       <title>镜像仓库大全</title>
-      <link>http://localhost:8081/docs/linux/%E9%95%9C%E5%83%8F%E4%BB%93%E5%BA%93%E5%A4%A7%E5%85%A8/</link>
+      <link>https://example.org/docs/linux/%E9%95%9C%E5%83%8F%E4%BB%93%E5%BA%93%E5%A4%A7%E5%85%A8/</link>
       <pubDate>Fri, 26 Dec 2025 14:03:41 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/linux/%E9%95%9C%E5%83%8F%E4%BB%93%E5%BA%93%E5%A4%A7%E5%85%A8/</guid>
+      <guid>https://example.org/docs/linux/%E9%95%9C%E5%83%8F%E4%BB%93%E5%BA%93%E5%A4%A7%E5%85%A8/</guid>
       <description>
         
         

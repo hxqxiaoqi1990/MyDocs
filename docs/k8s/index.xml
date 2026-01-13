@@ -1,13 +1,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>自在网站 – </title>
-    <link>http://localhost:8081/docs/k8s/</link>
+    <link>https://example.org/docs/k8s/</link>
     <description>Recent content on 自在网站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Mon, 12 Jan 2026 16:12:36 +0800</lastBuildDate>
     
-	  <atom:link href="http://localhost:8081/docs/k8s/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="https://example.org/docs/k8s/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -17,10 +17,10 @@
     
     <item>
       <title>基本概念</title>
-      <link>http://localhost:8081/docs/k8s/%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</link>
+      <link>https://example.org/docs/k8s/%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</link>
       <pubDate>Fri, 26 Dec 2025 16:43:23 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/k8s/%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</guid>
+      <guid>https://example.org/docs/k8s/%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</guid>
       <description>
         
         
@@ -30,10 +30,10 @@
     
     <item>
       <title>控制器基础</title>
-      <link>http://localhost:8081/docs/k8s/%E6%8E%A7%E5%88%B6%E5%99%A8%E5%9F%BA%E7%A1%80/</link>
+      <link>https://example.org/docs/k8s/%E6%8E%A7%E5%88%B6%E5%99%A8%E5%9F%BA%E7%A1%80/</link>
       <pubDate>Fri, 26 Dec 2025 16:43:12 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/k8s/%E6%8E%A7%E5%88%B6%E5%99%A8%E5%9F%BA%E7%A1%80/</guid>
+      <guid>https://example.org/docs/k8s/%E6%8E%A7%E5%88%B6%E5%99%A8%E5%9F%BA%E7%A1%80/</guid>
       <description>
         
         
@@ -43,10 +43,10 @@
     
     <item>
       <title>网络基础</title>
-      <link>http://localhost:8081/docs/k8s/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/</link>
+      <link>https://example.org/docs/k8s/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/</link>
       <pubDate>Fri, 26 Dec 2025 16:42:22 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/k8s/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/</guid>
+      <guid>https://example.org/docs/k8s/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/</guid>
       <description>
         
         
@@ -56,10 +56,10 @@
     
     <item>
       <title>存储基础</title>
-      <link>http://localhost:8081/docs/k8s/%E5%AD%98%E5%82%A8%E5%9F%BA%E7%A1%80/</link>
+      <link>https://example.org/docs/k8s/%E5%AD%98%E5%82%A8%E5%9F%BA%E7%A1%80/</link>
       <pubDate>Fri, 26 Dec 2025 16:43:02 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/k8s/%E5%AD%98%E5%82%A8%E5%9F%BA%E7%A1%80/</guid>
+      <guid>https://example.org/docs/k8s/%E5%AD%98%E5%82%A8%E5%9F%BA%E7%A1%80/</guid>
       <description>
         
         
@@ -69,10 +69,10 @@
     
     <item>
       <title>权限基础</title>
-      <link>http://localhost:8081/docs/k8s/%E6%9D%83%E9%99%90%E5%9F%BA%E7%A1%80/</link>
+      <link>https://example.org/docs/k8s/%E6%9D%83%E9%99%90%E5%9F%BA%E7%A1%80/</link>
       <pubDate>Fri, 26 Dec 2025 16:44:23 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/k8s/%E6%9D%83%E9%99%90%E5%9F%BA%E7%A1%80/</guid>
+      <guid>https://example.org/docs/k8s/%E6%9D%83%E9%99%90%E5%9F%BA%E7%A1%80/</guid>
       <description>
         
         
@@ -82,10 +82,10 @@
     
     <item>
       <title>Configmap基础</title>
-      <link>http://localhost:8081/docs/k8s/configmap%E5%9F%BA%E7%A1%80/</link>
+      <link>https://example.org/docs/k8s/configmap%E5%9F%BA%E7%A1%80/</link>
       <pubDate>Fri, 26 Dec 2025 16:42:03 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/k8s/configmap%E5%9F%BA%E7%A1%80/</guid>
+      <guid>https://example.org/docs/k8s/configmap%E5%9F%BA%E7%A1%80/</guid>
       <description>
         
         
@@ -229,10 +229,10 @@
     
     <item>
       <title>问题优化</title>
-      <link>http://localhost:8081/docs/k8s/%E9%97%AE%E9%A2%98%E4%BC%98%E5%8C%96/</link>
+      <link>https://example.org/docs/k8s/%E9%97%AE%E9%A2%98%E4%BC%98%E5%8C%96/</link>
       <pubDate>Fri, 26 Dec 2025 16:47:57 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/k8s/%E9%97%AE%E9%A2%98%E4%BC%98%E5%8C%96/</guid>
+      <guid>https://example.org/docs/k8s/%E9%97%AE%E9%A2%98%E4%BC%98%E5%8C%96/</guid>
       <description>
         
         
@@ -242,10 +242,10 @@
     
     <item>
       <title>Kubectl常用命令</title>
-      <link>http://localhost:8081/docs/k8s/kubectl%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
+      <link>https://example.org/docs/k8s/kubectl%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
       <pubDate>Mon, 12 Jan 2026 16:12:36 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/k8s/kubectl%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
+      <guid>https://example.org/docs/k8s/kubectl%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
       <description>
         
         
