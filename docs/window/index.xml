@@ -1,13 +1,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>自在网站 – Window</title>
-    <link>https://example.org/docs/window/</link>
+    <link>http://localhost:8081/docs/window/</link>
     <description>Recent content in Window on 自在网站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sun, 04 Jan 2026 17:09:21 +0800</lastBuildDate>
     
-	  <atom:link href="https://example.org/docs/window/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="http://localhost:8081/docs/window/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -17,10 +17,10 @@
     
     <item>
       <title>激活和优化</title>
-      <link>https://example.org/docs/window/%E6%BF%80%E6%B4%BB/</link>
+      <link>http://localhost:8081/docs/window/%E6%BF%80%E6%B4%BB/</link>
       <pubDate>Sun, 04 Jan 2026 17:10:10 +0800</pubDate>
       
-      <guid>https://example.org/docs/window/%E6%BF%80%E6%B4%BB/</guid>
+      <guid>http://localhost:8081/docs/window/%E6%BF%80%E6%B4%BB/</guid>
       <description>
         
         

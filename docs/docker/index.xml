@@ -1,13 +1,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>自在网站 – </title>
-    <link>https://example.org/docs/docker/</link>
+    <link>http://localhost:8081/docs/docker/</link>
     <description>Recent content on 自在网站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Mon, 29 Dec 2025 15:51:10 +0800</lastBuildDate>
     
-	  <atom:link href="https://example.org/docs/docker/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="http://localhost:8081/docs/docker/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -17,10 +17,10 @@
     
     <item>
       <title>Docker基础</title>
-      <link>https://example.org/docs/docker/docker%E5%9F%BA%E7%A1%80/</link>
+      <link>http://localhost:8081/docs/docker/docker%E5%9F%BA%E7%A1%80/</link>
       <pubDate>Fri, 26 Dec 2025 16:35:20 +0800</pubDate>
       
-      <guid>https://example.org/docs/docker/docker%E5%9F%BA%E7%A1%80/</guid>
+      <guid>http://localhost:8081/docs/docker/docker%E5%9F%BA%E7%A1%80/</guid>
       <description>
         
         
@@ -234,10 +234,10 @@
     
     <item>
       <title>Docker配置</title>
-      <link>https://example.org/docs/docker/docker%E9%85%8D%E7%BD%AE/</link>
+      <link>http://localhost:8081/docs/docker/docker%E9%85%8D%E7%BD%AE/</link>
       <pubDate>Mon, 29 Dec 2025 15:51:10 +0800</pubDate>
       
-      <guid>https://example.org/docs/docker/docker%E9%85%8D%E7%BD%AE/</guid>
+      <guid>http://localhost:8081/docs/docker/docker%E9%85%8D%E7%BD%AE/</guid>
       <description>
         
         
@@ -659,10 +659,10 @@
     
     <item>
       <title>Docker网络</title>
-      <link>https://example.org/docs/docker/docker%E7%BD%91%E7%BB%9C/</link>
+      <link>http://localhost:8081/docs/docker/docker%E7%BD%91%E7%BB%9C/</link>
       <pubDate>Fri, 26 Dec 2025 16:35:37 +0800</pubDate>
       
-      <guid>https://example.org/docs/docker/docker%E7%BD%91%E7%BB%9C/</guid>
+      <guid>http://localhost:8081/docs/docker/docker%E7%BD%91%E7%BB%9C/</guid>
       <description>
         
         
@@ -673,10 +673,10 @@
     
     <item>
       <title>Docker存储</title>
-      <link>https://example.org/docs/docker/docker%E5%AD%98%E5%82%A8/</link>
+      <link>http://localhost:8081/docs/docker/docker%E5%AD%98%E5%82%A8/</link>
       <pubDate>Fri, 26 Dec 2025 16:35:28 +0800</pubDate>
       
-      <guid>https://example.org/docs/docker/docker%E5%AD%98%E5%82%A8/</guid>
+      <guid>http://localhost:8081/docs/docker/docker%E5%AD%98%E5%82%A8/</guid>
       <description>
         
         
@@ -687,10 +687,10 @@
     
     <item>
       <title>Dockerfile基础</title>
-      <link>https://example.org/docs/docker/dockerfile%E5%9F%BA%E7%A1%80/</link>
+      <link>http://localhost:8081/docs/docker/dockerfile%E5%9F%BA%E7%A1%80/</link>
       <pubDate>Fri, 26 Dec 2025 16:38:12 +0800</pubDate>
       
-      <guid>https://example.org/docs/docker/dockerfile%E5%9F%BA%E7%A1%80/</guid>
+      <guid>http://localhost:8081/docs/docker/dockerfile%E5%9F%BA%E7%A1%80/</guid>
       <description>
         
         
@@ -1005,10 +1005,10 @@
     
     <item>
       <title>Docker Compose基础</title>
-      <link>https://example.org/docs/docker/docker-compose%E5%9F%BA%E7%A1%80/</link>
+      <link>http://localhost:8081/docs/docker/docker-compose%E5%9F%BA%E7%A1%80/</link>
       <pubDate>Fri, 26 Dec 2025 16:38:27 +0800</pubDate>
       
-      <guid>https://example.org/docs/docker/docker-compose%E5%9F%BA%E7%A1%80/</guid>
+      <guid>http://localhost:8081/docs/docker/docker-compose%E5%9F%BA%E7%A1%80/</guid>
       <description>
         
         
