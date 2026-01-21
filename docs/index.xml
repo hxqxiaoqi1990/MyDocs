@@ -1,13 +1,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>自在网站 – </title>
-    <link>http://localhost:8081/docs/</link>
+    <link>https://example.org/docs/</link>
     <description>Recent content on 自在网站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 15 Jan 2026 17:47:01 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 21 Jan 2026 16:05:57 +0800</lastBuildDate>
     
-	  <atom:link href="http://localhost:8081/docs/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="https://example.org/docs/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -17,10 +17,10 @@
     
     <item>
       <title>基本概念</title>
-      <link>http://localhost:8081/docs/k8s/%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</link>
+      <link>https://example.org/docs/k8s/%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</link>
       <pubDate>Fri, 26 Dec 2025 16:43:23 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/k8s/%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</guid>
+      <guid>https://example.org/docs/k8s/%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</guid>
       <description>
         
         
@@ -30,10 +30,10 @@
     
     <item>
       <title>Docker基础</title>
-      <link>http://localhost:8081/docs/%E5%AE%B9%E5%99%A8/docker%E5%9F%BA%E7%A1%80/</link>
+      <link>https://example.org/docs/%E5%AE%B9%E5%99%A8/docker%E5%9F%BA%E7%A1%80/</link>
       <pubDate>Fri, 26 Dec 2025 16:35:20 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/%E5%AE%B9%E5%99%A8/docker%E5%9F%BA%E7%A1%80/</guid>
+      <guid>https://example.org/docs/%E5%AE%B9%E5%99%A8/docker%E5%9F%BA%E7%A1%80/</guid>
       <description>
         
         
@@ -247,10 +247,10 @@
     
     <item>
       <title>Docker配置</title>
-      <link>http://localhost:8081/docs/%E5%AE%B9%E5%99%A8/docker%E9%85%8D%E7%BD%AE/</link>
+      <link>https://example.org/docs/%E5%AE%B9%E5%99%A8/docker%E9%85%8D%E7%BD%AE/</link>
       <pubDate>Mon, 29 Dec 2025 15:51:10 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/%E5%AE%B9%E5%99%A8/docker%E9%85%8D%E7%BD%AE/</guid>
+      <guid>https://example.org/docs/%E5%AE%B9%E5%99%A8/docker%E9%85%8D%E7%BD%AE/</guid>
       <description>
         
         
@@ -672,10 +672,10 @@
     
     <item>
       <title>控制器基础</title>
-      <link>http://localhost:8081/docs/k8s/%E6%8E%A7%E5%88%B6%E5%99%A8%E5%9F%BA%E7%A1%80/</link>
+      <link>https://example.org/docs/k8s/%E6%8E%A7%E5%88%B6%E5%99%A8%E5%9F%BA%E7%A1%80/</link>
       <pubDate>Fri, 26 Dec 2025 16:43:12 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/k8s/%E6%8E%A7%E5%88%B6%E5%99%A8%E5%9F%BA%E7%A1%80/</guid>
+      <guid>https://example.org/docs/k8s/%E6%8E%A7%E5%88%B6%E5%99%A8%E5%9F%BA%E7%A1%80/</guid>
       <description>
         
         
@@ -685,10 +685,10 @@
     
     <item>
       <title>网络基础</title>
-      <link>http://localhost:8081/docs/k8s/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/</link>
+      <link>https://example.org/docs/k8s/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/</link>
       <pubDate>Fri, 26 Dec 2025 16:42:22 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/k8s/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/</guid>
+      <guid>https://example.org/docs/k8s/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/</guid>
       <description>
         
         
@@ -698,10 +698,10 @@
     
     <item>
       <title>Docker网络</title>
-      <link>http://localhost:8081/docs/%E5%AE%B9%E5%99%A8/docker%E7%BD%91%E7%BB%9C/</link>
+      <link>https://example.org/docs/%E5%AE%B9%E5%99%A8/docker%E7%BD%91%E7%BB%9C/</link>
       <pubDate>Fri, 26 Dec 2025 16:35:37 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/%E5%AE%B9%E5%99%A8/docker%E7%BD%91%E7%BB%9C/</guid>
+      <guid>https://example.org/docs/%E5%AE%B9%E5%99%A8/docker%E7%BD%91%E7%BB%9C/</guid>
       <description>
         
         
@@ -712,10 +712,10 @@
     
     <item>
       <title>存储基础</title>
-      <link>http://localhost:8081/docs/k8s/%E5%AD%98%E5%82%A8%E5%9F%BA%E7%A1%80/</link>
+      <link>https://example.org/docs/k8s/%E5%AD%98%E5%82%A8%E5%9F%BA%E7%A1%80/</link>
       <pubDate>Fri, 26 Dec 2025 16:43:02 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/k8s/%E5%AD%98%E5%82%A8%E5%9F%BA%E7%A1%80/</guid>
+      <guid>https://example.org/docs/k8s/%E5%AD%98%E5%82%A8%E5%9F%BA%E7%A1%80/</guid>
       <description>
         
         
@@ -725,10 +725,10 @@
     
     <item>
       <title>Docker存储</title>
-      <link>http://localhost:8081/docs/%E5%AE%B9%E5%99%A8/docker%E5%AD%98%E5%82%A8/</link>
+      <link>https://example.org/docs/%E5%AE%B9%E5%99%A8/docker%E5%AD%98%E5%82%A8/</link>
       <pubDate>Fri, 26 Dec 2025 16:35:28 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/%E5%AE%B9%E5%99%A8/docker%E5%AD%98%E5%82%A8/</guid>
+      <guid>https://example.org/docs/%E5%AE%B9%E5%99%A8/docker%E5%AD%98%E5%82%A8/</guid>
       <description>
         
         
@@ -739,10 +739,10 @@
     
     <item>
       <title>权限基础</title>
-      <link>http://localhost:8081/docs/k8s/%E6%9D%83%E9%99%90%E5%9F%BA%E7%A1%80/</link>
+      <link>https://example.org/docs/k8s/%E6%9D%83%E9%99%90%E5%9F%BA%E7%A1%80/</link>
       <pubDate>Fri, 26 Dec 2025 16:44:23 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/k8s/%E6%9D%83%E9%99%90%E5%9F%BA%E7%A1%80/</guid>
+      <guid>https://example.org/docs/k8s/%E6%9D%83%E9%99%90%E5%9F%BA%E7%A1%80/</guid>
       <description>
         
         
@@ -752,10 +752,10 @@
     
     <item>
       <title>Dockerfile基础</title>
-      <link>http://localhost:8081/docs/%E5%AE%B9%E5%99%A8/dockerfile%E5%9F%BA%E7%A1%80/</link>
+      <link>https://example.org/docs/%E5%AE%B9%E5%99%A8/dockerfile%E5%9F%BA%E7%A1%80/</link>
       <pubDate>Fri, 26 Dec 2025 16:38:12 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/%E5%AE%B9%E5%99%A8/dockerfile%E5%9F%BA%E7%A1%80/</guid>
+      <guid>https://example.org/docs/%E5%AE%B9%E5%99%A8/dockerfile%E5%9F%BA%E7%A1%80/</guid>
       <description>
         
         
@@ -1070,10 +1070,10 @@
     
     <item>
       <title>Configmap基础</title>
-      <link>http://localhost:8081/docs/k8s/configmap%E5%9F%BA%E7%A1%80/</link>
+      <link>https://example.org/docs/k8s/configmap%E5%9F%BA%E7%A1%80/</link>
       <pubDate>Fri, 26 Dec 2025 16:42:03 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/k8s/configmap%E5%9F%BA%E7%A1%80/</guid>
+      <guid>https://example.org/docs/k8s/configmap%E5%9F%BA%E7%A1%80/</guid>
       <description>
         
         
@@ -1217,10 +1217,10 @@
     
     <item>
       <title>Docker Compose基础</title>
-      <link>http://localhost:8081/docs/%E5%AE%B9%E5%99%A8/docker-compose%E5%9F%BA%E7%A1%80/</link>
+      <link>https://example.org/docs/%E5%AE%B9%E5%99%A8/docker-compose%E5%9F%BA%E7%A1%80/</link>
       <pubDate>Fri, 26 Dec 2025 16:38:27 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/%E5%AE%B9%E5%99%A8/docker-compose%E5%9F%BA%E7%A1%80/</guid>
+      <guid>https://example.org/docs/%E5%AE%B9%E5%99%A8/docker-compose%E5%9F%BA%E7%A1%80/</guid>
       <description>
         
         
@@ -1816,10 +1816,10 @@
     
     <item>
       <title>问题优化</title>
-      <link>http://localhost:8081/docs/k8s/%E9%97%AE%E9%A2%98%E4%BC%98%E5%8C%96/</link>
+      <link>https://example.org/docs/k8s/%E9%97%AE%E9%A2%98%E4%BC%98%E5%8C%96/</link>
       <pubDate>Fri, 26 Dec 2025 16:47:57 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/k8s/%E9%97%AE%E9%A2%98%E4%BC%98%E5%8C%96/</guid>
+      <guid>https://example.org/docs/k8s/%E9%97%AE%E9%A2%98%E4%BC%98%E5%8C%96/</guid>
       <description>
         
         
@@ -1828,11 +1828,749 @@
     </item>
     
     <item>
+      <title>图标</title>
+      <link>https://example.org/docs/linux/%E5%9B%BE%E6%A0%87/</link>
+      <pubDate>Wed, 21 Jan 2026 16:05:57 +0800</pubDate>
+      
+      <guid>https://example.org/docs/linux/%E5%9B%BE%E6%A0%87/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;状态指示图标&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;状态指示图标&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e7%8a%b6%e6%80%81%e6%8c%87%e7%a4%ba%e5%9b%be%e6%a0%87&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;成功/完成&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;✅ ✓ ✔ ✓ ✔ 🎉 🏆 🥇 🏅 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;✅ 任务完成 ✓ 成功 ✔ 验证通过&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
+    title=&#34;复制代码&#34;
+  &gt;
+    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;错误/失败&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;❌ ✗ ✘ ⚠️ 🚫 🚨 💥 🔥 🆘
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;❌ 错误 ✗ 失败 ⚠️ 警告 🚨 告警&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
+    title=&#34;复制代码&#34;
+  &gt;
+    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;进行中&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;🔄 ⏳ ⌛ 🕐 🕑 🕒 🕓 🕔 🕕 🕖 🕗 🕘 🕙 🕚 🕛
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;🔄 处理中 ⏳ 等待 ⌛ 加载中&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
+    title=&#34;复制代码&#34;
+  &gt;
+    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;颜色状态图标&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;颜色状态图标&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e9%a2%9c%e8%89%b2%e7%8a%b6%e6%80%81%e5%9b%be%e6%a0%87&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;彩色圆圈&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;🔴 🟠 🟡 🟢 🔵 🟣 ⚫ ⚪ 🟤
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;🔴 紧急 🟠 高危 🟡 警告 🟢 正常 🔵 信息&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
+    title=&#34;复制代码&#34;
+  &gt;
+    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;其他形状&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;🔺 🔻 ⬜ ⬛ ◼️ ◻️ ◾ ◽ ▪️ ▫️
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;🔺 上升 🔻 下降&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
+    title=&#34;复制代码&#34;
+  &gt;
+    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;系统资源图标&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;系统资源图标&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e7%b3%bb%e7%bb%9f%e8%b5%84%e6%ba%90%e5%9b%be%e6%a0%87&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;硬件资源&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;💻 电脑/CPU
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;💾 内存/存储
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;💿 磁盘/CD
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;📀 DVD
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;🔋 电池
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;🖥️ 显示器
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;⌨️ 键盘
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;🖱️ 鼠标
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;📡 网络
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;📶 信号&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
+    title=&#34;复制代码&#34;
+  &gt;
+    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;服务器相关&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;🖥️ 服务器
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;🗄️ 数据库
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;🔌 连接
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;📊 图表
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;📈 增长
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;📉 下降
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;📋 日志
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;🗂️ 文件夹&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
+    title=&#34;复制代码&#34;
+  &gt;
+    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;监控专用图标&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;监控专用图标&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e7%9b%91%e6%8e%a7%e4%b8%93%e7%94%a8%e5%9b%be%e6%a0%87&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;监控状态&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;👁️ 监控
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;🔍 检查
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;📡 探测
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;🎯 目标
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;📍 位置
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;📌 标记
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;🏷️ 标签&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
+    title=&#34;复制代码&#34;
+  &gt;
+    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;告警级别&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;🔔 通知
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;📢 广播
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;🚨 紧急告警
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;⚠️ 警告
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ℹ️ 信息
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;❓ 疑问
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;❗ 重要&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
+    title=&#34;复制代码&#34;
+  &gt;
+    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;时间相关图标&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;时间相关图标&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e6%97%b6%e9%97%b4%e7%9b%b8%e5%85%b3%e5%9b%be%e6%a0%87&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;时钟&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;🕐 🕑 🕒 🕓 🕔 🕕 🕖 🕗 🕘 🕙 🕚 🕛
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;🕜 🕝 🕞 🕟 🕠 🕡 🕢 🕣 🕤 🕥 🕦 🕧
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;🕐 时间&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
+    title=&#34;复制代码&#34;
+  &gt;
+    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;日历时间&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;📅 日历
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;📆 计划
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;⏰ 闹钟
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;⏱️ 秒表
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;⏲️ 定时器
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;⌚ 手表&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
+    title=&#34;复制代码&#34;
+  &gt;
+    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;网络与连接&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;网络与连接&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e7%bd%91%e7%bb%9c%e4%b8%8e%e8%bf%9e%e6%8e%a5&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;网络状态&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;🌐 全球网络
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;📡 卫星
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;📶 信号强度
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;📲 移动设备
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;☎️ 电话
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;📞 通话
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;📠 传真&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
+    title=&#34;复制代码&#34;
+  &gt;
+    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;连接状态&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;🔗 链接
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;🔌 插头
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;📎 附件
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;🖇️ 回形针
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;🔐 加密
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;🔓 解锁
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;🔒 锁定&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
+    title=&#34;复制代码&#34;
+  &gt;
+    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;文件与文档&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;文件与文档&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e6%96%87%e4%bb%b6%e4%b8%8e%e6%96%87%e6%a1%a3&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;文件类型&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;📁 文件夹
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;📂 打开文件夹
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;📄 文档
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;📃 页面
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;📑 书签
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;📊 图表
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;📈 增长图
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;📉 下降图
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;📋 剪贴板&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
+    title=&#34;复制代码&#34;
+  &gt;
+    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;文档操作&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;✏️ 编辑
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;📝 备忘录
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;📌 图钉
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;📍 圆针
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;📎 附件
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;🖊️ 钢笔
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;🖋️ 钢笔尖
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;✒️ 钢笔&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
+    title=&#34;复制代码&#34;
+  &gt;
+    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;人员与团队&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;人员与团队&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e4%ba%ba%e5%91%98%e4%b8%8e%e5%9b%a2%e9%98%9f&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;角色&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;👤 用户
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;👥 用户组
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;👨‍💻 程序员
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;👩‍💻 女程序员
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;🧑‍💻 技术人员
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;🛡️ 安全
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;🔐 管理员&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
+    title=&#34;复制代码&#34;
+  &gt;
+    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;通信&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;💬 对话
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;🗨️ 发言
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;👂 监听
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;📢 广播
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;📣 扩音器
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;📤 发送
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;📥 接收&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
+    title=&#34;复制代码&#34;
+  &gt;
+    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;实用工具图标&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;实用工具图标&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e5%ae%9e%e7%94%a8%e5%b7%a5%e5%85%b7%e5%9b%be%e6%a0%87&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;工具&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;🔧 工具
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;🔨 锤子
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;⚒️ 锤子和镐
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;🛠️ 扳手和锤子
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;🔩 螺母和螺栓
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;⚙️ 齿轮
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;🗜️ 夹钳&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
+    title=&#34;复制代码&#34;
+  &gt;
+    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;搜索与查找&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;🔍 放大镜
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;🔎 放大镜&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;右&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;🕵️ 侦探
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;📡 雷达
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;📍 定位
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;🎯 靶心&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
+    title=&#34;复制代码&#34;
+  &gt;
+    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;符号与标记&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;符号与标记&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e7%ac%a6%e5%8f%b7%e4%b8%8e%e6%a0%87%e8%ae%b0&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;箭头&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;⬆️ 上箭头
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;⬇️ 下箭头
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;⬅️ 左箭头
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;➡️ 右箭头
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;↕️ 上下箭头
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;↔️ 左右箭头
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;↖️ 左上
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;↗️ 右上
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;↘️ 右下
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;↙️ 左下
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;⏫ 快速上
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;⏬ 快速下
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;🔽 向下三角形
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;🔼 向上三角形&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
+    title=&#34;复制代码&#34;
+  &gt;
+    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;数学符号&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;➕ 加
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;➖ 减
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;✖️ 乘
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;➗ 除
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;♾️ 无限
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;💯 百分
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;🔢 数字&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
+    title=&#34;复制代码&#34;
+  &gt;
+    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Ssh端口转发脚本</title>
+      <link>https://example.org/docs/%E8%84%9A%E6%9C%AC%E5%B7%A5%E5%85%B7/shell/ssh%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91%E8%84%9A%E6%9C%AC/</link>
+      <pubDate>Tue, 20 Jan 2026 17:35:07 +0800</pubDate>
+      
+      <guid>https://example.org/docs/%E8%84%9A%E6%9C%AC%E5%B7%A5%E5%85%B7/shell/ssh%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91%E8%84%9A%E6%9C%AC/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;简介&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;简介&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e7%ae%80%e4%bb%8b&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;使用&lt;code&gt;autossh&lt;/code&gt;工具实现, 功能:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;开放跳板机端口, 内网通过跳板机访问远程服务器&lt;/li&gt;
+&lt;li&gt;自动重连&lt;/li&gt;
+&lt;li&gt;支持多层跳板机&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;脚本&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;脚本&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e8%84%9a%e6%9c%ac&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;安装&lt;/p&gt;
+&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;yum -y install autossh&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
+    title=&#34;复制代码&#34;
+  &gt;
+    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;脚本在跳板机上运行, 主要通过跳板机端口实现转发&lt;/p&gt;
+&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#!/bin/bash
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# 用于配置ssh隧道转发&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;AUTOSSH_POLL&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;60&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;AUTOSSH_PORT&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;function&lt;/span&gt; start&lt;span class=&#34;o&#34;&gt;(){&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;# 测试1: 开放内网10.0.0.2的10001端口, 远程连接外网192.168.1.2的22端口&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    autossh -M &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; -o &lt;span class=&#34;s2&#34;&gt;&amp;#34;ExitOnForwardFailure yes&amp;#34;&lt;/span&gt; -o &lt;span class=&#34;s2&#34;&gt;&amp;#34;ServerAliveInterval 30&amp;#34;&lt;/span&gt; -o &lt;span class=&#34;s2&#34;&gt;&amp;#34;ServerAliveCountMax 3&amp;#34;&lt;/span&gt; -fNL 0.0.0.0:10001:192.168.1.2:22 root@10.0.0.2
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;# 测试2: 开放内网10.0.0.2的10002端口, 远程连接外网192.168.1.3的22端口, 通过两层10.0.0.2, 172.32.0.2跳转到192.168.1.3&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    autossh -M &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; -o &lt;span class=&#34;s2&#34;&gt;&amp;#34;ExitOnForwardFailure yes&amp;#34;&lt;/span&gt; -o &lt;span class=&#34;s2&#34;&gt;&amp;#34;ServerAliveInterval 30&amp;#34;&lt;/span&gt; -o &lt;span class=&#34;s2&#34;&gt;&amp;#34;ServerAliveCountMax 3&amp;#34;&lt;/span&gt; -fNL 0.0.0.0:10002:192.168.1.3:22 -J root@root@10.0.0.2 root@172.32.0.2
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;function&lt;/span&gt; stop&lt;span class=&#34;o&#34;&gt;(){&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; i in &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;ps aux&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;grep &lt;span class=&#34;s2&#34;&gt;&amp;#34;\-NL&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;grep -v grep&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;awk &lt;span class=&#34;s1&#34;&gt;&amp;#39;{print $2}&amp;#39;&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;nb&#34;&gt;kill&lt;/span&gt; -9 &lt;span class=&#34;nv&#34;&gt;$i&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;function&lt;/span&gt; ls&lt;span class=&#34;o&#34;&gt;(){&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;#ps aux|grep autossh|grep -v grep|grep -v ls|awk &amp;#39;{print NR,$11,$12,$13,$14,$15,$16}&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; i in &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;ps aux&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;grep autossh&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;grep -v grep&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;grep -v ls&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;awk &lt;span class=&#34;s1&#34;&gt;&amp;#39;{print $24}&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;awk -F &lt;span class=&#34;s1&#34;&gt;&amp;#39;:&amp;#39;&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;{print $2}&amp;#39;&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;do&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        grep -B &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$i&lt;/span&gt; /script/ssh-tunnel
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;case&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt; in
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s2&#34;&gt;&amp;#34;start&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        start
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s2&#34;&gt;&amp;#34;restart&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        stop
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        start
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s2&#34;&gt;&amp;#34;stop&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        stop
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s2&#34;&gt;&amp;#34;ls&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        ls
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    *&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;  &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;start|restart|stop|ls&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;esac&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
+    title=&#34;复制代码&#34;
+  &gt;
+    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Server2022</title>
+      <link>https://example.org/docs/window/server2022/</link>
+      <pubDate>Fri, 16 Jan 2026 17:49:59 +0800</pubDate>
+      
+      <guid>https://example.org/docs/window/server2022/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;优化脚本&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;优化脚本&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e4%bc%98%e5%8c%96%e8%84%9a%e6%9c%ac&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bat&#34; data-lang=&#34;bat&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;@&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; off
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;chcp 65001 &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;nul
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;title&lt;/span&gt; Windows Server 2022 自动化配置脚本 - 管理员模式
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;cls&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; ========================================================
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt;          ✅ Windows Server 2022 一站式系统配置脚本
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt;          ✅ 含：关更新/关UAC/永不关屏/开远程桌面等
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; ========================================================
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; ★ 脚本将自动执行所有配置，全程无需手动操作...
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;pause&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;nul
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;: ====== 【1/10】彻底关闭Windows系统自动更新 ======&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; [1/10] 正在关闭Windows系统自动更新...
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;: Server 2022 专属注册表路径，兼容LTSC版本&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;reg add &lt;span class=&#34;s2&#34;&gt;&amp;#34;HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update&amp;#34;&lt;/span&gt; /v AUOptions /t REG_DWORD /d 1 /f &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;nul &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;reg add &lt;span class=&#34;s2&#34;&gt;&amp;#34;HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU&amp;#34;&lt;/span&gt; /v NoAutoUpdate /t REG_DWORD /d 1 /f &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;nul &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;reg add &lt;span class=&#34;s2&#34;&gt;&amp;#34;HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate&amp;#34;&lt;/span&gt; /v DisableWindowsUpdateAccess /t REG_DWORD /d 1 /f &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;nul &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;: 禁用并停止Windows Update相关服务（Server 2022 关键服务）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sc config wuauserv start= disabled &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;nul &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sc stop wuauserv &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;nul &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sc config cryptSvc start= disabled &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;nul &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sc stop cryptSvc &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;nul &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sc config bits start= disabled &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;nul &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sc stop bits &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;nul &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sc config trustedinstaller start= disabled &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;nul &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; ✔ 系统自动更新已禁用（Server 2022 专属配置）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;: ====== 【2/10】UAC用户账户控制 → 设置为从不通知 ======&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; [2/10] 正在设置UAC为从不通知...
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;reg add &lt;span class=&#34;s2&#34;&gt;&amp;#34;HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System&amp;#34;&lt;/span&gt; /v EnableLUA /t REG_DWORD /d 0 /f &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;nul &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;reg add &lt;span class=&#34;s2&#34;&gt;&amp;#34;HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System&amp;#34;&lt;/span&gt; /v ConsentPromptBehaviorAdmin /t REG_DWORD /d 0 /f &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;nul &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; ✔ UAC已设置为【从不通知】（重启后生效）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;: ====== 【3/10】关闭系统休眠功能（释放磁盘空间） ======&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; [3/10] 正在关闭系统休眠...
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;powercfg -h off &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;nul &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;: Server 2022 额外清理休眠文件残留&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;del&lt;/span&gt; /f /q C:\hiberfil.sys &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;nul &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; ✔ 休眠功能已关闭，已释放休眠文件占用空间
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;: ====== 【4/10】永久关闭屏幕保护程序（适配Server桌面版，Core版无影响） ======&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; [4/10] 正在关闭屏幕保护程序...
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;reg add &lt;span class=&#34;s2&#34;&gt;&amp;#34;HKCU\Control Panel\Desktop&amp;#34;&lt;/span&gt; /v ScreenSaveActive /t REG_SZ /d 0 /f &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;nul &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;reg add &lt;span class=&#34;s2&#34;&gt;&amp;#34;HKCU\Control Panel\Desktop&amp;#34;&lt;/span&gt; /v ScreenSaverIsSecure /t REG_SZ /d 0 /f &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;nul &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;: 额外配置系统级屏保禁用，适配Server多用户&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;reg add &lt;span class=&#34;s2&#34;&gt;&amp;#34;HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon&amp;#34;&lt;/span&gt; /v ScreenSaverExecutable /t REG_SZ /d &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt; /f &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;nul &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;reg add &lt;span class=&#34;s2&#34;&gt;&amp;#34;HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon&amp;#34;&lt;/span&gt; /v ScreenSaverActive /t REG_SZ /d 0 /f &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;nul &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; ✔ 屏幕保护已永久关闭（桌面版生效，Core版无影响）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;: ====== 【5/10】关闭Windows Defender实时防护（Server 2022 专属配置） ======&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; [5/10] 正在关闭Defender实时防护...
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;reg add &lt;span class=&#34;s2&#34;&gt;&amp;#34;HKLM\SOFTWARE\Microsoft\Windows Defender&amp;#34;&lt;/span&gt; /v DisableAntiSpyware /t REG_DWORD /d 1 /f &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;nul &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;reg add &lt;span class=&#34;s2&#34;&gt;&amp;#34;HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Real-Time Protection&amp;#34;&lt;/span&gt; /v DisableRealtimeMonitoring /t REG_DWORD /d 1 /f &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;nul &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;reg add &lt;span class=&#34;s2&#34;&gt;&amp;#34;HKLM\SOFTWARE\Policies\Microsoft\Windows Defender&amp;#34;&lt;/span&gt; /v DisableWindowsDefender /t REG_DWORD /d 1 /f &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;nul &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;: 禁用并停止Server 2022 Defender相关服务&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sc config WinDefend start= disabled &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;nul &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sc stop WinDefend &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;nul &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sc config WdNisSvc start= disabled &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;nul &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sc stop WdNisSvc &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;nul &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; ✔ Defender实时防护已禁用（避免误杀EXE服务）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;: ====== 【6/10】关闭通知中心所有弹窗（Server 2022 适配） ======&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; [6/10] 正在关闭所有系统/应用通知...
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;reg add &lt;span class=&#34;s2&#34;&gt;&amp;#34;HKCU\Software\Microsoft\Windows\CurrentVersion\Notifications\Settings&amp;#34;&lt;/span&gt; /v NOC_GLOBAL_SETTING_ALLOW_NOTIFICATIONS /t REG_DWORD /d 0 /f &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;nul &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;reg add &lt;span class=&#34;s2&#34;&gt;&amp;#34;HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\PushNotifications&amp;#34;&lt;/span&gt; /v ToastEnabled /t REG_DWORD /d 0 /f &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;nul &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;: Server 2022 额外禁用服务器管理器通知&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;reg add &lt;span class=&#34;s2&#34;&gt;&amp;#34;HKCU\Software\Microsoft\ServerManager&amp;#34;&lt;/span&gt; /v DoNotOpenServerManagerAtLogon /t REG_DWORD /d 1 /f &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;nul &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;reg add &lt;span class=&#34;s2&#34;&gt;&amp;#34;HKLM\SOFTWARE\Microsoft\ServerManager&amp;#34;&lt;/span&gt; /v DoNotOpenServerManagerAtLogon /t REG_DWORD /d 1 /f &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;nul &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; ✔ 通知中心已关闭，所有弹窗将被屏蔽（含服务器管理器通知）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;: ====== 【7/10】关闭系统自动维护（Server 2022 关键优化） ======&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; [7/10] 正在关闭系统自动维护...
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;reg add &lt;span class=&#34;s2&#34;&gt;&amp;#34;HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Schedule\Maintenance&amp;#34;&lt;/span&gt; /v MaintenanceDisabled /t REG_DWORD /d 1 /f &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;nul &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;: 禁用维护相关任务计划，避免后台干扰EXE服务&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;schtasks /change /tn &lt;span class=&#34;s2&#34;&gt;&amp;#34;\Microsoft\Windows\TaskScheduler\Maintenance Configurator&amp;#34;&lt;/span&gt; /disable &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;nul &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;schtasks /change /tn &lt;span class=&#34;s2&#34;&gt;&amp;#34;\Microsoft\Windows\TaskScheduler\Regular Maintenance&amp;#34;&lt;/span&gt; /disable &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;nul &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; ✔ 自动维护已关闭，禁止后台自动扫描/优化（避免服务中断）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;: ====== 【8/10】关闭快速启动（Server 2022 电源配置） ======&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; [8/10] 正在关闭快速启动...
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;powercfg /setactive scheme_current &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;nul &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;reg add &lt;span class=&#34;s2&#34;&gt;&amp;#34;HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Power&amp;#34;&lt;/span&gt; /v HiberbootEnabled /t REG_DWORD /d 0 /f &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;nul &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;: Server 2022 额外禁用混合关机&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;powercfg /setdcvalueindex scheme_current sub_boot hybridboot 0 &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;nul &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;powercfg /setacvalueindex scheme_current sub_boot hybridboot 0 &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;nul &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; ✔ 快速启动已关闭，提升开机兼容性（适配服务器长期运行）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;: ====== 【9/10】开启远程桌面连接（Server 2022 专属，含防火墙放行） ======&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; [9/10] 正在开启远程桌面并放行防火墙...
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;: 启用远程桌面核心配置&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;reg add &lt;span class=&#34;s2&#34;&gt;&amp;#34;HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server&amp;#34;&lt;/span&gt; /v fDenyTSConnections /t REG_DWORD /d 0 /f &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;nul &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;reg add &lt;span class=&#34;s2&#34;&gt;&amp;#34;HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp&amp;#34;&lt;/span&gt; /v UserAuthentication /t REG_DWORD /d 1 /f &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;nul &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;reg add &lt;span class=&#34;s2&#34;&gt;&amp;#34;HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server&amp;#34;&lt;/span&gt; /v AllowTSConnections /t REG_DWORD /d 1 /f &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;nul &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;: Server 2022 防火墙放行（支持远程桌面默认端口3389）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;netsh advfirewall firewall set rule group=&lt;span class=&#34;s2&#34;&gt;&amp;#34;远程桌面&amp;#34;&lt;/span&gt; new enable=yes &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;nul &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;netsh advfirewall firewall add rule name=&lt;span class=&#34;s2&#34;&gt;&amp;#34;RDP-TCP-3389&amp;#34;&lt;/span&gt; dir=in action=allow protocol=TCP localport=3389 enable=yes profile=any &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;nul &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;: 启用远程桌面服务（Server 2022 关键服务）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sc config TermService start= auto &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;nul &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sc start TermService &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;nul &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; ✔ 远程桌面已开启，防火墙已放行（3389端口，可直接连接）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;: ====== 【10/10】设置系统永不关闭屏幕、永不睡眠（Server 2022 电源优化） ======&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; [10/10] 正在设置永不关闭屏幕、永不系统睡眠...
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;: 交流电源（服务器通常接市电，优先配置）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;powercfg /change monitor-timeout-ac 0 &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;nul &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;powercfg /change standby-timeout-ac 0 &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;nul &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;powercfg /change hibernate-timeout-ac 0 &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;nul &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;powercfg /change disk-timeout-ac 0 &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;nul &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;: 直流电源（备用，适配便携小主机）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;powercfg /change monitor-timeout-dc 0 &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;nul &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;powercfg /change standby-timeout-dc 0 &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;nul &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;powercfg /change hibernate-timeout-dc 0 &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;nul &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;powercfg /change disk-timeout-dc 0 &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;nul &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;: Server 2022 额外设置高性能电源计划，避免降频干扰服务&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;powercfg /setactive 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;nul &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; ✔ 已设置：显示器永不关闭、系统永不睡眠、高性能电源模式
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;: ====== 执行完成 ======&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; ========================================================
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; ✅ 所有10项配置全部执行完成！✅
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; ⚠ 提示：UAC、远程桌面、系统更新需重启服务器后生效
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; ⚠ 其余功能已立即生效，重启后所有配置全部稳定运行
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; ⚠ 注意：该脚本适配Server 2022 LTSC（Core版/桌面版均支持）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; ========================================================
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pause&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
+    title=&#34;复制代码&#34;
+  &gt;
+    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;激活&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;激活&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e6%bf%80%e6%b4%bb&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;slmgr /ipk WX4NM-KYWYW-QJJR4-XV3QB-6VM33
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;slmgr /skms kms.03k.org
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;slmgr /ato&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
+    title=&#34;复制代码&#34;
+  &gt;
+    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;自动登录&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;自动登录&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e8%87%aa%e5%8a%a8%e7%99%bb%e5%bd%95&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;:: 1. 启用自动登录（1&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;启用，0&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;禁用）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;reg add &lt;span class=&#34;s2&#34;&gt;&amp;#34;HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon&amp;#34;&lt;/span&gt; /v AutoAdminLogon /t REG_DWORD /d &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; /f
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;:: 2. 设置默认登录用户名（替换为你的实际账号，如 Administrator、自定义账号）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;reg add &lt;span class=&#34;s2&#34;&gt;&amp;#34;HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon&amp;#34;&lt;/span&gt; /v DefaultUserName /t REG_SZ /d &lt;span class=&#34;s2&#34;&gt;&amp;#34;你的登录账号&amp;#34;&lt;/span&gt; /f
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;:: 3. 设置默认登录密码（替换为你的账号对应密码，明文存储，仅限内网服务器）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;reg add &lt;span class=&#34;s2&#34;&gt;&amp;#34;HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon&amp;#34;&lt;/span&gt; /v DefaultPassword /t REG_SZ /d &lt;span class=&#34;s2&#34;&gt;&amp;#34;你的账号密码&amp;#34;&lt;/span&gt; /f
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;:: 4. （可选）跳过「Ctrl+Alt+Del」登录提示，直接进入桌面
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;reg add &lt;span class=&#34;s2&#34;&gt;&amp;#34;HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon&amp;#34;&lt;/span&gt; /v AutoLogonSkipHotKey /t REG_DWORD /d &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; /f&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
+    title=&#34;复制代码&#34;
+  &gt;
+    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;开机启动&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;开机启动&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e5%bc%80%e6%9c%ba%e5%90%af%e5%8a%a8&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;:: 1. 静默安装系统服务（服务名称自定义，如 BasketballService，格式：nssm install 服务名 &lt;span class=&#34;s2&#34;&gt;&amp;#34;EXE完整路径&amp;#34;&lt;/span&gt;）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nssm install BasketballService &lt;span class=&#34;s2&#34;&gt;&amp;#34;D:\ServerApps\baskball.exe&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;:: 2. 配置服务：设置为开机自动启动
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nssm &lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; BasketballService Start SERVICE_AUTO_START
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;:: 3. 配置服务：意外崩溃后自动重启（延迟3秒，避免频繁重启）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nssm &lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; BasketballService AppRestartDelay &lt;span class=&#34;m&#34;&gt;3000&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nssm &lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; BasketballService OnExit Default RESTART
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;:: 4. 配置服务：运行目录（即baskball.exe所在文件夹，避免程序读取依赖文件失败）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nssm &lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; BasketballService AppDirectory &lt;span class=&#34;s2&#34;&gt;&amp;#34;D:\ServerApps&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;:: 5. （可选）配置日志输出，方便排查程序运行报错（自动创建日志目录）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nssm &lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; BasketballService AppStdout &lt;span class=&#34;s2&#34;&gt;&amp;#34;D:\ServerApps\Logs\stdout.log&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nssm &lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; BasketballService AppStderr &lt;span class=&#34;s2&#34;&gt;&amp;#34;D:\ServerApps\Logs\stderr.log&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nssm &lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; BasketballService AppRotateFiles &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;  :: 启用日志文件轮转
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nssm &lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; BasketballService AppRotateBytes &lt;span class=&#34;m&#34;&gt;10485760&lt;/span&gt;  :: 单个日志文件最大10MB
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;:: 6. 启动该服务（立即验证是否能正常运行，无需重启）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nssm start BasketballService
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;:: 重启baskball.exe对应的服务
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nssm restart BasketballService
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;:: 停止baskball.exe对应的服务
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nssm stop BasketballService
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;:: 卸载服务（如需重新配置，confirm表示无需手动确认）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nssm remove BasketballService confirm&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
+    title=&#34;复制代码&#34;
+  &gt;
+    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Log Pilot日志采集</title>
-      <link>http://localhost:8081/docs/k8s/log-pilot%E6%97%A5%E5%BF%97%E9%87%87%E9%9B%86/</link>
+      <link>https://example.org/docs/k8s/log-pilot%E6%97%A5%E5%BF%97%E9%87%87%E9%9B%86/</link>
       <pubDate>Thu, 15 Jan 2026 17:47:01 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/k8s/log-pilot%E6%97%A5%E5%BF%97%E9%87%87%E9%9B%86/</guid>
+      <guid>https://example.org/docs/k8s/log-pilot%E6%97%A5%E5%BF%97%E9%87%87%E9%9B%86/</guid>
       <description>
         
         
@@ -2006,16 +2744,16 @@
     
     <item>
       <title>内部资源站</title>
-      <link>http://localhost:8081/docs/%E8%84%9A%E6%9C%AC%E5%B7%A5%E5%85%B7/python/%E5%86%85%E9%83%A8%E8%B5%84%E6%BA%90%E7%AB%99/</link>
+      <link>https://example.org/docs/%E8%84%9A%E6%9C%AC%E5%B7%A5%E5%85%B7/python/%E5%86%85%E9%83%A8%E8%B5%84%E6%BA%90%E7%AB%99/</link>
       <pubDate>Tue, 13 Jan 2026 18:10:03 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/%E8%84%9A%E6%9C%AC%E5%B7%A5%E5%85%B7/python/%E5%86%85%E9%83%A8%E8%B5%84%E6%BA%90%E7%AB%99/</guid>
+      <guid>https://example.org/docs/%E8%84%9A%E6%9C%AC%E5%B7%A5%E5%85%B7/python/%E5%86%85%E9%83%A8%E8%B5%84%E6%BA%90%E7%AB%99/</guid>
       <description>
         
         
         &lt;h2&gt;简介&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;简介&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#%e7%ae%80%e4%bb%8b&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;一个简单的资源管理站点, 使用python的flask工具开发, 引用Element样式, 方便管理和快速查找公司各种工具。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;http://localhost:8081/images/ops-web.png&#34;&gt;&lt;img src=&#34;http://localhost:8081/images/ops-web.png&#34; alt=&#34;展示效果&#34; style=&#34;max-width: 100%;&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://example.org/images/ops-web.png&#34;&gt;&lt;img src=&#34;https://example.org/images/ops-web.png&#34; alt=&#34;展示效果&#34; style=&#34;max-width: 100%;&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;部署&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;部署&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#%e9%83%a8%e7%bd%b2&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;目录结果&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;目录结果&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#%e7%9b%ae%e5%bd%95%e7%bb%93%e6%9e%9c&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
@@ -2272,17 +3010,17 @@
     
     <item>
       <title>简易跳板机</title>
-      <link>http://localhost:8081/docs/%E8%84%9A%E6%9C%AC%E5%B7%A5%E5%85%B7/shell/%E7%AE%80%E6%98%93%E8%B7%B3%E6%9D%BF%E6%9C%BA/</link>
+      <link>https://example.org/docs/%E8%84%9A%E6%9C%AC%E5%B7%A5%E5%85%B7/shell/%E7%AE%80%E6%98%93%E8%B7%B3%E6%9D%BF%E6%9C%BA/</link>
       <pubDate>Tue, 13 Jan 2026 17:21:09 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/%E8%84%9A%E6%9C%AC%E5%B7%A5%E5%85%B7/shell/%E7%AE%80%E6%98%93%E8%B7%B3%E6%9D%BF%E6%9C%BA/</guid>
+      <guid>https://example.org/docs/%E8%84%9A%E6%9C%AC%E5%B7%A5%E5%85%B7/shell/%E7%AE%80%E6%98%93%E8%B7%B3%E6%9D%BF%E6%9C%BA/</guid>
       <description>
         
         
         &lt;h2&gt;介绍&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;介绍&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#%e4%bb%8b%e7%bb%8d&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;使用&lt;code&gt;tssh&lt;/code&gt;工具实现跳板机功能, 官网: &lt;a href=&#34;https://github.com/trzsz/trzsz-ssh&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com/trzsz/trzsz-ssh&lt;/a&gt;
 &lt;figure&gt;
-    &lt;img src=&#34;http://localhost:8081/images/tbj.png&#34; title=&#34;展示效果&#34; alt=&#34;风景&#34;  loading=&#34;lazy&#34; /&gt;
+    &lt;img src=&#34;https://example.org/images/tbj.png&#34; title=&#34;展示效果&#34; alt=&#34;风景&#34;  loading=&#34;lazy&#34; /&gt;
     &lt;figcaption&gt;展示效果&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;/p&gt;
 &lt;h2&gt;部署&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;部署&#34;&gt;&lt;/span&gt;
@@ -2408,10 +3146,10 @@
     
     <item>
       <title>Kubectl常用命令</title>
-      <link>http://localhost:8081/docs/k8s/kubectl%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
+      <link>https://example.org/docs/k8s/kubectl%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
       <pubDate>Mon, 12 Jan 2026 16:12:36 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/k8s/kubectl%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
+      <guid>https://example.org/docs/k8s/kubectl%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
       <description>
         
         
@@ -2545,10 +3283,10 @@
     
     <item>
       <title>文件打开数</title>
-      <link>http://localhost:8081/docs/linux/%E6%96%87%E4%BB%B6%E6%89%93%E5%BC%80%E6%95%B0/</link>
+      <link>https://example.org/docs/linux/%E6%96%87%E4%BB%B6%E6%89%93%E5%BC%80%E6%95%B0/</link>
       <pubDate>Mon, 12 Jan 2026 15:27:16 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/linux/%E6%96%87%E4%BB%B6%E6%89%93%E5%BC%80%E6%95%B0/</guid>
+      <guid>https://example.org/docs/linux/%E6%96%87%E4%BB%B6%E6%89%93%E5%BC%80%E6%95%B0/</guid>
       <description>
         
         
@@ -2726,10 +3464,10 @@
     
     <item>
       <title>语言</title>
-      <link>http://localhost:8081/docs/linux/%E8%AF%AD%E8%A8%80/</link>
+      <link>https://example.org/docs/linux/%E8%AF%AD%E8%A8%80/</link>
       <pubDate>Mon, 12 Jan 2026 14:46:57 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/linux/%E8%AF%AD%E8%A8%80/</guid>
+      <guid>https://example.org/docs/linux/%E8%AF%AD%E8%A8%80/</guid>
       <description>
         
         
@@ -2739,10 +3477,10 @@
     
     <item>
       <title>时区</title>
-      <link>http://localhost:8081/docs/linux/%E6%97%B6%E5%8C%BA/</link>
+      <link>https://example.org/docs/linux/%E6%97%B6%E5%8C%BA/</link>
       <pubDate>Mon, 12 Jan 2026 14:46:53 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/linux/%E6%97%B6%E5%8C%BA/</guid>
+      <guid>https://example.org/docs/linux/%E6%97%B6%E5%8C%BA/</guid>
       <description>
         
         
@@ -3010,11 +3748,11 @@
     </item>
     
     <item>
-      <title>激活和优化</title>
-      <link>http://localhost:8081/docs/window/%E6%BF%80%E6%B4%BB/</link>
+      <title>win11</title>
+      <link>https://example.org/docs/window/win11/</link>
       <pubDate>Sun, 04 Jan 2026 17:10:10 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/window/%E6%BF%80%E6%B4%BB/</guid>
+      <guid>https://example.org/docs/window/win11/</guid>
       <description>
         
         
@@ -3208,7 +3946,7 @@ NBQWQ-W9PTV-B4YWP-4K773-T6PKG&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2&gt;开机启动&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;开机启动&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#%e5%bc%80%e6%9c%ba%e5%90%af%e5%8a%a8&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;添加启动规则&lt;/p&gt;
+    &lt;a href=&#34;#%e5%bc%80%e6%9c%ba%e5%90%af%e5%8a%a8&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;开机启动配置&lt;/p&gt;
 &lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
 
 &lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 设置开机启动&lt;/span&gt;
@@ -3229,10 +3967,10 @@ NBQWQ-W9PTV-B4YWP-4K773-T6PKG&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;code&gt;PyEXE_AutoRun&lt;/code&gt;: 启动规则名称&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;C:\Users\test.exe&lt;/code&gt;: 启动程序路径&lt;/li&gt;
+&lt;li&gt;PyEXE_AutoRun: 启动规则名称&lt;/li&gt;
+&lt;li&gt;C:\Users\test.exe: 启动程序路径&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;跳过账号登录&lt;/p&gt;
+&lt;p&gt;自动登录&lt;/p&gt;
 &lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
 
 &lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 1. 开启自动登录功能&lt;/span&gt;
@@ -3255,16 +3993,70 @@ NBQWQ-W9PTV-B4YWP-4K773-T6PKG&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=
   &lt;/button&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+&lt;p&gt;执行脚本, 断开远程登录, 显示桌面&lt;/p&gt;
+&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;@echo off
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;chcp &lt;span class=&#34;m&#34;&gt;65001&lt;/span&gt; &amp;gt; nul 2&amp;gt;&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;title 维持远程桌面会话（断开后不锁屏）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==============================================&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; 正在查询当前活跃用户会话...
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==============================================&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;:: 自动查询当前Active（活跃）会话的ID，排除无关信息
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; /f &lt;span class=&#34;s2&#34;&gt;&amp;#34;tokens=2,3 delims= &amp;#34;&lt;/span&gt; %%a in &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;quser ^| findstr /i &amp;#34;Active&amp;#34;&amp;#39;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;do&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;session_id=%%a&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    :: 处理会话ID可能为字母+数字的情况（部分系统环境）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; not &lt;span class=&#34;s2&#34;&gt;&amp;#34;%%b&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;==&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;session_id=%%b&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;:: 判断是否查询到会话ID
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; not defined session_id &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; 错误：未查询到活跃的用户会话，请确认已建立远程连接！
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    :: 延迟2秒后退出（让用户看到错误提示，可按需调整或删除）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    timeout /t &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt; /nobreak &amp;gt; nul
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nb&#34;&gt;exit&lt;/span&gt; /b &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; 查询到活跃会话ID：%session_id%
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; 正在执行tscon命令，维持会话不锁屏...
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==============================================&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;:: 执行tscon命令，重定向会话到控制台（需管理员权限）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tscon %session_id% /dest:console /v
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;:: 命令执行结果判断
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; %errorlevel% equ &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; 操作成功！会话已维持，断开远程桌面后将显示桌面而非锁屏。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; 错误：命令执行失败，请以管理员身份运行此脚本！
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==============================================&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;:: 移除原有的pause命令，无需用户手动干预，脚本执行完毕直接退出
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;:: 可选：添加短暂延迟，让用户看清执行结果（如需立即退出，删除下面这行即可）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;timeout /t &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; /nobreak &amp;gt; nul&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
+    title=&#34;复制代码&#34;
+  &gt;
+    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 
       </description>
     </item>
     
     <item>
       <title>Redis安装</title>
-      <link>http://localhost:8081/docs/%E6%95%B0%E6%8D%AE%E5%BA%93/redis/redis%E5%AE%89%E8%A3%85/</link>
+      <link>https://example.org/docs/%E6%95%B0%E6%8D%AE%E5%BA%93/redis/redis%E5%AE%89%E8%A3%85/</link>
       <pubDate>Tue, 30 Dec 2025 17:41:00 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/%E6%95%B0%E6%8D%AE%E5%BA%93/redis/redis%E5%AE%89%E8%A3%85/</guid>
+      <guid>https://example.org/docs/%E6%95%B0%E6%8D%AE%E5%BA%93/redis/redis%E5%AE%89%E8%A3%85/</guid>
       <description>
         
         
@@ -3319,10 +4111,10 @@ NBQWQ-W9PTV-B4YWP-4K773-T6PKG&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=
     
     <item>
       <title>Mongo安装</title>
-      <link>http://localhost:8081/docs/%E6%95%B0%E6%8D%AE%E5%BA%93/mongo/mongo%E5%AE%89%E8%A3%85/</link>
+      <link>https://example.org/docs/%E6%95%B0%E6%8D%AE%E5%BA%93/mongo/mongo%E5%AE%89%E8%A3%85/</link>
       <pubDate>Tue, 30 Dec 2025 17:39:37 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/%E6%95%B0%E6%8D%AE%E5%BA%93/mongo/mongo%E5%AE%89%E8%A3%85/</guid>
+      <guid>https://example.org/docs/%E6%95%B0%E6%8D%AE%E5%BA%93/mongo/mongo%E5%AE%89%E8%A3%85/</guid>
       <description>
         
         
@@ -3378,10 +4170,10 @@ NBQWQ-W9PTV-B4YWP-4K773-T6PKG&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=
     
     <item>
       <title>Mysql安装</title>
-      <link>http://localhost:8081/docs/%E6%95%B0%E6%8D%AE%E5%BA%93/mysql/mysql%E5%AE%89%E8%A3%85/</link>
+      <link>https://example.org/docs/%E6%95%B0%E6%8D%AE%E5%BA%93/mysql/mysql%E5%AE%89%E8%A3%85/</link>
       <pubDate>Tue, 30 Dec 2025 17:38:14 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/%E6%95%B0%E6%8D%AE%E5%BA%93/mysql/mysql%E5%AE%89%E8%A3%85/</guid>
+      <guid>https://example.org/docs/%E6%95%B0%E6%8D%AE%E5%BA%93/mysql/mysql%E5%AE%89%E8%A3%85/</guid>
       <description>
         
         
@@ -3439,10 +4231,10 @@ NBQWQ-W9PTV-B4YWP-4K773-T6PKG&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=
     
     <item>
       <title>Openvpn</title>
-      <link>http://localhost:8081/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/openvpn/</link>
+      <link>https://example.org/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/openvpn/</link>
       <pubDate>Tue, 30 Dec 2025 17:32:00 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/openvpn/</guid>
+      <guid>https://example.org/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/openvpn/</guid>
       <description>
         
         
@@ -3582,10 +4374,10 @@ docker run -v ./openvpn:/etc/openvpn --rm -it kylemanna/openvpn ovpn_initpki&lt;
     
     <item>
       <title>Gitlab</title>
-      <link>http://localhost:8081/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/gitlab/</link>
+      <link>https://example.org/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/gitlab/</link>
       <pubDate>Tue, 30 Dec 2025 17:30:16 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/gitlab/</guid>
+      <guid>https://example.org/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/gitlab/</guid>
       <description>
         
         
@@ -3667,10 +4459,10 @@ docker run -v ./openvpn:/etc/openvpn --rm -it kylemanna/openvpn ovpn_initpki&lt;
     
     <item>
       <title>Nginxwebui</title>
-      <link>http://localhost:8081/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/nginxwebui/</link>
+      <link>https://example.org/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/nginxwebui/</link>
       <pubDate>Tue, 30 Dec 2025 17:26:49 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/nginxwebui/</guid>
+      <guid>https://example.org/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/nginxwebui/</guid>
       <description>
         
         
@@ -3725,10 +4517,10 @@ docker run -v ./openvpn:/etc/openvpn --rm -it kylemanna/openvpn ovpn_initpki&lt;
     
     <item>
       <title>Nacos</title>
-      <link>http://localhost:8081/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/nacos/</link>
+      <link>https://example.org/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/nacos/</link>
       <pubDate>Tue, 30 Dec 2025 17:18:15 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/nacos/</guid>
+      <guid>https://example.org/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/nacos/</guid>
       <description>
         
         
@@ -3792,10 +4584,10 @@ docker run -v ./openvpn:/etc/openvpn --rm -it kylemanna/openvpn ovpn_initpki&lt;
     
     <item>
       <title>Nextcloud</title>
-      <link>http://localhost:8081/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/nextcloud/</link>
+      <link>https://example.org/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/nextcloud/</link>
       <pubDate>Tue, 30 Dec 2025 17:18:06 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/nextcloud/</guid>
+      <guid>https://example.org/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/nextcloud/</guid>
       <description>
         
         
@@ -3888,10 +4680,10 @@ docker run -v ./openvpn:/etc/openvpn --rm -it kylemanna/openvpn ovpn_initpki&lt;
     
     <item>
       <title>Mindoc</title>
-      <link>http://localhost:8081/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/mindoc/</link>
+      <link>https://example.org/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/mindoc/</link>
       <pubDate>Mon, 29 Dec 2025 16:59:30 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/mindoc/</guid>
+      <guid>https://example.org/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/mindoc/</guid>
       <description>
         
         
@@ -3972,10 +4764,10 @@ docker run -v ./openvpn:/etc/openvpn --rm -it kylemanna/openvpn ovpn_initpki&lt;
     
     <item>
       <title>Iptables之nat配置</title>
-      <link>http://localhost:8081/docs/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/iptables%E4%B9%8Bnat%E9%85%8D%E7%BD%AE/</link>
+      <link>https://example.org/docs/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/iptables%E4%B9%8Bnat%E9%85%8D%E7%BD%AE/</link>
       <pubDate>Mon, 29 Dec 2025 14:57:35 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/iptables%E4%B9%8Bnat%E9%85%8D%E7%BD%AE/</guid>
+      <guid>https://example.org/docs/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/iptables%E4%B9%8Bnat%E9%85%8D%E7%BD%AE/</guid>
       <description>
         
         
@@ -4405,10 +5197,10 @@ iptables -t nat -F POSTROUTING&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class
     
     <item>
       <title>Iptables基础</title>
-      <link>http://localhost:8081/docs/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/iptables%E5%9F%BA%E7%A1%80/</link>
+      <link>https://example.org/docs/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/iptables%E5%9F%BA%E7%A1%80/</link>
       <pubDate>Mon, 29 Dec 2025 11:17:36 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/iptables%E5%9F%BA%E7%A1%80/</guid>
+      <guid>https://example.org/docs/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/iptables%E5%9F%BA%E7%A1%80/</guid>
       <description>
         
         
@@ -4720,10 +5512,10 @@ iptables -P INPUT ACCEPT  # 临时放行所有入站，避免失联&lt;/code&gt;
     
     <item>
       <title>Tcpdump</title>
-      <link>http://localhost:8081/docs/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/tcpdump/</link>
+      <link>https://example.org/docs/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/tcpdump/</link>
       <pubDate>Mon, 29 Dec 2025 11:17:24 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/tcpdump/</guid>
+      <guid>https://example.org/docs/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/tcpdump/</guid>
       <description>
         
         
@@ -4883,10 +5675,10 @@ iptables -P INPUT ACCEPT  # 临时放行所有入站，避免失联&lt;/code&gt;
     
     <item>
       <title>Proxmox</title>
-      <link>http://localhost:8081/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/proxmox/</link>
+      <link>https://example.org/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/proxmox/</link>
       <pubDate>Fri, 26 Dec 2025 16:54:51 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/proxmox/</guid>
+      <guid>https://example.org/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/proxmox/</guid>
       <description>
         
         
@@ -4896,10 +5688,10 @@ iptables -P INPUT ACCEPT  # 临时放行所有入站，避免失联&lt;/code&gt;
     
     <item>
       <title>Frp</title>
-      <link>http://localhost:8081/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/frp/</link>
+      <link>https://example.org/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/frp/</link>
       <pubDate>Fri, 26 Dec 2025 16:54:36 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/frp/</guid>
+      <guid>https://example.org/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/frp/</guid>
       <description>
         
         
@@ -5156,10 +5948,10 @@ iptables -P INPUT ACCEPT  # 临时放行所有入站，避免失联&lt;/code&gt;
     
     <item>
       <title>Grafana</title>
-      <link>http://localhost:8081/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/grafana/</link>
+      <link>https://example.org/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/grafana/</link>
       <pubDate>Fri, 26 Dec 2025 16:54:30 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/grafana/</guid>
+      <guid>https://example.org/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/grafana/</guid>
       <description>
         
         
@@ -5218,10 +6010,10 @@ iptables -P INPUT ACCEPT  # 临时放行所有入站，避免失联&lt;/code&gt;
     
     <item>
       <title>Archery</title>
-      <link>http://localhost:8081/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/archery/</link>
+      <link>https://example.org/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/archery/</link>
       <pubDate>Fri, 26 Dec 2025 16:54:13 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/archery/</guid>
+      <guid>https://example.org/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/archery/</guid>
       <description>
         
         
@@ -5277,10 +6069,10 @@ iptables -P INPUT ACCEPT  # 临时放行所有入站，避免失联&lt;/code&gt;
     
     <item>
       <title>Nexus</title>
-      <link>http://localhost:8081/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/nexus/</link>
+      <link>https://example.org/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/nexus/</link>
       <pubDate>Fri, 26 Dec 2025 16:53:55 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/nexus/</guid>
+      <guid>https://example.org/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/nexus/</guid>
       <description>
         
         
@@ -5349,10 +6141,10 @@ iptables -P INPUT ACCEPT  # 临时放行所有入站，避免失联&lt;/code&gt;
     
     <item>
       <title>Harbor</title>
-      <link>http://localhost:8081/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/harbor/</link>
+      <link>https://example.org/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/harbor/</link>
       <pubDate>Fri, 26 Dec 2025 16:53:48 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/harbor/</guid>
+      <guid>https://example.org/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/harbor/</guid>
       <description>
         
         
@@ -5412,10 +6204,10 @@ iptables -P INPUT ACCEPT  # 临时放行所有入站，避免失联&lt;/code&gt;
     
     <item>
       <title>Jenkins</title>
-      <link>http://localhost:8081/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/jenkins/</link>
+      <link>https://example.org/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/jenkins/</link>
       <pubDate>Fri, 26 Dec 2025 16:53:40 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/jenkins/</guid>
+      <guid>https://example.org/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/jenkins/</guid>
       <description>
         
         
@@ -5490,10 +6282,10 @@ iptables -P INPUT ACCEPT  # 临时放行所有入站，避免失联&lt;/code&gt;
     
     <item>
       <title>Zabbix</title>
-      <link>http://localhost:8081/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/zabbix/</link>
+      <link>https://example.org/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/zabbix/</link>
       <pubDate>Fri, 26 Dec 2025 16:51:46 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/zabbix/</guid>
+      <guid>https://example.org/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/zabbix/</guid>
       <description>
         
         
@@ -5603,10 +6395,10 @@ iptables -P INPUT ACCEPT  # 临时放行所有入站，避免失联&lt;/code&gt;
     
     <item>
       <title>Promethous</title>
-      <link>http://localhost:8081/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/promethous/</link>
+      <link>https://example.org/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/promethous/</link>
       <pubDate>Fri, 26 Dec 2025 16:51:10 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/promethous/</guid>
+      <guid>https://example.org/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/promethous/</guid>
       <description>
         
         
@@ -5684,10 +6476,10 @@ iptables -P INPUT ACCEPT  # 临时放行所有入站，避免失联&lt;/code&gt;
     
     <item>
       <title>Elk</title>
-      <link>http://localhost:8081/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/elk/</link>
+      <link>https://example.org/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/elk/</link>
       <pubDate>Fri, 26 Dec 2025 16:50:20 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/elk/</guid>
+      <guid>https://example.org/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/elk/</guid>
       <description>
         
         
@@ -6123,10 +6915,10 @@ output {
     
     <item>
       <title>Nginx</title>
-      <link>http://localhost:8081/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/nginx/</link>
+      <link>https://example.org/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/nginx/</link>
       <pubDate>Fri, 26 Dec 2025 16:50:09 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/nginx/</guid>
+      <guid>https://example.org/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/nginx/</guid>
       <description>
         
         
@@ -6485,10 +7277,10 @@ output {
     
     <item>
       <title>镜像仓库大全</title>
-      <link>http://localhost:8081/docs/linux/%E9%95%9C%E5%83%8F%E4%BB%93%E5%BA%93%E5%A4%A7%E5%85%A8/</link>
+      <link>https://example.org/docs/linux/%E9%95%9C%E5%83%8F%E4%BB%93%E5%BA%93%E5%A4%A7%E5%85%A8/</link>
       <pubDate>Fri, 26 Dec 2025 14:03:41 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/linux/%E9%95%9C%E5%83%8F%E4%BB%93%E5%BA%93%E5%A4%A7%E5%85%A8/</guid>
+      <guid>https://example.org/docs/linux/%E9%95%9C%E5%83%8F%E4%BB%93%E5%BA%93%E5%A4%A7%E5%85%A8/</guid>
       <description>
         
         
@@ -6523,13 +7315,24 @@ output {
 &lt;/div&gt;
 &lt;h2&gt;debian&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;debian&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#debian&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;debian 9-11&lt;/li&gt;
+&lt;li&gt;debian 9-11
+归档源&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
 
-&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sed -i &lt;span class=&#34;s1&#34;&gt;&amp;#39;s/deb.debian.org/mirrors.aliyun.com/g&amp;#39;&lt;/span&gt; /etc/apt/sources.list
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sed -i &lt;span class=&#34;s1&#34;&gt;&amp;#39;s/security.debian.org/mirrors.aliyun.com/g&amp;#39;&lt;/span&gt; /etc/apt/sources.list
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;apt update&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cat &amp;gt; /etc/apt/sources.list &lt;span class=&#34;s&#34;&gt;&amp;lt;&amp;lt;EOF
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;# 阿里云 Debian 10 (Buster) 归档源
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;deb http://mirrors.aliyun.com/debian-archive/debian/ buster main non-free contrib
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;deb-src http://mirrors.aliyun.com/debian-archive/debian/ buster main non-free contrib
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;# 归档更新源
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;deb http://mirrors.aliyun.com/debian-archive/debian/ buster-updates main non-free contrib
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;deb-src http://mirrors.aliyun.com/debian-archive/debian/ buster-updates main non-free contrib
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;# 归档安全更新源
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;deb http://mirrors.aliyun.com/debian-archive/debian-security/ buster/updates main non-free contrib
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;deb-src http://mirrors.aliyun.com/debian-archive/debian-security/ buster/updates main non-free contrib
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;EOF&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
   &lt;button
     class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
     title=&#34;复制代码&#34;
@@ -6686,6 +7489,25 @@ output {
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 验证是否设置成功&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npm config get registry&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
+    title=&#34;复制代码&#34;
+  &gt;
+    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;linux流量代理&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;linux流量代理&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#linux%e6%b5%81%e9%87%8f%e4%bb%a3%e7%90%86&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;code&gt;10.0.0.82&lt;/code&gt;: 代理服务器&lt;/p&gt;
+&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# HTTP/HTTPS 代理&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;http_proxy&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;http://10.0.0.82:7890&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;https_proxy&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;http://10.0.0.82:7890&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# SOCKS 代理&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;socks_proxy&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;socks5://10.0.0.82:7890&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;SOCKS_PROXY&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;socks5://10.0.0.82:7890&amp;#34;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
   &lt;button
     class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
     title=&#34;复制代码&#34;

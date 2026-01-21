@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr"><head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="robots" content="noindex, nofollow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="robots" content="index, follow" />
   <link rel="icon shortcut" href="/favicon.ico" sizes="32x32" />
 <link rel="icon" href="/favicon.svg" type="image/svg+xml" id="favicon-svg" />
 <link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16" />
@@ -9,7 +9,7 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
 <title>Configmap基础 – 自在网站</title>
-  <meta name="description" content="作为环境变量 apiVersion: v1 kind: Pod metadata: name: pod-env-config-demo spec: containers: - name: demo-container image: busybox command: [&#34;/bin/sh&#34;, &#34;-c&#34;, &#34;env | grep APP_ &amp;&amp; sleep 3600&#34;] # 打印环境变量并休眠 env: # 单个环境变量：直接引用 ConfigMap 的某个键值对 - name: APP_ENV # 容器内的环境变量名 valueFrom: configMapKeyRef: name: app-yaml-config # 引用的 ConfigMap 名称 key: app.env # 引用的 ConfigMap 中的键 - name: APP_VERSION # 另一个环境变量 valueFrom: configMapKeyRef: name: app-yaml-config key: app.version # （可选）批量注入环境变量：将 ConfigMap 所有键值对作为环境变量注入 envFrom: - configMapRef: name: app-simple-config # 引用的 ConfigMap 名称（方式 1 创建的） restartPolicy: Never 作为命令行参数（通过环境变量中转） apiVersion: v1 kind: Pod metadata: name: pod-command-config-demo spec: containers: - name: demo-container image: busybox # 命令行参数引用环境变量（环境变量来自 ConfigMap） command: [&#34;/bin/sh&#34;, &#34;-c&#34;, &#34;echo &#39;当前环境：$(APP_ENV)，版本：$(APP_VERSION)&#39; &amp;&amp; sleep 3600&#34;] env: - name: APP_ENV valueFrom: configMapKeyRef: name: app-yaml-config key: app.env - name: APP_VERSION valueFrom: configMapKeyRef: name: app-yaml-config key: app.version restartPolicy: Never 挂载为目录(支持热更新) apiVersion: v1 kind: Pod metadata: name: pod-volume-dir-config-demo spec: containers: - name: demo-container image: busybox command: [&#34;/bin/sh&#34;, &#34;-c&#34;, &#34;ls /app/config &amp;&amp; cat /app/config/app.conf &amp;&amp; sleep 3600&#34;] volumeMounts: - name: config-volume # 与 volumes 中定义的卷名对应 mountPath: /app/config # 容器内的挂载目录（该目录下原有文件会被覆盖） volumes: - name: config-volume # 定义卷名称 configMap: name: app-yaml-config # 引用的 ConfigMap 名称 restartPolicy: Never 挂载为文件 apiVersion: v1 kind: Pod metadata: name: pod-volume-file-config-demo spec: containers: - name: demo-container image: busybox command: [&#34;/bin/sh&#34;, &#34;-c&#34;, &#34;cat /app/db.properties &amp;&amp; sleep 3600&#34;] volumeMounts: - name: config-volume # 与 volumes 中定义的卷名对应 mountPath: /app/db.properties # 容器内的单个文件路径 subPath: db.properties # 引用 ConfigMap 中的某个键（对应生成的文件名） volumes: - name: config-volume configMap: name: app-yaml-config # 引用的 ConfigMap 名称 items: # 可选：筛选需要挂载的键（不写则挂载所有） - key: db.properties path: db.properties # 卷内的文件路径（与 subPath 对应） restartPolicy: Never " /><link rel="canonical" href="http://localhost:8081/docs/k8s/configmap%E5%9F%BA%E7%A1%80/" itemprop="url" />
+  <meta name="description" content="作为环境变量 apiVersion: v1 kind: Pod metadata: name: pod-env-config-demo spec: containers: - name: demo-container image: busybox command: [&#34;/bin/sh&#34;, &#34;-c&#34;, &#34;env | grep APP_ &amp;&amp; sleep 3600&#34;] # 打印环境变量并休眠 env: # 单个环境变量：直接引用 ConfigMap 的某个键值对 - name: APP_ENV # 容器内的环境变量名 valueFrom: configMapKeyRef: name: app-yaml-config # 引用的 ConfigMap 名称 key: app.env # 引用的 ConfigMap 中的键 - name: APP_VERSION # 另一个环境变量 valueFrom: configMapKeyRef: name: app-yaml-config key: app.version # （可选）批量注入环境变量：将 ConfigMap 所有键值对作为环境变量注入 envFrom: - configMapRef: name: app-simple-config # 引用的 ConfigMap 名称（方式 1 创建的） restartPolicy: Never 作为命令行参数（通过环境变量中转） apiVersion: v1 kind: Pod metadata: name: pod-command-config-demo spec: containers: - name: demo-container image: busybox # 命令行参数引用环境变量（环境变量来自 ConfigMap） command: [&#34;/bin/sh&#34;, &#34;-c&#34;, &#34;echo &#39;当前环境：$(APP_ENV)，版本：$(APP_VERSION)&#39; &amp;&amp; sleep 3600&#34;] env: - name: APP_ENV valueFrom: configMapKeyRef: name: app-yaml-config key: app.env - name: APP_VERSION valueFrom: configMapKeyRef: name: app-yaml-config key: app.version restartPolicy: Never 挂载为目录(支持热更新) apiVersion: v1 kind: Pod metadata: name: pod-volume-dir-config-demo spec: containers: - name: demo-container image: busybox command: [&#34;/bin/sh&#34;, &#34;-c&#34;, &#34;ls /app/config &amp;&amp; cat /app/config/app.conf &amp;&amp; sleep 3600&#34;] volumeMounts: - name: config-volume # 与 volumes 中定义的卷名对应 mountPath: /app/config # 容器内的挂载目录（该目录下原有文件会被覆盖） volumes: - name: config-volume # 定义卷名称 configMap: name: app-yaml-config # 引用的 ConfigMap 名称 restartPolicy: Never 挂载为文件 apiVersion: v1 kind: Pod metadata: name: pod-volume-file-config-demo spec: containers: - name: demo-container image: busybox command: [&#34;/bin/sh&#34;, &#34;-c&#34;, &#34;cat /app/db.properties &amp;&amp; sleep 3600&#34;] volumeMounts: - name: config-volume # 与 volumes 中定义的卷名对应 mountPath: /app/db.properties # 容器内的单个文件路径 subPath: db.properties # 引用 ConfigMap 中的某个键（对应生成的文件名） volumes: - name: config-volume configMap: name: app-yaml-config # 引用的 ConfigMap 名称 items: # 可选：筛选需要挂载的键（不写则挂载所有） - key: db.properties path: db.properties # 卷内的文件路径（与 subPath 对应） restartPolicy: Never " /><link rel="canonical" href="https://example.org/docs/k8s/configmap%E5%9F%BA%E7%A1%80/" itemprop="url" />
 
 <meta property="og:title" content="Configmap基础">
 <meta
@@ -145,7 +145,7 @@ spec:
   content="
     article
   ">
-<meta property="og:url" content="http://localhost:8081/docs/k8s/configmap%E5%9F%BA%E7%A1%80/"><meta property="article:section" content="docs">
+<meta property="og:url" content="https://example.org/docs/k8s/configmap%E5%9F%BA%E7%A1%80/"><meta property="article:section" content="docs">
 
 <meta
   property="article:published_time"
@@ -166,12 +166,18 @@ spec:
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Configmap基础">
   <meta name="twitter:description" content="作为环境变量 apiVersion: v1 kind: Pod metadata: name: pod-env-config-demo spec: containers: - name: demo-container image: busybox command: [&#34;/bin/sh&#34;, &#34;-c&#34;, &#34;env | grep APP_ &amp;&amp; sleep 3600&#34;] # 打印环境变量并休眠 env: # 单个环境变量：直接引用 ConfigMap 的某个键值对 - name: APP_ENV # 容器内的环境变量名 valueFrom: configMapKeyRef: name: app-yaml-config # 引用的 ConfigMap 名称 key: app.env # 引用的 ConfigMap 中的键 - name: APP_VERSION # 另一个环境变量 valueFrom: configMapKeyRef: name: app-yaml-config key: app.version # （可选）批量注入环境变量：将 ConfigMap 所有键值对作为环境变量注入 envFrom: - configMapRef: name: app-simple-config # 引用的 ConfigMap 名称（方式 1 创建的） restartPolicy: Never 作为命令行参数（通过环境变量中转） apiVersion: v1 kind: Pod metadata: name: pod-command-config-demo spec: containers: - name: demo-container image: busybox # 命令行参数引用环境变量（环境变量来自 ConfigMap） command: [&#34;/bin/sh&#34;, &#34;-c&#34;, &#34;echo &#39;当前环境：$(APP_ENV)，版本：$(APP_VERSION)&#39; &amp;&amp; sleep 3600&#34;] env: - name: APP_ENV valueFrom: configMapKeyRef: name: app-yaml-config key: app.env - name: APP_VERSION valueFrom: configMapKeyRef: name: app-yaml-config key: app.version restartPolicy: Never 挂载为目录(支持热更新) apiVersion: v1 kind: Pod metadata: name: pod-volume-dir-config-demo spec: containers: - name: demo-container image: busybox command: [&#34;/bin/sh&#34;, &#34;-c&#34;, &#34;ls /app/config &amp;&amp; cat /app/config/app.conf &amp;&amp; sleep 3600&#34;] volumeMounts: - name: config-volume # 与 volumes 中定义的卷名对应 mountPath: /app/config # 容器内的挂载目录（该目录下原有文件会被覆盖） volumes: - name: config-volume # 定义卷名称 configMap: name: app-yaml-config # 引用的 ConfigMap 名称 restartPolicy: Never 挂载为文件 apiVersion: v1 kind: Pod metadata: name: pod-volume-file-config-demo spec: containers: - name: demo-container image: busybox command: [&#34;/bin/sh&#34;, &#34;-c&#34;, &#34;cat /app/db.properties &amp;&amp; sleep 3600&#34;] volumeMounts: - name: config-volume # 与 volumes 中定义的卷名对应 mountPath: /app/db.properties # 容器内的单个文件路径 subPath: db.properties # 引用 ConfigMap 中的某个键（对应生成的文件名） volumes: - name: config-volume configMap: name: app-yaml-config # 引用的 ConfigMap 名称 items: # 可选：筛选需要挂载的键（不写则挂载所有） - key: db.properties path: db.properties # 卷内的文件路径（与 subPath 对应） restartPolicy: Never">
-<link href="/css/compiled/main.css" rel="stylesheet" />
-    <link href="/css/variables.css" rel="stylesheet" />
-    <link href="/css/custom.css" rel="stylesheet" />
+
+    <link rel="preload" href="/css/compiled/main.min.ac24db5170e563c97286ca0f63189fbc3aff3672bb376e303a869613977967d0.css" as="style" integrity="sha256-rCTbUXDlY8lyhsoPYxifvDr/NnK7N24wOoaWE5d5Z9A=" />
+    <link href="/css/compiled/main.min.ac24db5170e563c97286ca0f63189fbc3aff3672bb376e303a869613977967d0.css" rel="stylesheet" integrity="sha256-rCTbUXDlY8lyhsoPYxifvDr/NnK7N24wOoaWE5d5Z9A=" />
 
   
-<script src="/js/main-head.js" integrity=""></script>
+
+
+
+
+
+
+<script src="/js/main-head.min.94da6f95b126542222dab3a6e07ffefe1aaf63ec3ca555e827b58b80e7d3f0b7.js" integrity="sha256-lNpvlbEmVCIi2rOm4H/&#43;/hqvY&#43;w8pVXoJ7WLgOfT8Lc="></script>
 
   
   
@@ -282,6 +288,14 @@ spec:
     </a>
               <div class="hx:ltr:pr-0 hx:overflow-hidden">
         <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/linux/%E5%9B%BE%E6%A0%87/"
+    
+  >图标
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/docs/linux/%E6%96%87%E4%BB%B6%E6%89%93%E5%BC%80%E6%95%B0/"
@@ -763,6 +777,14 @@ spec:
         <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/%E8%84%9A%E6%9C%AC%E5%B7%A5%E5%85%B7/shell/ssh%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91%E8%84%9A%E6%9C%AC/"
+    
+  >Ssh端口转发脚本
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/docs/%E8%84%9A%E6%9C%AC%E5%B7%A5%E5%85%B7/shell/%E7%AE%80%E6%98%93%E8%B7%B3%E6%9D%BF%E6%9C%BA/"
     
   >简易跳板机
@@ -811,9 +833,17 @@ spec:
         <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-    href="/docs/window/%E6%BF%80%E6%B4%BB/"
+    href="/docs/window/server2022/"
     
-  >激活和优化
+  >Server2022
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/window/win11/"
+    
+  >win11
     </a>
               
             </li></ul>
@@ -840,6 +870,14 @@ spec:
         <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></span>
     </a><div class="hx:ltr:pr-0 hx:overflow-hidden">
         <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/linux/%E5%9B%BE%E6%A0%87/"
+    
+  >图标
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/docs/linux/%E6%96%87%E4%BB%B6%E6%89%93%E5%BC%80%E6%95%B0/"
@@ -1288,6 +1326,14 @@ spec:
         <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/%E8%84%9A%E6%9C%AC%E5%B7%A5%E5%85%B7/shell/ssh%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91%E8%84%9A%E6%9C%AC/"
+    
+  >Ssh端口转发脚本
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/docs/%E8%84%9A%E6%9C%AC%E5%B7%A5%E5%85%B7/shell/%E7%AE%80%E6%98%93%E8%B7%B3%E6%9D%BF%E6%9C%BA/"
     
   >简易跳板机
@@ -1335,9 +1381,17 @@ spec:
         <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-    href="/docs/window/%E6%BF%80%E6%B4%BB/"
+    href="/docs/window/server2022/"
     
-  >激活和优化
+  >Server2022
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/window/win11/"
+    
+  >win11
     </a>
               
             </li></ul>
@@ -1598,8 +1652,8 @@ spec:
   </a></div></div>
     </div></footer>
     
-    <script defer src="/js/main.js" integrity=""></script>
-<script defer src="/js/flexsearch.9f5b5908f93ae86f1ecd4b043b799f580c2d1654e703dd9357d568ac41b2547a.js" integrity="sha256-n1tZCPk66G8ezUsEO3mfWAwtFlTnA92TV9VorEGyVHo=" crossorigin="anonymous"></script>
-        <script defer src="/zh-cn.search.js" integrity=""></script>
+    <script defer src="/js/main.min.3f1a19e714e9cbdcc9adbada379c71641b09a048f4cbd71870b8111ec0220433.js" integrity="sha256-PxoZ5xTpy9zJrbraN5xxZBsJoEj0y9cYcLgRHsAiBDM="></script>
+<script defer src="/js/flexsearch.433e941a8a573ebb9931fc16fc75266ab6b93f569ac2fb4f3dc66882e0416f4c.js" integrity="sha256-Qz6UGopXPruZMfwW/HUmara5P1aawvtPPcZoguBBb0w=" crossorigin="anonymous"></script>
+        <script defer src="/zh-cn.search.min.82e661f11acced65e462121c47b111d332c69279b28ac99d34dfa7fba6c6259f.js" integrity="sha256-guZh8RrM7WXkYhIcR7ER0zLGknmyismdNN&#43;n&#43;6bGJZ8="></script>
   </body>
 </html>
