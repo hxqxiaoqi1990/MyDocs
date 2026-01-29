@@ -8,51 +8,134 @@
 <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
-<title>Harbor – 自在网站</title>
-  <meta name="description" content="简介 Harbor 是一个开源的云原生注册中心，用于管理和分发容器镜像。它提供了一个安全、高效且功能丰富的平台，旨在为企业级应用提供镜像存储和管理服务。
-部署 安装包已绑定到博客上方
-# 下载 wget https://github.com/goharbor/harbor/releases/download/v2.10.3/harbor-online-installer-v2.10.3.tgz # 解压 tar xf harbor-online-installer-v2.10.3.tgz cd harbor # 复制配置模板为配置文件 cp harbor.yml.tmpl harbor.yml # 修改配置，默认端口为80，如果需要修改端口，请自行修改harbor.yml配置 ## 改为本机ip sed -i &#39;s/hostname: reg.mydomain.com/hostname: 192.168.40.10/g&#39; harbor.yml ## 关闭https sed -i &#39;s/https:/#https:/g&#39; harbor.yml sed -i &#39;s/port: 443/#port: 443/g&#39; harbor.yml sed -i &#39;s#certificate: /your/certificate/path#\#certificate: /your/certificate/path#g&#39; harbor.yml sed -i &#39;s#private_key: /your/private/key/path#\#private_key: /your/private/key/path#g&#39; harbor.yml # 安装，自动生成docker-compose.yaml文件，并启动 ./install.sh 访问 默认账号：admin 密码：Harbor12345" /><link rel="canonical" href="https://example.org/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/harbor/" itemprop="url" />
+<title>Redis分片集群 – 自在网站</title>
+  <meta name="description" content="部署 三主三从配置
+services: redis-node-1: image: docker.io/redis:5.0.5 container_name: redis-node-1 command: redis-server --cluster-enabled yes --cluster-config-file nodes.conf --cluster-node-timeout 5000 --cluster-migration-barrier 1 --cluster-require-full-coverage no --appendonly yes --port 17001 --requirepass moxigame --masterauth moxigame network_mode: host volumes: - ./data/node-1:/data restart: unless-stopped redis-node-2: image: docker.io/redis:5.0.5 container_name: redis-node-2 command: redis-server --cluster-enabled yes --cluster-config-file nodes.conf --cluster-node-timeout 5000 --cluster-migration-barrier 1 --cluster-require-full-coverage no --appendonly yes --port 17002 --requirepass moxigame --masterauth moxigame network_mode: host volumes: - ./data/node-2:/data restart: unless-stopped redis-node-3: image: docker.io/redis:5.0.5 container_name: redis-node-3 command: redis-server --cluster-enabled yes --cluster-config-file nodes.conf --cluster-node-timeout 5000 --cluster-migration-barrier 1 --cluster-require-full-coverage no --appendonly yes --port 17003 --requirepass moxigame --masterauth moxigame network_mode: host volumes: - ./data/node-3:/data restart: unless-stopped redis-node-4: image: docker.io/redis:5.0.5 container_name: redis-node-4 command: redis-server --cluster-enabled yes --cluster-config-file nodes.conf --cluster-node-timeout 5000 --cluster-migration-barrier 1 --cluster-require-full-coverage no --appendonly yes --port 17004 --requirepass moxigame --masterauth moxigame network_mode: host volumes: - ./data/node-4:/data restart: unless-stopped redis-node-5: image: docker.io/redis:5.0.5 container_name: redis-node-5 command: redis-server --cluster-enabled yes --cluster-config-file nodes.conf --cluster-node-timeout 5000 --cluster-migration-barrier 1 --cluster-require-full-coverage no --appendonly yes --port 17005 --requirepass moxigame --masterauth moxigame network_mode: host volumes: - ./data/node-5:/data restart: unless-stopped redis-node-6: image: docker.io/redis:5.0.5 container_name: redis-node-6 command: redis-server --cluster-enabled yes --cluster-config-file nodes.conf --cluster-node-timeout 5000 --cluster-migration-barrier 1 --cluster-require-full-coverage no --appendonly yes --port 17006 --requirepass moxigame --masterauth moxigame network_mode: host volumes: - ./data/node-6:/data restart: unless-stopped 运行" /><link rel="canonical" href="https://example.org/docs/%E6%95%B0%E6%8D%AE%E5%BA%93/redis/redis%E5%88%86%E7%89%87%E9%9B%86%E7%BE%A4/" itemprop="url" />
 
-<meta property="og:title" content="Harbor">
+<meta property="og:title" content="Redis分片集群">
 <meta
   property="og:description"
   content="
     
-      简介
-    Harbor 是一个开源的云原生注册中心，用于管理和分发容器镜像。它提供了一个安全、高效且功能丰富的平台，旨在为企业级应用提供镜像存储和管理服务。
-部署
-    安装包已绑定到博客上方
+      部署
+    三主三从配置
 
 
-# 下载
-wget https://github.com/goharbor/harbor/releases/download/v2.10.3/harbor-online-installer-v2.10.3.tgz
+services:
+  redis-node-1:
+    image: docker.io/redis:5.0.5
+    container_name: redis-node-1
+    command: redis-server 
+      --cluster-enabled yes 
+      --cluster-config-file nodes.conf 
+      --cluster-node-timeout 5000 
+      --cluster-migration-barrier 1
+      --cluster-require-full-coverage no
+      --appendonly yes 
+      --port 17001
+      --requirepass moxigame
+      --masterauth moxigame
+    network_mode: host
+    volumes:
+      - ./data/node-1:/data
+    restart: unless-stopped
 
-# 解压
-tar xf harbor-online-installer-v2.10.3.tgz
-cd harbor
+  redis-node-2:
+    image: docker.io/redis:5.0.5
+    container_name: redis-node-2
+    command: redis-server 
+      --cluster-enabled yes 
+      --cluster-config-file nodes.conf 
+      --cluster-node-timeout 5000 
+      --cluster-migration-barrier 1
+      --cluster-require-full-coverage no
+      --appendonly yes 
+      --port 17002
+      --requirepass moxigame
+      --masterauth moxigame
+    network_mode: host
+    volumes:
+      - ./data/node-2:/data
+    restart: unless-stopped
 
-# 复制配置模板为配置文件
-cp harbor.yml.tmpl harbor.yml
-
-# 修改配置，默认端口为80，如果需要修改端口，请自行修改harbor.yml配置
-## 改为本机ip
-sed -i &#39;s/hostname: reg.mydomain.com/hostname: 192.168.40.10/g&#39; harbor.yml
-## 关闭https
-sed -i &#39;s/https:/#https:/g&#39; harbor.yml
-sed -i &#39;s/port: 443/#port: 443/g&#39; harbor.yml
-sed -i &#39;s#certificate: /your/certificate/path#\#certificate: /your/certificate/path#g&#39; harbor.yml
-sed -i &#39;s#private_key: /your/private/key/path#\#private_key: /your/private/key/path#g&#39; harbor.yml
-
-# 安装，自动生成docker-compose.yaml文件，并启动
-./install.sh
+  redis-node-3:
+    image: docker.io/redis:5.0.5
+    container_name: redis-node-3
+    command: redis-server 
+      --cluster-enabled yes 
+      --cluster-config-file nodes.conf 
+      --cluster-node-timeout 5000 
+      --cluster-migration-barrier 1
+      --cluster-require-full-coverage no
+      --appendonly yes 
+      --port 17003
+      --requirepass moxigame
+      --masterauth moxigame
+    network_mode: host
+    volumes:
+      - ./data/node-3:/data
+    restart: unless-stopped
+    
+  redis-node-4:
+    image: docker.io/redis:5.0.5
+    container_name: redis-node-4
+    command: redis-server 
+      --cluster-enabled yes 
+      --cluster-config-file nodes.conf 
+      --cluster-node-timeout 5000 
+      --cluster-migration-barrier 1
+      --cluster-require-full-coverage no
+      --appendonly yes 
+      --port 17004
+      --requirepass moxigame
+      --masterauth moxigame
+    network_mode: host
+    volumes:
+      - ./data/node-4:/data
+    restart: unless-stopped
+    
+  redis-node-5:
+    image: docker.io/redis:5.0.5
+    container_name: redis-node-5
+    command: redis-server 
+      --cluster-enabled yes 
+      --cluster-config-file nodes.conf 
+      --cluster-node-timeout 5000 
+      --cluster-migration-barrier 1
+      --cluster-require-full-coverage no
+      --appendonly yes 
+      --port 17005
+      --requirepass moxigame
+      --masterauth moxigame
+    network_mode: host
+    volumes:
+      - ./data/node-5:/data
+    restart: unless-stopped
+    
+  redis-node-6:
+    image: docker.io/redis:5.0.5
+    container_name: redis-node-6
+    command: redis-server 
+      --cluster-enabled yes 
+      --cluster-config-file nodes.conf 
+      --cluster-node-timeout 5000 
+      --cluster-migration-barrier 1
+      --cluster-require-full-coverage no
+      --appendonly yes 
+      --port 17006
+      --requirepass moxigame
+      --masterauth moxigame
+    network_mode: host
+    volumes:
+      - ./data/node-6:/data
+    restart: unless-stopped
   
     
 
   
 
 
-访问
-    默认账号：admin 密码：Harbor12345
+运行
     
   ">
 <meta
@@ -60,31 +143,29 @@ sed -i &#39;s#private_key: /your/private/key/path#\#private_key: /your/private/k
   content="
     article
   ">
-<meta property="og:url" content="https://example.org/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/harbor/"><meta property="article:section" content="docs">
+<meta property="og:url" content="https://example.org/docs/%E6%95%B0%E6%8D%AE%E5%BA%93/redis/redis%E5%88%86%E7%89%87%E9%9B%86%E7%BE%A4/"><meta property="article:section" content="docs">
 
 <meta
   property="article:published_time"
-  content="2025-12-26T16:53:48+08:00">
+  content="2026-01-22T17:37:45+08:00">
 
 
 <meta
   property="article:modified_time"
-  content="2025-12-26T16:53:48+08:00">
+  content="2026-01-22T17:37:45+08:00">
 
 
 
-  <meta itemprop="name" content="Harbor">
-  <meta itemprop="description" content="简介 Harbor 是一个开源的云原生注册中心，用于管理和分发容器镜像。它提供了一个安全、高效且功能丰富的平台，旨在为企业级应用提供镜像存储和管理服务。
-部署 安装包已绑定到博客上方
-# 下载 wget https://github.com/goharbor/harbor/releases/download/v2.10.3/harbor-online-installer-v2.10.3.tgz # 解压 tar xf harbor-online-installer-v2.10.3.tgz cd harbor # 复制配置模板为配置文件 cp harbor.yml.tmpl harbor.yml # 修改配置，默认端口为80，如果需要修改端口，请自行修改harbor.yml配置 ## 改为本机ip sed -i &#39;s/hostname: reg.mydomain.com/hostname: 192.168.40.10/g&#39; harbor.yml ## 关闭https sed -i &#39;s/https:/#https:/g&#39; harbor.yml sed -i &#39;s/port: 443/#port: 443/g&#39; harbor.yml sed -i &#39;s#certificate: /your/certificate/path#\#certificate: /your/certificate/path#g&#39; harbor.yml sed -i &#39;s#private_key: /your/private/key/path#\#private_key: /your/private/key/path#g&#39; harbor.yml # 安装，自动生成docker-compose.yaml文件，并启动 ./install.sh 访问 默认账号：admin 密码：Harbor12345">
-  <meta itemprop="datePublished" content="2025-12-26T16:53:48+08:00">
-  <meta itemprop="dateModified" content="2025-12-26T16:53:48+08:00">
-  <meta itemprop="wordCount" content="63">
+  <meta itemprop="name" content="Redis分片集群">
+  <meta itemprop="description" content="部署 三主三从配置
+services: redis-node-1: image: docker.io/redis:5.0.5 container_name: redis-node-1 command: redis-server --cluster-enabled yes --cluster-config-file nodes.conf --cluster-node-timeout 5000 --cluster-migration-barrier 1 --cluster-require-full-coverage no --appendonly yes --port 17001 --requirepass moxigame --masterauth moxigame network_mode: host volumes: - ./data/node-1:/data restart: unless-stopped redis-node-2: image: docker.io/redis:5.0.5 container_name: redis-node-2 command: redis-server --cluster-enabled yes --cluster-config-file nodes.conf --cluster-node-timeout 5000 --cluster-migration-barrier 1 --cluster-require-full-coverage no --appendonly yes --port 17002 --requirepass moxigame --masterauth moxigame network_mode: host volumes: - ./data/node-2:/data restart: unless-stopped redis-node-3: image: docker.io/redis:5.0.5 container_name: redis-node-3 command: redis-server --cluster-enabled yes --cluster-config-file nodes.conf --cluster-node-timeout 5000 --cluster-migration-barrier 1 --cluster-require-full-coverage no --appendonly yes --port 17003 --requirepass moxigame --masterauth moxigame network_mode: host volumes: - ./data/node-3:/data restart: unless-stopped redis-node-4: image: docker.io/redis:5.0.5 container_name: redis-node-4 command: redis-server --cluster-enabled yes --cluster-config-file nodes.conf --cluster-node-timeout 5000 --cluster-migration-barrier 1 --cluster-require-full-coverage no --appendonly yes --port 17004 --requirepass moxigame --masterauth moxigame network_mode: host volumes: - ./data/node-4:/data restart: unless-stopped redis-node-5: image: docker.io/redis:5.0.5 container_name: redis-node-5 command: redis-server --cluster-enabled yes --cluster-config-file nodes.conf --cluster-node-timeout 5000 --cluster-migration-barrier 1 --cluster-require-full-coverage no --appendonly yes --port 17005 --requirepass moxigame --masterauth moxigame network_mode: host volumes: - ./data/node-5:/data restart: unless-stopped redis-node-6: image: docker.io/redis:5.0.5 container_name: redis-node-6 command: redis-server --cluster-enabled yes --cluster-config-file nodes.conf --cluster-node-timeout 5000 --cluster-migration-barrier 1 --cluster-require-full-coverage no --appendonly yes --port 17006 --requirepass moxigame --masterauth moxigame network_mode: host volumes: - ./data/node-6:/data restart: unless-stopped 运行">
+  <meta itemprop="datePublished" content="2026-01-22T17:37:45+08:00">
+  <meta itemprop="dateModified" content="2026-01-22T17:37:45+08:00">
+  <meta itemprop="wordCount" content="473">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Harbor">
-  <meta name="twitter:description" content="简介 Harbor 是一个开源的云原生注册中心，用于管理和分发容器镜像。它提供了一个安全、高效且功能丰富的平台，旨在为企业级应用提供镜像存储和管理服务。
-部署 安装包已绑定到博客上方
-# 下载 wget https://github.com/goharbor/harbor/releases/download/v2.10.3/harbor-online-installer-v2.10.3.tgz # 解压 tar xf harbor-online-installer-v2.10.3.tgz cd harbor # 复制配置模板为配置文件 cp harbor.yml.tmpl harbor.yml # 修改配置，默认端口为80，如果需要修改端口，请自行修改harbor.yml配置 ## 改为本机ip sed -i &#39;s/hostname: reg.mydomain.com/hostname: 192.168.40.10/g&#39; harbor.yml ## 关闭https sed -i &#39;s/https:/#https:/g&#39; harbor.yml sed -i &#39;s/port: 443/#port: 443/g&#39; harbor.yml sed -i &#39;s#certificate: /your/certificate/path#\#certificate: /your/certificate/path#g&#39; harbor.yml sed -i &#39;s#private_key: /your/private/key/path#\#private_key: /your/private/key/path#g&#39; harbor.yml # 安装，自动生成docker-compose.yaml文件，并启动 ./install.sh 访问 默认账号：admin 密码：Harbor12345">
+  <meta name="twitter:title" content="Redis分片集群">
+  <meta name="twitter:description" content="部署 三主三从配置
+services: redis-node-1: image: docker.io/redis:5.0.5 container_name: redis-node-1 command: redis-server --cluster-enabled yes --cluster-config-file nodes.conf --cluster-node-timeout 5000 --cluster-migration-barrier 1 --cluster-require-full-coverage no --appendonly yes --port 17001 --requirepass moxigame --masterauth moxigame network_mode: host volumes: - ./data/node-1:/data restart: unless-stopped redis-node-2: image: docker.io/redis:5.0.5 container_name: redis-node-2 command: redis-server --cluster-enabled yes --cluster-config-file nodes.conf --cluster-node-timeout 5000 --cluster-migration-barrier 1 --cluster-require-full-coverage no --appendonly yes --port 17002 --requirepass moxigame --masterauth moxigame network_mode: host volumes: - ./data/node-2:/data restart: unless-stopped redis-node-3: image: docker.io/redis:5.0.5 container_name: redis-node-3 command: redis-server --cluster-enabled yes --cluster-config-file nodes.conf --cluster-node-timeout 5000 --cluster-migration-barrier 1 --cluster-require-full-coverage no --appendonly yes --port 17003 --requirepass moxigame --masterauth moxigame network_mode: host volumes: - ./data/node-3:/data restart: unless-stopped redis-node-4: image: docker.io/redis:5.0.5 container_name: redis-node-4 command: redis-server --cluster-enabled yes --cluster-config-file nodes.conf --cluster-node-timeout 5000 --cluster-migration-barrier 1 --cluster-require-full-coverage no --appendonly yes --port 17004 --requirepass moxigame --masterauth moxigame network_mode: host volumes: - ./data/node-4:/data restart: unless-stopped redis-node-5: image: docker.io/redis:5.0.5 container_name: redis-node-5 command: redis-server --cluster-enabled yes --cluster-config-file nodes.conf --cluster-node-timeout 5000 --cluster-migration-barrier 1 --cluster-require-full-coverage no --appendonly yes --port 17005 --requirepass moxigame --masterauth moxigame network_mode: host volumes: - ./data/node-5:/data restart: unless-stopped redis-node-6: image: docker.io/redis:5.0.5 container_name: redis-node-6 command: redis-server --cluster-enabled yes --cluster-config-file nodes.conf --cluster-node-timeout 5000 --cluster-migration-barrier 1 --cluster-require-full-coverage no --appendonly yes --port 17006 --requirepass moxigame --masterauth moxigame network_mode: host volumes: - ./data/node-6:/data restart: unless-stopped 运行">
 
     <link rel="preload" href="/css/compiled/main.min.ac24db5170e563c97286ca0f63189fbc3aff3672bb376e303a869613977967d0.css" as="style" integrity="sha256-rCTbUXDlY8lyhsoPYxifvDr/NnK7N24wOoaWE5d5Z9A=" />
     <link href="/css/compiled/main.min.ac24db5170e563c97286ca0f63189fbc3aff3672bb376e303a869613977967d0.css" rel="stylesheet" integrity="sha256-rCTbUXDlY8lyhsoPYxifvDr/NnK7N24wOoaWE5d5Z9A=" />
@@ -398,7 +479,7 @@ sed -i &#39;s#private_key: /your/private/key/path#\#private_key: /your/private/k
               
             </li></ul>
       </div>
-            </li><li class="hx:flex hx:flex-col open"><a
+            </li><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/"
@@ -495,34 +576,13 @@ sed -i &#39;s#private_key: /your/private/key/path#\#private_key: /your/private/k
   >Nexus
     </a>
               
-            </li><li class="hx:flex hx:flex-col open"><a
+            </li><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hextra-sidebar-active-item hx:bg-primary-100 hx:font-semibold hx:text-primary-800 hx:contrast-more:border hx:contrast-more:border-primary-500 hx:dark:bg-primary-400/10 hx:dark:text-primary-600 hx:contrast-more:dark:border-primary-500"
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/harbor/"
     
   >Harbor
     </a>
-  
-    <ul class='hx:flex hx:flex-col hx:gap-1 hx:relative hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:dark:before:bg-neutral-800 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:pr-3 hx:rtl:before:right-0 hx:ltr:ml-3 hx:rtl:mr-3'><li>
-              <a
-                href="#%e7%ae%80%e4%bb%8b"
-                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
-              >简介</a>
-            </li>
-          <li>
-              <a
-                href="#%e9%83%a8%e7%bd%b2"
-                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
-              >部署</a>
-            </li>
-          <li>
-              <a
-                href="#%e8%ae%bf%e9%97%ae"
-                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
-              >访问</a>
-            </li>
-          </ul>
-  
               
             </li><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
@@ -601,7 +661,7 @@ sed -i &#39;s#private_key: /your/private/key/path#\#private_key: /your/private/k
               
             </li></ul>
       </div>
-            </li><li class="hx:flex hx:flex-col "><a
+            </li><li class="hx:flex hx:flex-col open"><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/docs/%E6%95%B0%E6%8D%AE%E5%BA%93/"
@@ -656,7 +716,7 @@ sed -i &#39;s#private_key: /your/private/key/path#\#private_key: /your/private/k
               
             </li></ul>
       </div>
-            </li><li class="hx:flex hx:flex-col "><a
+            </li><li class="hx:flex hx:flex-col open"><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/docs/%E6%95%B0%E6%8D%AE%E5%BA%93/redis/"
@@ -665,13 +725,46 @@ sed -i &#39;s#private_key: /your/private/key/path#\#private_key: /your/private/k
         <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></span>
     </a>
               <div class="hx:ltr:pr-0 hx:overflow-hidden">
-        <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col "><a
+        <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col open"><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      hextra-sidebar-active-item hx:bg-primary-100 hx:font-semibold hx:text-primary-800 hx:contrast-more:border hx:contrast-more:border-primary-500 hx:dark:bg-primary-400/10 hx:dark:text-primary-600 hx:contrast-more:dark:border-primary-500"
     href="/docs/%E6%95%B0%E6%8D%AE%E5%BA%93/redis/redis%E5%88%86%E7%89%87%E9%9B%86%E7%BE%A4/"
     
   >Redis分片集群
     </a>
+  
+    <ul class='hx:flex hx:flex-col hx:gap-1 hx:relative hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:dark:before:bg-neutral-800 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:pr-3 hx:rtl:before:right-0 hx:ltr:ml-3 hx:rtl:mr-3'><li>
+              <a
+                href="#%e9%83%a8%e7%bd%b2"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >部署</a>
+            </li>
+          <li>
+              <a
+                href="#%e7%bc%a9%e5%ae%b9"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >缩容</a>
+            </li>
+          <li>
+              <a
+                href="#%e6%89%a9%e5%ae%b9"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >扩容</a>
+            </li>
+          <li>
+              <a
+                href="#%e5%a4%87%e4%bb%bd"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >备份</a>
+            </li>
+          <li>
+              <a
+                href="#%e6%81%a2%e5%a4%8d"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >恢复</a>
+            </li>
+          </ul>
+  
               
             </li><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
@@ -988,7 +1081,7 @@ sed -i &#39;s#private_key: /your/private/key/path#\#private_key: /your/private/k
               
             </li></ul>
       </div></li>
-          <li class="open"><a
+          <li class=""><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/"
@@ -1084,9 +1177,9 @@ sed -i &#39;s#private_key: /your/private/key/path#\#private_key: /your/private/k
   >Nexus
     </a>
               
-            </li><li class="hx:flex hx:flex-col open"><a
+            </li><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hextra-sidebar-active-item hx:bg-primary-100 hx:font-semibold hx:text-primary-800 hx:contrast-more:border hx:contrast-more:border-primary-500 hx:dark:bg-primary-400/10 hx:dark:text-primary-600 hx:contrast-more:dark:border-primary-500"
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/harbor/"
     
   >Harbor
@@ -1168,7 +1261,7 @@ sed -i &#39;s#private_key: /your/private/key/path#\#private_key: /your/private/k
               
             </li></ul>
       </div></li>
-          <li class=""><a
+          <li class="open"><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/docs/%E6%95%B0%E6%8D%AE%E5%BA%93/"
@@ -1222,7 +1315,7 @@ sed -i &#39;s#private_key: /your/private/key/path#\#private_key: /your/private/k
               
             </li></ul>
       </div>
-            </li><li class="hx:flex hx:flex-col "><a
+            </li><li class="hx:flex hx:flex-col open"><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/docs/%E6%95%B0%E6%8D%AE%E5%BA%93/redis/"
@@ -1231,9 +1324,9 @@ sed -i &#39;s#private_key: /your/private/key/path#\#private_key: /your/private/k
         <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></span>
     </a>
               <div class="hx:ltr:pr-0 hx:overflow-hidden">
-        <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col "><a
+        <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col open"><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      hextra-sidebar-active-item hx:bg-primary-100 hx:font-semibold hx:text-primary-800 hx:contrast-more:border hx:contrast-more:border-primary-500 hx:dark:bg-primary-400/10 hx:dark:text-primary-600 hx:contrast-more:dark:border-primary-500"
     href="/docs/%E6%95%B0%E6%8D%AE%E5%BA%93/redis/redis%E5%88%86%E7%89%87%E9%9B%86%E7%BE%A4/"
     
   >Redis分片集群
@@ -1398,15 +1491,23 @@ sed -i &#39;s#private_key: /your/private/key/path#\#private_key: /your/private/k
 <nav class="hextra-toc hx:order-last hx:hidden hx:w-64 hx:shrink-0 hx:xl:block hx:print:hidden hx:px-4" aria-label="table of contents">
     <div class="hextra-scrollbar hx:sticky hx:top-16 hx:overflow-y-auto hx:pr-4 hx:pt-6 hx:text-sm [hyphens:auto] hx:max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] hx:ltr:-mr-4 hx:rtl:-ml-4"><p class="hx:mb-4 hx:font-semibold hx:tracking-tight">此页上</p><ul>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#%e7%ae%80%e4%bb%8b">简介
-        </a>
-      </li>
-      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
         <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#%e9%83%a8%e7%bd%b2">部署
         </a>
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#%e8%ae%bf%e9%97%ae">访问
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#%e7%bc%a9%e5%ae%b9">缩容
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#%e6%89%a9%e5%ae%b9">扩容
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#%e5%a4%87%e4%bb%bd">备份
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#%e6%81%a2%e5%a4%8d">恢复
         </a>
       </li></ul>
       <div class="hx:mt-8 hx:border-t hx:bg-white hx:pt-8 hx:shadow-[0_-12px_16px_white] hx:dark:bg-dark hx:dark:shadow-[0_-12px_16px_#111] hx:sticky hx:bottom-0 hx:flex hx:flex-col hx:items-start hx:gap-2 hx:pb-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-t hx:contrast-more:border-neutral-400 hx:contrast-more:shadow-none hx:contrast-more:dark:border-neutral-400">
@@ -1428,39 +1529,127 @@ sed -i &#39;s#private_key: /your/private/key/path#\#private_key: /your/private/k
           <a href="/docs/">文档</a>
         </div><svg class="hx:w-3.5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
         <div class="hx:whitespace-nowrap hx:transition-colors hx:min-w-[24px] hx:overflow-hidden hx:text-ellipsis hx:hover:text-gray-900 hx:dark:hover:text-gray-100">
-          <a href="/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/">运维服务</a>
-        </div><svg class="hx:w-3.5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg><div class="hx:whitespace-nowrap hx:transition-colors hx:font-medium hx:text-gray-700 hx:contrast-more:font-bold hx:contrast-more:text-current hx:dark:text-gray-100 hx:contrast-more:dark:text-current">Harbor</div>
+          <a href="/docs/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a>
+        </div><svg class="hx:w-3.5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+        <div class="hx:whitespace-nowrap hx:transition-colors hx:min-w-[24px] hx:overflow-hidden hx:text-ellipsis hx:hover:text-gray-900 hx:dark:hover:text-gray-100">
+          <a href="/docs/%E6%95%B0%E6%8D%AE%E5%BA%93/redis/">Redis</a>
+        </div><svg class="hx:w-3.5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg><div class="hx:whitespace-nowrap hx:transition-colors hx:font-medium hx:text-gray-700 hx:contrast-more:font-bold hx:contrast-more:text-current hx:dark:text-gray-100 hx:contrast-more:dark:text-current">Redis分片集群</div>
   </div>
 
         <div class="content">
-          <h1>Harbor</h1>
-          <h2>简介<span class="hx:absolute hx:-mt-20" id="简介"></span>
-    <a href="#%e7%ae%80%e4%bb%8b" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Harbor 是一个开源的云原生注册中心，用于管理和分发容器镜像。它提供了一个安全、高效且功能丰富的平台，旨在为企业级应用提供镜像存储和管理服务。</p>
-<h2>部署<span class="hx:absolute hx:-mt-20" id="部署"></span>
-    <a href="#%e9%83%a8%e7%bd%b2" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>安装包已绑定到博客上方</p>
+          <h1>Redis分片集群</h1>
+          <h2>部署<span class="hx:absolute hx:-mt-20" id="部署"></span>
+    <a href="#%e9%83%a8%e7%bd%b2" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>三主三从配置</p>
 <div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
 
-<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 下载</span>
-</span></span><span class="line"><span class="cl">wget https://github.com/goharbor/harbor/releases/download/v2.10.3/harbor-online-installer-v2.10.3.tgz
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># 解压</span>
-</span></span><span class="line"><span class="cl">tar xf harbor-online-installer-v2.10.3.tgz
-</span></span><span class="line"><span class="cl"><span class="nb">cd</span> harbor
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># 复制配置模板为配置文件</span>
-</span></span><span class="line"><span class="cl">cp harbor.yml.tmpl harbor.yml
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># 修改配置，默认端口为80，如果需要修改端口，请自行修改harbor.yml配置</span>
-</span></span><span class="line"><span class="cl"><span class="c1">## 改为本机ip</span>
-</span></span><span class="line"><span class="cl">sed -i <span class="s1">&#39;s/hostname: reg.mydomain.com/hostname: 192.168.40.10/g&#39;</span> harbor.yml
-</span></span><span class="line"><span class="cl"><span class="c1">## 关闭https</span>
-</span></span><span class="line"><span class="cl">sed -i <span class="s1">&#39;s/https:/#https:/g&#39;</span> harbor.yml
-</span></span><span class="line"><span class="cl">sed -i <span class="s1">&#39;s/port: 443/#port: 443/g&#39;</span> harbor.yml
-</span></span><span class="line"><span class="cl">sed -i <span class="s1">&#39;s#certificate: /your/certificate/path#\#certificate: /your/certificate/path#g&#39;</span> harbor.yml
-</span></span><span class="line"><span class="cl">sed -i <span class="s1">&#39;s#private_key: /your/private/key/path#\#private_key: /your/private/key/path#g&#39;</span> harbor.yml
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># 安装，自动生成docker-compose.yaml文件，并启动</span>
-</span></span><span class="line"><span class="cl">./install.sh</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">services</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">redis-node-1</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">docker.io/redis:5.0.5</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">redis-node-1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l">redis-server </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>--<span class="l">cluster-enabled yes </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>--<span class="l">cluster-config-file nodes.conf </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>--<span class="l">cluster-node-timeout 5000 </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>--<span class="l">cluster-migration-barrier 1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>--<span class="l">cluster-require-full-coverage no</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>--<span class="l">appendonly yes </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>--<span class="l">port 17001</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>--<span class="l">requirepass moxigame</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>--<span class="l">masterauth moxigame</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">network_mode</span><span class="p">:</span><span class="w"> </span><span class="l">host</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">./data/node-1:/data</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l">unless-stopped</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">redis-node-2</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">docker.io/redis:5.0.5</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">redis-node-2</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l">redis-server </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>--<span class="l">cluster-enabled yes </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>--<span class="l">cluster-config-file nodes.conf </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>--<span class="l">cluster-node-timeout 5000 </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>--<span class="l">cluster-migration-barrier 1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>--<span class="l">cluster-require-full-coverage no</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>--<span class="l">appendonly yes </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>--<span class="l">port 17002</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>--<span class="l">requirepass moxigame</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>--<span class="l">masterauth moxigame</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">network_mode</span><span class="p">:</span><span class="w"> </span><span class="l">host</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">./data/node-2:/data</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l">unless-stopped</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">redis-node-3</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">docker.io/redis:5.0.5</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">redis-node-3</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l">redis-server </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>--<span class="l">cluster-enabled yes </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>--<span class="l">cluster-config-file nodes.conf </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>--<span class="l">cluster-node-timeout 5000 </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>--<span class="l">cluster-migration-barrier 1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>--<span class="l">cluster-require-full-coverage no</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>--<span class="l">appendonly yes </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>--<span class="l">port 17003</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>--<span class="l">requirepass moxigame</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>--<span class="l">masterauth moxigame</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">network_mode</span><span class="p">:</span><span class="w"> </span><span class="l">host</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">./data/node-3:/data</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l">unless-stopped</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">redis-node-4</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">docker.io/redis:5.0.5</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">redis-node-4</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l">redis-server </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>--<span class="l">cluster-enabled yes </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>--<span class="l">cluster-config-file nodes.conf </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>--<span class="l">cluster-node-timeout 5000 </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>--<span class="l">cluster-migration-barrier 1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>--<span class="l">cluster-require-full-coverage no</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>--<span class="l">appendonly yes </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>--<span class="l">port 17004</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>--<span class="l">requirepass moxigame</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>--<span class="l">masterauth moxigame</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">network_mode</span><span class="p">:</span><span class="w"> </span><span class="l">host</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">./data/node-4:/data</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l">unless-stopped</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">redis-node-5</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">docker.io/redis:5.0.5</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">redis-node-5</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l">redis-server </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>--<span class="l">cluster-enabled yes </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>--<span class="l">cluster-config-file nodes.conf </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>--<span class="l">cluster-node-timeout 5000 </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>--<span class="l">cluster-migration-barrier 1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>--<span class="l">cluster-require-full-coverage no</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>--<span class="l">appendonly yes </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>--<span class="l">port 17005</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>--<span class="l">requirepass moxigame</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>--<span class="l">masterauth moxigame</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">network_mode</span><span class="p">:</span><span class="w"> </span><span class="l">host</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">./data/node-5:/data</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l">unless-stopped</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">redis-node-6</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">docker.io/redis:5.0.5</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">redis-node-6</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l">redis-server </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>--<span class="l">cluster-enabled yes </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>--<span class="l">cluster-config-file nodes.conf </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>--<span class="l">cluster-node-timeout 5000 </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>--<span class="l">cluster-migration-barrier 1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>--<span class="l">cluster-require-full-coverage no</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>--<span class="l">appendonly yes </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>--<span class="l">port 17006</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>--<span class="l">requirepass moxigame</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>--<span class="l">masterauth moxigame</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">network_mode</span><span class="p">:</span><span class="w"> </span><span class="l">host</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">./data/node-6:/data</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l">unless-stopped</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
   <button
     class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
     title="复制代码"
@@ -1470,11 +1659,10 @@ sed -i &#39;s#private_key: /your/private/key/path#\#private_key: /your/private/k
   </button>
 </div>
 </div>
-<h2>访问<span class="hx:absolute hx:-mt-20" id="访问"></span>
-    <a href="#%e8%ae%bf%e9%97%ae" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>默认账号：admin 密码：Harbor12345</p>
+<p>运行</p>
 <div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
 
-<div><pre><code>curl http://192.168.40.10</code></pre></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker compose up -d</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
   <button
     class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
     title="复制代码"
@@ -1484,18 +1672,133 @@ sed -i &#39;s#private_key: /your/private/key/path#\#private_key: /your/private/k
   </button>
 </div>
 </div>
+<p>创建集群</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
 
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">redis-cli -a moxigame --cluster create 10.0.1.247:17001 10.0.1.247:17002 10.0.1.247:17003 10.0.1.247:17004 10.0.1.247:17005 10.0.1.247:17006 --cluster-replicas <span class="m">1</span> --cluster-yes</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="复制代码"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<h2>缩容<span class="hx:absolute hx:-mt-20" id="缩容"></span>
+    <a href="#%e7%bc%a9%e5%ae%b9" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>缩容从节点</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 移除从节点（格式：redis-cli --cluster del-node 集群节点地址 要下线的节点ID）</span>
+</span></span><span class="line"><span class="cl">redis-cli -a moxigame --cluster del-node 10.0.1.247:17001 c9f280b217c2fdb9713732f527781ebef9d9f909
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 查看集群节点列表，确认 17004 已不存在</span>
+</span></span><span class="line"><span class="cl">redis-cli -a moxigame -c -p <span class="m">17001</span> cluster nodes <span class="p">|</span> grep <span class="m">17004</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 查看集群状态，确保正常</span>
+</span></span><span class="line"><span class="cl">redis-cli -a moxigame -c -p <span class="m">17001</span> cluster info <span class="p">|</span> grep cluster_state
+</span></span><span class="line"><span class="cl"><span class="c1"># 输出 cluster_state:ok</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="复制代码"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<p>缩容主节点</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 连接集群，查看 17003 主节点信息</span>
+</span></span><span class="line"><span class="cl">redis-cli -a moxigame -c -p <span class="m">17001</span> cluster nodes <span class="p">|</span> grep <span class="m">17003</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 输出示例：</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 04d6252fe6ca1f48b3a4cd7ca37baa1c817a8786 10.0.1.247:17003@27003 myself,master - 0 1769133219646 3 connected 10923-16383</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 记录：主节点 ID=04d6252fe6ca1f48b3a4cd7ca37baa1c817a8786，哈希槽=10923-16383</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 进入任意主节点容器（如 17001）</span>
+</span></span><span class="line"><span class="cl">docker <span class="nb">exec</span> -it redis-node-1 bash
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 执行槽位迁移（以迁移 17003 的 5461 个槽到 17001 为例）</span>
+</span></span><span class="line"><span class="cl">redis-cli -a moxigame --cluster reshard 10.0.1.247:17001</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="复制代码"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<p>交互步骤（按提示输入）：
+How many slots do you want to move (from 1 to 16384)? → 输入 5461（17003 持有的槽数，10923-16383 共 5461 个）；
+What is the receiving node ID? → 输入目标主节点 ID（如 17001 的 ID：234a5b1659e4142eee6d1e76a2f82a754eb909f9）；
+Source node #1: → 输入源主节点 ID（17003 的 ID：04d6252fe6ca1f48b3a4cd7ca37baa1c817a8786）；
+Source node #2: → 输入 done（表示仅从 17003 迁移）；
+Do you want to proceed with the proposed reshard plan (yes/no)? → 输入 yes。</p>
+<p>迁移完成验证：</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 查看 17003 的槽位，确认已无槽位</span>
+</span></span><span class="line"><span class="cl">redis-cli -a moxigame -c -p <span class="m">17001</span> cluster nodes <span class="p">|</span> grep <span class="m">17003</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 输出中无 &#34;connected 10923-16383&#34; 表示槽位迁移完成</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="复制代码"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<p>验证</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 1. 查看集群节点，确认 17003/17006 已移除</span>
+</span></span><span class="line"><span class="cl">redis-cli -a moxigame -c -p <span class="m">17001</span> cluster nodes <span class="p">|</span> grep -E <span class="s2">&#34;17003|17006&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 无输出表示移除成功</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 2. 验证哈希槽全部分配</span>
+</span></span><span class="line"><span class="cl">redis-cli -a moxigame -c -p <span class="m">17001</span> cluster info <span class="p">|</span> grep cluster_slots_assigned
+</span></span><span class="line"><span class="cl"><span class="c1"># 输出 cluster_slots_assigned:16384 表示槽位无丢失</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 3. 测试数据读写（访问原 17003 的槽位）</span>
+</span></span><span class="line"><span class="cl">redis-cli -a moxigame -c -p <span class="m">17001</span> <span class="nb">set</span> test_reshard <span class="s2">&#34;success&#34;</span>
+</span></span><span class="line"><span class="cl">redis-cli -a moxigame -c -p <span class="m">17001</span> get test_reshard
+</span></span><span class="line"><span class="cl"><span class="c1"># 输出 &#34;success&#34; 表示读写正常</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="复制代码"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<h2>扩容<span class="hx:absolute hx:-mt-20" id="扩容"></span>
+    <a href="#%e6%89%a9%e5%ae%b9" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">redis-cli -a moxigame --cluster add-node 10.0.1.247:17004 10.0.1.247:17001</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="复制代码"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<h2>备份<span class="hx:absolute hx:-mt-20" id="备份"></span>
+    <a href="#%e5%a4%87%e4%bb%bd" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>cp data</p>
+<h2>恢复<span class="hx:absolute hx:-mt-20" id="恢复"></span>
+    <a href="#%e6%81%a2%e5%a4%8d" class="subheading-anchor" aria-label="Permalink for this section"></a></h2>
         </div>
         <div class="hx:mt-16"></div>
         <div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
-        href="/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/nexus/"
-        title="Nexus"
-        class="hx:flex hx:max-w-[50%] hx:items-center hx:gap-1 hx:py-4 hx:text-base hx:font-medium hx:text-gray-600 hx:transition-colors [word-break:break-word] hx:hover:text-primary-600 hx:dark:text-gray-300 hx:md:text-lg hx:ltr:pr-4 hx:rtl:pl-4"
-      ><svg class="hx:inline hx:h-5 hx:shrink-0 hx:ltr:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>Nexus</a><a
-        href="/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/jenkins/"
-        title="Jenkins"
+        href="/docs/%E6%95%B0%E6%8D%AE%E5%BA%93/redis/redis%E5%AE%89%E8%A3%85/"
+        title="Redis安装"
         class="hx:flex hx:max-w-[50%] hx:items-center hx:gap-1 hx:py-4 hx:text-base hx:font-medium hx:text-gray-600 hx:transition-colors [word-break:break-word] hx:hover:text-primary-600 hx:dark:text-gray-300 hx:md:text-lg hx:ltr:ml-auto hx:ltr:pl-4 hx:ltr:text-right hx:rtl:mr-auto hx:rtl:pr-4 hx:rtl:text-left"
-      >Jenkins<svg class="hx:inline hx:h-5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a></div>
+      >Redis安装<svg class="hx:inline hx:h-5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a></div>
         
       </main>
     </article>

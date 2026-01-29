@@ -12,7 +12,7 @@
   <meta name="description" content="简介 使用autossh工具实现, 功能:
 开放跳板机端口, 内网通过跳板机访问远程服务器 自动重连 支持多层跳板机 脚本 安装
 yum -y install autossh 脚本在跳板机上运行, 主要通过跳板机端口实现转发
-#!/bin/bash # 用于配置ssh隧道转发 export AUTOSSH_POLL=60 export AUTOSSH_PORT=0 function start(){ # 测试1: 开放内网10.0.0.2的10001端口, 远程连接外网192.168.1.2的22端口 autossh -M 0 -o &#34;ExitOnForwardFailure yes&#34; -o &#34;ServerAliveInterval 30&#34; -o &#34;ServerAliveCountMax 3&#34; -fNL 0.0.0.0:10001:192.168.1.2:22 root@10.0.0.2 # 测试2: 开放内网10.0.0.2的10002端口, 远程连接外网192.168.1.3的22端口, 通过两层10.0.0.2, 172.32.0.2跳转到192.168.1.3 autossh -M 0 -o &#34;ExitOnForwardFailure yes&#34; -o &#34;ServerAliveInterval 30&#34; -o &#34;ServerAliveCountMax 3&#34; -fNL 0.0.0.0:10002:192.168.1.3:22 -J root@root@10.0.0.2 root@172.32.0.2 } function stop(){ for i in `ps aux|grep &#34;\-NL&#34;|grep -v grep|awk &#39;{print $2}&#39;` do kill -9 $i done } function ls(){ #ps aux|grep autossh|grep -v grep|grep -v ls|awk &#39;{print NR,$11,$12,$13,$14,$15,$16}&#39; for i in `ps aux|grep autossh|grep -v grep|grep -v ls|awk &#39;{print $24}&#39;|awk -F &#39;:&#39; &#39;{print $2}&#39;` do grep -B 1 $i /script/ssh-tunnel done } case $1 in &#34;start&#34;) start ;; &#34;restart&#34;) stop start ;; &#34;stop&#34;) stop ;; &#34;ls&#34;) ls ;; *) echo &#34;start|restart|stop|ls&#34; ;; esac " /><link rel="canonical" href="https://example.org/docs/%E8%84%9A%E6%9C%AC%E5%B7%A5%E5%85%B7/shell/ssh%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91%E8%84%9A%E6%9C%AC/" itemprop="url" />
+#!/bin/bash # 用于配置ssh隧道转发 export AUTOSSH_POLL=60 export AUTOSSH_PORT=0 function start(){ # 测试1: 开放内网10.0.0.2的10001端口, 远程连接外网192.168.1.2的22端口 autossh -M 0 -o &#34;ExitOnForwardFailure yes&#34; -o &#34;ServerAliveInterval 30&#34; -o &#34;ServerAliveCountMax 3&#34; -fNL 0.0.0.0:10001:192.168.1.2:22 root@10.0.0.2 # 测试2: 开放内网10.0.0.2的10002端口, 远程连接外网192.168.1.3的22端口, 通过两层10.0.0.2, 172.32.0.2跳转到192.168.1.3 autossh -M 0 -o &#34;ExitOnForwardFailure yes&#34; -o &#34;ServerAliveInterval 30&#34; -o &#34;ServerAliveCountMax 3&#34; -fNL 0.0.0.0:10002:192.168.1.3:22 -J root@root@10.0.0.2 root@172.32.0.2 } function stop(){ for i in `ps aux|grep &#34;\-NL&#34;|grep -v grep|awk &#39;{print $2}&#39;` do kill -9 $i done } function ls(){ for i in `ps aux|grep autossh|grep -v grep|grep -v ls|awk &#39;{print $24}&#39;|awk -F &#39;:&#39; &#39;{print $2}&#39;` do grep -B 1 $i /script/ssh-tunnel done } case $1 in &#34;start&#34;) start ;; &#34;restart&#34;) stop start ;; &#34;stop&#34;) stop ;; &#34;ls&#34;) ls ;; *) echo &#34;start|restart|stop|ls&#34; ;; esac " /><link rel="canonical" href="https://example.org/docs/%E8%84%9A%E6%9C%AC%E5%B7%A5%E5%85%B7/shell/ssh%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91%E8%84%9A%E6%9C%AC/" itemprop="url" />
 
 <meta property="og:title" content="Ssh端口转发脚本">
 <meta
@@ -61,7 +61,6 @@ function stop(){
 }
 
 function ls(){
-    #ps aux|grep autossh|grep -v grep|grep -v ls|awk &#39;{print NR,$11,$12,$13,$14,$15,$16}&#39;
     for i in `ps aux|grep autossh|grep -v grep|grep -v ls|awk &#39;{print $24}&#39;|awk -F &#39;:&#39; &#39;{print $2}&#39;`
     do 
         grep -B 1 $i /script/ssh-tunnel
@@ -115,16 +114,16 @@ esac
   <meta itemprop="description" content="简介 使用autossh工具实现, 功能:
 开放跳板机端口, 内网通过跳板机访问远程服务器 自动重连 支持多层跳板机 脚本 安装
 yum -y install autossh 脚本在跳板机上运行, 主要通过跳板机端口实现转发
-#!/bin/bash # 用于配置ssh隧道转发 export AUTOSSH_POLL=60 export AUTOSSH_PORT=0 function start(){ # 测试1: 开放内网10.0.0.2的10001端口, 远程连接外网192.168.1.2的22端口 autossh -M 0 -o &#34;ExitOnForwardFailure yes&#34; -o &#34;ServerAliveInterval 30&#34; -o &#34;ServerAliveCountMax 3&#34; -fNL 0.0.0.0:10001:192.168.1.2:22 root@10.0.0.2 # 测试2: 开放内网10.0.0.2的10002端口, 远程连接外网192.168.1.3的22端口, 通过两层10.0.0.2, 172.32.0.2跳转到192.168.1.3 autossh -M 0 -o &#34;ExitOnForwardFailure yes&#34; -o &#34;ServerAliveInterval 30&#34; -o &#34;ServerAliveCountMax 3&#34; -fNL 0.0.0.0:10002:192.168.1.3:22 -J root@root@10.0.0.2 root@172.32.0.2 } function stop(){ for i in `ps aux|grep &#34;\-NL&#34;|grep -v grep|awk &#39;{print $2}&#39;` do kill -9 $i done } function ls(){ #ps aux|grep autossh|grep -v grep|grep -v ls|awk &#39;{print NR,$11,$12,$13,$14,$15,$16}&#39; for i in `ps aux|grep autossh|grep -v grep|grep -v ls|awk &#39;{print $24}&#39;|awk -F &#39;:&#39; &#39;{print $2}&#39;` do grep -B 1 $i /script/ssh-tunnel done } case $1 in &#34;start&#34;) start ;; &#34;restart&#34;) stop start ;; &#34;stop&#34;) stop ;; &#34;ls&#34;) ls ;; *) echo &#34;start|restart|stop|ls&#34; ;; esac">
+#!/bin/bash # 用于配置ssh隧道转发 export AUTOSSH_POLL=60 export AUTOSSH_PORT=0 function start(){ # 测试1: 开放内网10.0.0.2的10001端口, 远程连接外网192.168.1.2的22端口 autossh -M 0 -o &#34;ExitOnForwardFailure yes&#34; -o &#34;ServerAliveInterval 30&#34; -o &#34;ServerAliveCountMax 3&#34; -fNL 0.0.0.0:10001:192.168.1.2:22 root@10.0.0.2 # 测试2: 开放内网10.0.0.2的10002端口, 远程连接外网192.168.1.3的22端口, 通过两层10.0.0.2, 172.32.0.2跳转到192.168.1.3 autossh -M 0 -o &#34;ExitOnForwardFailure yes&#34; -o &#34;ServerAliveInterval 30&#34; -o &#34;ServerAliveCountMax 3&#34; -fNL 0.0.0.0:10002:192.168.1.3:22 -J root@root@10.0.0.2 root@172.32.0.2 } function stop(){ for i in `ps aux|grep &#34;\-NL&#34;|grep -v grep|awk &#39;{print $2}&#39;` do kill -9 $i done } function ls(){ for i in `ps aux|grep autossh|grep -v grep|grep -v ls|awk &#39;{print $24}&#39;|awk -F &#39;:&#39; &#39;{print $2}&#39;` do grep -B 1 $i /script/ssh-tunnel done } case $1 in &#34;start&#34;) start ;; &#34;restart&#34;) stop start ;; &#34;stop&#34;) stop ;; &#34;ls&#34;) ls ;; *) echo &#34;start|restart|stop|ls&#34; ;; esac">
   <meta itemprop="datePublished" content="2026-01-20T17:35:07+08:00">
   <meta itemprop="dateModified" content="2026-01-20T17:35:07+08:00">
-  <meta itemprop="wordCount" content="141">
+  <meta itemprop="wordCount" content="132">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Ssh端口转发脚本">
   <meta name="twitter:description" content="简介 使用autossh工具实现, 功能:
 开放跳板机端口, 内网通过跳板机访问远程服务器 自动重连 支持多层跳板机 脚本 安装
 yum -y install autossh 脚本在跳板机上运行, 主要通过跳板机端口实现转发
-#!/bin/bash # 用于配置ssh隧道转发 export AUTOSSH_POLL=60 export AUTOSSH_PORT=0 function start(){ # 测试1: 开放内网10.0.0.2的10001端口, 远程连接外网192.168.1.2的22端口 autossh -M 0 -o &#34;ExitOnForwardFailure yes&#34; -o &#34;ServerAliveInterval 30&#34; -o &#34;ServerAliveCountMax 3&#34; -fNL 0.0.0.0:10001:192.168.1.2:22 root@10.0.0.2 # 测试2: 开放内网10.0.0.2的10002端口, 远程连接外网192.168.1.3的22端口, 通过两层10.0.0.2, 172.32.0.2跳转到192.168.1.3 autossh -M 0 -o &#34;ExitOnForwardFailure yes&#34; -o &#34;ServerAliveInterval 30&#34; -o &#34;ServerAliveCountMax 3&#34; -fNL 0.0.0.0:10002:192.168.1.3:22 -J root@root@10.0.0.2 root@172.32.0.2 } function stop(){ for i in `ps aux|grep &#34;\-NL&#34;|grep -v grep|awk &#39;{print $2}&#39;` do kill -9 $i done } function ls(){ #ps aux|grep autossh|grep -v grep|grep -v ls|awk &#39;{print NR,$11,$12,$13,$14,$15,$16}&#39; for i in `ps aux|grep autossh|grep -v grep|grep -v ls|awk &#39;{print $24}&#39;|awk -F &#39;:&#39; &#39;{print $2}&#39;` do grep -B 1 $i /script/ssh-tunnel done } case $1 in &#34;start&#34;) start ;; &#34;restart&#34;) stop start ;; &#34;stop&#34;) stop ;; &#34;ls&#34;) ls ;; *) echo &#34;start|restart|stop|ls&#34; ;; esac">
+#!/bin/bash # 用于配置ssh隧道转发 export AUTOSSH_POLL=60 export AUTOSSH_PORT=0 function start(){ # 测试1: 开放内网10.0.0.2的10001端口, 远程连接外网192.168.1.2的22端口 autossh -M 0 -o &#34;ExitOnForwardFailure yes&#34; -o &#34;ServerAliveInterval 30&#34; -o &#34;ServerAliveCountMax 3&#34; -fNL 0.0.0.0:10001:192.168.1.2:22 root@10.0.0.2 # 测试2: 开放内网10.0.0.2的10002端口, 远程连接外网192.168.1.3的22端口, 通过两层10.0.0.2, 172.32.0.2跳转到192.168.1.3 autossh -M 0 -o &#34;ExitOnForwardFailure yes&#34; -o &#34;ServerAliveInterval 30&#34; -o &#34;ServerAliveCountMax 3&#34; -fNL 0.0.0.0:10002:192.168.1.3:22 -J root@root@10.0.0.2 root@172.32.0.2 } function stop(){ for i in `ps aux|grep &#34;\-NL&#34;|grep -v grep|awk &#39;{print $2}&#39;` do kill -9 $i done } function ls(){ for i in `ps aux|grep autossh|grep -v grep|grep -v ls|awk &#39;{print $24}&#39;|awk -F &#39;:&#39; &#39;{print $2}&#39;` do grep -B 1 $i /script/ssh-tunnel done } case $1 in &#34;start&#34;) start ;; &#34;restart&#34;) stop start ;; &#34;stop&#34;) stop ;; &#34;ls&#34;) ls ;; *) echo &#34;start|restart|stop|ls&#34; ;; esac">
 
     <link rel="preload" href="/css/compiled/main.min.ac24db5170e563c97286ca0f63189fbc3aff3672bb376e303a869613977967d0.css" as="style" integrity="sha256-rCTbUXDlY8lyhsoPYxifvDr/NnK7N24wOoaWE5d5Z9A=" />
     <link href="/css/compiled/main.min.ac24db5170e563c97286ca0f63189fbc3aff3672bb376e303a869613977967d0.css" rel="stylesheet" integrity="sha256-rCTbUXDlY8lyhsoPYxifvDr/NnK7N24wOoaWE5d5Z9A=" />
@@ -247,6 +246,14 @@ yum -y install autossh 脚本在跳板机上运行, 主要通过跳板机端口�
     </a>
               <div class="hx:ltr:pr-0 hx:overflow-hidden">
         <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/linux/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/"
+    
+  >开发环境
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/docs/linux/%E5%9B%BE%E6%A0%87/"
@@ -677,6 +684,14 @@ yum -y install autossh 脚本在跳板机上运行, 主要通过跳板机端口�
     </a>
               <div class="hx:ltr:pr-0 hx:overflow-hidden">
         <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/%E6%95%B0%E6%8D%AE%E5%BA%93/redis/redis%E5%88%86%E7%89%87%E9%9B%86%E7%BE%A4/"
+    
+  >Redis分片集群
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/docs/%E6%95%B0%E6%8D%AE%E5%BA%93/redis/redis%E5%AE%89%E8%A3%85/"
@@ -819,6 +834,14 @@ yum -y install autossh 脚本在跳板机上运行, 主要通过跳板机端口�
         <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/linux/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/"
+    
+  >开发环境
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/docs/linux/%E5%9B%BE%E6%A0%87/"
     
   >图标
@@ -1242,6 +1265,14 @@ yum -y install autossh 脚本在跳板机上运行, 主要通过跳板机端口�
     </a>
               <div class="hx:ltr:pr-0 hx:overflow-hidden">
         <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/%E6%95%B0%E6%8D%AE%E5%BA%93/redis/redis%E5%88%86%E7%89%87%E9%9B%86%E7%BE%A4/"
+    
+  >Redis分片集群
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/docs/%E6%95%B0%E6%8D%AE%E5%BA%93/redis/redis%E5%AE%89%E8%A3%85/"
@@ -1480,7 +1511,6 @@ yum -y install autossh 脚本在跳板机上运行, 主要通过跳板机端口�
 </span></span><span class="line"><span class="cl"><span class="o">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="k">function</span> ls<span class="o">(){</span>
-</span></span><span class="line"><span class="cl">    <span class="c1">#ps aux|grep autossh|grep -v grep|grep -v ls|awk &#39;{print NR,$11,$12,$13,$14,$15,$16}&#39;</span>
 </span></span><span class="line"><span class="cl">    <span class="k">for</span> i in <span class="sb">`</span>ps aux<span class="p">|</span>grep autossh<span class="p">|</span>grep -v grep<span class="p">|</span>grep -v ls<span class="p">|</span>awk <span class="s1">&#39;{print $24}&#39;</span><span class="p">|</span>awk -F <span class="s1">&#39;:&#39;</span> <span class="s1">&#39;{print $2}&#39;</span><span class="sb">`</span>
 </span></span><span class="line"><span class="cl">    <span class="k">do</span> 
 </span></span><span class="line"><span class="cl">        grep -B <span class="m">1</span> <span class="nv">$i</span> /script/ssh-tunnel
