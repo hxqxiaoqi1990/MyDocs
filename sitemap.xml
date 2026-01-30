@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://example.org/docs/linux/</loc>
-    <lastmod>2026-01-29T11:20:44+08:00</lastmod>
+    <lastmod>2026-01-30T15:58:30+08:00</lastmod>
   </url><url>
     <loc>https://example.org/docs/k8s/%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</loc>
     <lastmod>2025-12-26T16:43:23+08:00</lastmod>
@@ -62,13 +62,16 @@
     <loc>https://example.org/docs/k8s/%E9%97%AE%E9%A2%98%E4%BC%98%E5%8C%96/</loc>
     <lastmod>2025-12-26T16:47:57+08:00</lastmod>
   </url><url>
-    <loc>https://example.org/docs/linux/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</loc>
-    <lastmod>2026-01-29T11:20:44+08:00</lastmod>
+    <loc>https://example.org/docs/linux/ansible/</loc>
+    <lastmod>2026-01-30T15:58:30+08:00</lastmod>
   </url><url>
     <loc>https://example.org/docs/</loc>
-    <lastmod>2026-01-29T11:20:44+08:00</lastmod>
+    <lastmod>2026-01-30T15:58:30+08:00</lastmod>
   </url><url>
     <loc>https://example.org/</loc>
+    <lastmod>2026-01-30T15:58:30+08:00</lastmod>
+  </url><url>
+    <loc>https://example.org/docs/linux/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</loc>
     <lastmod>2026-01-29T11:20:44+08:00</lastmod>
   </url><url>
     <loc>https://example.org/docs/%E6%95%B0%E6%8D%AE%E5%BA%93/redis/redis%E5%88%86%E7%89%87%E9%9B%86%E7%BE%A4/</loc>

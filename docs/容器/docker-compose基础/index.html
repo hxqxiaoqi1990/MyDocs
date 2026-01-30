@@ -9,19 +9,19 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
 <title>Docker Compose基础 – 自在网站</title>
-  <meta name="description" content="一、Docker Compose 配置文件核心结构 Docker Compose 配置文件（docker-compose.yml/compose.yml）基于 YAML 格式，核心分为 五大模块：services（服务，必选）、networks（网络）、volumes（卷）、configs（配置）、secrets（密钥），另支持顶层全局参数和自定义扩展字段，以下是所有支持的参数详细说明。
-二、顶层全局参数 顶层参数作用于整个 Compose 项目，定义项目的基础配置和全局资源。
-参数 说明 version 指定 Compose 文件格式版本（推荐 3.8&#43;，适配 Docker 20.10&#43;），不同版本支持的参数存在兼容性差异，3.x 版本适配 Swarm 模式，2.x 偏向单机使用 services 定义所有容器服务（核心必选模块），下属每个子项为一个独立容器服务，包含容器运行的所有配置 networks 定义自定义网络，用于服务间网络隔离、通信，支持多种网络驱动，需在服务中通过 networks 关联 volumes 定义持久化数据卷，用于容器数据持久化（容器删除后数据不丢失），支持本地卷、网络卷等，需在服务中通过 volumes 挂载 configs Docker Swarm 模式专用，定义跨服务共享的配置文件（非敏感信息），支持本地文件加载或引用外部配置 secrets Docker Swarm 模式专用，定义敏感信息（密码、密钥等），避免明文暴露，支持本地文件加载或引用外部密钥 x-* 自定义扩展字段，字段名必须以 x- 开头（如 x-common-env），Compose 会忽略该字段，但可通过 YAML 锚点语法复用配置 三、Services 模块（容器服务核心参数） services 是 Compose 配置的核心模块，每个服务对应一个容器实例，参数覆盖容器运行的所有配置（等价于 docker run 命令的所有选项）。" /><link rel="canonical" href="https://example.org/docs/%E5%AE%B9%E5%99%A8/docker-compose%E5%9F%BA%E7%A1%80/" itemprop="url" />
+  <meta name="description" content="配置文件核心结构 Docker Compose 配置文件（docker-compose.yml/compose.yml）基于 YAML 格式，核心分为 五大模块：services（服务，必选）、networks（网络）、volumes（卷）、configs（配置）、secrets（密钥），另支持顶层全局参数和自定义扩展字段，以下是所有支持的参数详细说明。
+顶层参数作用于整个 Compose 项目，定义项目的基础配置和全局资源。
+参数 说明 version 指定 Compose 文件格式版本（推荐 3.8&#43;，适配 Docker 20.10&#43;），不同版本支持的参数存在兼容性差异，3.x 版本适配 Swarm 模式，2.x 偏向单机使用 services 定义所有容器服务（核心必选模块），下属每个子项为一个独立容器服务，包含容器运行的所有配置 networks 定义自定义网络，用于服务间网络隔离、通信，支持多种网络驱动，需在服务中通过 networks 关联 volumes 定义持久化数据卷，用于容器数据持久化（容器删除后数据不丢失），支持本地卷、网络卷等，需在服务中通过 volumes 挂载 configs Docker Swarm 模式专用，定义跨服务共享的配置文件（非敏感信息），支持本地文件加载或引用外部配置 secrets Docker Swarm 模式专用，定义敏感信息（密码、密钥等），避免明文暴露，支持本地文件加载或引用外部密钥 x-* 自定义扩展字段，字段名必须以 x- 开头（如 x-common-env），Compose 会忽略该字段，但可通过 YAML 锚点语法复用配置 示例配置 基础运行yaml
+services: nginx: image: nginx container_name: nginx restart: unless-stopped environment: ENV_TEST: 123456 ports: - &#34;80:80&#34; volumes: - ./html:/usr/share/nginx/html 资源限制 限制内存" /><link rel="canonical" href="https://example.org/docs/%E5%AE%B9%E5%99%A8/docker-compose%E5%9F%BA%E7%A1%80/" itemprop="url" />
 
 <meta property="og:title" content="Docker Compose基础">
 <meta
   property="og:description"
   content="
     
-      一、Docker Compose 配置文件核心结构
+      配置文件核心结构
     Docker Compose 配置文件（docker-compose.yml/compose.yml）基于 YAML 格式，核心分为 五大模块：services（服务，必选）、networks（网络）、volumes（卷）、configs（配置）、secrets（密钥），另支持顶层全局参数和自定义扩展字段，以下是所有支持的参数详细说明。
-二、顶层全局参数
-    顶层参数作用于整个 Compose 项目，定义项目的基础配置和全局资源。
+顶层参数作用于整个 Compose 项目，定义项目的基础配置和全局资源。
 
   
       
@@ -60,8 +60,29 @@
       
   
 
-三、Services 模块（容器服务核心参数）
-    services 是 Compose 配置的核心模块，每个服务对应一个容器实例，参数覆盖容器运行的所有配置（等价于 docker run 命令的所有选项）。
+示例配置
+    基础运行yaml
+
+
+services:
+  nginx:
+    image: nginx
+    container_name: nginx
+    restart: unless-stopped
+    environment:
+      ENV_TEST: 123456
+    ports:
+      - &#34;80:80&#34;
+    volumes:
+      - ./html:/usr/share/nginx/html
+  
+    
+
+  
+
+
+资源限制
+    限制内存
     
   ">
 <meta
@@ -83,17 +104,19 @@
 
 
   <meta itemprop="name" content="Docker Compose基础">
-  <meta itemprop="description" content="一、Docker Compose 配置文件核心结构 Docker Compose 配置文件（docker-compose.yml/compose.yml）基于 YAML 格式，核心分为 五大模块：services（服务，必选）、networks（网络）、volumes（卷）、configs（配置）、secrets（密钥），另支持顶层全局参数和自定义扩展字段，以下是所有支持的参数详细说明。
-二、顶层全局参数 顶层参数作用于整个 Compose 项目，定义项目的基础配置和全局资源。
-参数 说明 version 指定 Compose 文件格式版本（推荐 3.8&#43;，适配 Docker 20.10&#43;），不同版本支持的参数存在兼容性差异，3.x 版本适配 Swarm 模式，2.x 偏向单机使用 services 定义所有容器服务（核心必选模块），下属每个子项为一个独立容器服务，包含容器运行的所有配置 networks 定义自定义网络，用于服务间网络隔离、通信，支持多种网络驱动，需在服务中通过 networks 关联 volumes 定义持久化数据卷，用于容器数据持久化（容器删除后数据不丢失），支持本地卷、网络卷等，需在服务中通过 volumes 挂载 configs Docker Swarm 模式专用，定义跨服务共享的配置文件（非敏感信息），支持本地文件加载或引用外部配置 secrets Docker Swarm 模式专用，定义敏感信息（密码、密钥等），避免明文暴露，支持本地文件加载或引用外部密钥 x-* 自定义扩展字段，字段名必须以 x- 开头（如 x-common-env），Compose 会忽略该字段，但可通过 YAML 锚点语法复用配置 三、Services 模块（容器服务核心参数） services 是 Compose 配置的核心模块，每个服务对应一个容器实例，参数覆盖容器运行的所有配置（等价于 docker run 命令的所有选项）。">
+  <meta itemprop="description" content="配置文件核心结构 Docker Compose 配置文件（docker-compose.yml/compose.yml）基于 YAML 格式，核心分为 五大模块：services（服务，必选）、networks（网络）、volumes（卷）、configs（配置）、secrets（密钥），另支持顶层全局参数和自定义扩展字段，以下是所有支持的参数详细说明。
+顶层参数作用于整个 Compose 项目，定义项目的基础配置和全局资源。
+参数 说明 version 指定 Compose 文件格式版本（推荐 3.8&#43;，适配 Docker 20.10&#43;），不同版本支持的参数存在兼容性差异，3.x 版本适配 Swarm 模式，2.x 偏向单机使用 services 定义所有容器服务（核心必选模块），下属每个子项为一个独立容器服务，包含容器运行的所有配置 networks 定义自定义网络，用于服务间网络隔离、通信，支持多种网络驱动，需在服务中通过 networks 关联 volumes 定义持久化数据卷，用于容器数据持久化（容器删除后数据不丢失），支持本地卷、网络卷等，需在服务中通过 volumes 挂载 configs Docker Swarm 模式专用，定义跨服务共享的配置文件（非敏感信息），支持本地文件加载或引用外部配置 secrets Docker Swarm 模式专用，定义敏感信息（密码、密钥等），避免明文暴露，支持本地文件加载或引用外部密钥 x-* 自定义扩展字段，字段名必须以 x- 开头（如 x-common-env），Compose 会忽略该字段，但可通过 YAML 锚点语法复用配置 示例配置 基础运行yaml
+services: nginx: image: nginx container_name: nginx restart: unless-stopped environment: ENV_TEST: 123456 ports: - &#34;80:80&#34; volumes: - ./html:/usr/share/nginx/html 资源限制 限制内存">
   <meta itemprop="datePublished" content="2025-12-26T16:38:27+08:00">
   <meta itemprop="dateModified" content="2025-12-26T16:38:27+08:00">
-  <meta itemprop="wordCount" content="768">
+  <meta itemprop="wordCount" content="348">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Docker Compose基础">
-  <meta name="twitter:description" content="一、Docker Compose 配置文件核心结构 Docker Compose 配置文件（docker-compose.yml/compose.yml）基于 YAML 格式，核心分为 五大模块：services（服务，必选）、networks（网络）、volumes（卷）、configs（配置）、secrets（密钥），另支持顶层全局参数和自定义扩展字段，以下是所有支持的参数详细说明。
-二、顶层全局参数 顶层参数作用于整个 Compose 项目，定义项目的基础配置和全局资源。
-参数 说明 version 指定 Compose 文件格式版本（推荐 3.8&#43;，适配 Docker 20.10&#43;），不同版本支持的参数存在兼容性差异，3.x 版本适配 Swarm 模式，2.x 偏向单机使用 services 定义所有容器服务（核心必选模块），下属每个子项为一个独立容器服务，包含容器运行的所有配置 networks 定义自定义网络，用于服务间网络隔离、通信，支持多种网络驱动，需在服务中通过 networks 关联 volumes 定义持久化数据卷，用于容器数据持久化（容器删除后数据不丢失），支持本地卷、网络卷等，需在服务中通过 volumes 挂载 configs Docker Swarm 模式专用，定义跨服务共享的配置文件（非敏感信息），支持本地文件加载或引用外部配置 secrets Docker Swarm 模式专用，定义敏感信息（密码、密钥等），避免明文暴露，支持本地文件加载或引用外部密钥 x-* 自定义扩展字段，字段名必须以 x- 开头（如 x-common-env），Compose 会忽略该字段，但可通过 YAML 锚点语法复用配置 三、Services 模块（容器服务核心参数） services 是 Compose 配置的核心模块，每个服务对应一个容器实例，参数覆盖容器运行的所有配置（等价于 docker run 命令的所有选项）。">
+  <meta name="twitter:description" content="配置文件核心结构 Docker Compose 配置文件（docker-compose.yml/compose.yml）基于 YAML 格式，核心分为 五大模块：services（服务，必选）、networks（网络）、volumes（卷）、configs（配置）、secrets（密钥），另支持顶层全局参数和自定义扩展字段，以下是所有支持的参数详细说明。
+顶层参数作用于整个 Compose 项目，定义项目的基础配置和全局资源。
+参数 说明 version 指定 Compose 文件格式版本（推荐 3.8&#43;，适配 Docker 20.10&#43;），不同版本支持的参数存在兼容性差异，3.x 版本适配 Swarm 模式，2.x 偏向单机使用 services 定义所有容器服务（核心必选模块），下属每个子项为一个独立容器服务，包含容器运行的所有配置 networks 定义自定义网络，用于服务间网络隔离、通信，支持多种网络驱动，需在服务中通过 networks 关联 volumes 定义持久化数据卷，用于容器数据持久化（容器删除后数据不丢失），支持本地卷、网络卷等，需在服务中通过 volumes 挂载 configs Docker Swarm 模式专用，定义跨服务共享的配置文件（非敏感信息），支持本地文件加载或引用外部配置 secrets Docker Swarm 模式专用，定义敏感信息（密码、密钥等），避免明文暴露，支持本地文件加载或引用外部密钥 x-* 自定义扩展字段，字段名必须以 x- 开头（如 x-common-env），Compose 会忽略该字段，但可通过 YAML 锚点语法复用配置 示例配置 基础运行yaml
+services: nginx: image: nginx container_name: nginx restart: unless-stopped environment: ENV_TEST: 123456 ports: - &#34;80:80&#34; volumes: - ./html:/usr/share/nginx/html 资源限制 限制内存">
 
     <link rel="preload" href="/css/compiled/main.min.ac24db5170e563c97286ca0f63189fbc3aff3672bb376e303a869613977967d0.css" as="style" integrity="sha256-rCTbUXDlY8lyhsoPYxifvDr/NnK7N24wOoaWE5d5Z9A=" />
     <link href="/css/compiled/main.min.ac24db5170e563c97286ca0f63189fbc3aff3672bb376e303a869613977967d0.css" rel="stylesheet" integrity="sha256-rCTbUXDlY8lyhsoPYxifvDr/NnK7N24wOoaWE5d5Z9A=" />
@@ -218,6 +241,14 @@
         <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/linux/ansible/"
+    
+  >Ansible
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/docs/linux/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/"
     
   >开发环境
@@ -324,57 +355,21 @@
   
     <ul class='hx:flex hx:flex-col hx:gap-1 hx:relative hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:dark:before:bg-neutral-800 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:pr-3 hx:rtl:before:right-0 hx:ltr:ml-3 hx:rtl:mr-3'><li>
               <a
-                href="#%e4%b8%80docker-compose-%e9%85%8d%e7%bd%ae%e6%96%87%e4%bb%b6%e6%a0%b8%e5%bf%83%e7%bb%93%e6%9e%84"
+                href="#%e9%85%8d%e7%bd%ae%e6%96%87%e4%bb%b6%e6%a0%b8%e5%bf%83%e7%bb%93%e6%9e%84"
                 class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
-              >一、Docker Compose 配置文件核心结构</a>
+              >配置文件核心结构</a>
             </li>
           <li>
               <a
-                href="#%e4%ba%8c%e9%a1%b6%e5%b1%82%e5%85%a8%e5%b1%80%e5%8f%82%e6%95%b0"
+                href="#%e7%a4%ba%e4%be%8b%e9%85%8d%e7%bd%ae"
                 class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
-              >二、顶层全局参数</a>
+              >示例配置</a>
             </li>
           <li>
               <a
-                href="#%e4%b8%89services-%e6%a8%a1%e5%9d%97%e5%ae%b9%e5%99%a8%e6%9c%8d%e5%8a%a1%e6%a0%b8%e5%bf%83%e5%8f%82%e6%95%b0"
+                href="#%e7%a4%ba%e4%be%8b"
                 class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
-              >三、Services 模块（容器服务核心参数）</a>
-            </li>
-          <li>
-              <a
-                href="#%e5%9b%9bnetworks-%e6%a8%a1%e5%9d%97%e8%87%aa%e5%ae%9a%e4%b9%89%e7%bd%91%e7%bb%9c%e5%8f%82%e6%95%b0"
-                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
-              >四、Networks 模块（自定义网络参数）</a>
-            </li>
-          <li>
-              <a
-                href="#%e4%ba%94volumes-%e6%a8%a1%e5%9d%97%e6%8c%81%e4%b9%85%e5%8c%96%e5%8d%b7%e5%8f%82%e6%95%b0"
-                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
-              >五、Volumes 模块（持久化卷参数）</a>
-            </li>
-          <li>
-              <a
-                href="#%e5%85%adconfigs-%e6%a8%a1%e5%9d%97swarm-%e9%85%8d%e7%bd%ae%e6%96%87%e4%bb%b6%e5%8f%82%e6%95%b0"
-                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
-              >六、Configs 模块（Swarm 配置文件参数）</a>
-            </li>
-          <li>
-              <a
-                href="#%e4%b8%83secrets-%e6%a8%a1%e5%9d%97swarm-%e5%af%86%e9%92%a5%e5%8f%82%e6%95%b0"
-                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
-              >七、Secrets 模块（Swarm 密钥参数）</a>
-            </li>
-          <li>
-              <a
-                href="#%e8%a1%a5%e5%85%85%e8%af%b4%e6%98%8e"
-                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
-              >补充说明</a>
-            </li>
-          <li>
-              <a
-                href="#%e5%85%ab%e7%a4%ba%e4%be%8b"
-                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
-              >八、示例</a>
+              >示例</a>
             </li>
           </ul>
   
@@ -844,6 +839,14 @@
         <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></span>
     </a><div class="hx:ltr:pr-0 hx:overflow-hidden">
         <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/linux/ansible/"
+    
+  >Ansible
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/docs/linux/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/"
@@ -1443,63 +1446,27 @@
 <nav class="hextra-toc hx:order-last hx:hidden hx:w-64 hx:shrink-0 hx:xl:block hx:print:hidden hx:px-4" aria-label="table of contents">
     <div class="hextra-scrollbar hx:sticky hx:top-16 hx:overflow-y-auto hx:pr-4 hx:pt-6 hx:text-sm [hyphens:auto] hx:max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] hx:ltr:-mr-4 hx:rtl:-ml-4"><p class="hx:mb-4 hx:font-semibold hx:tracking-tight">此页上</p><ul>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#%e4%b8%80docker-compose-%e9%85%8d%e7%bd%ae%e6%96%87%e4%bb%b6%e6%a0%b8%e5%bf%83%e7%bb%93%e6%9e%84">一、Docker Compose 配置文件核心结构
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#%e9%85%8d%e7%bd%ae%e6%96%87%e4%bb%b6%e6%a0%b8%e5%bf%83%e7%bb%93%e6%9e%84">配置文件核心结构
         </a>
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#%e4%ba%8c%e9%a1%b6%e5%b1%82%e5%85%a8%e5%b1%80%e5%8f%82%e6%95%b0">二、顶层全局参数
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#%e7%a4%ba%e4%be%8b%e9%85%8d%e7%bd%ae">示例配置
         </a>
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#%e4%b8%89services-%e6%a8%a1%e5%9d%97%e5%ae%b9%e5%99%a8%e6%9c%8d%e5%8a%a1%e6%a0%b8%e5%bf%83%e5%8f%82%e6%95%b0">三、Services 模块（容器服务核心参数）
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#%e8%b5%84%e6%ba%90%e9%99%90%e5%88%b6">资源限制
         </a>
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#1-%e5%9f%ba%e7%a1%80%e9%85%8d%e7%bd%ae%e5%8f%82%e6%95%b0">1. 基础配置参数
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#%e7%bd%91%e7%bb%9c%e9%80%89%e6%8b%a9">网络选择
         </a>
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#2-%e7%bd%91%e7%bb%9c%e9%85%8d%e7%bd%ae%e5%8f%82%e6%95%b0">2. 网络配置参数
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#%e6%8c%81%e4%b9%85%e5%8c%96%e9%85%8d%e7%bd%ae">持久化配置
         </a>
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#3-%e5%ad%98%e5%82%a8%e9%85%8d%e7%bd%ae%e5%8f%82%e6%95%b0">3. 存储配置参数
-        </a>
-      </li>
-      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#4-%e7%8e%af%e5%a2%83%e9%85%8d%e7%bd%ae%e5%8f%82%e6%95%b0">4. 环境配置参数
-        </a>
-      </li>
-      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#5-%e8%b5%84%e6%ba%90%e9%99%90%e5%88%b6%e4%b8%8e%e9%83%a8%e7%bd%b2%e5%8f%82%e6%95%b0%e8%a1%a5%e5%85%85-deploy-%e5%ad%90%e5%8f%82%e6%95%b0">5. 资源限制与部署参数（补充 deploy 子参数）
-        </a>
-      </li>
-      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#6-%e6%97%a5%e5%bf%97%e9%85%8d%e7%bd%ae%e5%8f%82%e6%95%b0">6. 日志配置参数
-        </a>
-      </li>
-      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#%e5%9b%9bnetworks-%e6%a8%a1%e5%9d%97%e8%87%aa%e5%ae%9a%e4%b9%89%e7%bd%91%e7%bb%9c%e5%8f%82%e6%95%b0">四、Networks 模块（自定义网络参数）
-        </a>
-      </li>
-      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#%e4%ba%94volumes-%e6%a8%a1%e5%9d%97%e6%8c%81%e4%b9%85%e5%8c%96%e5%8d%b7%e5%8f%82%e6%95%b0">五、Volumes 模块（持久化卷参数）
-        </a>
-      </li>
-      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#%e5%85%adconfigs-%e6%a8%a1%e5%9d%97swarm-%e9%85%8d%e7%bd%ae%e6%96%87%e4%bb%b6%e5%8f%82%e6%95%b0">六、Configs 模块（Swarm 配置文件参数）
-        </a>
-      </li>
-      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#%e4%b8%83secrets-%e6%a8%a1%e5%9d%97swarm-%e5%af%86%e9%92%a5%e5%8f%82%e6%95%b0">七、Secrets 模块（Swarm 密钥参数）
-        </a>
-      </li>
-      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#%e8%a1%a5%e5%85%85%e8%af%b4%e6%98%8e">补充说明
-        </a>
-      </li>
-      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#%e5%85%ab%e7%a4%ba%e4%be%8b">八、示例
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#%e7%a4%ba%e4%be%8b">示例
         </a>
       </li></ul>
       <div class="hx:mt-8 hx:border-t hx:bg-white hx:pt-8 hx:shadow-[0_-12px_16px_white] hx:dark:bg-dark hx:dark:shadow-[0_-12px_16px_#111] hx:sticky hx:bottom-0 hx:flex hx:flex-col hx:items-start hx:gap-2 hx:pb-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-t hx:contrast-more:border-neutral-400 hx:contrast-more:shadow-none hx:contrast-more:dark:border-neutral-400">
@@ -1527,10 +1494,9 @@
 
         <div class="content">
           <h1>Docker Compose基础</h1>
-          <h2>一、Docker Compose 配置文件核心结构<span class="hx:absolute hx:-mt-20" id="一docker-compose-配置文件核心结构"></span>
-    <a href="#%e4%b8%80docker-compose-%e9%85%8d%e7%bd%ae%e6%96%87%e4%bb%b6%e6%a0%b8%e5%bf%83%e7%bb%93%e6%9e%84" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Docker Compose 配置文件（<code>docker-compose.yml</code>/<code>compose.yml</code>）基于 YAML 格式，核心分为 <strong>五大模块</strong>：<code>services</code>（服务，必选）、<code>networks</code>（网络）、<code>volumes</code>（卷）、<code>configs</code>（配置）、<code>secrets</code>（密钥），另支持顶层全局参数和自定义扩展字段，以下是所有支持的参数详细说明。</p>
-<h2>二、顶层全局参数<span class="hx:absolute hx:-mt-20" id="二顶层全局参数"></span>
-    <a href="#%e4%ba%8c%e9%a1%b6%e5%b1%82%e5%85%a8%e5%b1%80%e5%8f%82%e6%95%b0" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>顶层参数作用于整个 Compose 项目，定义项目的基础配置和全局资源。</p>
+          <h2>配置文件核心结构<span class="hx:absolute hx:-mt-20" id="配置文件核心结构"></span>
+    <a href="#%e9%85%8d%e7%bd%ae%e6%96%87%e4%bb%b6%e6%a0%b8%e5%bf%83%e7%bb%93%e6%9e%84" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Docker Compose 配置文件（<code>docker-compose.yml</code>/<code>compose.yml</code>）基于 YAML 格式，核心分为 <strong>五大模块</strong>：<code>services</code>（服务，必选）、<code>networks</code>（网络）、<code>volumes</code>（卷）、<code>configs</code>（配置）、<code>secrets</code>（密钥），另支持顶层全局参数和自定义扩展字段，以下是所有支持的参数详细说明。</p>
+<p>顶层参数作用于整个 Compose 项目，定义项目的基础配置和全局资源。</p>
 <table>
   <thead>
       <tr>
@@ -1569,472 +1535,290 @@
       </tr>
   </tbody>
 </table>
-<h2>三、Services 模块（容器服务核心参数）<span class="hx:absolute hx:-mt-20" id="三services-模块容器服务核心参数"></span>
-    <a href="#%e4%b8%89services-%e6%a8%a1%e5%9d%97%e5%ae%b9%e5%99%a8%e6%9c%8d%e5%8a%a1%e6%a0%b8%e5%bf%83%e5%8f%82%e6%95%b0" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p><code>services</code> 是 Compose 配置的核心模块，每个服务对应一个容器实例，参数覆盖容器运行的所有配置（等价于 <code>docker run</code> 命令的所有选项）。</p>
-<h3>1. 基础配置参数<span class="hx:absolute hx:-mt-20" id="1-基础配置参数"></span>
-    <a href="#1-%e5%9f%ba%e7%a1%80%e9%85%8d%e7%bd%ae%e5%8f%82%e6%95%b0" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
-  <thead>
-      <tr>
-          <th>参数</th>
-          <th>说明</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>image</code></td>
-          <td>指定容器镜像（格式：<code>镜像名:标签</code>），与 <code>build</code> 二选一，优先使用已有镜像</td>
-      </tr>
-      <tr>
-          <td><code>build</code></td>
-          <td>从 Dockerfile 构建镜像，不使用现有镜像，支持子参数：<code>context</code>（构建上下文目录，必选）、<code>dockerfile</code>（自定义 Dockerfile 文件名）、<code>args</code>（构建参数，对应 Dockerfile 的 <code>ARG</code>）、<code>labels</code>（构建时添加镜像标签）、<code>cache_from</code>（构建缓存来源）、<code>cache_to</code>（构建缓存推送目标）、<code>shm_size</code>（共享内存大小）</td>
-      </tr>
-      <tr>
-          <td><code>container_name</code></td>
-          <td>自定义容器名称，默认自动生成（格式：<code>项目名_服务名_序号</code>），同一主机内容器名称唯一</td>
-      </tr>
-      <tr>
-          <td><code>command</code></td>
-          <td>覆盖容器默认启动命令，支持字符串格式（如 <code>nginx -g 'daemon off;'</code>）或数组格式（如 <code>[&quot;nginx&quot;, &quot;-g&quot;, &quot;daemon off;&quot;]</code>），数组格式更安全（避免字符转义问题）</td>
-      </tr>
-      <tr>
-          <td><code>entrypoint</code></td>
-          <td>覆盖容器默认入口点，优先级高于 <code>command</code>，支持字符串或数组格式，入口点是容器启动时执行的第一个命令</td>
-      </tr>
-      <tr>
-          <td><code>restart</code></td>
-          <td>容器重启策略：<code>no</code>（默认，不重启）、<code>always</code>（容器退出时始终重启）、<code>on-failure</code>（容器退出状态码非 0 时重启）、<code>unless-stopped</code>（除非手动停止容器，否则始终重启）</td>
-      </tr>
-      <tr>
-          <td><code>hostname</code></td>
-          <td>容器主机名，在容器内部可见，用于容器内程序识别主机标识</td>
-      </tr>
-      <tr>
-          <td><code>domainname</code></td>
-          <td>容器域名，配合 <code>hostname</code> 使用，组成完整的主机域名（如 <code>hostname: app</code> + <code>domainname: example.com</code> → <code>app.example.com</code>）</td>
-      </tr>
-      <tr>
-          <td><code>mac_address</code></td>
-          <td>容器 MAC 地址（如 <code>02:42:ac:11:65:43</code>），用于需要绑定 MAC 地址的场景</td>
-      </tr>
-      <tr>
-          <td><code>privileged</code></td>
-          <td>是否授予容器特权模式（<code>true</code>/<code>false</code>），特权模式下容器拥有主机的所有设备访问权限</td>
-      </tr>
-      <tr>
-          <td><code>read_only</code></td>
-          <td>容器文件系统是否设为只读（<code>true</code>/<code>false</code>），只读模式下容器无法修改文件系统，需通过卷挂载可写目录</td>
-      </tr>
-      <tr>
-          <td><code>stdin_open</code></td>
-          <td>是否保持标准输入打开（<code>true</code>/<code>false</code>），等价于 <code>docker run -i</code></td>
-      </tr>
-      <tr>
-          <td><code>tty</code></td>
-          <td>是否分配伪终端（<code>true</code>/<code>false</code>），等价于 <code>docker run -t</code>，通常与 <code>stdin_open</code> 配合使用（<code>stdin_open: true</code> + <code>tty: true</code> → 等价于 <code>docker run -it</code>）</td>
-      </tr>
-      <tr>
-          <td><code>stop_signal</code></td>
-          <td>停止容器的信号（默认 <code>SIGTERM</code>），支持 Unix 信号（如 <code>SIGINT</code>、<code>SIGKILL</code>）</td>
-      </tr>
-      <tr>
-          <td><code>stop_grace_period</code></td>
-          <td>容器停止的宽限期（默认 <code>10s</code>），宽限期内容器正常退出，超时后强制终止（<code>SIGKILL</code>）</td>
-      </tr>
-      <tr>
-          <td><code>healthcheck</code></td>
-          <td>容器健康检查配置，子参数：<code>test</code>（健康检查命令，如 <code>[&quot;CMD&quot;, &quot;curl&quot;, &quot;-f&quot;, &quot;http://localhost&quot;]</code>）、<code>interval</code>（检查间隔，如 <code>30s</code>）、<code>timeout</code>（检查超时时间，如 <code>10s</code>）、<code>retries</code>（检查失败重试次数，如 <code>3</code>）、<code>start_period</code>（容器启动后延迟检查的时间，如 <code>30s</code>）、<code>disable</code>（是否禁用健康检查，<code>true</code>/<code>false</code>）</td>
-      </tr>
-      <tr>
-          <td><code>depends_on</code></td>
-          <td>服务依赖关系，控制服务启动 / 停止顺序（启动时先启动依赖服务，停止时后停止当前服务），支持数组格式（如 <code>[&quot;db&quot;, &quot;redis&quot;]</code>），仅保证启动顺序，不保证依赖服务就绪（需结合健康检查）</td>
-      </tr>
-      <tr>
-          <td><code>deploy</code></td>
-          <td>部署配置（Swarm 模式核心参数，单机模式部分生效），子参数：<code>replicas</code>（Swarm 模式下的副本数）、<code>resources</code>（资源限制与预留）、<code>restart_policy</code>（Swarm 模式重启策略）、<code>placement</code>（节点部署约束）、<code>update_config</code>（滚动更新配置）、<code>rollback_config</code>（回滚配置）、<code>labels</code>（服务部署标签）、<code>mode</code>（部署模式：<code>replicated</code> 副本模式 /<code>global</code> 全局模式）</td>
-      </tr>
-      <tr>
-          <td><code>labels</code></td>
-          <td>容器元数据标签，用于分类、筛选容器，支持键值对格式（如 <code>com.example.env: production</code>）或数组格式（如 <code>[&quot;com.example.team=devops&quot;, &quot;com.example.version=1.0&quot;]</code>）</td>
-      </tr>
-  </tbody>
-</table>
-<h3>2. 网络配置参数<span class="hx:absolute hx:-mt-20" id="2-网络配置参数"></span>
-    <a href="#2-%e7%bd%91%e7%bb%9c%e9%85%8d%e7%bd%ae%e5%8f%82%e6%95%b0" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
-  <thead>
-      <tr>
-          <th>参数</th>
-          <th>说明</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>networks</code></td>
-          <td>容器关联的自定义网络，需在顶层 <code>networks</code> 中定义，支持子参数：<code>aliases</code>（容器在该网络中的别名，服务间可通过别名访问）、<code>ipv4_address</code>（静态 IPv4 地址，需网络支持固定子网）、<code>ipv6_address</code>（静态 IPv6 地址）</td>
-      </tr>
-      <tr>
-          <td><code>ports</code></td>
-          <td>端口映射，将容器端口暴露到主机，支持短格式（<code>主机端口:容器端口</code>，如 <code>8080:80</code>）、长格式（<code>published</code> 主机端口、<code>target</code> 容器端口、<code>protocol</code> 协议（<code>tcp</code>/<code>udp</code>/<code>sctp</code>）、<code>mode</code> 模式（<code>host</code>/<code>ingress</code>，Swarm 模式有效））</td>
-      </tr>
-      <tr>
-          <td><code>expose</code></td>
-          <td>暴露容器内部端口（仅声明端口，不映射到主机），供同一网络内的其他服务访问，支持单个端口（如 <code>8080</code>）或数组格式（如 <code>[&quot;8080&quot;, &quot;9090&quot;]</code>）</td>
-      </tr>
-      <tr>
-          <td><code>dns</code></td>
-          <td>自定义容器 DNS 服务器，支持单个 DNS（如 <code>8.8.8.8</code>）或数组格式（如 <code>[&quot;8.8.8.8&quot;, &quot;114.114.114.114&quot;]</code>）</td>
-      </tr>
-      <tr>
-          <td><code>dns_search</code></td>
-          <td>DNS 搜索域，容器解析主机名时自动拼接的域名后缀（如 <code>[&quot;example.com&quot;, &quot;test.com&quot;]</code>），解析 <code>app</code> 时会尝试 <code>app.example.com</code>、<code>app.test.com</code></td>
-      </tr>
-      <tr>
-          <td><code>dns_opt</code></td>
-          <td>DNS 选项，如 <code>[&quot;use-vc&quot;, &quot;timeout:2&quot;]</code>（使用 TCP 连接 DNS 服务器、超时时间 2 秒）</td>
-      </tr>
-      <tr>
-          <td><code>network_mode</code></td>
-          <td>容器网络模式，可选值：<code>bridge</code>（默认，桥接模式）、<code>host</code>（共享主机网络栈）、<code>none</code>（无网络）、<code>service:&gt;</code>（共享其他服务的网络栈）、<code>container:&gt;</code>（共享其他容器的网络栈）</td>
-      </tr>
-      <tr>
-          <td><code>extra_hosts</code></td>
-          <td>添加主机名到 IP 的映射（等价于 <code>docker run --add-host</code>），支持数组格式（如 <code>[&quot;host.docker.internal:host-gateway&quot;, &quot;db-server:192.168.1.100&quot;]</code>）</td>
-      </tr>
-      <tr>
-          <td><code>hostname</code></td>
-          <td>容器主机名（已在基础配置中列出，此处重复标注网络相关作用）</td>
-      </tr>
-      <tr>
-          <td><code>domainname</code></td>
-          <td>容器域名（已在基础配置中列出，此处重复标注网络相关作用）</td>
-      </tr>
-      <tr>
-          <td><code>mac_address</code></td>
-          <td>容器 MAC 地址（已在基础配置中列出，此处重复标注网络相关作用）</td>
-      </tr>
-  </tbody>
-</table>
-<h3>3. 存储配置参数<span class="hx:absolute hx:-mt-20" id="3-存储配置参数"></span>
-    <a href="#3-%e5%ad%98%e5%82%a8%e9%85%8d%e7%bd%ae%e5%8f%82%e6%95%b0" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
-  <thead>
-      <tr>
-          <th>参数</th>
-          <th>说明</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>volumes</code></td>
-          <td>数据卷挂载，支持三种类型：<code>bind</code>（主机路径绑定）、<code>volume</code>（命名卷，需在顶层 <code>volumes</code> 定义）、<code>tmpfs</code>（临时文件系统），格式：短格式（<code>源:目标:权限</code>，如 <code>./data:/app/data:ro</code>）、长格式（<code>type</code> 类型、<code>source</code> 源路径、<code>target</code> 目标路径、<code>read_only</code> 是否只读、<code>bind</code> 绑定选项、<code>volume</code> 卷选项、<code>tmpfs</code> 临时文件系统选项）</td>
-      </tr>
-      <tr>
-          <td><code>tmpfs</code></td>
-          <td>挂载临时文件系统（容器重启后数据丢失），支持单个路径（如 <code>/tmp</code>）或数组格式（如 <code>[&quot;/tmp&quot;, &quot;/var/run:size=100m&quot;]</code>），<code>size</code> 限制临时目录大小</td>
-      </tr>
-      <tr>
-          <td><code>ulimits</code></td>
-          <td>容器资源限制，控制容器的最大进程数、文件描述符数等，支持子参数：<code>nproc</code>（最大进程数）、<code>nofile</code>（最大文件描述符数，支持 <code>soft</code> 软限制和 <code>hard</code> 硬限制）、<code>core</code>（核心文件大小限制）、<code>rss</code>（常驻内存大小限制）等</td>
-      </tr>
-      <tr>
-          <td><code>shm_size</code></td>
-          <td>容器共享内存大小（如 <code>1g</code>、<code>512m</code>），等价于 <code>docker run --shm-size</code></td>
-      </tr>
-      <tr>
-          <td><code>sysctls</code></td>
-          <td>配置容器内核参数（如 <code>net.ipv4.ip_forward: 1</code>、<code>net.core.somaxconn: 1024</code>），支持键值对或数组格式</td>
-      </tr>
-      <tr>
-          <td><code>cap_add</code></td>
-          <td>添加容器的 Linux  capabilities（如 <code>NET_ADMIN</code>、<code>SYS_TIME</code>），赋予容器额外权限</td>
-      </tr>
-      <tr>
-          <td><code>cap_drop</code></td>
-          <td>移除容器的 Linux  capabilities（如 <code>ALL</code> 移除所有权限，仅保留默认最小权限）</td>
-      </tr>
-      <tr>
-          <td><code>devices</code></td>
-          <td>挂载主机设备到容器（如 <code>/dev/sda1:/dev/sda1</code>），支持数组格式，需配合 <code>privileged: true</code> 使用</td>
-      </tr>
-  </tbody>
-</table>
-<h3>4. 环境配置参数<span class="hx:absolute hx:-mt-20" id="4-环境配置参数"></span>
-    <a href="#4-%e7%8e%af%e5%a2%83%e9%85%8d%e7%bd%ae%e5%8f%82%e6%95%b0" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
-  <thead>
-      <tr>
-          <th>参数</th>
-          <th>说明</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>environment</code></td>
-          <td>设置容器环境变量，支持数组格式（如 <code>[&quot;MYSQL_ROOT_PASSWORD=123456&quot;, &quot;APP_ENV=prod&quot;]</code>）或字典格式（如 <code>MYSQL_ROOT_PASSWORD: 123456</code>），优先级高于 <code>env_file</code>，同名变量会覆盖 <code>env_file</code> 中的值</td>
-      </tr>
-      <tr>
-          <td><code>env_file</code></td>
-          <td>从文件加载环境变量，支持单个文件（如 <code>.env</code>）或数组格式（如 <code>[&quot;.env&quot;, &quot;prod.env&quot;]</code>），文件中每行格式为 <code>KEY=VALUE</code>，空行和 <code>#</code> 开头的注释行会被忽略</td>
-      </tr>
-      <tr>
-          <td><code>secrets</code></td>
-          <td>Docker Swarm 模式下挂载密钥，从顶层 <code>secrets</code> 中引用，支持子参数：<code>source</code>（密钥名称）、<code>target</code>（容器内挂载路径）、<code>uid</code>（挂载文件的用户 ID）、<code>gid</code>（挂载文件的组 ID）、<code>mode</code>（挂载文件的权限，如 <code>0400</code>）</td>
-      </tr>
-      <tr>
-          <td><code>configs</code></td>
-          <td>Docker Swarm 模式下挂载配置文件，从顶层 <code>configs</code> 中引用，子参数与 <code>secrets</code> 一致，用于挂载非敏感配置</td>
-      </tr>
-      <tr>
-          <td><code>user</code></td>
-          <td>容器运行用户，支持用户名（如 <code>root</code>）、UID（如 <code>1000</code>）、UID:GID（如 <code>1000:1000</code>），用于控制容器内程序的运行权限</td>
-      </tr>
-      <tr>
-          <td><code>working_dir</code></td>
-          <td>容器工作目录（如 <code>/app</code>），容器启动后默认进入该目录，<code>command</code> 和 <code>entrypoint</code> 命令会在该目录下执行</td>
-      </tr>
-      <tr>
-          <td><code>env_file</code></td>
-          <td>从文件加载环境变量（已说明，此处保持分类一致性）</td>
-      </tr>
-  </tbody>
-</table>
-<h3>5. 资源限制与部署参数（补充 <code>deploy</code> 子参数）<span class="hx:absolute hx:-mt-20" id="5-资源限制与部署参数补充-deploy-子参数"></span>
-    <a href="#5-%e8%b5%84%e6%ba%90%e9%99%90%e5%88%b6%e4%b8%8e%e9%83%a8%e7%bd%b2%e5%8f%82%e6%95%b0%e8%a1%a5%e5%85%85-deploy-%e5%ad%90%e5%8f%82%e6%95%b0" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
-  <thead>
-      <tr>
-          <th>参数</th>
-          <th>说明</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>cpus</code></td>
-          <td>简化的 CPU 限制（如 <code>0.5</code>、<code>2</code>），等价于 <code>deploy.resources.limits.cpus</code>，单机模式生效</td>
-      </tr>
-      <tr>
-          <td><code>cpus_per_task</code></td>
-          <td>Swarm 模式下每个任务（容器）的 CPU 限制，仅 <code>mode: replicated</code> 有效</td>
-      </tr>
-      <tr>
-          <td><code>mem_limit</code></td>
-          <td>简化的内存限制（如 <code>1g</code>、<code>512m</code>），等价于 <code>deploy.resources.limits.memory</code>，单机模式生效</td>
-      </tr>
-      <tr>
-          <td><code>mem_reservation</code></td>
-          <td>简化的内存预留（如 <code>512m</code>），等价于 <code>deploy.resources.reservations.memory</code>，保证容器最小可用内存</td>
-      </tr>
-      <tr>
-          <td><code>deploy.resources.limits</code></td>
-          <td>容器最大资源限制，子参数：<code>cpus</code>（CPU 核心数，如 <code>1</code> 表示 1 核）、<code>memory</code>（内存大小，如 <code>1g</code>）、<code>pids</code>（最大进程数，如 <code>50</code>）</td>
-      </tr>
-      <tr>
-          <td><code>deploy.resources.reservations</code></td>
-          <td>容器最小资源预留，子参数与 <code>limits</code> 一致，确保节点为容器分配足够资源</td>
-      </tr>
-      <tr>
-          <td><code>deploy.restart_policy</code></td>
-          <td>Swarm 模式重启策略，子参数：<code>condition</code>（重启条件：<code>none</code>/<code>on-failure</code>/<code>any</code>）、<code>delay</code>（重启延迟，如 <code>5s</code>）、<code>max_attempts</code>（最大重启次数，如 <code>3</code>）、<code>window</code>（判断容器稳定的时间窗口，如 <code>120s</code>）</td>
-      </tr>
-      <tr>
-          <td><code>deploy.placement</code></td>
-          <td>Swarm 节点部署约束，子参数：<code>constraints</code>（节点约束，如 <code>[&quot;node.role==worker&quot;, &quot;node.labels.env==prod&quot;]</code>）、<code>preferences</code>（部署偏好，如 <code>[{&quot;spread&quot;: &quot;node.labels.zone&quot;}]</code>）</td>
-      </tr>
-      <tr>
-          <td><code>deploy.update_config</code></td>
-          <td>Swarm 滚动更新配置，子参数：<code>parallelism</code>（同时更新的副本数，如 <code>1</code>）、<code>delay</code>（副本更新间隔，如 <code>10s</code>）、<code>failure_action</code>（更新失败动作：<code>continue</code>/<code>rollback</code>/<code>pause</code>）、<code>monitor</code>（更新后监控时间，如 <code>60s</code>）、<code>max_failure_ratio</code>（最大失败比例，如 <code>0.2</code>）、<code>order</code>（更新顺序：<code>stop-first</code>/<code>start-first</code>）</td>
-      </tr>
-      <tr>
-          <td><code>deploy.rollback_config</code></td>
-          <td>Swarm 更新失败回滚配置，子参数与 <code>update_config</code> 一致</td>
-      </tr>
-      <tr>
-          <td><code>deploy.mode</code></td>
-          <td>Swarm 部署模式：<code>replicated</code>（副本模式，需指定 <code>replicas</code>）、<code>global</code>（全局模式，每个节点运行一个副本）</td>
-      </tr>
-      <tr>
-          <td><code>deploy.replicas</code></td>
-          <td>Swarm 副本模式下的容器数量（如 <code>3</code>），仅 <code>mode: replicated</code> 有效</td>
-      </tr>
-      <tr>
-          <td><code>deploy.labels</code></td>
-          <td>Swarm 服务部署标签，仅作用于服务，不作用于容器</td>
-      </tr>
-  </tbody>
-</table>
-<h3>6. 日志配置参数<span class="hx:absolute hx:-mt-20" id="6-日志配置参数"></span>
-    <a href="#6-%e6%97%a5%e5%bf%97%e9%85%8d%e7%bd%ae%e5%8f%82%e6%95%b0" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
-  <thead>
-      <tr>
-          <th>参数</th>
-          <th>说明</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>logging</code></td>
-          <td>容器日志配置，子参数：<code>driver</code>（日志驱动，默认 <code>json-file</code>，支持 <code>syslog</code>、<code>journald</code>、<code>fluentd</code>、<code>gelf</code>、<code>none</code> 等）、<code>options</code>（驱动选项，如 <code>json-file</code> 的 <code>max-size</code>（单个日志文件大小）、<code>max-file</code>（日志文件保留数量）、<code>compress</code>（是否压缩旧日志））</td>
-      </tr>
-  </tbody>
-</table>
-<h2>四、Networks 模块（自定义网络参数）<span class="hx:absolute hx:-mt-20" id="四networks-模块自定义网络参数"></span>
-    <a href="#%e5%9b%9bnetworks-%e6%a8%a1%e5%9d%97%e8%87%aa%e5%ae%9a%e4%b9%89%e7%bd%91%e7%bb%9c%e5%8f%82%e6%95%b0" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p><code>networks</code> 模块定义项目的自定义网络，用于服务间通信隔离，支持多种网络驱动，所有参数如下：</p>
-<table>
-  <thead>
-      <tr>
-          <th>参数</th>
-          <th>说明</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>driver</code></td>
-          <td>网络驱动，可选值：<code>bridge</code>（单机默认桥接网络）、<code>host</code>（共享主机网络）、<code>overlay</code>（Swarm 跨节点网络）、<code>macvlan</code>（分配物理 MAC 地址，模拟物理设备）、<code>none</code>（无网络）、<code>ipvlan</code>（L2/L3 层 VLAN 网络）、第三方驱动（如 <code>weave</code>、<code>calico</code>）</td>
-      </tr>
-      <tr>
-          <td><code>driver_opts</code></td>
-          <td>网络驱动选项，不同驱动支持不同选项，如 <code>bridge</code> 驱动的 <code>com.docker.network.bridge.name</code>（自定义桥接网卡名称）、<code>overlay</code> 驱动的 <code>com.docker.network.driver.mtu</code>（MTU 大小）</td>
-      </tr>
-      <tr>
-          <td><code>ipam</code></td>
-          <td>IP 地址管理配置，子参数：<code>driver</code>（IPAM 驱动，默认 <code>default</code>）、<code>config</code>（IP 配置列表，每个配置包含 <code>subnet</code>（子网）、<code>gateway</code>（网关）、<code>ip_range</code>（可用 IP 范围）、<code>aux_addresses</code>（预留 IP 地址））、<code>options</code>（IPAM 选项）</td>
-      </tr>
-      <tr>
-          <td><code>external</code></td>
-          <td>是否使用外部已存在的网络（<code>true</code>/<code>false</code>），<code>true</code> 时 Compose 不创建网络，直接使用现有网络（需提前通过 <code>docker network create</code> 创建）</td>
-      </tr>
-      <tr>
-          <td><code>name</code></td>
-          <td>自定义网络名称（默认格式：<code>项目名_网络名</code>），避免默认名称过长或冲突</td>
-      </tr>
-      <tr>
-          <td><code>labels</code></td>
-          <td>网络元数据标签，用于分类、筛选网络</td>
-      </tr>
-      <tr>
-          <td><code>internal</code></td>
-          <td>是否设置为内部网络（<code>true</code>/<code>false</code>），内部网络中的服务无法访问外部网络，仅允许内部服务通信</td>
-      </tr>
-      <tr>
-          <td><code>attachable</code></td>
-          <td>Swarm <code>overlay</code> 网络专用，是否允许非 Swarm 服务的容器连接到该网络（<code>true</code>/<code>false</code>）</td>
-      </tr>
-      <tr>
-          <td><code>ingress</code></td>
-          <td>Swarm 专用，是否设置为入口网络（<code>true</code>/<code>false</code>），入口网络用于 Swarm 服务的负载均衡，默认已存在 <code>ingress</code> 网络</td>
-      </tr>
-      <tr>
-          <td><code>enable_ipv6</code></td>
-          <td>是否启用 IPv6（<code>true</code>/<code>false</code>），需配合 <code>ipam.config</code> 中的 IPv6 子网配置</td>
-      </tr>
-  </tbody>
-</table>
-<h2>五、Volumes 模块（持久化卷参数）<span class="hx:absolute hx:-mt-20" id="五volumes-模块持久化卷参数"></span>
-    <a href="#%e4%ba%94volumes-%e6%a8%a1%e5%9d%97%e6%8c%81%e4%b9%85%e5%8c%96%e5%8d%b7%e5%8f%82%e6%95%b0" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p><code>volumes</code> 模块定义项目的持久化卷，用于容器数据持久化，所有参数如下：</p>
-<table>
-  <thead>
-      <tr>
-          <th>参数</th>
-          <th>说明</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>driver</code></td>
-          <td>卷驱动，默认 <code>local</code>（本地卷），支持第三方驱动（如 <code>nfs</code>、<code>glusterfs</code>、<code>ceph</code>、<code>azure_file</code> 等）</td>
-      </tr>
-      <tr>
-          <td><code>driver_opts</code></td>
-          <td>卷驱动选项，不同驱动支持不同选项，如 <code>nfs</code> 驱动的 <code>type</code>（文件系统类型，<code>nfs</code>）、<code>o</code>（挂载选项，如 <code>addr=192.168.1.100,rw</code>）、<code>device</code>（NFS 服务器共享目录，如 <code>:/data/nfs</code>）；<code>local</code> 驱动的 <code>type</code>（<code>none</code>/<code>bind</code>）、<code>o</code>（挂载选项）、<code>device</code>（主机路径）</td>
-      </tr>
-      <tr>
-          <td><code>external</code></td>
-          <td>是否使用外部已存在的卷（<code>true</code>/<code>false</code>），<code>true</code> 时 Compose 不创建卷，直接使用现有卷（需提前通过 <code>docker volume create</code> 创建）</td>
-      </tr>
-      <tr>
-          <td><code>name</code></td>
-          <td>自定义卷名称（默认格式：<code>项目名_卷名</code>），避免默认名称冲突</td>
-      </tr>
-      <tr>
-          <td><code>labels</code></td>
-          <td>卷元数据标签，用于分类、筛选卷</td>
-      </tr>
-      <tr>
-          <td><code>permissions</code></td>
-          <td>卷权限配置（部分驱动支持），如 <code>read_only</code>（只读）</td>
-      </tr>
-      <tr>
-          <td><code>target</code></td>
-          <td>卷挂载目标路径（仅在服务 <code>volumes</code> 中配置，此处为模块级参数说明）</td>
-      </tr>
-      <tr>
-          <td><code>source</code></td>
-          <td>卷挂载源路径（仅在服务 <code>volumes</code> 中配置，此处为模块级参数说明）</td>
-      </tr>
-  </tbody>
-</table>
-<h2>六、Configs 模块（Swarm 配置文件参数）<span class="hx:absolute hx:-mt-20" id="六configs-模块swarm-配置文件参数"></span>
-    <a href="#%e5%85%adconfigs-%e6%a8%a1%e5%9d%97swarm-%e9%85%8d%e7%bd%ae%e6%96%87%e4%bb%b6%e5%8f%82%e6%95%b0" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p><code>configs</code> 模块仅在 Docker Swarm 模式下生效，定义跨服务共享的非敏感配置文件，所有参数如下：</p>
-<table>
-  <thead>
-      <tr>
-          <th>参数</th>
-          <th>说明</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>file</code></td>
-          <td>从本地文件加载配置内容（如 <code>file: ./app.conf</code>），Compose 启动时将文件内容上传到 Swarm 配置存储</td>
-      </tr>
-      <tr>
-          <td><code>external</code></td>
-          <td>是否使用外部已存在的配置（<code>true</code>/<code>false</code>），<code>true</code> 时引用 Swarm 中已创建的配置（需提前通过 <code>docker config create</code> 创建）</td>
-      </tr>
-      <tr>
-          <td><code>name</code></td>
-          <td>自定义配置名称（默认格式：<code>项目名_配置名</code>），Swarm 中配置名称唯一</td>
-      </tr>
-      <tr>
-          <td><code>template_driver</code></td>
-          <td>配置模板驱动（如 <code>golang</code>），支持使用模板动态生成配置文件（需配置文件中包含模板语法）</td>
-      </tr>
-  </tbody>
-</table>
-<h2>七、Secrets 模块（Swarm 密钥参数）<span class="hx:absolute hx:-mt-20" id="七secrets-模块swarm-密钥参数"></span>
-    <a href="#%e4%b8%83secrets-%e6%a8%a1%e5%9d%97swarm-%e5%af%86%e9%92%a5%e5%8f%82%e6%95%b0" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p><code>secrets</code> 模块仅在 Docker Swarm 模式下生效，定义敏感信息（密码、密钥等），所有参数如下：</p>
-<table>
-  <thead>
-      <tr>
-          <th>参数</th>
-          <th>说明</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>file</code></td>
-          <td>从本地文件加载密钥内容（如 <code>file: ./db-password.txt</code>），文件内容为敏感信息（无需 <code>KEY=VALUE</code> 格式），上传到 Swarm 密钥存储时会加密</td>
-      </tr>
-      <tr>
-          <td><code>external</code></td>
-          <td>是否使用外部已存在的密钥（<code>true</code>/<code>false</code>），<code>true</code> 时引用 Swarm 中已创建的密钥（需提前通过 <code>docker secret create</code> 创建）</td>
-      </tr>
-      <tr>
-          <td><code>name</code></td>
-          <td>自定义密钥名称（默认格式：<code>项目名_密钥名</code>），Swarm 中密钥名称唯一</td>
-      </tr>
-  </tbody>
-</table>
-<h2>补充说明<span class="hx:absolute hx:-mt-20" id="补充说明"></span>
-    <a href="#%e8%a1%a5%e5%85%85%e8%af%b4%e6%98%8e" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ol>
-<li>
-<p><strong>版本兼容性</strong>：部分参数仅支持特定 Compose 版本，如 <code>deploy</code> 模块的 <code>rollback_config</code> 需 <code>version: 3.7+</code>，<code>configs</code> 和 <code>secrets</code> 需 <code>version: 3.3+</code>，建议优先使用 <code>3.8</code> 版本（最新稳定版）。</p>
-</li>
-<li>
-<p><strong>参数优先级</strong>：<code>environment</code> &gt; <code>env_file</code> &gt; 镜像默认环境变量；<code>command</code>/<code>entrypoint</code> 覆盖镜像默认配置；服务内 <code>networks</code>/<code>volumes</code> 引用顶层定义的资源。</p>
-</li>
-<li>
-<p><strong>官方文档参考</strong>：所有参数的最新说明可查阅 Docker 官方文档：<a href="https://docs.docker.com/compose/compose-file/"target="_blank" rel="noopener">Compose File Reference</a></p>
-</li>
-</ol>
-<h2>八、示例<span class="hx:absolute hx:-mt-20" id="八示例"></span>
-    <a href="#%e5%85%ab%e7%a4%ba%e4%be%8b" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+<h2>示例配置<span class="hx:absolute hx:-mt-20" id="示例配置"></span>
+    <a href="#%e7%a4%ba%e4%be%8b%e9%85%8d%e7%bd%ae" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>基础运行yaml</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">services</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">nginx</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">nginx</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">nginx</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l">unless-stopped</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">ENV_TEST</span><span class="p">:</span><span class="w"> </span><span class="m">123456</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">ports</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="s2">&#34;80:80&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">./html:/usr/share/nginx/html</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="复制代码"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<h3>资源限制<span class="hx:absolute hx:-mt-20" id="资源限制"></span>
+    <a href="#%e8%b5%84%e6%ba%90%e9%99%90%e5%88%b6" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>限制内存</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="w">    </span><span class="nt">mem_limit</span><span class="p">:</span><span class="w"> </span><span class="l">2000M</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="复制代码"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<p>cpu和内存</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="w">    </span><span class="nt">deploy</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">resources</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">limits</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">cpus</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;1&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">memory</span><span class="p">:</span><span class="w"> </span><span class="l">1G</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">reservations</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">cpus</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;0.5&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">memory</span><span class="p">:</span><span class="w"> </span><span class="l">512M</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="复制代码"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<p>文件打开数</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="w">    </span><span class="nt">sysctls</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">net.core.somaxconn=65535</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">ulimits</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">nofile</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">soft</span><span class="p">:</span><span class="w"> </span><span class="m">100000</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">hard</span><span class="p">:</span><span class="w"> </span><span class="m">100000</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="复制代码"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<h3>网络选择<span class="hx:absolute hx:-mt-20" id="网络选择"></span>
+    <a href="#%e7%bd%91%e7%bb%9c%e9%80%89%e6%8b%a9" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>使用已有网络</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="w">    </span><span class="c"># 使用已有自定义网络, 类型bridge</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">network_mode</span><span class="p">:</span><span class="w"> </span><span class="l">app-network</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># 使用host网络</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">network_mode</span><span class="p">:</span><span class="w"> </span><span class="l">host</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># 使用bridge网络</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">network_mode</span><span class="p">:</span><span class="w"> </span><span class="l">bridge</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="复制代码"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<p>使用自定义网络,不指定网段</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="w">    </span><span class="nt">networks</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">app-network</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">networks</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">app-network</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">driver</span><span class="p">:</span><span class="w"> </span><span class="l">bridge</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="复制代码"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<p>使用自定义网络,并自定义网段</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="w">    </span><span class="nt">networks</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">app-network</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">networks</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">app-network</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">driver</span><span class="p">:</span><span class="w"> </span><span class="l">bridge</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">ipam</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">config</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="nt">subnet</span><span class="p">:</span><span class="w"> </span><span class="m">172.30.0.0</span><span class="l">/16</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">gateway</span><span class="p">:</span><span class="w"> </span><span class="m">172.30.0.1</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="复制代码"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<p>使用自定义网络,并自定义网段和ip</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="w">    </span><span class="nt">networks</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">app_net</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">ipv4_address</span><span class="p">:</span><span class="w"> </span><span class="m">172.30.0.2</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">networks</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">app-network</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">driver</span><span class="p">:</span><span class="w"> </span><span class="l">bridge</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">ipam</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">config</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="nt">subnet</span><span class="p">:</span><span class="w"> </span><span class="m">172.30.0.0</span><span class="l">/16</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">gateway</span><span class="p">:</span><span class="w"> </span><span class="m">172.30.0.1</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="复制代码"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<h3>持久化配置<span class="hx:absolute hx:-mt-20" id="持久化配置"></span>
+    <a href="#%e6%8c%81%e4%b9%85%e5%8c%96%e9%85%8d%e7%bd%ae" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>使用宿主机目录或文件挂载</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">./conf:/etc/nginx/conf.d</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">./conf/default.conf:/etc/nginx/conf.d/default.conf</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="复制代码"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<p>使用volume</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">nginx_conf:/etc/nginx/conf.d</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="l">nginx_conf:</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="复制代码"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<p>指定存储名称和挂载类型</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">nginx_conf:/etc/nginx/conf.d</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">nginx_conf</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">conf</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">driver</span><span class="p">:</span><span class="w"> </span><span class="l">local</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="复制代码"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<p>使用已有存储</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">existing_volume:/app/data</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">existing_volume</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">external</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">pre-existing-volume-name </span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="复制代码"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<p>使用volumes卷, 挂载自定义目录</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">nginx_test:/etc/nginx/conf.d</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">nginx_test</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">driver</span><span class="p">:</span><span class="w"> </span><span class="l">local</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">driver_opts</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l">none</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">o</span><span class="p">:</span><span class="w"> </span><span class="l">bind</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">device</span><span class="p">:</span><span class="w"> </span><span class="l">/data/nginx/conf.d</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="复制代码"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<p>远程挂载</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># NFS 驱动</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">nfs_volume</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">driver</span><span class="p">:</span><span class="w"> </span><span class="l">local</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">driver_opts</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l">nfs</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">device</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;:/nfs/share/data&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">o</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;addr=192.168.1.100,nfsvers=4,hard,intr&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># SMB/CIFS 驱动</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">smb_volume</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">driver</span><span class="p">:</span><span class="w"> </span><span class="l">local</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">driver_opts</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l">cifs</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">device</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;//server/share&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">o</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;username=user,password=pass,file_mode=0777,dir_mode=0777&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 临时内存卷</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">tmpfs_volume</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">driver</span><span class="p">:</span><span class="w"> </span><span class="l">local</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">driver_opts</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l">tmpfs</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">device</span><span class="p">:</span><span class="w"> </span><span class="l">tmpfs</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">o</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;size=100m,uid=1000&#34;</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="复制代码"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<h2>示例<span class="hx:absolute hx:-mt-20" id="示例"></span>
+    <a href="#%e7%a4%ba%e4%be%8b" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
 
 <div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;3.8&#39;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">

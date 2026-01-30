@@ -8,50 +8,38 @@
 <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
-<title>开发环境 – 自在网站</title>
-  <meta name="description" content="简介 配置golang, node.js, python, jdk等环境, 以下下载链接可以选择对应版本号下载
-golang 下载
-wget https://dl.google.com/go/go1.22.0.linux-amd64.tar.gz 配置
-tar xf go1.22.0.linux-amd64.tar.gz -C /usr/local/ cat &gt;&gt; /etc/profile &lt;&lt;EOF export GOROOT=/usr/local/go export GOPATH=\$HOME/go export PATH=\$PATH:\$GOROOT/bin:\$GOPATH/bin export GOPROXY=https://goproxy.cn,direct EOF source /etc/profile 验证" /><link rel="canonical" href="https://example.org/docs/linux/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/" itemprop="url" />
+<title>Ansible – 自在网站</title>
+  <meta name="description" content="简介 本文档以「命令行实操」为核心，搭配高频场景Playbook示例，帮助运维/开发人员快速掌握Ansible的基础使用、主机管理、模块调用及Playbook编写，可直接复制命令和示例进行实操，降低入门成本。 Ansible是一款开源的自动化运维工具，基于SSH协议（无需在被控主机安装客户端），可实现批量主机管理、配置部署、任务执行、服务启停等自动化操作，核心优势：轻量、无客户端、配置简单、可扩展性强。
+安装 # 1. 安装EPEL源（CentOS默认无Ansible仓库） yum install -y epel-release # 2. 安装Ansible yum install -y ansible # 3. 验证安装（查看版本） ansible --version # 正常输出示例：ansible [core 2.14.2] 主机配置 Ansible通过「主机清单」识别被控主机，默认路径为 /etc/ansible/hosts，也可自定义清单文件Inventory（推荐，避免修改系统默认文件）。" /><link rel="canonical" href="https://example.org/docs/linux/ansible/" itemprop="url" />
 
-<meta property="og:title" content="开发环境">
+<meta property="og:title" content="Ansible">
 <meta
   property="og:description"
   content="
     
       简介
-    配置golang, node.js, python, jdk等环境, 以下下载链接可以选择对应版本号下载
-golang
-    下载
+    本文档以「命令行实操」为核心，搭配高频场景Playbook示例，帮助运维/开发人员快速掌握Ansible的基础使用、主机管理、模块调用及Playbook编写，可直接复制命令和示例进行实操，降低入门成本。
+Ansible是一款开源的自动化运维工具，基于SSH协议（无需在被控主机安装客户端），可实现批量主机管理、配置部署、任务执行、服务启停等自动化操作，核心优势：轻量、无客户端、配置简单、可扩展性强。
+安装
+    
 
+# 1. 安装EPEL源（CentOS默认无Ansible仓库）
+yum install -y epel-release
 
-wget https://dl.google.com/go/go1.22.0.linux-amd64.tar.gz
+# 2. 安装Ansible
+yum install -y ansible
+
+# 3. 验证安装（查看版本）
+ansible --version
+# 正常输出示例：ansible [core 2.14.2]
   
     
 
   
 
 
-配置
-
-
-tar xf go1.22.0.linux-amd64.tar.gz -C /usr/local/
-
-cat &gt;&gt; /etc/profile &lt;&lt;EOF
-export GOROOT=/usr/local/go
-export GOPATH=\$HOME/go
-export PATH=\$PATH:\$GOROOT/bin:\$GOPATH/bin
-export GOPROXY=https://goproxy.cn,direct
-EOF
-
-source /etc/profile
-  
-    
-
-  
-
-
-验证
+主机配置
+    Ansible通过「主机清单」识别被控主机，默认路径为 /etc/ansible/hosts，也可自定义清单文件Inventory（推荐，避免修改系统默认文件）。
     
   ">
 <meta
@@ -59,33 +47,29 @@ source /etc/profile
   content="
     article
   ">
-<meta property="og:url" content="https://example.org/docs/linux/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/"><meta property="article:section" content="docs">
+<meta property="og:url" content="https://example.org/docs/linux/ansible/"><meta property="article:section" content="docs">
 
 <meta
   property="article:published_time"
-  content="2026-01-29T11:20:44+08:00">
+  content="2026-01-30T15:58:30+08:00">
 
 
 <meta
   property="article:modified_time"
-  content="2026-01-29T11:20:44+08:00">
+  content="2026-01-30T15:58:30+08:00">
 
 
 
-  <meta itemprop="name" content="开发环境">
-  <meta itemprop="description" content="简介 配置golang, node.js, python, jdk等环境, 以下下载链接可以选择对应版本号下载
-golang 下载
-wget https://dl.google.com/go/go1.22.0.linux-amd64.tar.gz 配置
-tar xf go1.22.0.linux-amd64.tar.gz -C /usr/local/ cat &gt;&gt; /etc/profile &lt;&lt;EOF export GOROOT=/usr/local/go export GOPATH=\$HOME/go export PATH=\$PATH:\$GOROOT/bin:\$GOPATH/bin export GOPROXY=https://goproxy.cn,direct EOF source /etc/profile 验证">
-  <meta itemprop="datePublished" content="2026-01-29T11:20:44+08:00">
-  <meta itemprop="dateModified" content="2026-01-29T11:20:44+08:00">
-  <meta itemprop="wordCount" content="152">
+  <meta itemprop="name" content="Ansible">
+  <meta itemprop="description" content="简介 本文档以「命令行实操」为核心，搭配高频场景Playbook示例，帮助运维/开发人员快速掌握Ansible的基础使用、主机管理、模块调用及Playbook编写，可直接复制命令和示例进行实操，降低入门成本。 Ansible是一款开源的自动化运维工具，基于SSH协议（无需在被控主机安装客户端），可实现批量主机管理、配置部署、任务执行、服务启停等自动化操作，核心优势：轻量、无客户端、配置简单、可扩展性强。
+安装 # 1. 安装EPEL源（CentOS默认无Ansible仓库） yum install -y epel-release # 2. 安装Ansible yum install -y ansible # 3. 验证安装（查看版本） ansible --version # 正常输出示例：ansible [core 2.14.2] 主机配置 Ansible通过「主机清单」识别被控主机，默认路径为 /etc/ansible/hosts，也可自定义清单文件Inventory（推荐，避免修改系统默认文件）。">
+  <meta itemprop="datePublished" content="2026-01-30T15:58:30+08:00">
+  <meta itemprop="dateModified" content="2026-01-30T15:58:30+08:00">
+  <meta itemprop="wordCount" content="264">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="开发环境">
-  <meta name="twitter:description" content="简介 配置golang, node.js, python, jdk等环境, 以下下载链接可以选择对应版本号下载
-golang 下载
-wget https://dl.google.com/go/go1.22.0.linux-amd64.tar.gz 配置
-tar xf go1.22.0.linux-amd64.tar.gz -C /usr/local/ cat &gt;&gt; /etc/profile &lt;&lt;EOF export GOROOT=/usr/local/go export GOPATH=\$HOME/go export PATH=\$PATH:\$GOROOT/bin:\$GOPATH/bin export GOPROXY=https://goproxy.cn,direct EOF source /etc/profile 验证">
+  <meta name="twitter:title" content="Ansible">
+  <meta name="twitter:description" content="简介 本文档以「命令行实操」为核心，搭配高频场景Playbook示例，帮助运维/开发人员快速掌握Ansible的基础使用、主机管理、模块调用及Playbook编写，可直接复制命令和示例进行实操，降低入门成本。 Ansible是一款开源的自动化运维工具，基于SSH协议（无需在被控主机安装客户端），可实现批量主机管理、配置部署、任务执行、服务启停等自动化操作，核心优势：轻量、无客户端、配置简单、可扩展性强。
+安装 # 1. 安装EPEL源（CentOS默认无Ansible仓库） yum install -y epel-release # 2. 安装Ansible yum install -y ansible # 3. 验证安装（查看版本） ansible --version # 正常输出示例：ansible [core 2.14.2] 主机配置 Ansible通过「主机清单」识别被控主机，默认路径为 /etc/ansible/hosts，也可自定义清单文件Inventory（推荐，避免修改系统默认文件）。">
 
     <link rel="preload" href="/css/compiled/main.min.ac24db5170e563c97286ca0f63189fbc3aff3672bb376e303a869613977967d0.css" as="style" integrity="sha256-rCTbUXDlY8lyhsoPYxifvDr/NnK7N24wOoaWE5d5Z9A=" />
     <link href="/css/compiled/main.min.ac24db5170e563c97286ca0f63189fbc3aff3672bb376e303a869613977967d0.css" rel="stylesheet" integrity="sha256-rCTbUXDlY8lyhsoPYxifvDr/NnK7N24wOoaWE5d5Z9A=" />
@@ -207,20 +191,12 @@ tar xf go1.22.0.linux-amd64.tar.gz -C /usr/local/ cat &gt;&gt; /etc/profile &lt;
         <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></span>
     </a>
               <div class="hx:ltr:pr-0 hx:overflow-hidden">
-        <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col "><a
+        <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col open"><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      hextra-sidebar-active-item hx:bg-primary-100 hx:font-semibold hx:text-primary-800 hx:contrast-more:border hx:contrast-more:border-primary-500 hx:dark:bg-primary-400/10 hx:dark:text-primary-600 hx:contrast-more:dark:border-primary-500"
     href="/docs/linux/ansible/"
     
   >Ansible
-    </a>
-              
-            </li><li class="hx:flex hx:flex-col open"><a
-    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hextra-sidebar-active-item hx:bg-primary-100 hx:font-semibold hx:text-primary-800 hx:contrast-more:border hx:contrast-more:border-primary-500 hx:dark:bg-primary-400/10 hx:dark:text-primary-600 hx:contrast-more:dark:border-primary-500"
-    href="/docs/linux/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/"
-    
-  >开发环境
     </a>
   
     <ul class='hx:flex hx:flex-col hx:gap-1 hx:relative hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:dark:before:bg-neutral-800 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:pr-3 hx:rtl:before:right-0 hx:ltr:ml-3 hx:rtl:mr-3'><li>
@@ -231,30 +207,32 @@ tar xf go1.22.0.linux-amd64.tar.gz -C /usr/local/ cat &gt;&gt; /etc/profile &lt;
             </li>
           <li>
               <a
-                href="#golang"
+                href="#%e5%ae%89%e8%a3%85"
                 class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
-              >golang</a>
+              >安装</a>
             </li>
           <li>
               <a
-                href="#nodejs"
+                href="#%e4%b8%bb%e6%9c%ba%e9%85%8d%e7%bd%ae"
                 class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
-              >node.js</a>
+              >主机配置</a>
             </li>
           <li>
               <a
-                href="#python3"
+                href="#ansible%e7%a4%ba%e4%be%8b"
                 class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
-              >python3</a>
-            </li>
-          <li>
-              <a
-                href="#jdk"
-                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
-              >jdk</a>
+              >ansible示例</a>
             </li>
           </ul>
   
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/linux/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/"
+    
+  >开发环境
+    </a>
               
             </li><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
@@ -819,17 +797,17 @@ tar xf go1.22.0.linux-amd64.tar.gz -C /usr/local/ cat &gt;&gt; /etc/profile &lt;
   >linux
         <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></span>
     </a><div class="hx:ltr:pr-0 hx:overflow-hidden">
-        <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col "><a
+        <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col open"><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      hextra-sidebar-active-item hx:bg-primary-100 hx:font-semibold hx:text-primary-800 hx:contrast-more:border hx:contrast-more:border-primary-500 hx:dark:bg-primary-400/10 hx:dark:text-primary-600 hx:contrast-more:dark:border-primary-500"
     href="/docs/linux/ansible/"
     
   >Ansible
     </a>
               
-            </li><li class="hx:flex hx:flex-col open"><a
+            </li><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hextra-sidebar-active-item hx:bg-primary-100 hx:font-semibold hx:text-primary-800 hx:contrast-more:border hx:contrast-more:border-primary-500 hx:dark:bg-primary-400/10 hx:dark:text-primary-600 hx:contrast-more:dark:border-primary-500"
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/docs/linux/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/"
     
   >开发环境
@@ -1431,19 +1409,15 @@ tar xf go1.22.0.linux-amd64.tar.gz -C /usr/local/ cat &gt;&gt; /etc/profile &lt;
         </a>
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#golang">golang
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#%e5%ae%89%e8%a3%85">安装
         </a>
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#nodejs">node.js
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#%e4%b8%bb%e6%9c%ba%e9%85%8d%e7%bd%ae">主机配置
         </a>
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#python3">python3
-        </a>
-      </li>
-      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#jdk">jdk
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#ansible%e7%a4%ba%e4%be%8b">ansible示例
         </a>
       </li></ul>
       <div class="hx:mt-8 hx:border-t hx:bg-white hx:pt-8 hx:shadow-[0_-12px_16px_white] hx:dark:bg-dark hx:dark:shadow-[0_-12px_16px_#111] hx:sticky hx:bottom-0 hx:flex hx:flex-col hx:items-start hx:gap-2 hx:pb-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-t hx:contrast-more:border-neutral-400 hx:contrast-more:shadow-none hx:contrast-more:dark:border-neutral-400">
@@ -1466,18 +1440,26 @@ tar xf go1.22.0.linux-amd64.tar.gz -C /usr/local/ cat &gt;&gt; /etc/profile &lt;
         </div><svg class="hx:w-3.5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
         <div class="hx:whitespace-nowrap hx:transition-colors hx:min-w-[24px] hx:overflow-hidden hx:text-ellipsis hx:hover:text-gray-900 hx:dark:hover:text-gray-100">
           <a href="/docs/linux/">linux</a>
-        </div><svg class="hx:w-3.5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg><div class="hx:whitespace-nowrap hx:transition-colors hx:font-medium hx:text-gray-700 hx:contrast-more:font-bold hx:contrast-more:text-current hx:dark:text-gray-100 hx:contrast-more:dark:text-current">开发环境</div>
+        </div><svg class="hx:w-3.5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg><div class="hx:whitespace-nowrap hx:transition-colors hx:font-medium hx:text-gray-700 hx:contrast-more:font-bold hx:contrast-more:text-current hx:dark:text-gray-100 hx:contrast-more:dark:text-current">Ansible</div>
   </div>
 
         <div class="content">
-          <h1>开发环境</h1>
+          <h1>Ansible</h1>
           <h2>简介<span class="hx:absolute hx:-mt-20" id="简介"></span>
-    <a href="#%e7%ae%80%e4%bb%8b" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>配置golang, node.js, python, jdk等环境, 以下下载链接可以选择对应版本号下载</p>
-<h2>golang<span class="hx:absolute hx:-mt-20" id="golang"></span>
-    <a href="#golang" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p><strong>下载</strong></p>
-<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+    <a href="#%e7%ae%80%e4%bb%8b" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>本文档以「命令行实操」为核心，搭配高频场景Playbook示例，帮助运维/开发人员快速掌握Ansible的基础使用、主机管理、模块调用及Playbook编写，可直接复制命令和示例进行实操，降低入门成本。
+Ansible是一款开源的自动化运维工具，基于SSH协议（无需在被控主机安装客户端），可实现批量主机管理、配置部署、任务执行、服务启停等自动化操作，核心优势：轻量、无客户端、配置简单、可扩展性强。</p>
+<h2>安装<span class="hx:absolute hx:-mt-20" id="安装"></span>
+    <a href="#%e5%ae%89%e8%a3%85" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
 
-<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">wget https://dl.google.com/go/go1.22.0.linux-amd64.tar.gz</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 1. 安装EPEL源（CentOS默认无Ansible仓库）</span>
+</span></span><span class="line"><span class="cl">yum install -y epel-release
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 2. 安装Ansible</span>
+</span></span><span class="line"><span class="cl">yum install -y ansible
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 3. 验证安装（查看版本）</span>
+</span></span><span class="line"><span class="cl">ansible --version
+</span></span><span class="line"><span class="cl"><span class="c1"># 正常输出示例：ansible [core 2.14.2]</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
   <button
     class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
     title="复制代码"
@@ -1487,19 +1469,36 @@ tar xf go1.22.0.linux-amd64.tar.gz -C /usr/local/ cat &gt;&gt; /etc/profile &lt;
   </button>
 </div>
 </div>
-<p><strong>配置</strong></p>
+<h2>主机配置<span class="hx:absolute hx:-mt-20" id="主机配置"></span>
+    <a href="#%e4%b8%bb%e6%9c%ba%e9%85%8d%e7%bd%ae" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Ansible通过「主机清单」识别被控主机，默认路径为 /etc/ansible/hosts，也可自定义清单文件Inventory（推荐，避免修改系统默认文件）。</p>
+<p><strong>编辑默认主机清单（简单场景）</strong></p>
 <div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
 
-<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">tar xf go1.22.0.linux-amd64.tar.gz -C /usr/local/
+<div class="hextra-code-filename not-prose" dir="auto">/etc/ansible/hosts</div><div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ini" data-lang="ini"><span class="line"><span class="cl"><span class="c1"># 格式1：单主机（IP）</span>
+</span></span><span class="line"><span class="cl"><span class="na">192.168.1.100</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">cat &gt;&gt; /etc/profile <span class="s">&lt;&lt;EOF
-</span></span></span><span class="line"><span class="cl"><span class="s">export GOROOT=/usr/local/go
-</span></span></span><span class="line"><span class="cl"><span class="s">export GOPATH=\$HOME/go
-</span></span></span><span class="line"><span class="cl"><span class="s">export PATH=\$PATH:\$GOROOT/bin:\$GOPATH/bin
-</span></span></span><span class="line"><span class="cl"><span class="s">export GOPROXY=https://goproxy.cn,direct
-</span></span></span><span class="line"><span class="cl"><span class="s">EOF</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 格式2：单主机（IP+端口+用户名，默认端口22可省略）</span>
+</span></span><span class="line"><span class="cl"><span class="na">192.168.1.101:22 ansible_user</span><span class="o">=</span><span class="s">root ansible_ssh_pass=123456</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nb">source</span> /etc/profile</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+</span></span><span class="line"><span class="cl"><span class="c1"># 格式3：主机组（批量管理，推荐）</span>
+</span></span><span class="line"><span class="cl"><span class="na">[webservers]  # 主机组名称（自定义，如web服务器组）</span>
+</span></span><span class="line"><span class="cl"><span class="na">192.168.1.102 ansible_user</span><span class="o">=</span><span class="s">root ansible_ssh_pass=123456</span>
+</span></span><span class="line"><span class="cl"><span class="na">192.168.1.103 ansible_user</span><span class="o">=</span><span class="s">root ansible_ssh_pass=123456</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="na">[dbservers]   # 另一组（数据库服务器组）</span>
+</span></span><span class="line"><span class="cl"><span class="na">192.168.1.104 ansible_user</span><span class="o">=</span><span class="s">root ansible_ssh_pass=123456</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 格式4: 主机组嵌套</span>
+</span></span><span class="line"><span class="cl"><span class="k">[myhost:children]</span>
+</span></span><span class="line"><span class="cl"><span class="na">webservers</span>
+</span></span><span class="line"><span class="cl"><span class="na">dbservers</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 格式4: 参数复用</span>
+</span></span><span class="line"><span class="cl"><span class="k">[myhost:vars]</span>
+</span></span><span class="line"><span class="cl"><span class="na">ansible_ssh_user</span><span class="o">=</span><span class="s">root</span>
+</span></span><span class="line"><span class="cl"><span class="na">ansible_ssh_pass</span><span class="o">=</span><span class="s">123456</span>
+</span></span><span class="line"><span class="cl"><span class="na">ansible_ssh_port</span><span class="o">=</span><span class="s">22</span>
+</span></span><span class="line"><span class="cl"><span class="na">ansible_ssh_common_args</span><span class="o">=</span><span class="s">&#39;-o ProxyCommand=&#34;ssh -W %h:%p -q root@111.111.111.111&#34;&#39; # 跳板机</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-8">
   <button
     class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
     title="复制代码"
@@ -1509,10 +1508,18 @@ tar xf go1.22.0.linux-amd64.tar.gz -C /usr/local/ cat &gt;&gt; /etc/profile &lt;
   </button>
 </div>
 </div>
-<p><strong>验证</strong></p>
+<p><strong>自定义主机清单（推荐，实操首选）</strong></p>
+<p>自定义清单文件（如 inventory.ini），避免修改系统默认配置，后续命令通过 -i 指定该文件即可。</p>
+<p><strong>在当前目录创建自定义清单</strong></p>
 <div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
 
-<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">go version</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+<div class="hextra-code-filename not-prose" dir="auto">inventory.ini</div><div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ini" data-lang="ini"><span class="line"><span class="cl"><span class="c1"># 2. 写入内容（支持密钥认证，更安全）</span>
+</span></span><span class="line"><span class="cl"><span class="k">[web]</span>
+</span></span><span class="line"><span class="cl"><span class="na">web1 ansible_host</span><span class="o">=</span><span class="s">192.168.1.102 ansible_user=root ansible_ssh_private_key_file=/root/.ssh/id_rsa</span>
+</span></span><span class="line"><span class="cl"><span class="na">web2 ansible_host</span><span class="o">=</span><span class="s">192.168.1.103 ansible_user=root ansible_ssh_private_key_file=/root/.ssh/id_rsa</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">[db]</span>
+</span></span><span class="line"><span class="cl"><span class="na">db1 ansible_host</span><span class="o">=</span><span class="s">192.168.1.104 ansible_user=root ansible_ssh_private_key_file=/root/.ssh/id_rsa</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-8">
   <button
     class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
     title="复制代码"
@@ -1522,11 +1529,25 @@ tar xf go1.22.0.linux-amd64.tar.gz -C /usr/local/ cat &gt;&gt; /etc/profile &lt;
   </button>
 </div>
 </div>
-<h2>node.js<span class="hx:absolute hx:-mt-20" id="nodejs"></span>
-    <a href="#nodejs" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p><strong>下载</strong></p>
+<p><strong>验证主机连通性（核心命令）</strong>
+使用 ansible ping 模块，测试控制节点与被控主机的连通性，这是Ansible实操的第一步。</p>
 <div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
 
-<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">wget https://mirrors.aliyun.com/nodejs-release/v23.0.0/node-v23.0.0-linux-x64.tar.gz</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 场景1：测试默认清单（/etc/ansible/hosts）中所有主机</span>
+</span></span><span class="line"><span class="cl">ansible all -m ping
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 场景2：测试默认清单中webservers主机组</span>
+</span></span><span class="line"><span class="cl">ansible webservers -m ping
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 场景3：测试自定义清单（inventory.ini）中web组</span>
+</span></span><span class="line"><span class="cl">ansible web -i inventory.ini -m ping
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 场景4：测试自定义清单中单个主机（web1）</span>
+</span></span><span class="line"><span class="cl">ansible web1 -i inventory.ini -m ping
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 场景5：密码认证，临时指定密码（避免明文写在清单）</span>
+</span></span><span class="line"><span class="cl">ansible web -i inventory.ini -m ping -k
+</span></span><span class="line"><span class="cl"><span class="c1"># 执行后会提示输入被控主机密码（ansible_ssh_pass）</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
   <button
     class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
     title="复制代码"
@@ -1536,17 +1557,12 @@ tar xf go1.22.0.linux-amd64.tar.gz -C /usr/local/ cat &gt;&gt; /etc/profile &lt;
   </button>
 </div>
 </div>
-<p><strong>配置</strong></p>
+<p>成功提示：被控主机返回 &ldquo;pong&rdquo;: &ldquo;pong&rdquo;，表示连通正常；失败请检查SSH服务、网络、密码/密钥是否正确。</p>
+<h2>ansible示例<span class="hx:absolute hx:-mt-20" id="ansible示例"></span>
+    <a href="#ansible%e7%a4%ba%e4%be%8b" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>执行shell命令, 默认shell模块</p>
 <div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
 
-<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">tar xf node-v23.0.0-linux-x64.tar.gz -C /usr/local/
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">cat &gt;&gt; /etc/profile <span class="s">&lt;&lt;EOF
-</span></span></span><span class="line"><span class="cl"><span class="s">export NODE_HOME=/usr/local/node-v23.0.0-linux-x64/
-</span></span></span><span class="line"><span class="cl"><span class="s">export PATH=\${PATH}:\${NODE_HOME}/bin
-</span></span></span><span class="line"><span class="cl"><span class="s">EOF</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nb">source</span> /etc/profile</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ansible webservers -a <span class="s2">&#34;ls&#34;</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
   <button
     class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
     title="复制代码"
@@ -1556,10 +1572,10 @@ tar xf go1.22.0.linux-amd64.tar.gz -C /usr/local/ cat &gt;&gt; /etc/profile &lt;
   </button>
 </div>
 </div>
-<p><strong>验证</strong></p>
+<p>拷贝文件</p>
 <div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
 
-<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">node -v</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ansible webservers -m copy -a <span class="s2">&#34;src=/root/nginx.conf dest=/etc/nginx/nginx.conf mode=644&#34;</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
   <button
     class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
     title="复制代码"
@@ -1569,11 +1585,17 @@ tar xf go1.22.0.linux-amd64.tar.gz -C /usr/local/ cat &gt;&gt; /etc/profile &lt;
   </button>
 </div>
 </div>
-<h2>python3<span class="hx:absolute hx:-mt-20" id="python3"></span>
-    <a href="#python3" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p><strong>下载</strong></p>
+<p>修改文件</p>
 <div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
 
-<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">wget https://mirrors.tuna.tsinghua.edu.cn/python/3.10.5/Python-3.10.5.tgz</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 修改文件内容111为123</span>
+</span></span><span class="line"><span class="cl">ansible webservers -m lineinfile -a <span class="s2">&#34;path=/root/hxq.txt regexp=&#39;^111&#39; line=&#39;123&#39;&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 添加配置到文件末尾, 防止重复</span>
+</span></span><span class="line"><span class="cl">ansible webservers -m lineinfile -a <span class="s2">&#34;path=/root/hxq.txt line=&#39;222&#39; regexp=&#39;^222</span>$<span class="s2">&#39; state=present&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 添加配置到文件开头, 防止重复</span>
+</span></span><span class="line"><span class="cl">ansible webservers -m lineinfile -a <span class="s2">&#34;path=/root/hxq.txt line=&#39;555&#39; regexp=&#39;^555</span>$<span class="s2">&#39; insertafter=BOF state=present&#34;</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
   <button
     class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
     title="复制代码"
@@ -1583,92 +1605,29 @@ tar xf go1.22.0.linux-amd64.tar.gz -C /usr/local/ cat &gt;&gt; /etc/profile &lt;
   </button>
 </div>
 </div>
-<p><strong>配置</strong></p>
+<p>服务操作</p>
 <div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
 
-<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 升级yum并安装编译依赖</span>
-</span></span><span class="line"><span class="cl">yum update -y
-</span></span><span class="line"><span class="cl">yum install -y gcc gcc-c++ make zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gdbm-devel db4-devel libpcap-devel xz-devel libffi-devel wget
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 批量安装nginx</span>
+</span></span><span class="line"><span class="cl">ansible webservers -m yum -a <span class="s2">&#34;name=nginx state=present&#34;</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">tar -zxvf Python-3.10.5.tgz
-</span></span><span class="line"><span class="cl"><span class="nb">cd</span> Python-3.10.5
+</span></span><span class="line"><span class="cl"><span class="c1"># 批量卸载nginx</span>
+</span></span><span class="line"><span class="cl">ansible webservers -m yum -a <span class="s2">&#34;name=nginx state=absent&#34;</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># 1. 配置编译参数（指定安装路径为/usr/local/python310，方便管理）</span>
-</span></span><span class="line"><span class="cl">./configure --prefix<span class="o">=</span>/usr/local/python310 --enable-optimizations --with-ssl
+</span></span><span class="line"><span class="cl"><span class="c1"># 批量升级nginx</span>
+</span></span><span class="line"><span class="cl">ansible webservers -m yum -a <span class="s2">&#34;name=nginx state=latest&#34;</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># 参数说明：</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># --prefix：指定安装目录，避免和系统Python冲突</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># --enable-optimizations：开启编译优化，提升Python运行效率</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># --with-ssl：解决后续pip安装包时的SSL报错问题</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 批量启动nginx服务，并设置开机自启</span>
+</span></span><span class="line"><span class="cl">ansible webservers -m service -a <span class="s2">&#34;name=nginx state=started enabled=yes&#34;</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># 2. 编译（-j后接CPU核心数，比如4核就写-j4，加速编译）</span>
-</span></span><span class="line"><span class="cl">make -j <span class="k">$(</span>nproc<span class="k">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 批量停止nginx服务</span>
+</span></span><span class="line"><span class="cl">ansible webservers -m service -a <span class="s2">&#34;name=nginx state=stopped&#34;</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># 3. 安装（不会覆盖系统Python）</span>
-</span></span><span class="line"><span class="cl">make install
+</span></span><span class="line"><span class="cl"><span class="c1"># 批量重启nginx服务</span>
+</span></span><span class="line"><span class="cl">ansible webservers -m service -a <span class="s2">&#34;name=nginx state=restarted&#34;</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;export PATH=/usr/local/python310/bin:\$PATH&#34;</span> &gt;&gt; /etc/profile
-</span></span><span class="line"><span class="cl"><span class="nb">source</span> /etc/profile</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
-  <button
-    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
-    title="复制代码"
-  >
-    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
-<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
-  </button>
-</div>
-</div>
-<p><strong>验证</strong></p>
-<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
-
-<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">python3 -V</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
-  <button
-    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
-    title="复制代码"
-  >
-    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
-<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
-  </button>
-</div>
-</div>
-<h2>jdk<span class="hx:absolute hx:-mt-20" id="jdk"></span>
-    <a href="#jdk" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p><strong>下载</strong></p>
-<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
-
-<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">wget https://mirrors.tuna.tsinghua.edu.cn/Adoptium/17/jdk/x64/linux/OpenJDK17U-jdk_x64_linux_hotspot_17.0.18_8.tar.gz</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
-  <button
-    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
-    title="复制代码"
-  >
-    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
-<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
-  </button>
-</div>
-</div>
-<p><strong>配置</strong></p>
-<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
-
-<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">tar xf OpenJDK17U-jdk_x64_linux_hotspot_17.0.18_8.tar.gz -C /usr/local/
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">cat &gt;&gt; /etc/profile <span class="s">&lt;&lt;EOF
-</span></span></span><span class="line"><span class="cl"><span class="s">export JAVA_HOME=/usr/local/jdk-17.0.18+8
-</span></span></span><span class="line"><span class="cl"><span class="s">export PATH=\$JAVA_HOME/bin:\$PATH
-</span></span></span><span class="line"><span class="cl"><span class="s">EOF</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nb">source</span> /etc/profile</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
-  <button
-    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
-    title="复制代码"
-  >
-    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
-<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
-  </button>
-</div>
-</div>
-<p><strong>验证</strong></p>
-<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
-
-<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">java --version</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+</span></span><span class="line"><span class="cl"><span class="c1"># 批量重新加载nginx配置（无需重启服务）</span>
+</span></span><span class="line"><span class="cl">ansible webservers -m service -a <span class="s2">&#34;name=nginx state=reloaded&#34;</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
   <button
     class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
     title="复制代码"
@@ -1682,14 +1641,10 @@ tar xf go1.22.0.linux-amd64.tar.gz -C /usr/local/ cat &gt;&gt; /etc/profile &lt;
         </div>
         <div class="hx:mt-16"></div>
         <div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
-        href="/docs/linux/ansible/"
-        title="Ansible"
-        class="hx:flex hx:max-w-[50%] hx:items-center hx:gap-1 hx:py-4 hx:text-base hx:font-medium hx:text-gray-600 hx:transition-colors [word-break:break-word] hx:hover:text-primary-600 hx:dark:text-gray-300 hx:md:text-lg hx:ltr:pr-4 hx:rtl:pl-4"
-      ><svg class="hx:inline hx:h-5 hx:shrink-0 hx:ltr:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>Ansible</a><a
-        href="/docs/linux/%E5%9B%BE%E6%A0%87/"
-        title="图标"
+        href="/docs/linux/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/"
+        title="开发环境"
         class="hx:flex hx:max-w-[50%] hx:items-center hx:gap-1 hx:py-4 hx:text-base hx:font-medium hx:text-gray-600 hx:transition-colors [word-break:break-word] hx:hover:text-primary-600 hx:dark:text-gray-300 hx:md:text-lg hx:ltr:ml-auto hx:ltr:pl-4 hx:ltr:text-right hx:rtl:mr-auto hx:rtl:pr-4 hx:rtl:text-left"
-      >图标<svg class="hx:inline hx:h-5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a></div>
+      >开发环境<svg class="hx:inline hx:h-5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a></div>
         
       </main>
     </article>
