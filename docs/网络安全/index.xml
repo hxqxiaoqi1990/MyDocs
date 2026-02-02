@@ -1,13 +1,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>自在网站 – </title>
-    <link>https://example.org/docs/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/</link>
+    <link>http://localhost:8081/docs/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/</link>
     <description>Recent content on 自在网站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Mon, 29 Dec 2025 11:17:13 +0800</lastBuildDate>
     
-	  <atom:link href="https://example.org/docs/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="http://localhost:8081/docs/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -17,10 +17,10 @@
     
     <item>
       <title>Iptables之nat配置</title>
-      <link>https://example.org/docs/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/iptables%E4%B9%8Bnat%E9%85%8D%E7%BD%AE/</link>
+      <link>http://localhost:8081/docs/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/iptables%E4%B9%8Bnat%E9%85%8D%E7%BD%AE/</link>
       <pubDate>Mon, 29 Dec 2025 14:57:35 +0800</pubDate>
       
-      <guid>https://example.org/docs/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/iptables%E4%B9%8Bnat%E9%85%8D%E7%BD%AE/</guid>
+      <guid>http://localhost:8081/docs/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/iptables%E4%B9%8Bnat%E9%85%8D%E7%BD%AE/</guid>
       <description>
         
         
@@ -450,10 +450,10 @@ iptables -t nat -F POSTROUTING&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class
     
     <item>
       <title>Iptables基础</title>
-      <link>https://example.org/docs/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/iptables%E5%9F%BA%E7%A1%80/</link>
+      <link>http://localhost:8081/docs/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/iptables%E5%9F%BA%E7%A1%80/</link>
       <pubDate>Mon, 29 Dec 2025 11:17:36 +0800</pubDate>
       
-      <guid>https://example.org/docs/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/iptables%E5%9F%BA%E7%A1%80/</guid>
+      <guid>http://localhost:8081/docs/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/iptables%E5%9F%BA%E7%A1%80/</guid>
       <description>
         
         
@@ -765,10 +765,10 @@ iptables -P INPUT ACCEPT  # 临时放行所有入站，避免失联&lt;/code&gt;
     
     <item>
       <title>Tcpdump</title>
-      <link>https://example.org/docs/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/tcpdump/</link>
+      <link>http://localhost:8081/docs/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/tcpdump/</link>
       <pubDate>Mon, 29 Dec 2025 11:17:24 +0800</pubDate>
       
-      <guid>https://example.org/docs/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/tcpdump/</guid>
+      <guid>http://localhost:8081/docs/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/tcpdump/</guid>
       <description>
         
         

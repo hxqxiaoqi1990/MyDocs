@@ -1,0 +1,196 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: istio-system
+  name: nginx
+  annotations:
+    k8s.kuboard.cn/workload: nginx
+    k8s.kuboard.cn/displayName: nginx
+    deployment.kubernetes.io/revision: '1'
+    k8s.kuboard.cn/ingress: 'false'
+    k8s.kuboard.cn/service: NodePort
+  labels:
+    k8s.kuboard.cn/layer: ''
+    k8s.kuboard.cn/name: nginx
+spec:
+  selector:
+    matchLabels:
+      k8s.kuboard.cn/layer: ''
+      k8s.kuboard.cn/name: nginx
+  revisionHistoryLimit: 10
+  template:
+    metadata:
+      labels:
+        k8s.kuboard.cn/layer: ''
+        k8s.kuboard.cn/name: nginx
+    spec:
+      securityContext:
+        seLinuxOptions: {}
+      imagePullSecrets: []
+      restartPolicy: Always
+      initContainers: []
+      containers:
+        - image: 'registry.cn-zhangjiakou.aliyuncs.com/moxi-k8s/nginx:1.29.1-alpine'
+          imagePullPolicy: IfNotPresent
+          name: nginx
+          volumeMounts:
+            - name: conf
+              mountPath: /etc/nginx/conf.d/
+          resources:
+            limits:
+              cpu: '1'
+              memory: 1Gi
+            requests:
+              cpu: 100m
+              memory: 100Mi
+          env: []
+          readinessProbe:
+            tcpSocket:
+              port: 80
+            initialDelaySeconds: 5
+            timeoutSeconds: 1
+            periodSeconds: 10
+            successThreshold: 1
+            failureThreshold: 3
+          livenessProbe:
+            tcpSocket:
+              port: 80
+            initialDelaySeconds: 5
+            timeoutSeconds: 1
+            periodSeconds: 10
+            successThreshold: 1
+            failureThreshold: 3
+          lifecycle: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+      volumes:
+        - name: conf
+          configMap:
+            name: nginx
+            items:
+              - key: default.conf
+                path: default.conf
+            defaultMode: 420
+      dnsPolicy: ClusterFirst
+      dnsConfig: {}
+      schedulerName: default-scheduler
+      terminationGracePeriodSeconds: 30
+  progressDeadlineSeconds: 600
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 0
+      maxSurge: 1
+  replicas: 1
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: istio-system
+  name: nginx
+  annotations:
+    k8s.kuboard.cn/workload: nginx
+    k8s.kuboard.cn/displayName: nginx
+  labels:
+    k8s.kuboard.cn/layer: ''
+    k8s.kuboard.cn/name: nginx
+spec:
+  selector:
+    k8s.kuboard.cn/layer: ''
+    k8s.kuboard.cn/name: nginx
+  type: NodePort
+  ports:
+    - port: 80
+      targetPort: 80
+      protocol: TCP
+      name: ftstrn
+      nodePort: 30001
+  sessionAffinity: None
+
+---
+metadata:
+  name: nginx
+  namespace: istio-system
+  managedFields:
+    - manager: Mozilla
+      operation: Update
+      apiVersion: v1
+      time: '2025-11-17T08:09:16Z'
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:data':
+          .: {}
+          'f:default.conf': {}
+data:
+  default.conf: |-
+    server {
+        listen 80;
+        server_name localhost;  
+        gzip on;
+        gzip_http_version 1.0;
+        gzip_comp_level 3;
+        gzip_types text/plain application/javascript application/json application/x-javascript text/css application/xml text/javascript application/x-httpd-php image/jpeg image/gif image/png application/vnd.ms-fontobject font/ttf font/opentype font/x-woff image/svg+xml application/octet-stream;
+        gzip_disable "MSIE [1-6]\.";
+        gzip_buffers 32 4k;
+
+        # 代理kuboard的路径
+        location / {
+            proxy_pass  http://kuboard.kube-system;  # 替换成你的节点地址
+            proxy_http_version 1.1;
+            proxy_pass_header Authorization;
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            # proxy_set_header X-Forwarded-Proto https; # 如果您在反向代理上启用了 HTTPS
+        }
+
+        location /k8s-ws/ {
+            proxy_pass  http://kuboard.kube-system;  # 替换成你的节点地址
+            proxy_http_version 1.1;
+            proxy_pass_header Authorization;
+            proxy_set_header Upgrade "websocket";
+            proxy_set_header Connection "upgrade";
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            # proxy_set_header X-Forwarded-Proto https; # 如果您在反向代理上启用了 HTTPS
+        }
+
+        # 代理Prometheus的路径
+        location /prometheus/ {
+            # 转发请求到Prometheus本地地址
+            proxy_pass http://prometheus.istio-system:9090/prometheus/;  # 注意末尾的斜杠必须与外部路径一致
+
+            # 保留原始请求头（关键，否则Prometheus可能无法正确识别路径）
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_set_header X-Forwarded-Proto $scheme;
+
+            # 支持WebSocket（Prometheus某些功能可能用到）
+            proxy_http_version 1.1;
+            proxy_set_header Upgrade $http_upgrade;
+            proxy_set_header Connection "upgrade";
+        }
+
+        # 代理kiali的路径
+        location /kiali {
+            # 转发请求到Prometheus本地地址
+            proxy_pass http://kiali.istio-system:20001;  # 注意末尾的斜杠必须与外部路径一致
+
+            # 保留原始请求头（关键，否则Prometheus可能无法正确识别路径）
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_set_header X-Forwarded-Proto $scheme;
+
+            # 支持WebSocket（Prometheus某些功能可能用到）
+            proxy_http_version 1.1;
+            proxy_set_header Upgrade $http_upgrade;
+            proxy_set_header Connection "upgrade";
+        }
+    }
+kind: ConfigMap
+apiVersion: v1
