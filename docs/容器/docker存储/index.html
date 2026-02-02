@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr"><head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="robots" content="noindex, nofollow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="robots" content="index, follow" />
   <link rel="icon shortcut" href="/favicon.ico" sizes="32x32" />
 <link rel="icon" href="/favicon.svg" type="image/svg+xml" id="favicon-svg" />
 <link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16" />
@@ -18,7 +18,7 @@
 匿名卷（Anonymous Volume）：用户不指定卷名称，Docker自动生成随机名称，容器销毁后，若未手动删除，卷会保留（适合临时持久化、无需共享的场景）；
 外部卷（External Volume）：引用已存在的卷（如其他项目创建的卷、NFS共享卷、云存储卷），实现数据跨项目、跨环境共享。
 创建卷
-# 1. 创建命名卷（最常用） docker volume create my-volume # 2. 创建自定义参数的卷（如NFS卷、指定存储路径） # 示例：创建NFS类型的命名卷，挂载远程NFS共享目录 docker volume create --driver local \ --opt type=nfs \ --opt o=addr=192.168.1.100,rw,noatime \ --opt device=:/nfs-share/docker-volumes \ my-nfs-volume # 3. 匿名卷（无需手动创建，启动容器时自动生成） # 启动容器时，指定-v /容器路径，即可自动创建匿名卷 docker run -it -v /app/data nginx 容器挂载卷 支持两种挂载方式：命令行挂载、Docker Compose挂载，后者更适合多服务场景。" /><link rel="canonical" href="http://localhost:8081/docs/%E5%AE%B9%E5%99%A8/docker%E5%AD%98%E5%82%A8/" itemprop="url" />
+# 1. 创建命名卷（最常用） docker volume create my-volume # 2. 创建自定义参数的卷（如NFS卷、指定存储路径） # 示例：创建NFS类型的命名卷，挂载远程NFS共享目录 docker volume create --driver local \ --opt type=nfs \ --opt o=addr=192.168.1.100,rw,noatime \ --opt device=:/nfs-share/docker-volumes \ my-nfs-volume # 3. 匿名卷（无需手动创建，启动容器时自动生成） # 启动容器时，指定-v /容器路径，即可自动创建匿名卷 docker run -it -v /app/data nginx 容器挂载卷 支持两种挂载方式：命令行挂载、Docker Compose挂载，后者更适合多服务场景。" /><link rel="canonical" href="https://example.org/docs/%E5%AE%B9%E5%99%A8/docker%E5%AD%98%E5%82%A8/" itemprop="url" />
 
 <meta property="og:title" content="Docker存储">
 <meta
@@ -122,7 +122,7 @@ docker run -it -v /app/data nginx
   content="
     article
   ">
-<meta property="og:url" content="http://localhost:8081/docs/%E5%AE%B9%E5%99%A8/docker%E5%AD%98%E5%82%A8/"><meta property="article:section" content="docs">
+<meta property="og:url" content="https://example.org/docs/%E5%AE%B9%E5%99%A8/docker%E5%AD%98%E5%82%A8/"><meta property="article:section" content="docs">
 
 <meta
   property="article:published_time"
@@ -161,12 +161,18 @@ docker run -it -v /app/data nginx
 外部卷（External Volume）：引用已存在的卷（如其他项目创建的卷、NFS共享卷、云存储卷），实现数据跨项目、跨环境共享。
 创建卷
 # 1. 创建命名卷（最常用） docker volume create my-volume # 2. 创建自定义参数的卷（如NFS卷、指定存储路径） # 示例：创建NFS类型的命名卷，挂载远程NFS共享目录 docker volume create --driver local \ --opt type=nfs \ --opt o=addr=192.168.1.100,rw,noatime \ --opt device=:/nfs-share/docker-volumes \ my-nfs-volume # 3. 匿名卷（无需手动创建，启动容器时自动生成） # 启动容器时，指定-v /容器路径，即可自动创建匿名卷 docker run -it -v /app/data nginx 容器挂载卷 支持两种挂载方式：命令行挂载、Docker Compose挂载，后者更适合多服务场景。">
-<link href="/css/compiled/main.css" rel="stylesheet" />
-    <link href="/css/variables.css" rel="stylesheet" />
-    <link href="/css/custom.css" rel="stylesheet" />
+
+    <link rel="preload" href="/css/compiled/main.min.ac24db5170e563c97286ca0f63189fbc3aff3672bb376e303a869613977967d0.css" as="style" integrity="sha256-rCTbUXDlY8lyhsoPYxifvDr/NnK7N24wOoaWE5d5Z9A=" />
+    <link href="/css/compiled/main.min.ac24db5170e563c97286ca0f63189fbc3aff3672bb376e303a869613977967d0.css" rel="stylesheet" integrity="sha256-rCTbUXDlY8lyhsoPYxifvDr/NnK7N24wOoaWE5d5Z9A=" />
 
   
-<script src="/js/main-head.js" integrity=""></script>
+
+
+
+
+
+
+<script src="/js/main-head.min.94da6f95b126542222dab3a6e07ffefe1aaf63ec3ca555e827b58b80e7d3f0b7.js" integrity="sha256-lNpvlbEmVCIi2rOm4H/&#43;/hqvY&#43;w8pVXoJ7WLgOfT8Lc="></script>
 
   
   
@@ -1774,8 +1780,8 @@ docker run -it -v /app/data nginx
   </a></div></div>
     </div></footer>
     
-    <script defer src="/js/main.js" integrity=""></script>
-<script defer src="/js/flexsearch.9f5b5908f93ae86f1ecd4b043b799f580c2d1654e703dd9357d568ac41b2547a.js" integrity="sha256-n1tZCPk66G8ezUsEO3mfWAwtFlTnA92TV9VorEGyVHo=" crossorigin="anonymous"></script>
-        <script defer src="/zh-cn.search.js" integrity=""></script>
+    <script defer src="/js/main.min.3f1a19e714e9cbdcc9adbada379c71641b09a048f4cbd71870b8111ec0220433.js" integrity="sha256-PxoZ5xTpy9zJrbraN5xxZBsJoEj0y9cYcLgRHsAiBDM="></script>
+<script defer src="/js/flexsearch.433e941a8a573ebb9931fc16fc75266ab6b93f569ac2fb4f3dc66882e0416f4c.js" integrity="sha256-Qz6UGopXPruZMfwW/HUmara5P1aawvtPPcZoguBBb0w=" crossorigin="anonymous"></script>
+        <script defer src="/zh-cn.search.min.82e661f11acced65e462121c47b111d332c69279b28ac99d34dfa7fba6c6259f.js" integrity="sha256-guZh8RrM7WXkYhIcR7ER0zLGknmyismdNN&#43;n&#43;6bGJZ8="></script>
   </body>
 </html>

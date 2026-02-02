@@ -1,13 +1,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>自在网站 – </title>
-    <link>http://localhost:8081/docs/%E8%84%9A%E6%9C%AC%E5%B7%A5%E5%85%B7/</link>
+    <link>https://example.org/docs/%E8%84%9A%E6%9C%AC%E5%B7%A5%E5%85%B7/</link>
     <description>Recent content on 自在网站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Tue, 20 Jan 2026 17:35:07 +0800</lastBuildDate>
     
-	  <atom:link href="http://localhost:8081/docs/%E8%84%9A%E6%9C%AC%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="https://example.org/docs/%E8%84%9A%E6%9C%AC%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -17,10 +17,10 @@
     
     <item>
       <title>Shell</title>
-      <link>http://localhost:8081/docs/%E8%84%9A%E6%9C%AC%E5%B7%A5%E5%85%B7/shell/</link>
+      <link>https://example.org/docs/%E8%84%9A%E6%9C%AC%E5%B7%A5%E5%85%B7/shell/</link>
       <pubDate>Fri, 26 Dec 2025 16:32:15 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/%E8%84%9A%E6%9C%AC%E5%B7%A5%E5%85%B7/shell/</guid>
+      <guid>https://example.org/docs/%E8%84%9A%E6%9C%AC%E5%B7%A5%E5%85%B7/shell/</guid>
       <description>
         
         
@@ -31,10 +31,10 @@
     
     <item>
       <title>Go</title>
-      <link>http://localhost:8081/docs/%E8%84%9A%E6%9C%AC%E5%B7%A5%E5%85%B7/go/</link>
+      <link>https://example.org/docs/%E8%84%9A%E6%9C%AC%E5%B7%A5%E5%85%B7/go/</link>
       <pubDate>Fri, 26 Dec 2025 16:32:10 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/%E8%84%9A%E6%9C%AC%E5%B7%A5%E5%85%B7/go/</guid>
+      <guid>https://example.org/docs/%E8%84%9A%E6%9C%AC%E5%B7%A5%E5%85%B7/go/</guid>
       <description>
         
         
@@ -45,10 +45,10 @@
     
     <item>
       <title>Python</title>
-      <link>http://localhost:8081/docs/%E8%84%9A%E6%9C%AC%E5%B7%A5%E5%85%B7/python/</link>
+      <link>https://example.org/docs/%E8%84%9A%E6%9C%AC%E5%B7%A5%E5%85%B7/python/</link>
       <pubDate>Fri, 26 Dec 2025 16:32:04 +0800</pubDate>
       
-      <guid>http://localhost:8081/docs/%E8%84%9A%E6%9C%AC%E5%B7%A5%E5%85%B7/python/</guid>
+      <guid>https://example.org/docs/%E8%84%9A%E6%9C%AC%E5%B7%A5%E5%85%B7/python/</guid>
       <description>
         
         
