@@ -1,13 +1,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>自在网站 – Window</title>
-    <link>https://example.org/docs/window/</link>
+    <link>http://localhost:8081/docs/window/</link>
     <description>Recent content in Window on 自在网站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sun, 04 Jan 2026 17:09:21 +0800</lastBuildDate>
     
-	  <atom:link href="https://example.org/docs/window/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="http://localhost:8081/docs/window/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -17,10 +17,10 @@
     
     <item>
       <title>Server2022</title>
-      <link>https://example.org/docs/window/server2022/</link>
+      <link>http://localhost:8081/docs/window/server2022/</link>
       <pubDate>Fri, 16 Jan 2026 17:49:59 +0800</pubDate>
       
-      <guid>https://example.org/docs/window/server2022/</guid>
+      <guid>http://localhost:8081/docs/window/server2022/</guid>
       <description>
         
         
@@ -259,10 +259,10 @@
     
     <item>
       <title>win11</title>
-      <link>https://example.org/docs/window/win11/</link>
+      <link>http://localhost:8081/docs/window/win11/</link>
       <pubDate>Sun, 04 Jan 2026 17:10:10 +0800</pubDate>
       
-      <guid>https://example.org/docs/window/win11/</guid>
+      <guid>http://localhost:8081/docs/window/win11/</guid>
       <description>
         
         
@@ -341,7 +341,7 @@ NBQWQ-W9PTV-B4YWP-4K773-T6PKG&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=
 &lt;h2&gt;优化脚本&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;优化脚本&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#%e4%bc%98%e5%8c%96%e8%84%9a%e6%9c%ac&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
 
-&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bat&#34; data-lang=&#34;bat&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;@&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; off
+&lt;div class=&#34;hextra-code-filename not-prose&#34; dir=&#34;auto&#34;&gt;init.bat&lt;/div&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bat&#34; data-lang=&#34;bat&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;@&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; off
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;chcp 65001 &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;nul
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;title&lt;/span&gt; Win11系统自动化配置脚本 - 管理员模式
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;cls&lt;/span&gt;
@@ -445,7 +445,7 @@ NBQWQ-W9PTV-B4YWP-4K773-T6PKG&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; ⚠ 提示：UAC、远程桌面、系统更新需重启电脑后生效
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; ⚠ 其余功能已立即生效，重启后所有配置全部生效
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; ========================================================
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pause&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pause&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-8&#34;&gt;
   &lt;button
     class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
     title=&#34;复制代码&#34;
@@ -459,14 +459,14 @@ NBQWQ-W9PTV-B4YWP-4K773-T6PKG&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=
     &lt;a href=&#34;#%e5%bc%80%e6%9c%ba%e5%90%af%e5%8a%a8&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;开机启动配置&lt;/p&gt;
 &lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
 
-&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 设置开机启动&lt;/span&gt;
+&lt;div class=&#34;hextra-code-filename not-prose&#34; dir=&#34;auto&#34;&gt;cmd&lt;/div&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 设置开机启动&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;reg add &lt;span class=&#34;s2&#34;&gt;&amp;#34;HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run&amp;#34;&lt;/span&gt; /v PyEXE_AutoRun /t REG_SZ /d &lt;span class=&#34;s2&#34;&gt;&amp;#34;cmd /c timeout /t 3 /nobreak &amp;gt;nul &amp;amp;&amp;amp; start &amp;#34;&amp;#34;&amp;#34;&amp;#34; &amp;#34;&amp;#34;C:\Users\test.exe&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt; /f
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 查看开机启动&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;reg query &lt;span class=&#34;s2&#34;&gt;&amp;#34;HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run&amp;#34;&lt;/span&gt; /v PyEXE_AutoRun
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#删除开机启动&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;reg delete &lt;span class=&#34;s2&#34;&gt;&amp;#34;HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run&amp;#34;&lt;/span&gt; /v PyEXE_AutoRun /f&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;reg delete &lt;span class=&#34;s2&#34;&gt;&amp;#34;HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run&amp;#34;&lt;/span&gt; /v PyEXE_AutoRun /f&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-8&#34;&gt;
   &lt;button
     class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
     title=&#34;复制代码&#34;
@@ -483,17 +483,28 @@ NBQWQ-W9PTV-B4YWP-4K773-T6PKG&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=
 &lt;p&gt;自动登录&lt;/p&gt;
 &lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
 
-&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 1. 开启自动登录功能&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;reg add &lt;span class=&#34;s2&#34;&gt;&amp;#34;HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon&amp;#34;&lt;/span&gt; /v AutoAdminLogon /t REG_DWORD /d &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; /f
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 2. 写入你的登录账户名（替换为自己的用户名，例：User01）&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;reg add &lt;span class=&#34;s2&#34;&gt;&amp;#34;HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon&amp;#34;&lt;/span&gt; /v DefaultUserName /t REG_SZ /d &lt;span class=&#34;s2&#34;&gt;&amp;#34;User01&amp;#34;&lt;/span&gt; /f
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 3. 写入你的登录密码（替换为自己的密码，例：123456Abc）&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;reg add &lt;span class=&#34;s2&#34;&gt;&amp;#34;HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon&amp;#34;&lt;/span&gt; /v DefaultPassword /t REG_SZ /d &lt;span class=&#34;s2&#34;&gt;&amp;#34;123456Abc&amp;#34;&lt;/span&gt; /f
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 恢复密码登入&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;reg add &lt;span class=&#34;s2&#34;&gt;&amp;#34;HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon&amp;#34;&lt;/span&gt; /v AutoAdminLogon /t REG_DWORD /d &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; /f&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
+&lt;div class=&#34;hextra-code-filename not-prose&#34; dir=&#34;auto&#34;&gt;powershell&lt;/div&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;$reg&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Set-ItemProperty &lt;span class=&#34;nv&#34;&gt;$reg&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;AutoAdminLogon&amp;#34;&lt;/span&gt; -Value &lt;span class=&#34;s2&#34;&gt;&amp;#34;1&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Set-ItemProperty &lt;span class=&#34;nv&#34;&gt;$reg&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;DefaultUserName&amp;#34;&lt;/span&gt; -Value &lt;span class=&#34;s2&#34;&gt;&amp;#34;moxi_ba_001&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Set-ItemProperty &lt;span class=&#34;nv&#34;&gt;$reg&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;DefaultPassword&amp;#34;&lt;/span&gt; -Value &lt;span class=&#34;s2&#34;&gt;&amp;#34;123123&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Set-ItemProperty &lt;span class=&#34;nv&#34;&gt;$reg&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;DefaultDomainName&amp;#34;&lt;/span&gt; -Value &lt;span class=&#34;nv&#34;&gt;$env&lt;/span&gt;:COMPUTERNAME&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-8&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
+    title=&#34;复制代码&#34;
+  &gt;
+    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;设置注册表项以关闭“显示最后登录用户”&lt;/p&gt;
+&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+
+&lt;div class=&#34;hextra-code-filename not-prose&#34; dir=&#34;auto&#34;&gt;powershell&lt;/div&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;$regPath&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;-not &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;Test-Path &lt;span class=&#34;nv&#34;&gt;$regPath&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;))&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    New-Item -Path &lt;span class=&#34;nv&#34;&gt;$regPath&lt;/span&gt; -Force &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; Out-Null
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Set-ItemProperty -Path &lt;span class=&#34;nv&#34;&gt;$regPath&lt;/span&gt; -Name &lt;span class=&#34;s2&#34;&gt;&amp;#34;DontDisplayLastUserName&amp;#34;&lt;/span&gt; -Value &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-8&#34;&gt;
   &lt;button
     class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
     title=&#34;复制代码&#34;
@@ -506,7 +517,7 @@ NBQWQ-W9PTV-B4YWP-4K773-T6PKG&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=
 &lt;p&gt;执行脚本, 断开远程登录, 显示桌面&lt;/p&gt;
 &lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
 
-&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;@echo off
+&lt;div class=&#34;hextra-code-filename not-prose&#34; dir=&#34;auto&#34;&gt;stop.bat&lt;/div&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;@echo off
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;chcp &lt;span class=&#34;m&#34;&gt;65001&lt;/span&gt; &amp;gt; nul 2&amp;gt;&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;title 维持远程桌面会话（断开后不锁屏）
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==============================================&lt;/span&gt;
@@ -547,7 +558,7 @@ NBQWQ-W9PTV-B4YWP-4K773-T6PKG&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==============================================&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;:: 移除原有的pause命令，无需用户手动干预，脚本执行完毕直接退出
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;:: 可选：添加短暂延迟，让用户看清执行结果（如需立即退出，删除下面这行即可）
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;timeout /t &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; /nobreak &amp;gt; nul&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;timeout /t &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; /nobreak &amp;gt; nul&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-8&#34;&gt;
   &lt;button
     class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
     title=&#34;复制代码&#34;
