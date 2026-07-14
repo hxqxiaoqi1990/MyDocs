@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-cn" dir="ltr"><head>
+<html lang="zh-cn" dir="ltr"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=8081&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="robots" content="noindex, nofollow" />
   <link rel="icon shortcut" href="/favicon.ico" sizes="32x32" />
@@ -9,21 +9,42 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
 <title>Elk – 自在网站</title>
-  <meta name="description" content="简介 ELK 是一套由 Elasticsearch、Logstash 和 Kibana 组成的开源工具，用于搜索、分析和可视化数据。
-部署 创建es数据目录data和插件目录plugins
-mkdir data plugins chmod 777 data plugins 创建elasticsearch.yml
-cat &gt; elasticsearch.yml &lt;&lt;EOF network.host: 0.0.0.0 EOF 创建es-jvm.options文件" /><link rel="canonical" href="http://localhost:8081/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/elk/" itemprop="url" />
+  <meta name="description" content="概述 ELK 是一套由 Elasticsearch、Logstash 和 Kibana 组成的开源工具栈，用于日志的搜索、分析和可视化展示。
+组件 功能 Elasticsearch 分布式搜索和分析引擎，负责日志数据的存储与检索 Logstash 日志采集与处理管道，负责数据的过滤、转换和传输 Kibana 数据可视化平台，提供图表展示和交互式查询界面 部署准备 1. 创建数据目录 mkdir data plugins chmod 777 data plugins 2. 创建 Elasticsearch 配置文件 elasticsearch.yml：" /><link rel="canonical" href="http://localhost:8081/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/elk/" itemprop="url" />
 
 <meta property="og:title" content="Elk">
 <meta
   property="og:description"
   content="
     
-      简介
-    ELK 是一套由 Elasticsearch、Logstash 和 Kibana 组成的开源工具，用于搜索、分析和可视化数据。
-部署
-    创建es数据目录data和插件目录plugins
+      概述
+    ELK 是一套由 Elasticsearch、Logstash 和 Kibana 组成的开源工具栈，用于日志的搜索、分析和可视化展示。
 
+  
+      
+          组件
+          功能
+      
+  
+  
+      
+          Elasticsearch
+          分布式搜索和分析引擎，负责日志数据的存储与检索
+      
+      
+          Logstash
+          日志采集与处理管道，负责数据的过滤、转换和传输
+      
+      
+          Kibana
+          数据可视化平台，提供图表展示和交互式查询界面
+      
+  
+
+
+部署准备
+    1. 创建数据目录
+    
 
 mkdir data plugins
 chmod 777 data plugins
@@ -33,19 +54,8 @@ chmod 777 data plugins
   
 
 
-创建elasticsearch.yml
-
-
-cat &gt; elasticsearch.yml &lt;&lt;EOF
-network.host: 0.0.0.0
-EOF
-  
-    
-
-  
-
-
-创建es-jvm.options文件
+2. 创建 Elasticsearch 配置文件
+    elasticsearch.yml：
     
   ">
 <meta
@@ -67,19 +77,15 @@ EOF
 
 
   <meta itemprop="name" content="Elk">
-  <meta itemprop="description" content="简介 ELK 是一套由 Elasticsearch、Logstash 和 Kibana 组成的开源工具，用于搜索、分析和可视化数据。
-部署 创建es数据目录data和插件目录plugins
-mkdir data plugins chmod 777 data plugins 创建elasticsearch.yml
-cat &gt; elasticsearch.yml &lt;&lt;EOF network.host: 0.0.0.0 EOF 创建es-jvm.options文件">
+  <meta itemprop="description" content="概述 ELK 是一套由 Elasticsearch、Logstash 和 Kibana 组成的开源工具栈，用于日志的搜索、分析和可视化展示。
+组件 功能 Elasticsearch 分布式搜索和分析引擎，负责日志数据的存储与检索 Logstash 日志采集与处理管道，负责数据的过滤、转换和传输 Kibana 数据可视化平台，提供图表展示和交互式查询界面 部署准备 1. 创建数据目录 mkdir data plugins chmod 777 data plugins 2. 创建 Elasticsearch 配置文件 elasticsearch.yml：">
   <meta itemprop="datePublished" content="2025-12-26T16:50:20+08:00">
   <meta itemprop="dateModified" content="2025-12-26T16:50:20+08:00">
-  <meta itemprop="wordCount" content="535">
+  <meta itemprop="wordCount" content="689">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Elk">
-  <meta name="twitter:description" content="简介 ELK 是一套由 Elasticsearch、Logstash 和 Kibana 组成的开源工具，用于搜索、分析和可视化数据。
-部署 创建es数据目录data和插件目录plugins
-mkdir data plugins chmod 777 data plugins 创建elasticsearch.yml
-cat &gt; elasticsearch.yml &lt;&lt;EOF network.host: 0.0.0.0 EOF 创建es-jvm.options文件">
+  <meta name="twitter:description" content="概述 ELK 是一套由 Elasticsearch、Logstash 和 Kibana 组成的开源工具栈，用于日志的搜索、分析和可视化展示。
+组件 功能 Elasticsearch 分布式搜索和分析引擎，负责日志数据的存储与检索 Logstash 日志采集与处理管道，负责数据的过滤、转换和传输 Kibana 数据可视化平台，提供图表展示和交互式查询界面 部署准备 1. 创建数据目录 mkdir data plugins chmod 777 data plugins 2. 创建 Elasticsearch 配置文件 elasticsearch.yml：">
 <link href="/css/compiled/main.css" rel="stylesheet" />
     <link href="/css/variables.css" rel="stylesheet" />
     <link href="/css/custom.css" rel="stylesheet" />
@@ -186,7 +192,7 @@ cat &gt; elasticsearch.yml &lt;&lt;EOF network.host: 0.0.0.0 EOF 创建es-jvm.op
   >文档
         <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></span>
     </a><div class="hx:ltr:pr-0 hx:overflow-hidden">
-        <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col "><a
+        <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col open"><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/docs/linux/"
@@ -198,17 +204,9 @@ cat &gt; elasticsearch.yml &lt;&lt;EOF network.host: 0.0.0.0 EOF 创建es-jvm.op
         <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-    href="/docs/linux/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"
+    href="/docs/linux/%E5%9B%BE%E6%A0%87/"
     
-  >常用命令
-    </a>
-              
-            </li><li class="hx:flex hx:flex-col "><a
-    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-    href="/docs/linux/ansible/"
-    
-  >Ansible
+  >图标
     </a>
               
             </li><li class="hx:flex hx:flex-col "><a
@@ -217,14 +215,6 @@ cat &gt; elasticsearch.yml &lt;&lt;EOF network.host: 0.0.0.0 EOF 创建es-jvm.op
     href="/docs/linux/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/"
     
   >开发环境
-    </a>
-              
-            </li><li class="hx:flex hx:flex-col "><a
-    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-    href="/docs/linux/%E5%9B%BE%E6%A0%87/"
-    
-  >图标
     </a>
               
             </li><li class="hx:flex hx:flex-col "><a
@@ -254,151 +244,17 @@ cat &gt; elasticsearch.yml &lt;&lt;EOF network.host: 0.0.0.0 EOF 创建es-jvm.op
             </li><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/linux/ansible%E8%87%AA%E5%8A%A8%E5%8C%96%E8%BF%90%E7%BB%B4/"
+    
+  >Ansible自动化运维
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/docs/linux/%E9%95%9C%E5%83%8F%E4%BB%93%E5%BA%93%E5%A4%A7%E5%85%A8/"
     
   >镜像仓库大全
-    </a>
-              
-            </li></ul>
-      </div>
-            </li><li class="hx:flex hx:flex-col "><a
-    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-    href="/docs/%E5%AE%B9%E5%99%A8/"
-    
-  >容器
-        <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></span>
-    </a>
-              <div class="hx:ltr:pr-0 hx:overflow-hidden">
-        <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col "><a
-    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-    href="/docs/%E5%AE%B9%E5%99%A8/docker%E5%9F%BA%E7%A1%80/"
-    
-  >Docker基础
-    </a>
-              
-            </li><li class="hx:flex hx:flex-col "><a
-    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-    href="/docs/%E5%AE%B9%E5%99%A8/docker%E9%85%8D%E7%BD%AE/"
-    
-  >Docker配置
-    </a>
-              
-            </li><li class="hx:flex hx:flex-col "><a
-    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-    href="/docs/%E5%AE%B9%E5%99%A8/docker%E7%BD%91%E7%BB%9C/"
-    
-  >Docker网络
-    </a>
-              
-            </li><li class="hx:flex hx:flex-col "><a
-    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-    href="/docs/%E5%AE%B9%E5%99%A8/docker%E5%AD%98%E5%82%A8/"
-    
-  >Docker存储
-    </a>
-              
-            </li><li class="hx:flex hx:flex-col "><a
-    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-    href="/docs/%E5%AE%B9%E5%99%A8/dockerfile%E5%9F%BA%E7%A1%80/"
-    
-  >Dockerfile基础
-    </a>
-              
-            </li><li class="hx:flex hx:flex-col "><a
-    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-    href="/docs/%E5%AE%B9%E5%99%A8/docker-compose%E5%9F%BA%E7%A1%80/"
-    
-  >Docker Compose基础
-    </a>
-              
-            </li></ul>
-      </div>
-            </li><li class="hx:flex hx:flex-col "><a
-    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-    href="/docs/k8s/"
-    
-  >k8s
-        <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></span>
-    </a>
-              <div class="hx:ltr:pr-0 hx:overflow-hidden">
-        <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col "><a
-    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-    href="/docs/k8s/%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/"
-    
-  >基本概念
-    </a>
-              
-            </li><li class="hx:flex hx:flex-col "><a
-    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-    href="/docs/k8s/%E6%8E%A7%E5%88%B6%E5%99%A8%E5%9F%BA%E7%A1%80/"
-    
-  >控制器基础
-    </a>
-              
-            </li><li class="hx:flex hx:flex-col "><a
-    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-    href="/docs/k8s/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/"
-    
-  >网络基础
-    </a>
-              
-            </li><li class="hx:flex hx:flex-col "><a
-    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-    href="/docs/k8s/%E5%AD%98%E5%82%A8%E5%9F%BA%E7%A1%80/"
-    
-  >存储基础
-    </a>
-              
-            </li><li class="hx:flex hx:flex-col "><a
-    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-    href="/docs/k8s/%E6%9D%83%E9%99%90%E5%9F%BA%E7%A1%80/"
-    
-  >权限基础
-    </a>
-              
-            </li><li class="hx:flex hx:flex-col "><a
-    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-    href="/docs/k8s/configmap%E5%9F%BA%E7%A1%80/"
-    
-  >Configmap基础
-    </a>
-              
-            </li><li class="hx:flex hx:flex-col "><a
-    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-    href="/docs/k8s/%E9%97%AE%E9%A2%98%E4%BC%98%E5%8C%96/"
-    
-  >问题优化
-    </a>
-              
-            </li><li class="hx:flex hx:flex-col "><a
-    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-    href="/docs/k8s/log-pilot%E6%97%A5%E5%BF%97%E9%87%87%E9%9B%86/"
-    
-  >Log Pilot日志采集
-    </a>
-              
-            </li><li class="hx:flex hx:flex-col "><a
-    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-    href="/docs/k8s/kubectl%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"
-    
-  >Kubectl常用命令
     </a>
               
             </li></ul>
@@ -423,17 +279,9 @@ cat &gt; elasticsearch.yml &lt;&lt;EOF network.host: 0.0.0.0 EOF 创建es-jvm.op
             </li><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-    href="/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/gitlab/"
+    href="/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/nextcloud/"
     
-  >Gitlab
-    </a>
-              
-            </li><li class="hx:flex hx:flex-col "><a
-    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-    href="/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/nginxwebui/"
-    
-  >Nginxwebui
+  >Nextcloud
     </a>
               
             </li><li class="hx:flex hx:flex-col "><a
@@ -447,9 +295,9 @@ cat &gt; elasticsearch.yml &lt;&lt;EOF network.host: 0.0.0.0 EOF 创建es-jvm.op
             </li><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-    href="/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/nextcloud/"
+    href="/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/gitlab/"
     
-  >Nextcloud
+  >Gitlab
     </a>
               
             </li><li class="hx:flex hx:flex-col "><a
@@ -542,39 +390,57 @@ cat &gt; elasticsearch.yml &lt;&lt;EOF network.host: 0.0.0.0 EOF 创建es-jvm.op
   
     <ul class='hx:flex hx:flex-col hx:gap-1 hx:relative hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:dark:before:bg-neutral-800 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:pr-3 hx:rtl:before:right-0 hx:ltr:ml-3 hx:rtl:mr-3'><li>
               <a
-                href="#%e7%ae%80%e4%bb%8b"
+                href="#%e6%a6%82%e8%bf%b0"
                 class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
-              >简介</a>
+              >概述</a>
             </li>
           <li>
               <a
-                href="#%e9%83%a8%e7%bd%b2"
+                href="#%e9%83%a8%e7%bd%b2%e5%87%86%e5%a4%87"
                 class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
-              >部署</a>
+              >部署准备</a>
             </li>
           <li>
               <a
-                href="#%e5%90%af%e5%8a%a8"
+                href="#%e5%90%af%e5%8a%a8%e6%9c%8d%e5%8a%a1"
                 class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
-              >启动</a>
+              >启动服务</a>
             </li>
           <li>
               <a
-                href="#%e8%ae%bf%e9%97%ae"
+                href="#%e9%aa%8c%e8%af%81%e8%ae%bf%e9%97%ae"
                 class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
-              >访问</a>
+              >验证访问</a>
             </li>
           <li>
               <a
-                href="#%e8%ae%be%e7%bd%ae%e5%af%86%e7%a0%81"
+                href="#%e5%ae%89%e5%85%a8%e9%85%8d%e7%bd%ae%e8%ae%be%e7%bd%ae%e5%af%86%e7%a0%81"
                 class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
-              >设置密码</a>
+              >安全配置（设置密码）</a>
             </li>
           <li>
               <a
-                href="#logstash%e9%85%8d%e7%bd%ae%e7%a4%ba%e4%be%8b"
+                href="#logstash-%e9%ab%98%e7%ba%a7%e9%85%8d%e7%bd%ae%e7%a4%ba%e4%be%8b"
                 class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
-              >logstash配置示例</a>
+              >Logstash 高级配置示例</a>
+            </li>
+          <li>
+              <a
+                href="#%e5%b8%b8%e7%94%a8%e7%ae%a1%e7%90%86%e5%91%bd%e4%bb%a4"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >常用管理命令</a>
+            </li>
+          <li>
+              <a
+                href="#%e5%b8%b8%e8%a7%81%e9%97%ae%e9%a2%98"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >常见问题</a>
+            </li>
+          <li>
+              <a
+                href="#%e5%8f%82%e8%80%83%e9%93%be%e6%8e%a5"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >参考链接</a>
             </li>
           </ul>
   
@@ -592,34 +458,141 @@ cat &gt; elasticsearch.yml &lt;&lt;EOF network.host: 0.0.0.0 EOF 创建es-jvm.op
             </li><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-    href="/docs/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"
+    href="/docs/docker/"
     
-  >网络安全
+  >docker
         <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></span>
     </a>
               <div class="hx:ltr:pr-0 hx:overflow-hidden">
         <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-    href="/docs/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/iptables%E4%B9%8Bnat%E9%85%8D%E7%BD%AE/"
+    href="/docs/docker/docker%E5%9F%BA%E7%A1%80/"
     
-  >Iptables之nat配置
+  >Docker基础
     </a>
               
             </li><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-    href="/docs/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/iptables%E5%9F%BA%E7%A1%80/"
+    href="/docs/docker/docker%E9%85%8D%E7%BD%AE/"
     
-  >Iptables基础
+  >Docker配置
     </a>
               
             </li><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-    href="/docs/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/tcpdump/"
+    href="/docs/docker/docker%E7%BD%91%E7%BB%9C/"
     
-  >Tcpdump
+  >Docker网络
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/docker/docker%E5%AD%98%E5%82%A8/"
+    
+  >Docker存储
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/docker/dockerfile%E5%9F%BA%E7%A1%80/"
+    
+  >Dockerfile基础
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/docker/docker-compose%E5%9F%BA%E7%A1%80/"
+    
+  >Docker Compose基础
+    </a>
+              
+            </li></ul>
+      </div>
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/k8s/"
+    
+  >k8s
+        <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></span>
+    </a>
+              <div class="hx:ltr:pr-0 hx:overflow-hidden">
+        <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/k8s/%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/"
+    
+  >基本概念
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/k8s/%E6%8E%A7%E5%88%B6%E5%99%A8%E5%9F%BA%E7%A1%80/"
+    
+  >控制器基础
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/k8s/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/"
+    
+  >网络基础
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/k8s/%E5%AD%98%E5%82%A8%E5%9F%BA%E7%A1%80/"
+    
+  >存储基础
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/k8s/%E6%9D%83%E9%99%90%E5%9F%BA%E7%A1%80/"
+    
+  >权限基础
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/k8s/configmap%E5%9F%BA%E7%A1%80/"
+    
+  >Configmap基础
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/k8s/%E9%97%AE%E9%A2%98%E4%BC%98%E5%8C%96/"
+    
+  >问题优化
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/k8s/kubectl%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"
+    
+  >Kubectl常用命令
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/k8s/log-pilot%E6%97%A5%E5%BF%97%E9%87%87%E9%9B%86/"
+    
+  >Log Pilot日志采集
     </a>
               
             </li></ul>
@@ -691,21 +664,56 @@ cat &gt; elasticsearch.yml &lt;&lt;EOF network.host: 0.0.0.0 EOF 创建es-jvm.op
         <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-    href="/docs/%E6%95%B0%E6%8D%AE%E5%BA%93/redis/redis%E5%88%86%E7%89%87%E9%9B%86%E7%BE%A4/"
-    
-  >Redis分片集群
-    </a>
-              
-            </li><li class="hx:flex hx:flex-col "><a
-    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/docs/%E6%95%B0%E6%8D%AE%E5%BA%93/redis/redis%E5%AE%89%E8%A3%85/"
     
   >Redis安装
     </a>
               
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/%E6%95%B0%E6%8D%AE%E5%BA%93/redis/redis%E5%88%86%E7%89%87%E9%9B%86%E7%BE%A4/"
+    
+  >Redis分片集群
+    </a>
+              
             </li></ul>
       </div>
+            </li></ul>
+      </div>
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"
+    
+  >网络安全
+        <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></span>
+    </a>
+              <div class="hx:ltr:pr-0 hx:overflow-hidden">
+        <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/iptables%E4%B9%8Bnat%E9%85%8D%E7%BD%AE/"
+    
+  >Iptables之nat配置
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/iptables%E5%9F%BA%E7%A1%80/"
+    
+  >Iptables基础
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/tcpdump/"
+    
+  >Tcpdump
+    </a>
+              
             </li></ul>
       </div>
             </li><li class="hx:flex hx:flex-col "><a
@@ -731,15 +739,7 @@ cat &gt; elasticsearch.yml &lt;&lt;EOF network.host: 0.0.0.0 EOF 创建es-jvm.op
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/docs/%E8%84%9A%E6%9C%AC%E5%B7%A5%E5%85%B7/shell/ssh%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91%E8%84%9A%E6%9C%AC/"
     
-  >Ssh端口转发脚本
-    </a>
-              
-            </li><li class="hx:flex hx:flex-col "><a
-    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-    href="/docs/%E8%84%9A%E6%9C%AC%E5%B7%A5%E5%85%B7/shell/%E7%AE%80%E6%98%93%E8%B7%B3%E6%9D%BF%E6%9C%BA/"
-    
-  >简易跳板机
+  >SSH端口转发脚本
     </a>
               
             </li></ul>
@@ -778,7 +778,7 @@ cat &gt; elasticsearch.yml &lt;&lt;EOF network.host: 0.0.0.0 EOF 创建es-jvm.op
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/docs/window/"
     
-  >Window
+  >window
         <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></span>
     </a>
               <div class="hx:ltr:pr-0 hx:overflow-hidden">
@@ -793,9 +793,9 @@ cat &gt; elasticsearch.yml &lt;&lt;EOF network.host: 0.0.0.0 EOF 创建es-jvm.op
             </li><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-    href="/docs/window/win11/"
+    href="/docs/window/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"
     
-  >win11
+  >环境配置
     </a>
               
             </li></ul>
@@ -813,7 +813,7 @@ cat &gt; elasticsearch.yml &lt;&lt;EOF network.host: 0.0.0.0 EOF 创建es-jvm.op
 
     <ul class="hx:flex hx:flex-col hx:gap-1 hx:max-md:hidden">
         
-          <li class=""><a
+          <li class="open"><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/docs/linux/"
@@ -824,17 +824,9 @@ cat &gt; elasticsearch.yml &lt;&lt;EOF network.host: 0.0.0.0 EOF 创建es-jvm.op
         <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-    href="/docs/linux/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"
+    href="/docs/linux/%E5%9B%BE%E6%A0%87/"
     
-  >常用命令
-    </a>
-              
-            </li><li class="hx:flex hx:flex-col "><a
-    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-    href="/docs/linux/ansible/"
-    
-  >Ansible
+  >图标
     </a>
               
             </li><li class="hx:flex hx:flex-col "><a
@@ -843,14 +835,6 @@ cat &gt; elasticsearch.yml &lt;&lt;EOF network.host: 0.0.0.0 EOF 创建es-jvm.op
     href="/docs/linux/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/"
     
   >开发环境
-    </a>
-              
-            </li><li class="hx:flex hx:flex-col "><a
-    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-    href="/docs/linux/%E5%9B%BE%E6%A0%87/"
-    
-  >图标
     </a>
               
             </li><li class="hx:flex hx:flex-col "><a
@@ -880,149 +864,17 @@ cat &gt; elasticsearch.yml &lt;&lt;EOF network.host: 0.0.0.0 EOF 创建es-jvm.op
             </li><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/linux/ansible%E8%87%AA%E5%8A%A8%E5%8C%96%E8%BF%90%E7%BB%B4/"
+    
+  >Ansible自动化运维
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/docs/linux/%E9%95%9C%E5%83%8F%E4%BB%93%E5%BA%93%E5%A4%A7%E5%85%A8/"
     
   >镜像仓库大全
-    </a>
-              
-            </li></ul>
-      </div></li>
-          <li class=""><a
-    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-    href="/docs/%E5%AE%B9%E5%99%A8/"
-    
-  >容器
-        <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></span>
-    </a><div class="hx:ltr:pr-0 hx:overflow-hidden">
-        <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col "><a
-    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-    href="/docs/%E5%AE%B9%E5%99%A8/docker%E5%9F%BA%E7%A1%80/"
-    
-  >Docker基础
-    </a>
-              
-            </li><li class="hx:flex hx:flex-col "><a
-    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-    href="/docs/%E5%AE%B9%E5%99%A8/docker%E9%85%8D%E7%BD%AE/"
-    
-  >Docker配置
-    </a>
-              
-            </li><li class="hx:flex hx:flex-col "><a
-    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-    href="/docs/%E5%AE%B9%E5%99%A8/docker%E7%BD%91%E7%BB%9C/"
-    
-  >Docker网络
-    </a>
-              
-            </li><li class="hx:flex hx:flex-col "><a
-    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-    href="/docs/%E5%AE%B9%E5%99%A8/docker%E5%AD%98%E5%82%A8/"
-    
-  >Docker存储
-    </a>
-              
-            </li><li class="hx:flex hx:flex-col "><a
-    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-    href="/docs/%E5%AE%B9%E5%99%A8/dockerfile%E5%9F%BA%E7%A1%80/"
-    
-  >Dockerfile基础
-    </a>
-              
-            </li><li class="hx:flex hx:flex-col "><a
-    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-    href="/docs/%E5%AE%B9%E5%99%A8/docker-compose%E5%9F%BA%E7%A1%80/"
-    
-  >Docker Compose基础
-    </a>
-              
-            </li></ul>
-      </div></li>
-          <li class=""><a
-    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-    href="/docs/k8s/"
-    
-  >k8s
-        <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></span>
-    </a><div class="hx:ltr:pr-0 hx:overflow-hidden">
-        <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col "><a
-    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-    href="/docs/k8s/%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/"
-    
-  >基本概念
-    </a>
-              
-            </li><li class="hx:flex hx:flex-col "><a
-    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-    href="/docs/k8s/%E6%8E%A7%E5%88%B6%E5%99%A8%E5%9F%BA%E7%A1%80/"
-    
-  >控制器基础
-    </a>
-              
-            </li><li class="hx:flex hx:flex-col "><a
-    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-    href="/docs/k8s/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/"
-    
-  >网络基础
-    </a>
-              
-            </li><li class="hx:flex hx:flex-col "><a
-    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-    href="/docs/k8s/%E5%AD%98%E5%82%A8%E5%9F%BA%E7%A1%80/"
-    
-  >存储基础
-    </a>
-              
-            </li><li class="hx:flex hx:flex-col "><a
-    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-    href="/docs/k8s/%E6%9D%83%E9%99%90%E5%9F%BA%E7%A1%80/"
-    
-  >权限基础
-    </a>
-              
-            </li><li class="hx:flex hx:flex-col "><a
-    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-    href="/docs/k8s/configmap%E5%9F%BA%E7%A1%80/"
-    
-  >Configmap基础
-    </a>
-              
-            </li><li class="hx:flex hx:flex-col "><a
-    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-    href="/docs/k8s/%E9%97%AE%E9%A2%98%E4%BC%98%E5%8C%96/"
-    
-  >问题优化
-    </a>
-              
-            </li><li class="hx:flex hx:flex-col "><a
-    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-    href="/docs/k8s/log-pilot%E6%97%A5%E5%BF%97%E9%87%87%E9%9B%86/"
-    
-  >Log Pilot日志采集
-    </a>
-              
-            </li><li class="hx:flex hx:flex-col "><a
-    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-    href="/docs/k8s/kubectl%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"
-    
-  >Kubectl常用命令
     </a>
               
             </li></ul>
@@ -1046,17 +898,9 @@ cat &gt; elasticsearch.yml &lt;&lt;EOF network.host: 0.0.0.0 EOF 创建es-jvm.op
             </li><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-    href="/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/gitlab/"
+    href="/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/nextcloud/"
     
-  >Gitlab
-    </a>
-              
-            </li><li class="hx:flex hx:flex-col "><a
-    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-    href="/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/nginxwebui/"
-    
-  >Nginxwebui
+  >Nextcloud
     </a>
               
             </li><li class="hx:flex hx:flex-col "><a
@@ -1070,9 +914,9 @@ cat &gt; elasticsearch.yml &lt;&lt;EOF network.host: 0.0.0.0 EOF 创建es-jvm.op
             </li><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-    href="/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/nextcloud/"
+    href="/docs/%E8%BF%90%E7%BB%B4%E6%9C%8D%E5%8A%A1/gitlab/"
     
-  >Nextcloud
+  >Gitlab
     </a>
               
             </li><li class="hx:flex hx:flex-col "><a
@@ -1176,33 +1020,139 @@ cat &gt; elasticsearch.yml &lt;&lt;EOF network.host: 0.0.0.0 EOF 创建es-jvm.op
           <li class=""><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-    href="/docs/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"
+    href="/docs/docker/"
     
-  >网络安全
+  >docker
         <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></span>
     </a><div class="hx:ltr:pr-0 hx:overflow-hidden">
         <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-    href="/docs/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/iptables%E4%B9%8Bnat%E9%85%8D%E7%BD%AE/"
+    href="/docs/docker/docker%E5%9F%BA%E7%A1%80/"
     
-  >Iptables之nat配置
+  >Docker基础
     </a>
               
             </li><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-    href="/docs/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/iptables%E5%9F%BA%E7%A1%80/"
+    href="/docs/docker/docker%E9%85%8D%E7%BD%AE/"
     
-  >Iptables基础
+  >Docker配置
     </a>
               
             </li><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-    href="/docs/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/tcpdump/"
+    href="/docs/docker/docker%E7%BD%91%E7%BB%9C/"
     
-  >Tcpdump
+  >Docker网络
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/docker/docker%E5%AD%98%E5%82%A8/"
+    
+  >Docker存储
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/docker/dockerfile%E5%9F%BA%E7%A1%80/"
+    
+  >Dockerfile基础
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/docker/docker-compose%E5%9F%BA%E7%A1%80/"
+    
+  >Docker Compose基础
+    </a>
+              
+            </li></ul>
+      </div></li>
+          <li class=""><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/k8s/"
+    
+  >k8s
+        <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></span>
+    </a><div class="hx:ltr:pr-0 hx:overflow-hidden">
+        <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/k8s/%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/"
+    
+  >基本概念
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/k8s/%E6%8E%A7%E5%88%B6%E5%99%A8%E5%9F%BA%E7%A1%80/"
+    
+  >控制器基础
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/k8s/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/"
+    
+  >网络基础
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/k8s/%E5%AD%98%E5%82%A8%E5%9F%BA%E7%A1%80/"
+    
+  >存储基础
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/k8s/%E6%9D%83%E9%99%90%E5%9F%BA%E7%A1%80/"
+    
+  >权限基础
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/k8s/configmap%E5%9F%BA%E7%A1%80/"
+    
+  >Configmap基础
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/k8s/%E9%97%AE%E9%A2%98%E4%BC%98%E5%8C%96/"
+    
+  >问题优化
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/k8s/kubectl%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"
+    
+  >Kubectl常用命令
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/k8s/log-pilot%E6%97%A5%E5%BF%97%E9%87%87%E9%9B%86/"
+    
+  >Log Pilot日志采集
     </a>
               
             </li></ul>
@@ -1273,21 +1223,55 @@ cat &gt; elasticsearch.yml &lt;&lt;EOF network.host: 0.0.0.0 EOF 创建es-jvm.op
         <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-    href="/docs/%E6%95%B0%E6%8D%AE%E5%BA%93/redis/redis%E5%88%86%E7%89%87%E9%9B%86%E7%BE%A4/"
-    
-  >Redis分片集群
-    </a>
-              
-            </li><li class="hx:flex hx:flex-col "><a
-    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/docs/%E6%95%B0%E6%8D%AE%E5%BA%93/redis/redis%E5%AE%89%E8%A3%85/"
     
   >Redis安装
     </a>
               
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/%E6%95%B0%E6%8D%AE%E5%BA%93/redis/redis%E5%88%86%E7%89%87%E9%9B%86%E7%BE%A4/"
+    
+  >Redis分片集群
+    </a>
+              
             </li></ul>
       </div>
+            </li></ul>
+      </div></li>
+          <li class=""><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"
+    
+  >网络安全
+        <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></span>
+    </a><div class="hx:ltr:pr-0 hx:overflow-hidden">
+        <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/iptables%E4%B9%8Bnat%E9%85%8D%E7%BD%AE/"
+    
+  >Iptables之nat配置
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/iptables%E5%9F%BA%E7%A1%80/"
+    
+  >Iptables基础
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/tcpdump/"
+    
+  >Tcpdump
+    </a>
+              
             </li></ul>
       </div></li>
           <li class=""><a
@@ -1312,15 +1296,7 @@ cat &gt; elasticsearch.yml &lt;&lt;EOF network.host: 0.0.0.0 EOF 创建es-jvm.op
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/docs/%E8%84%9A%E6%9C%AC%E5%B7%A5%E5%85%B7/shell/ssh%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91%E8%84%9A%E6%9C%AC/"
     
-  >Ssh端口转发脚本
-    </a>
-              
-            </li><li class="hx:flex hx:flex-col "><a
-    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-    href="/docs/%E8%84%9A%E6%9C%AC%E5%B7%A5%E5%85%B7/shell/%E7%AE%80%E6%98%93%E8%B7%B3%E6%9D%BF%E6%9C%BA/"
-    
-  >简易跳板机
+  >SSH端口转发脚本
     </a>
               
             </li></ul>
@@ -1359,7 +1335,7 @@ cat &gt; elasticsearch.yml &lt;&lt;EOF network.host: 0.0.0.0 EOF 创建es-jvm.op
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/docs/window/"
     
-  >Window
+  >window
         <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></span>
     </a><div class="hx:ltr:pr-0 hx:overflow-hidden">
         <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col "><a
@@ -1373,9 +1349,9 @@ cat &gt; elasticsearch.yml &lt;&lt;EOF network.host: 0.0.0.0 EOF 创建es-jvm.op
             </li><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-    href="/docs/window/win11/"
+    href="/docs/window/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"
     
-  >win11
+  >环境配置
     </a>
               
             </li></ul>
@@ -1437,27 +1413,107 @@ cat &gt; elasticsearch.yml &lt;&lt;EOF network.host: 0.0.0.0 EOF 创建es-jvm.op
 <nav class="hextra-toc hx:order-last hx:hidden hx:w-64 hx:shrink-0 hx:xl:block hx:print:hidden hx:px-4" aria-label="table of contents">
     <div class="hextra-scrollbar hx:sticky hx:top-16 hx:overflow-y-auto hx:pr-4 hx:pt-6 hx:text-sm [hyphens:auto] hx:max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] hx:ltr:-mr-4 hx:rtl:-ml-4"><p class="hx:mb-4 hx:font-semibold hx:tracking-tight">此页上</p><ul>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#%e7%ae%80%e4%bb%8b">简介
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#%e6%a6%82%e8%bf%b0">概述
         </a>
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#%e9%83%a8%e7%bd%b2">部署
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#%e9%83%a8%e7%bd%b2%e5%87%86%e5%a4%87">部署准备
         </a>
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#%e5%90%af%e5%8a%a8">启动
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#1-%e5%88%9b%e5%bb%ba%e6%95%b0%e6%8d%ae%e7%9b%ae%e5%bd%95">1. 创建数据目录
         </a>
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#%e8%ae%bf%e9%97%ae">访问
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#2-%e5%88%9b%e5%bb%ba-elasticsearch-%e9%85%8d%e7%bd%ae%e6%96%87%e4%bb%b6">2. 创建 Elasticsearch 配置文件
         </a>
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#%e8%ae%be%e7%bd%ae%e5%af%86%e7%a0%81">设置密码
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#3-%e5%88%9b%e5%bb%ba-es-jvm-%e9%85%8d%e7%bd%ae%e6%96%87%e4%bb%b6">3. 创建 ES JVM 配置文件
         </a>
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#logstash%e9%85%8d%e7%bd%ae%e7%a4%ba%e4%be%8b">logstash配置示例
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#4-%e5%88%9b%e5%bb%ba-kibana-%e9%85%8d%e7%bd%ae%e6%96%87%e4%bb%b6">4. 创建 Kibana 配置文件
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#5-%e5%88%9b%e5%bb%ba-kibana-jvm-%e9%85%8d%e7%bd%ae%e6%96%87%e4%bb%b6">5. 创建 Kibana JVM 配置文件
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#6-%e5%88%9b%e5%bb%ba-logstash-%e9%85%8d%e7%bd%ae%e6%96%87%e4%bb%b6">6. 创建 Logstash 配置文件
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#7-%e5%88%9b%e5%bb%ba-docker-compose-%e7%bc%96%e6%8e%92%e6%96%87%e4%bb%b6">7. 创建 Docker Compose 编排文件
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#%e5%90%af%e5%8a%a8%e6%9c%8d%e5%8a%a1">启动服务
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#%e9%aa%8c%e8%af%81%e8%ae%bf%e9%97%ae">验证访问
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#%e5%ae%89%e5%85%a8%e9%85%8d%e7%bd%ae%e8%ae%be%e7%bd%ae%e5%af%86%e7%a0%81">安全配置（设置密码）
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#%e6%ad%a5%e9%aa%a4%e4%b8%80%e4%bf%ae%e6%94%b9-elasticsearch-%e9%85%8d%e7%bd%ae">步骤一：修改 Elasticsearch 配置
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#%e6%ad%a5%e9%aa%a4%e4%ba%8c%e9%87%8d%e5%90%af-elasticsearch-%e5%b9%b6%e8%ae%be%e7%bd%ae%e5%af%86%e7%a0%81">步骤二：重启 Elasticsearch 并设置密码
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#%e6%ad%a5%e9%aa%a4%e4%b8%89%e9%85%8d%e7%bd%ae-kibana-%e5%af%86%e7%a0%81">步骤三：配置 Kibana 密码
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#%e6%ad%a5%e9%aa%a4%e5%9b%9b%e9%85%8d%e7%bd%ae-logstash-%e5%af%86%e7%a0%81">步骤四：配置 Logstash 密码
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#%e6%ad%a5%e9%aa%a4%e4%ba%94%e9%87%8d%e5%90%af%e6%89%80%e6%9c%89%e6%9c%8d%e5%8a%a1">步骤五：重启所有服务
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#logstash-%e9%ab%98%e7%ba%a7%e9%85%8d%e7%bd%ae%e7%a4%ba%e4%be%8b">Logstash 高级配置示例
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#%e5%b8%b8%e7%94%a8%e7%ae%a1%e7%90%86%e5%91%bd%e4%bb%a4">常用管理命令
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#%e5%b8%b8%e8%a7%81%e9%97%ae%e9%a2%98">常见问题
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#qelasticsearch-%e5%90%af%e5%8a%a8%e5%a4%b1%e8%b4%a5%e6%8f%90%e7%a4%ba%e5%86%85%e5%ad%98%e4%b8%8d%e8%b6%b3">Q：Elasticsearch 启动失败，提示内存不足？
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#qkibana-%e6%97%a0%e6%b3%95%e8%bf%9e%e6%8e%a5%e5%88%b0-elasticsearch">Q：Kibana 无法连接到 Elasticsearch？
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#qlogstash-%e6%97%a0%e6%b3%95%e5%90%91-elasticsearch-%e5%86%99%e5%85%a5%e6%95%b0%e6%8d%ae">Q：Logstash 无法向 Elasticsearch 写入数据？
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#q%e5%a6%82%e4%bd%95%e5%8d%87%e7%ba%a7-elk-%e7%89%88%e6%9c%ac">Q：如何升级 ELK 版本？
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#qbeats-%e5%a6%82%e4%bd%95%e9%85%8d%e7%bd%ae%e8%be%93%e5%87%ba%e5%88%b0-logstash">Q：Beats 如何配置输出到 Logstash？
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#%e5%8f%82%e8%80%83%e9%93%be%e6%8e%a5">参考链接
         </a>
       </li></ul>
       <div class="hx:mt-8 hx:border-t hx:bg-white hx:pt-8 hx:shadow-[0_-12px_16px_white] hx:dark:bg-dark hx:dark:shadow-[0_-12px_16px_#111] hx:sticky hx:bottom-0 hx:flex hx:flex-col hx:items-start hx:gap-2 hx:pb-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-t hx:contrast-more:border-neutral-400 hx:contrast-more:shadow-none hx:contrast-more:dark:border-neutral-400">
@@ -1485,11 +1541,34 @@ cat &gt; elasticsearch.yml &lt;&lt;EOF network.host: 0.0.0.0 EOF 创建es-jvm.op
 
         <div class="content">
           <h1>Elk</h1>
-          <h2>简介<span class="hx:absolute hx:-mt-20" id="简介"></span>
-    <a href="#%e7%ae%80%e4%bb%8b" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>ELK 是一套由 Elasticsearch、Logstash 和 Kibana 组成的开源工具，用于搜索、分析和可视化数据。</p>
-<h2>部署<span class="hx:absolute hx:-mt-20" id="部署"></span>
-    <a href="#%e9%83%a8%e7%bd%b2" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>创建es数据目录data和插件目录plugins</p>
-<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+          <h2>概述<span class="hx:absolute hx:-mt-20" id="概述"></span>
+    <a href="#%e6%a6%82%e8%bf%b0" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>ELK 是一套由 Elasticsearch、Logstash 和 Kibana 组成的开源工具栈，用于日志的搜索、分析和可视化展示。</p>
+<table>
+  <thead>
+      <tr>
+          <th>组件</th>
+          <th>功能</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Elasticsearch</strong></td>
+          <td>分布式搜索和分析引擎，负责日志数据的存储与检索</td>
+      </tr>
+      <tr>
+          <td><strong>Logstash</strong></td>
+          <td>日志采集与处理管道，负责数据的过滤、转换和传输</td>
+      </tr>
+      <tr>
+          <td><strong>Kibana</strong></td>
+          <td>数据可视化平台，提供图表展示和交互式查询界面</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2>部署准备<span class="hx:absolute hx:-mt-20" id="部署准备"></span>
+    <a href="#%e9%83%a8%e7%bd%b2%e5%87%86%e5%a4%87" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>1. 创建数据目录<span class="hx:absolute hx:-mt-20" id="1-创建数据目录"></span>
+    <a href="#1-%e5%88%9b%e5%bb%ba%e6%95%b0%e6%8d%ae%e7%9b%ae%e5%bd%95" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
 
 <div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mkdir data plugins
 </span></span><span class="line"><span class="cl">chmod <span class="m">777</span> data plugins</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
@@ -1502,12 +1581,11 @@ cat &gt; elasticsearch.yml &lt;&lt;EOF network.host: 0.0.0.0 EOF 创建es-jvm.op
   </button>
 </div>
 </div>
-<p>创建elasticsearch.yml</p>
+<h3>2. 创建 Elasticsearch 配置文件<span class="hx:absolute hx:-mt-20" id="2-创建-elasticsearch-配置文件"></span>
+    <a href="#2-%e5%88%9b%e5%bb%ba-elasticsearch-%e9%85%8d%e7%bd%ae%e6%96%87%e4%bb%b6" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>elasticsearch.yml</code>：</p>
 <div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
 
-<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="l">cat &gt; elasticsearch.yml &lt;&lt;EOF</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">network.host</span><span class="p">:</span><span class="w"> </span><span class="m">0.0.0.0</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="l">EOF</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">network.host</span><span class="p">:</span><span class="w"> </span><span class="m">0.0.0.0</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
   <button
     class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
     title="复制代码"
@@ -1517,32 +1595,31 @@ cat &gt; elasticsearch.yml &lt;&lt;EOF network.host: 0.0.0.0 EOF 创建es-jvm.op
   </button>
 </div>
 </div>
-<p>创建es-jvm.options文件</p>
+<h3>3. 创建 ES JVM 配置文件<span class="hx:absolute hx:-mt-20" id="3-创建-es-jvm-配置文件"></span>
+    <a href="#3-%e5%88%9b%e5%bb%ba-es-jvm-%e9%85%8d%e7%bd%ae%e6%96%87%e4%bb%b6" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>es-jvm.options</code>：</p>
 <div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
 
-<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cat &gt; es-jvm.options <span class="s">&lt;&lt;EOF
-</span></span></span><span class="line"><span class="cl"><span class="s">-Xms1g
-</span></span></span><span class="line"><span class="cl"><span class="s">-Xmx1g
-</span></span></span><span class="line"><span class="cl"><span class="s">8-13:-XX:+UseConcMarkSweepGC
-</span></span></span><span class="line"><span class="cl"><span class="s">8-13:-XX:CMSInitiatingOccupancyFraction=75
-</span></span></span><span class="line"><span class="cl"><span class="s">8-13:-XX:+UseCMSInitiatingOccupancyOnly
-</span></span></span><span class="line"><span class="cl"><span class="s">14-:-XX:+UseG1GC
-</span></span></span><span class="line"><span class="cl"><span class="s">14-:-XX:G1ReservePercent=25
-</span></span></span><span class="line"><span class="cl"><span class="s">14-:-XX:InitiatingHeapOccupancyPercent=30
-</span></span></span><span class="line"><span class="cl"><span class="s">-Djava.io.tmpdir=\${ES_TMPDIR}
-</span></span></span><span class="line"><span class="cl"><span class="s">-XX:+HeapDumpOnOutOfMemoryError
-</span></span></span><span class="line"><span class="cl"><span class="s">-XX:HeapDumpPath=data
-</span></span></span><span class="line"><span class="cl"><span class="s">-XX:ErrorFile=logs/hs_err_pid%p.log
-</span></span></span><span class="line"><span class="cl"><span class="s">8:-XX:+PrintGCDetails
-</span></span></span><span class="line"><span class="cl"><span class="s">8:-XX:+PrintGCDateStamps
-</span></span></span><span class="line"><span class="cl"><span class="s">8:-XX:+PrintTenuringDistribution
-</span></span></span><span class="line"><span class="cl"><span class="s">8:-XX:+PrintGCApplicationStoppedTime
-</span></span></span><span class="line"><span class="cl"><span class="s">8:-Xloggc:logs/gc.log
-</span></span></span><span class="line"><span class="cl"><span class="s">8:-XX:+UseGCLogFileRotation
-</span></span></span><span class="line"><span class="cl"><span class="s">8:-XX:NumberOfGCLogFiles=32
-</span></span></span><span class="line"><span class="cl"><span class="s">8:-XX:GCLogFileSize=64m
-</span></span></span><span class="line"><span class="cl"><span class="s">9-:-Xlog:gc*,gc+age=trace,safepoint:file=logs/gc.log:utctime,pid,tags:filecount=32,filesize=64m
-</span></span></span><span class="line"><span class="cl"><span class="s">EOF</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">-Xms1g
+</span></span><span class="line"><span class="cl">-Xmx1g
+</span></span><span class="line"><span class="cl">8-13:-XX:+UseConcMarkSweepGC
+</span></span><span class="line"><span class="cl">8-13:-XX:CMSInitiatingOccupancyFraction<span class="o">=</span><span class="m">75</span>
+</span></span><span class="line"><span class="cl">8-13:-XX:+UseCMSInitiatingOccupancyOnly
+</span></span><span class="line"><span class="cl">14-:-XX:+UseG1GC
+</span></span><span class="line"><span class="cl">14-:-XX:G1ReservePercent<span class="o">=</span><span class="m">25</span>
+</span></span><span class="line"><span class="cl">14-:-XX:InitiatingHeapOccupancyPercent<span class="o">=</span><span class="m">30</span>
+</span></span><span class="line"><span class="cl">-Djava.io.tmpdir<span class="o">=</span><span class="si">${</span><span class="nv">ES_TMPDIR</span><span class="si">}</span>
+</span></span><span class="line"><span class="cl">-XX:+HeapDumpOnOutOfMemoryError
+</span></span><span class="line"><span class="cl">-XX:HeapDumpPath<span class="o">=</span>data
+</span></span><span class="line"><span class="cl">-XX:ErrorFile<span class="o">=</span>logs/hs_err_pid%p.log
+</span></span><span class="line"><span class="cl">8:-XX:+PrintGCDetails
+</span></span><span class="line"><span class="cl">8:-XX:+PrintGCDateStamps
+</span></span><span class="line"><span class="cl">8:-XX:+PrintTenuringDistribution
+</span></span><span class="line"><span class="cl">8:-XX:+PrintGCApplicationStoppedTime
+</span></span><span class="line"><span class="cl">8:-Xloggc:logs/gc.log
+</span></span><span class="line"><span class="cl">8:-XX:+UseGCLogFileRotation
+</span></span><span class="line"><span class="cl">8:-XX:NumberOfGCLogFiles<span class="o">=</span><span class="m">32</span>
+</span></span><span class="line"><span class="cl">8:-XX:GCLogFileSize<span class="o">=</span>64m
+</span></span><span class="line"><span class="cl">9-:-Xlog:gc*,gc+age<span class="o">=</span>trace,safepoint:file<span class="o">=</span>logs/gc.log:utctime,pid,tags:filecount<span class="o">=</span>32,filesize<span class="o">=</span>64m</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
   <button
     class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
     title="复制代码"
@@ -1552,16 +1629,15 @@ cat &gt; elasticsearch.yml &lt;&lt;EOF network.host: 0.0.0.0 EOF 创建es-jvm.op
   </button>
 </div>
 </div>
-<p>创建kibana.yml</p>
+<h3>4. 创建 Kibana 配置文件<span class="hx:absolute hx:-mt-20" id="4-创建-kibana-配置文件"></span>
+    <a href="#4-%e5%88%9b%e5%bb%ba-kibana-%e9%85%8d%e7%bd%ae%e6%96%87%e4%bb%b6" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>kibana.yml</code>：</p>
 <div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
 
-<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="l">cat &gt; kibana.yml &lt;&lt;EOF</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">server.name</span><span class="p">:</span><span class="w"> </span><span class="l">kibana</span><span class="w">
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">server.name</span><span class="p">:</span><span class="w"> </span><span class="l">kibana</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">server.host</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;0&#34;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">elasticsearch.hosts</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="s2">&#34;http://elasticsearch:9200&#34;</span><span class="w"> </span><span class="p">]</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">xpack.monitoring.ui.container.elasticsearch.enabled</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">i18n.locale</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;zh-CN&#34;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="l">EOF</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">i18n.locale</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;zh-CN&#34;</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
   <button
     class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
     title="复制代码"
@@ -1571,24 +1647,23 @@ cat &gt; elasticsearch.yml &lt;&lt;EOF network.host: 0.0.0.0 EOF 创建es-jvm.op
   </button>
 </div>
 </div>
-<p>创建kibana-jvm.options文件</p>
+<h3>5. 创建 Kibana JVM 配置文件<span class="hx:absolute hx:-mt-20" id="5-创建-kibana-jvm-配置文件"></span>
+    <a href="#5-%e5%88%9b%e5%bb%ba-kibana-jvm-%e9%85%8d%e7%bd%ae%e6%96%87%e4%bb%b6" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>kibana-jvm.options</code>：</p>
 <div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
 
-<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cat &gt; kibana-jvm.options <span class="s">&lt;&lt;EOF
-</span></span></span><span class="line"><span class="cl"><span class="s">-Xms1g
-</span></span></span><span class="line"><span class="cl"><span class="s">-Xmx1g
-</span></span></span><span class="line"><span class="cl"><span class="s">-XX:+UseConcMarkSweepGC
-</span></span></span><span class="line"><span class="cl"><span class="s">-XX:CMSInitiatingOccupancyFraction=75
-</span></span></span><span class="line"><span class="cl"><span class="s">-XX:+UseCMSInitiatingOccupancyOnly
-</span></span></span><span class="line"><span class="cl"><span class="s">-Djava.awt.headless=true
-</span></span></span><span class="line"><span class="cl"><span class="s">-Dfile.encoding=UTF-8
-</span></span></span><span class="line"><span class="cl"><span class="s">-Djruby.compile.invokedynamic=true
-</span></span></span><span class="line"><span class="cl"><span class="s">-Djruby.jit.threshold=0
-</span></span></span><span class="line"><span class="cl"><span class="s">-Djruby.regexp.interruptible=true
-</span></span></span><span class="line"><span class="cl"><span class="s">-XX:+HeapDumpOnOutOfMemoryError
-</span></span></span><span class="line"><span class="cl"><span class="s">-Djava.security.egd=file:/dev/urandom
-</span></span></span><span class="line"><span class="cl"><span class="s">-Dlog4j2.isThreadContextMapInheritable=true
-</span></span></span><span class="line"><span class="cl"><span class="s">EOF</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">-Xms1g
+</span></span><span class="line"><span class="cl">-Xmx1g
+</span></span><span class="line"><span class="cl">-XX:+UseConcMarkSweepGC
+</span></span><span class="line"><span class="cl">-XX:CMSInitiatingOccupancyFraction<span class="o">=</span><span class="m">75</span>
+</span></span><span class="line"><span class="cl">-XX:+UseCMSInitiatingOccupancyOnly
+</span></span><span class="line"><span class="cl">-Djava.awt.headless<span class="o">=</span><span class="nb">true</span>
+</span></span><span class="line"><span class="cl">-Dfile.encoding<span class="o">=</span>UTF-8
+</span></span><span class="line"><span class="cl">-Djruby.compile.invokedynamic<span class="o">=</span><span class="nb">true</span>
+</span></span><span class="line"><span class="cl">-Djruby.jit.threshold<span class="o">=</span><span class="m">0</span>
+</span></span><span class="line"><span class="cl">-Djruby.regexp.interruptible<span class="o">=</span><span class="nb">true</span>
+</span></span><span class="line"><span class="cl">-XX:+HeapDumpOnOutOfMemoryError
+</span></span><span class="line"><span class="cl">-Djava.security.egd<span class="o">=</span>file:/dev/urandom
+</span></span><span class="line"><span class="cl">-Dlog4j2.isThreadContextMapInheritable<span class="o">=</span>true</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
   <button
     class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
     title="复制代码"
@@ -1598,25 +1673,22 @@ cat &gt; elasticsearch.yml &lt;&lt;EOF network.host: 0.0.0.0 EOF 创建es-jvm.op
   </button>
 </div>
 </div>
-<p>创建logstash.conf</p>
+<h3>6. 创建 Logstash 配置文件<span class="hx:absolute hx:-mt-20" id="6-创建-logstash-配置文件"></span>
+    <a href="#6-%e5%88%9b%e5%bb%ba-logstash-%e9%85%8d%e7%bd%ae%e6%96%87%e4%bb%b6" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>logstash.conf</code>：</p>
 <div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
 
-<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cat &gt; logstash.conf <span class="s">&lt;&lt;EOF
-</span></span></span><span class="line"><span class="cl"><span class="s">input {
-</span></span></span><span class="line"><span class="cl"><span class="s">  # 来源beats
-</span></span></span><span class="line"><span class="cl"><span class="s">  beats {
-</span></span></span><span class="line"><span class="cl"><span class="s">      # 端口
-</span></span></span><span class="line"><span class="cl"><span class="s">      port =&gt; &#34;5044&#34;
-</span></span></span><span class="line"><span class="cl"><span class="s">  }
-</span></span></span><span class="line"><span class="cl"><span class="s">}
-</span></span></span><span class="line"><span class="cl"><span class="s">output {
-</span></span></span><span class="line"><span class="cl"><span class="s">  elasticsearch {
-</span></span></span><span class="line"><span class="cl"><span class="s">    hosts =&gt; [&#34;http://elasticsearch:9200&#34;]
-</span></span></span><span class="line"><span class="cl"><span class="s">    index =&gt; &#34;test&#34;
-</span></span></span><span class="line"><span class="cl"><span class="s">  }
-</span></span></span><span class="line"><span class="cl"><span class="s">  stdout { codec =&gt; rubydebug }
-</span></span></span><span class="line"><span class="cl"><span class="s">}
-</span></span></span><span class="line"><span class="cl"><span class="s">EOF</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">input <span class="o">{</span>
+</span></span><span class="line"><span class="cl">  beats <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">port</span> <span class="o">=</span>&gt; <span class="s2">&#34;5044&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">output <span class="o">{</span>
+</span></span><span class="line"><span class="cl">  elasticsearch <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">hosts</span> <span class="o">=</span>&gt; <span class="o">[</span><span class="s2">&#34;http://elasticsearch:9200&#34;</span><span class="o">]</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">index</span> <span class="o">=</span>&gt; <span class="s2">&#34;test&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="o">}</span>
+</span></span><span class="line"><span class="cl">  stdout <span class="o">{</span> <span class="nv">codec</span> <span class="o">=</span>&gt; rubydebug <span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
   <button
     class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
     title="复制代码"
@@ -1626,37 +1698,38 @@ cat &gt; elasticsearch.yml &lt;&lt;EOF network.host: 0.0.0.0 EOF 创建es-jvm.op
   </button>
 </div>
 </div>
-<p>创建docker-compose.yaml</p>
+<h3>7. 创建 Docker Compose 编排文件<span class="hx:absolute hx:-mt-20" id="7-创建-docker-compose-编排文件"></span>
+    <a href="#7-%e5%88%9b%e5%bb%ba-docker-compose-%e7%bc%96%e6%8e%92%e6%96%87%e4%bb%b6" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>docker-compose.yaml</code>：</p>
 <div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
 
-<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="l">cat &gt; docker-compose.yaml &lt;&lt;EOF</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">services</span><span class="p">:</span><span class="w">
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">services</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">elasticsearch</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">elasticsearch:7.7.0      </span><span class="w"> </span><span class="c"># 镜像版本</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">elasticsearch   </span><span class="w"> </span><span class="c"># 容器名称</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l">always                 </span><span class="w"> </span><span class="c"># 自动重启</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">elasticsearch:7.7.0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">elasticsearch</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l">always</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="s2">&#34;discovery.type=single-node&#34;</span><span class="w"> </span><span class="c"># 以单一节点模式启动</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="s2">&#34;TZ=Asia/Shanghai&#34;</span><span class="w">           </span><span class="c"># 设置时区</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w">                         </span><span class="c"># 持久化数据</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="s2">&#34;discovery.type=single-node&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="s2">&#34;TZ=Asia/Shanghai&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">./data:/usr/share/elasticsearch/data</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">./elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">./es-jvm.options:/usr/share/elasticsearch/config/jvm.options</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">./plugins:/usr/share/elasticsearch/plugins</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">ports</span><span class="p">:</span><span class="w">                           </span><span class="c"># 端口映射</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">ports</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="m">9200</span><span class="p">:</span><span class="m">9200</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="m">9300</span><span class="p">:</span><span class="m">9300</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">deploy</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">resources</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">limits</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">cpus</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;1&#34;</span><span class="w">              </span><span class="c"># 限制 CPU 核心数</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">memory</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;2G&#34;</span><span class="w">           </span><span class="c"># 限制内存大小</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">cpus</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;1&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">memory</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;2G&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">kibana</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">kibana:7.7.0</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">kibana</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l">always</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">depends_on</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">elasticsearch</span><span class="w"> </span><span class="c">#kibana在elasticsearch启动之后再启动</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">elasticsearch</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">i18n.locale=zh-CN</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">TZ=Asia/Shanghai</span><span class="w">
@@ -1669,6 +1742,7 @@ cat &gt; elasticsearch.yml &lt;&lt;EOF network.host: 0.0.0.0 EOF 创建es-jvm.op
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">limits</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">cpus</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;1&#34;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">memory</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;1G&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">logstash</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">logstash:7.7.0</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">logstash</span><span class="w">
@@ -1686,8 +1760,7 @@ cat &gt; elasticsearch.yml &lt;&lt;EOF network.host: 0.0.0.0 EOF 创建es-jvm.op
 </span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">resources</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">limits</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">cpus</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;1&#34;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">memory</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;1G&#34;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="l">EOF</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">memory</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;1G&#34;</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
   <button
     class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
     title="复制代码"
@@ -1697,8 +1770,9 @@ cat &gt; elasticsearch.yml &lt;&lt;EOF network.host: 0.0.0.0 EOF 创建es-jvm.op
   </button>
 </div>
 </div>
-<h2>启动<span class="hx:absolute hx:-mt-20" id="启动"></span>
-    <a href="#%e5%90%af%e5%8a%a8" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+<hr>
+<h2>启动服务<span class="hx:absolute hx:-mt-20" id="启动服务"></span>
+    <a href="#%e5%90%af%e5%8a%a8%e6%9c%8d%e5%8a%a1" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
 
 <div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker compose up -d</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
   <button
@@ -1710,10 +1784,10 @@ cat &gt; elasticsearch.yml &lt;&lt;EOF network.host: 0.0.0.0 EOF 创建es-jvm.op
   </button>
 </div>
 </div>
-<h2>访问<span class="hx:absolute hx:-mt-20" id="访问"></span>
-    <a href="#%e8%ae%bf%e9%97%ae" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+<p>查看容器运行状态：</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
 
-<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl http://127.0.0.1:5601</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker compose ps</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
   <button
     class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
     title="复制代码"
@@ -1723,17 +1797,40 @@ cat &gt; elasticsearch.yml &lt;&lt;EOF network.host: 0.0.0.0 EOF 创建es-jvm.op
   </button>
 </div>
 </div>
-<h2>设置密码<span class="hx:absolute hx:-mt-20" id="设置密码"></span>
-    <a href="#%e8%ae%be%e7%bd%ae%e5%af%86%e7%a0%81" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>修改配置elasticsearch.yml</p>
+<hr>
+<h2>验证访问<span class="hx:absolute hx:-mt-20" id="验证访问"></span>
+    <a href="#%e9%aa%8c%e8%af%81%e8%ae%bf%e9%97%ae" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 验证 Elasticsearch</span>
+</span></span><span class="line"><span class="cl">curl http://127.0.0.1:9200
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 验证 Kibana</span>
+</span></span><span class="line"><span class="cl">curl http://127.0.0.1:5601</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="复制代码"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<p>在浏览器中打开 <code>http://&lt;服务器IP&gt;:5601</code> 即可访问 Kibana 界面。</p>
+<hr>
+<h2>安全配置（设置密码）<span class="hx:absolute hx:-mt-20" id="安全配置设置密码"></span>
+    <a href="#%e5%ae%89%e5%85%a8%e9%85%8d%e7%bd%ae%e8%ae%be%e7%bd%ae%e5%af%86%e7%a0%81" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>步骤一：修改 Elasticsearch 配置<span class="hx:absolute hx:-mt-20" id="步骤一修改-elasticsearch-配置"></span>
+    <a href="#%e6%ad%a5%e9%aa%a4%e4%b8%80%e4%bf%ae%e6%94%b9-elasticsearch-%e9%85%8d%e7%bd%ae" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>在 <code>elasticsearch.yml</code> 中添加以下内容：</p>
 <div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
 
-<div class="hextra-code-filename not-prose" dir="auto">elasticsearch.yml</div><div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="c"># 1. 开启X-Pack安全认证（核心开关，7.7.0必须加）</span><span class="w">
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="c"># 开启 X-Pack 安全认证</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">xpack.security.enabled</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># 2. 关闭SSL证书校验（7.7.0关键，否则启动失败，纯账号密码认证）</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># 关闭 SSL 证书校验（7.7.0 版本必须配置，否则启动失败）</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">xpack.security.transport.ssl.enabled</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># 3. 允许远程访问（保证Kibana能连接ES，已配置可忽略）</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># 允许远程访问</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">network.host</span><span class="p">:</span><span class="w"> </span><span class="m">0.0.0.0</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">discovery.type</span><span class="p">:</span><span class="w"> </span><span class="l">single-node</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-8">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">discovery.type</span><span class="p">:</span><span class="w"> </span><span class="l">single-node</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
   <button
     class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
     title="复制代码"
@@ -1743,21 +1840,15 @@ cat &gt; elasticsearch.yml &lt;&lt;EOF network.host: 0.0.0.0 EOF 创建es-jvm.op
   </button>
 </div>
 </div>
-<p>重启elasticsearch容器，并进入容器执行命令设置密码。</p>
-<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+<h3>步骤二：重启 Elasticsearch 并设置密码<span class="hx:absolute hx:-mt-20" id="步骤二重启-elasticsearch-并设置密码"></span>
+    <a href="#%e6%ad%a5%e9%aa%a4%e4%ba%8c%e9%87%8d%e5%90%af-elasticsearch-%e5%b9%b6%e8%ae%be%e7%bd%ae%e5%af%86%e7%a0%81" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
 
-<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 执行初始化密码命令（7.7.0专属，固定命令）</span>
-</span></span><span class="line"><span class="cl">elasticsearch-setup-passwords interactive
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 重启 Elasticsearch 容器</span>
+</span></span><span class="line"><span class="cl">docker compose restart elasticsearch
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">Initiating the setup of passwords <span class="k">for</span> reserved users elastic,apm_system,kibana,logstash_system,beats_system.
-</span></span><span class="line"><span class="cl">You will be prompted to enter passwords as the process progresses.
-</span></span><span class="line"><span class="cl">Please confirm that you would like to <span class="k">continue</span> <span class="o">[</span>y/N<span class="o">]</span> → 输入 y 回车
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">Enter password <span class="k">for</span> <span class="o">[</span>elastic<span class="o">]</span>: → 输入你的密码（如Elk@7700），回车
-</span></span><span class="line"><span class="cl">Reenter password <span class="k">for</span> <span class="o">[</span>elastic<span class="o">]</span>: → 重复输入密码，回车
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">Enter password <span class="k">for</span> <span class="o">[</span>apm_system<span class="o">]</span>: → 输入密码，回车
-</span></span><span class="line"><span class="cl">...（依次为kibana、logstash_system、beats_system设置密码，建议统一设为同一个）</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+</span></span><span class="line"><span class="cl"><span class="c1"># 进入容器设置密码</span>
+</span></span><span class="line"><span class="cl">docker <span class="nb">exec</span> -it elasticsearch /bin/bash
+</span></span><span class="line"><span class="cl">elasticsearch-setup-passwords interactive</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
   <button
     class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
     title="复制代码"
@@ -1767,7 +1858,42 @@ cat &gt; elasticsearch.yml &lt;&lt;EOF network.host: 0.0.0.0 EOF 创建es-jvm.op
   </button>
 </div>
 </div>
-<p>设置kibana密码</p>
+<p>按提示依次为以下用户设置密码：</p>
+<table>
+  <thead>
+      <tr>
+          <th>用户</th>
+          <th>说明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>elastic</code></td>
+          <td>超级管理员（必设，Kibana/Logstash 连接使用）</td>
+      </tr>
+      <tr>
+          <td><code>apm_system</code></td>
+          <td>APM 系统用户</td>
+      </tr>
+      <tr>
+          <td><code>kibana</code></td>
+          <td>Kibana 连接 ES 使用</td>
+      </tr>
+      <tr>
+          <td><code>logstash_system</code></td>
+          <td>Logstash 监控用户</td>
+      </tr>
+      <tr>
+          <td><code>beats_system</code></td>
+          <td>Beats 监控用户</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote>
+  <p><strong>建议</strong>：将所有密码统一设置为相同值，便于管理。</p>
+</blockquote>
+<h3>步骤三：配置 Kibana 密码<span class="hx:absolute hx:-mt-20" id="步骤三配置-kibana-密码"></span>
+    <a href="#%e6%ad%a5%e9%aa%a4%e4%b8%89%e9%85%8d%e7%bd%ae-kibana-%e5%af%86%e7%a0%81" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>修改 <code>kibana.yml</code>，添加用户名和密码：</p>
 <div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
 
 <div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">server.name</span><span class="p">:</span><span class="w"> </span><span class="l">kibana</span><span class="w">
@@ -1776,11 +1902,11 @@ cat &gt; elasticsearch.yml &lt;&lt;EOF network.host: 0.0.0.0 EOF 创建es-jvm.op
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">xpack.monitoring.ui.container.elasticsearch.enabled</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">i18n.locale</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;zh-CN&#34;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># 配置ES的超级管理员账号（固定为elastic）</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># 配置 ES 认证</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">elasticsearch.username</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;elastic&#34;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># 配置该账号对应的密码（和你刚才为elastic设置的密码一致）</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">elasticsearch.password</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;你设置的ES密码&#34;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># 开启Kibana登录认证（7.7.0建议开启）</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># 开启 Kibana 登录认证</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">xpack.security.enabled</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
   <button
     class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
@@ -1791,22 +1917,19 @@ cat &gt; elasticsearch.yml &lt;&lt;EOF network.host: 0.0.0.0 EOF 创建es-jvm.op
   </button>
 </div>
 </div>
-<p>设置logstash密码</p>
+<h3>步骤四：配置 Logstash 密码<span class="hx:absolute hx:-mt-20" id="步骤四配置-logstash-密码"></span>
+    <a href="#%e6%ad%a5%e9%aa%a4%e5%9b%9b%e9%85%8d%e7%bd%ae-logstash-%e5%af%86%e7%a0%81" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>修改 <code>logstash.conf</code>，在 output 中添加认证信息：</p>
 <div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
 
 <div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">input <span class="o">{</span>
-</span></span><span class="line"><span class="cl">  <span class="c1"># 来源beats</span>
 </span></span><span class="line"><span class="cl">  beats <span class="o">{</span>
-</span></span><span class="line"><span class="cl">      <span class="c1"># 端口</span>
-</span></span><span class="line"><span class="cl">      <span class="nv">port</span> <span class="o">=</span>&gt; <span class="s2">&#34;5044&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">port</span> <span class="o">=</span>&gt; <span class="s2">&#34;5044&#34;</span>
 </span></span><span class="line"><span class="cl">  <span class="o">}</span>
 </span></span><span class="line"><span class="cl"><span class="o">}</span>
 </span></span><span class="line"><span class="cl">output <span class="o">{</span>
 </span></span><span class="line"><span class="cl">  elasticsearch <span class="o">{</span>
 </span></span><span class="line"><span class="cl">    <span class="nv">hosts</span> <span class="o">=</span>&gt; <span class="o">[</span><span class="s2">&#34;http://elasticsearch:9200&#34;</span><span class="o">]</span>
-</span></span><span class="line"><span class="cl">    <span class="c1"># 按天生成索引</span>
 </span></span><span class="line"><span class="cl">    <span class="nv">index</span> <span class="o">=</span>&gt; <span class="s2">&#34;log-%{+YYYY.MM.dd}&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="c1"># 配置ES账号密码</span>
 </span></span><span class="line"><span class="cl">    <span class="nv">user</span> <span class="o">=</span>&gt; <span class="s2">&#34;elastic&#34;</span>
 </span></span><span class="line"><span class="cl">    <span class="nv">password</span> <span class="o">=</span>&gt; <span class="s2">&#34;你设置的ES密码&#34;</span>
 </span></span><span class="line"><span class="cl">  <span class="o">}</span>
@@ -1821,8 +1944,8 @@ cat &gt; elasticsearch.yml &lt;&lt;EOF network.host: 0.0.0.0 EOF 创建es-jvm.op
   </button>
 </div>
 </div>
-<p>重启elk服务</p>
-<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+<h3>步骤五：重启所有服务<span class="hx:absolute hx:-mt-20" id="步骤五重启所有服务"></span>
+    <a href="#%e6%ad%a5%e9%aa%a4%e4%ba%94%e9%87%8d%e5%90%af%e6%89%80%e6%9c%89%e6%9c%8d%e5%8a%a1" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
 
 <div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker compose restart</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
   <button
@@ -1834,74 +1957,74 @@ cat &gt; elasticsearch.yml &lt;&lt;EOF network.host: 0.0.0.0 EOF 创建es-jvm.op
   </button>
 </div>
 </div>
-<h2>logstash配置示例<span class="hx:absolute hx:-mt-20" id="logstash配置示例"></span>
-    <a href="#logstash%e9%85%8d%e7%bd%ae%e7%a4%ba%e4%be%8b" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+<hr>
+<h2>Logstash 高级配置示例<span class="hx:absolute hx:-mt-20" id="logstash-高级配置示例"></span>
+    <a href="#logstash-%e9%ab%98%e7%ba%a7%e9%85%8d%e7%bd%ae%e7%a4%ba%e4%be%8b" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>以下是一个完整的 Logstash 配置示例，包含日志解析、字段处理和性能优化：</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
 
-<div><pre><code>input {
-  beats {
-    port =&gt; 5044
-  }
-}
-
-filter {
-  # 解析日志行，提取时间戳和其他字段
-  grok {
-    match =&gt; { 
-      &#34;message&#34; =&gt; &#34;^&lt;(?&lt;log_level&gt;\d&#43;)&gt; %{TIMESTAMP_ISO8601:log_timestamp} \[%{LOGLEVEL:log_level_str}\] %{IP:client_ip} #%{NUMBER:connection_id} \[%{DATA:api_path}\] \[%{DATA:api_response}\] %{NUMBER:response_time}ms (?&lt;json_data&gt;{.*})$&#34;
-    }
-    tag_on_failure =&gt; [&#34;_grokparsefailure&#34;]
-  }
-
-  # 将日志时间戳设置为 @timestamp
-  # 注意：日志格式是 &#34;2026-01-15 14:45:17&#34;，中间有空格
-  date {
-    match =&gt; [&#34;log_timestamp&#34;, &#34;yyyy-MM-dd HH:mm:ss&#34;]
-    target =&gt; &#34;@timestamp&#34;
-    timezone =&gt; &#34;Asia/Shanghai&#34;
-    locale =&gt; &#34;zh_CN&#34;
-    tag_on_failure =&gt; [&#34;_dateparsefailure&#34;]
-  }
-
-  # 如果日期解析失败，使用当前时间
-  if &#34;_dateparsefailure&#34; in [tags] {
-    mutate {
-      remove_tag =&gt; [&#34;_dateparsefailure&#34;]
-      add_tag =&gt; [&#34;timestamp_fallback&#34;]
-    }
-    # 使用当前时间作为备选
-    date {
-      match =&gt; [&#34;@timestamp&#34;, &#34;ISO8601&#34;]
-      timezone =&gt; &#34;Asia/Shanghai&#34;
-    }
-  }
-  
-  # 添加字段
-  mutate {
-    add_field =&gt; {
-      &#34;api_performance&#34; =&gt; &#34;%{response_time}&#34;
-      &#34;status&#34; =&gt; &#34;%{response_time}&#34;
-    }
-  }
-  
-  # 清理不必要的字段
-  mutate {
-    remove_field =&gt; [
-      &#34;[beat][hostname]&#34;,
-      &#34;[beat][name]&#34;,
-      &#34;[beat][version]&#34;,
-      &#34;[message]&#34;
-    ]
-  }
-}
-
-output {
-    elasticsearch {
-        hosts =&gt; [&#34;127.0.0.1:9200&#34;]
-        index =&gt; &#34;%{index}-%{&#43;YYYY-MM-dd}&#34;
-        user =&gt; elastic
-        password =&gt; aaabbbccc
-    }
-}</code></pre></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">input <span class="o">{</span>
+</span></span><span class="line"><span class="cl">  beats <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">port</span> <span class="o">=</span>&gt; <span class="m">5044</span>
+</span></span><span class="line"><span class="cl">  <span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">filter <span class="o">{</span>
+</span></span><span class="line"><span class="cl">  <span class="c1"># 解析日志行，提取时间戳和其他字段</span>
+</span></span><span class="line"><span class="cl">  grok <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">match</span> <span class="o">=</span>&gt; <span class="o">{</span>
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;message&#34;</span> <span class="o">=</span>&gt; <span class="s2">&#34;^&lt;(?&lt;log_level&gt;\d+)&gt; %{TIMESTAMP_ISO8601:log_timestamp} \[%{LOGLEVEL:log_level_str}\] %{IP:client_ip} #%{NUMBER:connection_id} \[%{DATA:api_path}\] \[%{DATA:api_response}\] %{NUMBER:response_time}ms (?&lt;json_data&gt;{.*})</span>$<span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">tag_on_failure</span> <span class="o">=</span>&gt; <span class="o">[</span><span class="s2">&#34;_grokparsefailure&#34;</span><span class="o">]</span>
+</span></span><span class="line"><span class="cl">  <span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1"># 将日志时间戳设置为 @timestamp</span>
+</span></span><span class="line"><span class="cl">  date <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">match</span> <span class="o">=</span>&gt; <span class="o">[</span><span class="s2">&#34;log_timestamp&#34;</span>, <span class="s2">&#34;yyyy-MM-dd HH:mm:ss&#34;</span><span class="o">]</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">target</span> <span class="o">=</span>&gt; <span class="s2">&#34;@timestamp&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">timezone</span> <span class="o">=</span>&gt; <span class="s2">&#34;Asia/Shanghai&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">locale</span> <span class="o">=</span>&gt; <span class="s2">&#34;zh_CN&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">tag_on_failure</span> <span class="o">=</span>&gt; <span class="o">[</span><span class="s2">&#34;_dateparsefailure&#34;</span><span class="o">]</span>
+</span></span><span class="line"><span class="cl">  <span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1"># 如果日期解析失败，使用当前时间作为备选</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="s2">&#34;_dateparsefailure&#34;</span> in <span class="o">[</span>tags<span class="o">]</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    mutate <span class="o">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nv">remove_tag</span> <span class="o">=</span>&gt; <span class="o">[</span><span class="s2">&#34;_dateparsefailure&#34;</span><span class="o">]</span>
+</span></span><span class="line"><span class="cl">      <span class="nv">add_tag</span> <span class="o">=</span>&gt; <span class="o">[</span><span class="s2">&#34;timestamp_fallback&#34;</span><span class="o">]</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl">    date <span class="o">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nv">match</span> <span class="o">=</span>&gt; <span class="o">[</span><span class="s2">&#34;@timestamp&#34;</span>, <span class="s2">&#34;ISO8601&#34;</span><span class="o">]</span>
+</span></span><span class="line"><span class="cl">      <span class="nv">timezone</span> <span class="o">=</span>&gt; <span class="s2">&#34;Asia/Shanghai&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl">  <span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1"># 添加计算字段</span>
+</span></span><span class="line"><span class="cl">  mutate <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">add_field</span> <span class="o">=</span>&gt; <span class="o">{</span>
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;api_performance&#34;</span> <span class="o">=</span>&gt; <span class="s2">&#34;%{response_time}&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;status&#34;</span> <span class="o">=</span>&gt; <span class="s2">&#34;%{response_time}&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl">  <span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1"># 清理冗余字段，减少存储开销</span>
+</span></span><span class="line"><span class="cl">  mutate <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">remove_field</span> <span class="o">=</span>&gt; <span class="o">[</span>
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;[beat][hostname]&#34;</span>,
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;[beat][name]&#34;</span>,
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;[beat][version]&#34;</span>,
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;[message]&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">]</span>
+</span></span><span class="line"><span class="cl">  <span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">output <span class="o">{</span>
+</span></span><span class="line"><span class="cl">  elasticsearch <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">hosts</span> <span class="o">=</span>&gt; <span class="o">[</span><span class="s2">&#34;127.0.0.1:9200&#34;</span><span class="o">]</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">index</span> <span class="o">=</span>&gt; <span class="s2">&#34;%{index}-%{+YYYY-MM-dd}&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">user</span> <span class="o">=</span>&gt; <span class="s2">&#34;elastic&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">password</span> <span class="o">=</span>&gt; <span class="s2">&#34;aaabbbccc&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
   <button
     class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
     title="复制代码"
@@ -1911,6 +2034,160 @@ output {
   </button>
 </div>
 </div>
+<hr>
+<h2>常用管理命令<span class="hx:absolute hx:-mt-20" id="常用管理命令"></span>
+    <a href="#%e5%b8%b8%e7%94%a8%e7%ae%a1%e7%90%86%e5%91%bd%e4%bb%a4" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><table>
+  <thead>
+      <tr>
+          <th>操作</th>
+          <th>命令</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>启动所有服务</td>
+          <td><code>docker compose up -d</code></td>
+      </tr>
+      <tr>
+          <td>停止所有服务</td>
+          <td><code>docker compose stop</code></td>
+      </tr>
+      <tr>
+          <td>重启所有服务</td>
+          <td><code>docker compose restart</code></td>
+      </tr>
+      <tr>
+          <td>查看容器状态</td>
+          <td><code>docker compose ps</code></td>
+      </tr>
+      <tr>
+          <td>查看日志</td>
+          <td><code>docker compose logs -f --tail=100</code></td>
+      </tr>
+      <tr>
+          <td>查看 Elasticsearch 日志</td>
+          <td><code>docker logs elasticsearch -f --tail=50</code></td>
+      </tr>
+      <tr>
+          <td>查看 Kibana 日志</td>
+          <td><code>docker logs kibana -f --tail=50</code></td>
+      </tr>
+      <tr>
+          <td>查看 Logstash 日志</td>
+          <td><code>docker logs logstash -f --tail=50</code></td>
+      </tr>
+      <tr>
+          <td>进入 Elasticsearch 容器</td>
+          <td><code>docker exec -it elasticsearch /bin/bash</code></td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2>常见问题<span class="hx:absolute hx:-mt-20" id="常见问题"></span>
+    <a href="#%e5%b8%b8%e8%a7%81%e9%97%ae%e9%a2%98" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>Q：Elasticsearch 启动失败，提示内存不足？<span class="hx:absolute hx:-mt-20" id="qelasticsearch-启动失败提示内存不足"></span>
+    <a href="#qelasticsearch-%e5%90%af%e5%8a%a8%e5%a4%b1%e8%b4%a5%e6%8f%90%e7%a4%ba%e5%86%85%e5%ad%98%e4%b8%8d%e8%b6%b3" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>检查 JVM 堆内存配置是否超过宿主机可用内存：</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 查看宿主机内存</span>
+</span></span><span class="line"><span class="cl">free -h
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 修改 es-jvm.options 中的 -Xms 和 -Xmx 参数</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 建议设置为宿主机内存的 50%，且不超过 32G</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="复制代码"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<h3>Q：Kibana 无法连接到 Elasticsearch？<span class="hx:absolute hx:-mt-20" id="qkibana-无法连接到-elasticsearch"></span>
+    <a href="#qkibana-%e6%97%a0%e6%b3%95%e8%bf%9e%e6%8e%a5%e5%88%b0-elasticsearch" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><ol>
+<li>确认 Elasticsearch 已完全启动：</li>
+</ol>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl http://127.0.0.1:9200</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="复制代码"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<ol start="2">
+<li>检查 <code>elasticsearch.hosts</code> 配置是否正确：</li>
+</ol>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">elasticsearch.hosts</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="s2">&#34;http://elasticsearch:9200&#34;</span><span class="w"> </span><span class="p">]</span><span class="w">  </span><span class="c"># 容器内部使用服务名</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># 或</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">elasticsearch.hosts</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="s2">&#34;http://127.0.0.1:9200&#34;</span><span class="w"> </span><span class="p">]</span><span class="w">     </span><span class="c"># 宿主机访问</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="复制代码"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<ol start="3">
+<li>如已开启认证，确认用户名密码配置正确。</li>
+</ol>
+<h3>Q：Logstash 无法向 Elasticsearch 写入数据？<span class="hx:absolute hx:-mt-20" id="qlogstash-无法向-elasticsearch-写入数据"></span>
+    <a href="#qlogstash-%e6%97%a0%e6%b3%95%e5%90%91-elasticsearch-%e5%86%99%e5%85%a5%e6%95%b0%e6%8d%ae" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><ol>
+<li>检查 Elasticsearch 是否正常运行</li>
+<li>确认认证信息（user/password）是否正确</li>
+<li>查看 Logstash 日志排查错误：</li>
+</ol>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker logs logstash --tail<span class="o">=</span><span class="m">100</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="复制代码"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<h3>Q：如何升级 ELK 版本？<span class="hx:absolute hx:-mt-20" id="q如何升级-elk-版本"></span>
+    <a href="#q%e5%a6%82%e4%bd%95%e5%8d%87%e7%ba%a7-elk-%e7%89%88%e6%9c%ac" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><ol>
+<li>修改 <code>docker-compose.yaml</code> 中的镜像版本号（三个组件版本需保持一致）</li>
+<li>备份 Elasticsearch 数据目录 <code>./data</code></li>
+<li>执行 <code>docker compose down</code> 停止服务</li>
+<li>执行 <code>docker compose up -d</code> 启动新版本</li>
+<li>如遇索引兼容性问题，需执行数据迁移或重建索引</li>
+</ol>
+<h3>Q：Beats 如何配置输出到 Logstash？<span class="hx:absolute hx:-mt-20" id="qbeats-如何配置输出到-logstash"></span>
+    <a href="#qbeats-%e5%a6%82%e4%bd%95%e9%85%8d%e7%bd%ae%e8%be%93%e5%87%ba%e5%88%b0-logstash" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>在 Filebeat/Metricbeat 的配置文件中设置：</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">output.logstash</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">hosts</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&#34;&lt;Logstash_IP&gt;:5044&#34;</span><span class="p">]</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="复制代码"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<hr>
+<h2>参考链接<span class="hx:absolute hx:-mt-20" id="参考链接"></span>
+    <a href="#%e5%8f%82%e8%80%83%e9%93%be%e6%8e%a5" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ul>
+<li><a href="https://www.elastic.co/guide/en/elasticsearch/reference/7.7/index.html"target="_blank" rel="noopener">Elasticsearch 官方文档</a></li>
+<li><a href="https://www.elastic.co/guide/en/kibana/7.7/index.html"target="_blank" rel="noopener">Kibana 官方文档</a></li>
+<li><a href="https://www.elastic.co/guide/en/logstash/7.7/index.html"target="_blank" rel="noopener">Logstash 官方文档</a></li>
+<li><a href="https://www.elastic.co/guide/en/elastic-stack/7.7/docker.html"target="_blank" rel="noopener">Docker Compose 部署 ELK</a></li>
+</ul>
+<hr>
 
         </div>
         <div class="hx:mt-16"></div>

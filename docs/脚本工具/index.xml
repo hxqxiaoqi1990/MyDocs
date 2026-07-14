@@ -5,7 +5,7 @@
     <description>Recent content on 自在网站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 20 Jan 2026 17:35:07 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 14 Jul 2026 14:41:36 +0800</lastBuildDate>
     
 	  <atom:link href="http://localhost:8081/docs/%E8%84%9A%E6%9C%AC%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" />
     
@@ -24,8 +24,7 @@
       <description>
         
         
-        &lt;p&gt;shell编写实用脚本工具&lt;/p&gt;
-
+        
       </description>
     </item>
     
@@ -38,8 +37,7 @@
       <description>
         
         
-        &lt;p&gt;golang编写实用工具&lt;/p&gt;
-
+        
       </description>
     </item>
     
@@ -52,8 +50,7 @@
       <description>
         
         
-        &lt;p&gt;python编写实用工具&lt;/p&gt;
-
+        
       </description>
     </item>
     
